@@ -7,7 +7,7 @@
 
 Die österreischische Patient Summary (Austrian IPS) kombiniert die Vorgaben der [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/) sowie des [HL7® Austria FHIR® Core Implementation Guides](https://build.fhir.org/ig/HL7Austria/HL7-AT-FHIR-Core-R4/).
 
-[![overview](austrian-ips-context.drawio.png){: style="width: 80%"}](austrian-ips-context.drawio.png)
+[![overview](austrian-ips-context.drawio.png){: style="width: 50%"}](austrian-ips-context.drawio.png)
 
 ### Beispiele
 

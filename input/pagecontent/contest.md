@@ -19,3 +19,7 @@ Wir freuen uns auf eure kreativen Ideen und Einsendungen!
 Mit freundlichen Grüßen,
 
 HL7 Austria in Kooperation mit der ELGA GmbH
+
+### Teilnahmebedingungen
+
+tbd
