@@ -6,6 +6,19 @@ Die IPS basiert auf dem HL7 FHIR (Fast Healthcare Interoperability Resources) St
 
 Im Rahmen dieses Wettbewerbs stellen wir euch zwei beispielhafte IPS-Datensätze zur Verfügung, die im Zuge des Contests visualisiert werden sollen. Diese Datensätze bieten euch die Möglichkeit, eure Designideen an realistischen Patient:inneninformationen zu testen und umzusetzen.
 
+<div xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <blockquote class="stu-note">
+    <p>Beispiele der österreichischen IPS:</p>
+    <p>
+      <ul>
+        <li><a href="Bundle-IPS-1-no-problems-medication-allergies.html">IPS-1-no-problems-medication-allergies</a> - Minimalbeispiel eines Patienten ohne gesundheitliche Probleme, aktuelle Medikation oder Allergien.</li>
+        <li><a href="Bundle-IPS-2-preventive-medical-checkup.html">IPS-2-preventive-medical-checkup</a> - Umfangreiches Beispiel eines Patienten mit zahlreichen Beschwerden, Allergien, früheren Behandlungen, etc. Darüber hinaus wurden mehrere Medikamente verschrieben und Laborwerte erhoben.</li>
+      </ul>
+    </p>
+  </blockquote>
+</div>
+
 Eure Aufgabe besteht darin, innovative Design-Prototypen für die Visualisierung der IPS zu entwickeln - allein oder als Team! Ihr könnt dabei interaktive Lösungen gestalten, die die Nutzer einbeziehen. Alternativ könnt ihr auch statische Visualisierungen entwerfen, die beispielsweise für den Ausdruck geeignet sind und dennoch die Informationen klar und übersichtlich darstellen. In jedem Fall solltet ihr euer Werk gut dokumentieren, z.B. in einem GitHub/GitLab-Repository, wo ihr auch gleich die Source-Files bereitstellen könnt.
 
 Der Contest erstreckt sich über den Sommer und endet am **30. September 2024**. Eure eingereichten Prototypen werden von einer Fachjury bewertet, die Kreativität, Benutzerfreundlichkeit, Umsetzbarkeit, Ästhetik und die Fähigkeit zur effektiven Kommunikation von Gesundheitsinformationen berücksichtigt.
@@ -19,6 +32,12 @@ Wir freuen uns auf eure kreativen Ideen und Einsendungen!
 Mit freundlichen Grüßen,
 
 HL7 Austria in Kooperation mit der ELGA GmbH
+
+### Existierende Visualisierungswerkzeuge
+
+Für die IPS gibt es bereits verschiedene Visualisierungswerkzeuge, die aber allesamt noch nicht optimal sind:
+
+- tbd
 
 ### Teilnahmebedingungen
 
