@@ -37,8 +37,11 @@ HL7® Austria in Kooperation mit der ELGA GmbH
 
 Für die IPS (bzw. für FHIR®-Bundles) gibt es bereits verschiedene Visualisierungswerkzeuge, die aber allesamt noch nicht optimal sind:
 
-- https://sandbox.hl7europe.eu/laboratory/web/apps/visualiser/index.html?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b basierend auf https://github.com/hl7-eu/viz-lab
-- https://idmp-viewer.azurewebsites.net/display-product?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b basierend auf http://www.nprogram.co.uk/
+- [https://www.maxmddirect.com/direct/FHIR/ResponseViewer](https://www.maxmddirect.com/direct/FHIR/ResponseViewer)
+- [https://ps-ca-renderer.apibox.ca/index.html](https://ps-ca-renderer.apibox.ca/index.html)
+- [https://www.ipsviewer.com/](https://www.ipsviewer.com/)
+- [https://sandbox.hl7europe.eu/laboratory/web/apps/visualiser/index.html?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b](https://sandbox.hl7europe.eu/laboratory/web/apps/visualiser/index.html?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b) basierend auf [https://github.com/hl7-eu/viz-lab](https://github.com/hl7-eu/viz-lab)
+- [https://idmp-viewer.azurewebsites.net/display-product?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b](https://idmp-viewer.azurewebsites.net/display-product?url=https://sandbox.hl7europe.eu/laboratory/fhir/Bundle/at-f91828ea057b) basierend auf [http://www.nprogram.co.uk/](http://www.nprogram.co.uk/)
 
 ### Teilnahmebedingungen
 
