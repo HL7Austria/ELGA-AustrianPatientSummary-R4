@@ -23,7 +23,7 @@ Eure Aufgabe besteht darin, innovative Design-Prototypen für die Visualisierung
 
 Der Contest erstreckt sich über den Sommer und endet am **30. September 2024**. Eure eingereichten Prototypen werden von einer Fachjury bewertet, die Kreativität, Benutzerfreundlichkeit, Umsetzbarkeit, Ästhetik und die Fähigkeit zur effektiven Kommunikation von Gesundheitsinformationen berücksichtigt.
 
-Die Gewinner:innen werden nicht nur mit attraktiven Preisen belohnt, sondern haben auch die Möglichkeit, ihre Entwürfe einer breiten Öffentlichkeit zu präsentieren und einen Beitrag zur Weiterentwicklung der Gesundheitskommunikation zu leisten.
+Die Gewinner:innen werden nicht nur mit einem Preisgeld belohnt, sondern haben auch die Möglichkeit, ihre Entwürfe einer breiten Öffentlichkeit zu präsentieren und einen Beitrag zur Weiterentwicklung der Gesundheitskommunikation zu leisten. Insgesamt werden bis zu drei hervorragende Design-Prototypen prämiert, wobei der beste Prototyp mit € 1000,-, der zweite Platz mit € 750,- und der dritte Platz mit € 500,- dotiert ist.
 
 Nutzt diese Chance, eure Fähigkeiten im Design und euer Interesse am Gesundheitswesen zu kombinieren und gemeinsam die Zukunft der Patient Summary zu gestalten!
 
@@ -45,24 +45,23 @@ Für die IPS (bzw. für FHIR®-Bundles) gibt es bereits verschiedene Visualisier
 
 ### Teilnahmebedingungen
 
-- Das einzureichende Projekt muss sich mit der Visualisierung von FHIR®-Bundles oder einer Menge von FHIR®-Ressourcen auseinandersetzen.
-- Einreichen können einzelne oder Gruppen von Schüler:innen und/oder Student:innen, deren Schul- oder Studienabschluss nicht länger als ein Jahr zurückliegt.
-- Schüler:innen bzw. Student:innen müssen zu einer österreichischen Schule gehen bzw. an einem österreichischen Institut eingeschrieben sein.
+- Der einzureichende Design-Prototyp muss sich mit der Visualisierung von FHIR®-Bundles auseinandersetzen.
+- Einreichen können einzelne oder Gruppen von Schüler:innen und/oder Student:innen, die aktiv sind oder deren Schul- oder Studienabschluss an einer österreichischen Schule oder Universität nicht länger als ein Jahr zurückliegt.
 - Eine Mitgliedschaft bei HL7® Austria wird nicht vorausgesetzt.
 - Eine Bewerbung erfolgt auf Deutsch oder Englisch und umfasst folgende Unterlagen:
-  - Vorstellung des Projekts - diese sollte folgendes enthalten:
-    - Beschreibung des Projekts
+  - Vorstellung des Design-Prototypen - diese sollte folgendes enthalten:
+    - Beschreibung des Design-Prototypen
     - Designvorschläge/Screenshots
     - ggf. Link auf ein GitLab/GitHub-Repository
     - ggf. Link auf einen funktionierenden Prototypen
-  - Kurzpräsentation des Projekts auf 3 Folien (als PDF)
-  - Lebenslauf mit stichwortartiger Beschreibung des bisherigen (wissenschaftlichen) Werdegangs der einzelnen Schüler:innen und/oder Student:innen (als PDF)
-- Mit der Teilnahme erklären Sie sich bereit, dass das Projekt auf [www.hl7.at](https://hl7.at/) vorgestellt wird.
+  - Kurzpräsentation des Design-Prototypen auf 3 Folien (als PDF)
+  - Lebenslauf mit stichwortartiger Beschreibung des bisherigen (schulischen oder wissenschaftlichen) Werdegangs der einzelnen Schüler:innen und/oder Student:innen (als PDF)
+- Mit der Teilnahme erklären Sie sich bereit, dass der Design-Prototyp auf [www.hl7.at](https://hl7.at/) vorgestellt wird.
 - Einsendung an [office@hl7.at](mailto:office@hl7.at). Sie erhalten dann eine Rückmeldung, ob Ihre Unterlagen akzeptiert wurden. Nur vollständige Bewerbungen werden akzeptiert.
 - Einsendeschluss: 30. September 2024
-- Die Gewinnerinnen und Gewinner werden im Rahmen der HL7 Jahrestagung 2025 bekannt gegeben.
+- Die Gewinnerinnen und Gewinner werden bis 30. November 2024 bekannt gegeben.
 - Für akzeptierte Bewerberinnen und Bewerber ist daher die Teilnahme an dieser Veranstaltung kostenlos.
-- Im Zuge der Prämierung der besten Arbeiten präsentieren die Preisträgerinnen bzw. Preisträger ihre Einreichung in einem Kurzvortrag (5 Minuten) anhand der eingereichten Kurzpräsentation.
+- Die besten Arbeiten präsentieren ihre Einreichung in einem Kurzvortrag (5 Minuten) anhand der eingereichten Kurzpräsentation im Rahmen der HL7® Jahrestagung 2025.
 - Etwaige durch die Einreichung anfallende Kosten (wie z.B. Reisekosten) werden nicht erstattet.
 - Die Auswahl der besten Arbeiten erfolgt durch eine Jury, die als wissenschaftliches Komitee von der HL7® Austria bestellt wird.
 - Das Einlegen von Rechtsmitteln gegen die vom Ausschuss getroffene Auswahl ist ausgeschlossen.
