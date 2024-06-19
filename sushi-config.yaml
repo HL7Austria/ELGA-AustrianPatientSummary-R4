@@ -6,8 +6,8 @@
 id: hl7.at.fhir.elga.ips
 canonical: https://fhir.hl7.at/elga-austrianpatientsummary-r4
 name: ELGA-AustrianPatientSummary-R4
-title: Austrian IPS (R4)
-description: The FHIR® implementation guide Austrian IPS is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
+title: Austrian Patient Summary (R4)
+description: The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
 status: draft # draft | active | retired | unknown
 jurisdiction: urn:iso:std:iso:3166#AUT
 version: 0.1.0
@@ -50,7 +50,7 @@ pages:
   index.md:
     title: Home
   contest.md:
-    title: Aufruf zum "IPS Visualization Contest" - Gestalte die Zukunft der Patient Summary!
+    title: IPS Visualization Contest
 # pages:
 #   index.md:
 #     title: Example Home
@@ -84,7 +84,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Wettbewerb: contest.html
+  IPS Visualization Contest: contest.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
