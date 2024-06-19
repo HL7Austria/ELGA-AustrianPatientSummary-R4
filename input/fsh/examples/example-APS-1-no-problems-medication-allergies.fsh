@@ -5,7 +5,7 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 
-Instance: IPS-1-no-problems-medication-allergies
+Instance: APS-1-no-problems-medication-allergies
 InstanceOf: AtIpsBundle
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
@@ -13,19 +13,19 @@ Usage: #example
 * type = #document
 * timestamp = "2024-02-08T14:01:30+00:00"
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-composition
+* entry[=].resource = APS-1-no-problems-medication-allergies-composition
 * entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-patient
+* entry[=].resource = APS-1-no-problems-medication-allergies-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-author
+* entry[=].resource = APS-1-no-problems-medication-allergies-author
 * entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-problem-1
+* entry[=].resource = APS-1-no-problems-medication-allergies-problem-1
 * entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-medication-summary-1
+* entry[=].resource = APS-1-no-problems-medication-allergies-medication-summary-1
 * entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
-* entry[=].resource = IPS-1-no-problems-medication-allergies-allergy-1
+* entry[=].resource = APS-1-no-problems-medication-allergies-allergy-1
 
-Instance: IPS-1-no-problems-medication-allergies-composition
+Instance: APS-1-no-problems-medication-allergies-composition
 InstanceOf: AtIpsComposition
 Usage: #inline
 // * language = #de-AT
@@ -51,7 +51,7 @@ Usage: #inline
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
 * section[sectionProblems].entry = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
 
-Instance: IPS-1-no-problems-medication-allergies-patient
+Instance: APS-1-no-problems-medication-allergies-patient
 InstanceOf: AtIpsPatient
 Usage: #inline
 * identifier.type = $v2-0203#SS "Social Security Number"
@@ -80,7 +80,7 @@ Usage: #inline
 * address.country = "AUT"
 * maritalStatus = $v3-MaritalStatus#M "Married"
 
-Instance: IPS-1-no-problems-medication-allergies-author
+Instance: APS-1-no-problems-medication-allergies-author
 InstanceOf: Device
 Usage: #inline
 * text.status = #additional
@@ -88,14 +88,14 @@ Usage: #inline
 * deviceName.name = "IPS Generator"
 * deviceName.type = #user-friendly-name
 
-Instance: IPS-1-no-problems-medication-allergies-problem-1
+Instance: APS-1-no-problems-medication-allergies-problem-1
 InstanceOf: AtIpsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#inactive "Inactive"
 * code = $absent-unknown-uv-ips#no-known-problems "No known problems"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
-Instance: IPS-1-no-problems-medication-allergies-medication-summary-1
+Instance: APS-1-no-problems-medication-allergies-medication-summary-1
 InstanceOf: AtIpsMedicationStatement
 Usage: #inline
 * status = #unknown
@@ -103,7 +103,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T10:31:58+02:00"
 
-Instance: IPS-1-no-problems-medication-allergies-allergy-1
+Instance: APS-1-no-problems-medication-allergies-allergy-1
 InstanceOf: AtIpsAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#inactive "Inactive"
