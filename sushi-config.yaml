@@ -26,7 +26,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0-ballot
   hl7.at.fhir.core.r4: current
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:

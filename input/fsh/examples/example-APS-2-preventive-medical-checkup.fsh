@@ -160,6 +160,8 @@ Usage: #inline
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472)
 * title = "International Patient Summary - Preventive Medical Checkup"
+* attester.mode = #personal
+* attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 // Problem List
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
@@ -589,7 +591,7 @@ Usage: #inline
 // Diagnostic Results
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-1
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -600,7 +602,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-2
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -616,7 +618,7 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -630,7 +632,7 @@ Usage: #inline
 * valueQuantity.code = #mg/dL
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-4
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -644,7 +646,7 @@ Usage: #inline
 * valueQuantity.code = #mg/dL
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-5
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -658,7 +660,7 @@ Usage: #inline
 * valueQuantity.code = #{ratio}
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-6
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -672,7 +674,7 @@ Usage: #inline
 * valueQuantity.code = #mg/dL
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-7
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -686,7 +688,7 @@ Usage: #inline
 * valueQuantity.code = #U/L
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-8
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -702,7 +704,7 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-9
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -713,7 +715,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-10
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -724,7 +726,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-11
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -735,7 +737,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-12
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -746,7 +748,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-13
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -757,7 +759,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-14
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -768,7 +770,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-15
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
