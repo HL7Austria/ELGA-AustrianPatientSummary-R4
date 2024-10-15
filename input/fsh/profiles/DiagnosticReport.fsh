@@ -15,4 +15,4 @@ Description: "This AT IPS profile for the DiagnosticReport resource is derived f
 * result ^slicing.ordered = false
 * result contains observationResults 0..*
 * result[observationResults] 0..*
-* result[observationResults] only Reference(AtIpsObservationResultsLaboratory or AtIpsObservationResultsPathology or AtIpsObservationResultsRadiology or AtIpsObservationResults)
+* result[observationResults] only Reference(AtIpsObservationResultsLaboratoryPathology or AtIpsObservationResultsRadiology)

@@ -28,7 +28,9 @@ Description: "This AT IPS profile for the Composition resource is derived from t
     sectionPlanOfCare 0..1 and
     sectionSocialHistory 0..1 and
     sectionPregnancyHx 0..1 and
-    sectionAdvanceDirectives 0..1
+    sectionAdvanceDirectives 0..1 and
+    sectionAlerts 0..1 and
+    sectionPatientStory 0..1
 
 // ------ Required sections ------ //
 
@@ -105,9 +107,11 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionResults].entry 1..
 * section[sectionResults].entry only Reference(Observation or DiagnosticReport or DocumentReference)
 * section[sectionResults].entry contains
-    resultsObservation 0..* and
+    resultsObservationLaboratoryPathology 0..* and
+    resultsObservationRadiology 0..* and
     resultsDiagnosticReport 0..*
-* section[sectionResults].entry[resultsObservation] only Reference(AtIpsObservationResults)
+* section[sectionResults].entry[resultsObservationLaboratoryPathology] only Reference(AtIpsObservationResultsLaboratoryPathology)
+* section[sectionResults].entry[resultsObservationRadiology] only Reference(AtIpsObservationResultsRadiology)
 * section[sectionResults].entry[resultsDiagnosticReport] only Reference(AtIpsDiagnosticReport)
 
 // ------ Optional sections ------ //
@@ -181,3 +185,13 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionAdvanceDirectives].entry contains
     advanceDirectivesConsent 0..*
 * section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
+
+* section[sectionAlerts].code = $loinc#104605-1
+* section[sectionAlerts].entry ^slicing.discriminator[0].type = #profile
+* section[sectionAlerts].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionAlerts].entry ^slicing.rules = #open
+* section[sectionAlerts].entry only Reference(Flag or DocumentReference)
+* section[sectionAlerts].entry contains alertsFlag 0..*
+* section[sectionAlerts].entry[alertsFlag] only Reference(FlagAlertUvIps)
+
+* section[sectionPatientStory].code = $loinc#81338-6

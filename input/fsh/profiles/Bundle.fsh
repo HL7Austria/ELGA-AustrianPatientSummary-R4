@@ -23,7 +23,6 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
     DiagnosticReport 0..* and
     ImagingStudy 0..* and
     Immunization 0..* and
-    Media 0..* and
     Medication 0..* and
     MedicationRequest 0..* and
     MedicationStatement 0..* and
@@ -31,14 +30,20 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
     PractitionerRole 0..* and
     Procedure 0..* and
     Organization 0..* and
-    ObservationVitalSigns 0..* and
     ObservationPregnancyEdd 0..* and
     ObservationPregnancyOutcome 0..* and
     ObservationPregnancyStatus 0..* and
     ObservationAlcoholUse 0..* and
     ObservationTobaccoUse 0..* and
-    ObservationResults 0..* and
-    Specimen 0..*
+    ObservationResultsLaboratoryPathology 0..* and
+    ObservationResultsRadiology 0..* and
+    ObservationVitalSigns 0..* and
+    Specimen 0..* and
+    Flag 0..* and
+    Clinicalimpression 0..* and
+    Careplan 0..* and
+    Consent 0..* and
+    Documentreference 0..*
 
 * entry[Composition].resource 1..
 * entry[Composition].resource only AtIpsComposition
@@ -67,9 +72,6 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
 * entry[Immunization].resource 1..
 * entry[Immunization].resource only AtIpsImmunization
 
-* entry[Media].resource 1..
-* entry[Media].resource only AtIpsMediaObservation
-
 * entry[Medication].resource 1..
 * entry[Medication].resource only AtIpsMedication
 
@@ -91,9 +93,6 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
 * entry[Organization].resource 1..
 * entry[Organization].resource only AtIpsOrganization
 
-* entry[ObservationVitalSigns].resource 1..
-* entry[ObservationVitalSigns].resource only AtIpsObservationVitalSigns
-
 * entry[ObservationPregnancyEdd].resource 1..
 * entry[ObservationPregnancyEdd].resource only AtIpsObservationPregnancyEdd
 
@@ -109,8 +108,29 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
 * entry[ObservationTobaccoUse].resource 1..
 * entry[ObservationTobaccoUse].resource only AtIpsObservationTobaccoUse
 
-* entry[ObservationResults].resource 1..
-* entry[ObservationResults].resource only AtIpsObservationResults
+* entry[ObservationResultsLaboratoryPathology].resource 1..
+* entry[ObservationResultsLaboratoryPathology].resource only AtIpsObservationResultsLaboratoryPathology
+
+* entry[ObservationResultsRadiology].resource 1..
+* entry[ObservationResultsRadiology].resource only AtIpsObservationResultsRadiology
+
+* entry[ObservationVitalSigns].resource 1..
+* entry[ObservationVitalSigns].resource only AtIpsObservationVitalSigns
 
 * entry[Specimen].resource 1..
 * entry[Specimen].resource only AtIpsSpecimen
+
+* entry[Flag].resource 1..
+* entry[Flag].resource only FlagAlertUvIps
+
+* entry[Clinicalimpression].resource 1..
+* entry[Clinicalimpression].resource only ClinicalImpression
+
+* entry[Careplan].resource 1..
+* entry[Careplan].resource only CarePlan
+
+* entry[Consent].resource 1..
+* entry[Consent].resource only Consent
+
+* entry[Documentreference].resource 1..
+* entry[Documentreference].resource only DocumentReference
