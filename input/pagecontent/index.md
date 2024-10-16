@@ -28,7 +28,7 @@ blockquote.stu-note {
 
 ### Einleitung
 
-Ziel dieses Implementierungsleitfadens ist die Beschreibung von Struktur, Format und Standards des österreischischen Patient Summary (Austrian PS). Dazu werden die Vorgaben des [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/) sowie des [HL7® Austria FHIR® Core Implementation Guides](https://build.fhir.org/ig/HL7Austria/HL7-AT-FHIR-Core-R4/) kombiniert.
+Ziel dieses Implementierungsleitfadens ist die Beschreibung von Struktur, Format und Standards der österreischischen Patient Summary (Austrian PS). Dazu werden die Vorgaben des [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/) sowie des [HL7® Austria FHIR® Core Implementation Guides](https://build.fhir.org/ig/HL7Austria/HL7-AT-FHIR-Core-R4/) kombiniert.
 
 [![overview](austrian-ips-context.drawio.png){: style="width: 50%"}](austrian-ips-context.drawio.png)
 
