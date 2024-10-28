@@ -24,6 +24,8 @@ Usage: #example
 * entry[=].resource = APS-1-no-problems-medication-allergies-medication-summary-1
 * entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
 * entry[=].resource = APS-1-no-problems-medication-allergies-allergy-1
+* entry[+].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
+* entry[=].resource = APS-1-organization
 
 Instance: APS-1-no-problems-medication-allergies-composition
 InstanceOf: AtIpsComposition
@@ -35,6 +37,7 @@ Usage: #inline
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472)
 * title = "International Patient Summary"
+* custodian = Reference(urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd)
 * attester.mode = #personal
 * attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * section[sectionMedications].title = "Medication Summary"
@@ -52,6 +55,14 @@ Usage: #inline
 * section[sectionProblems].text.status = #empty
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
 * section[sectionProblems].entry = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
+* section[sectionProceduresHx].title = "History of Procedures"
+* section[sectionProceduresHx].code = $loinc#47519-4
+* section[sectionProceduresHx].text.status = #empty
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
+* section[sectionMedicalDevices].title = "Medical Devices"
+* section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
+* section[sectionMedicalDevices].text.status = #empty
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
 
 Instance: APS-1-no-problems-medication-allergies-patient
 InstanceOf: AtIpsPatient
@@ -111,3 +122,8 @@ Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#inactive "Inactive"
 * code = $absent-unknown-uv-ips#no-known-allergies "No known allergies"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+
+Instance: APS-1-organization
+InstanceOf: AtIpsOrganization
+Usage: #inline
+* name = "MusterOrganization"

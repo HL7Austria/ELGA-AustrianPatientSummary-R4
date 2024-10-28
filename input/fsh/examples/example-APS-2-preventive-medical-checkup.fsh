@@ -26,6 +26,8 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
 * entry[=].resource = APS-2-preventive-medical-checkup-author
+* entry[+].fullUrl = "urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6"
+* entry[=].resource = APS-2-organization
 // Problem List
 * entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
 * entry[=].resource = APS-2-preventive-medical-checkup-problem-1
@@ -162,6 +164,7 @@ Usage: #inline
 * title = "International Patient Summary - Preventive Medical Checkup"
 * attester.mode = #personal
 * attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6)
 // Problem List
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
@@ -214,6 +217,11 @@ Usage: #inline
 * section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a)
 * section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47)
 * section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8)
+// Medical Devices
+* section[sectionMedicalDevices].title = "Medical Devices"
+* section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
+* section[sectionMedicalDevices].text.status = #empty
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
 // Diagnostic Results
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
@@ -941,3 +949,8 @@ Usage: #inline
 * valueRatio.denominator.unit = "wk"
 * valueRatio.denominator.system = "http://unitsofmeasure.org"
 * valueRatio.denominator.code = #wk
+
+Instance: APS-2-organization
+InstanceOf: AtIpsOrganization
+Usage: #inline
+* name = "MusterOrganization"
