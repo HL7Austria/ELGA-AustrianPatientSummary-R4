@@ -8,6 +8,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionUvIps)
 * subject only Reference(AtIpsPatient)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtIpsComposition)
+* custodian 1..1
 
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
@@ -18,9 +19,9 @@ Description: "This AT IPS profile for the Composition resource is derived from t
     sectionMedications 1..1 and
     sectionAllergies 1..1 and
     sectionProblems 1..1 and
-    sectionProceduresHx 0..1 and
+    sectionProceduresHx 1..1 and
+    sectionMedicalDevices 1..1 and
     sectionImmunizations 0..1 and
-    sectionMedicalDevices 0..1 and
     sectionResults 0..1 and
     sectionVitalSigns 0..1 and
     sectionPastIllnessHx 0..1 and
