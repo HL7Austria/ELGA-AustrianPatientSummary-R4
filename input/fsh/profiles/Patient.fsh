@@ -8,3 +8,4 @@ Description: "This AT IPS profile for the Patient resource is derived from the c
 * name.family 1..1
 * name.given 1..*
 * birthDate 1..1
+* identifier[localPatientId] 1..1
