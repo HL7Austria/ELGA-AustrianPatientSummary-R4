@@ -1,20 +1,6 @@
-Alias: $loinc = http://loinc.org
-Alias: $sct = http://snomed.info/sct
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
-Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
-Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias: $asp = https://termgit.elga.gv.at/CodeSystem/asp-liste
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $elga-laborparameterergaenzung = https://termgit.elga.gv.at/CodeSystem/elga-laborparameterergaenzung
-Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $event-timing = http://hl7.org/fhir/event-timing
-
 Instance: APS-2-preventive-medical-checkup
 InstanceOf: AtIpsBundle
+Description: "APS with preventive medical checkup"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"
@@ -66,7 +52,7 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33"
 * entry[=].resource = APS-2-preventive-medical-checkup-problem-17
 * entry[+].fullUrl = "urn:uuid:f235c566-01aa-457d-ab49-9e422df69863"
-* entry[=].resource = APS-2-preventive-medical-checkup-problem-17-assessment-1
+* entry[=].resource = APS-2-preventive-medical-checkup-problem-17-assessment-1 //21
 // Medication Summary
 * entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
 * entry[=].resource = APS-2-preventive-medical-checkup-medication-summary-1
@@ -270,10 +256,14 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-patient
 InstanceOf: AtIpsPatient
 Usage: #inline
-* identifier.type = $v2-0203#SS "Social Security Number"
-* identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
-* identifier.value = "0000121150"
-* identifier.assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
+* identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
+* identifier[socialSecurityNumber].value = "0000121150"
+* identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[localPatientId].type = $v2-0203#PI "Patient internal identifier"
+* identifier[localPatientId].system = "urn:oid:1.2.3.4.5"
+* identifier[localPatientId].value = "0002"
+* identifier[localPatientId].assigner.display = "Ein GDA in Österreich"
 * name.family = "Test"
 * name.given[0] = "Arnold"
 * gender = #male // 1..1 in AT Core
@@ -628,6 +618,7 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2093-3 "Cholesterin"
@@ -642,6 +633,7 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-4
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2085-9 "HDL-Cholesterin"
@@ -670,6 +662,7 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-6
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2571-8 "Triglyceride"
@@ -684,6 +677,7 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-7
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2324-2 "Gamma-GT"

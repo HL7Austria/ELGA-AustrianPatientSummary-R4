@@ -6,4 +6,4 @@ Description: "This AT IPS profile for the AllergyIntolerance resource is derived
 * . ^short = "AT IPS AllergyIntolerance"
 * ^extension[$imposeProfile].valueCanonical = Canonical(AllergyIntoleranceUvIps)
 * patient only Reference(AtIpsPatient)
-
+* code from $allergy-intolerance (extensible)
