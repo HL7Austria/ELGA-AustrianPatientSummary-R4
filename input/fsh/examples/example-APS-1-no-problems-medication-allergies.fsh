@@ -153,6 +153,9 @@ InstanceOf: AtIpsDevice
 Usage: #inline
 * type = $sct#787483001 "No known device use (situation)"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* deviceName.name = "empty"
+* deviceName.type = #other
+* version.value = "empty"
 
 Instance: APS-1-organization
 InstanceOf: AtIpsOrganization
