@@ -6,3 +6,5 @@ Description: "This AT IPS profile for the Device resource is derived from the ge
 * . ^short = "AT IPS Device"
 * ^extension[$imposeProfile].valueCanonical = Canonical(DeviceUvIps)
 * patient only Reference(AtIpsPatient)
+* deviceName 1..*
+* version 1..*
