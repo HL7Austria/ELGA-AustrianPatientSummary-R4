@@ -40,6 +40,7 @@ Usage: #inline
 * custodian = Reference(urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd)
 * attester.mode = #personal
 * attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* extension[countryOfAffiliation].valueString = "AT"
 * section[sectionMedications].title = "Medication Summary"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #empty

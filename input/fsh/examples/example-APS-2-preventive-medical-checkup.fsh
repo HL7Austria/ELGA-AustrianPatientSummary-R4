@@ -151,6 +151,7 @@ Usage: #inline
 * attester.mode = #personal
 * attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6)
+* extension[countryOfAffiliation].valueString = "AT"
 // Problem List
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
