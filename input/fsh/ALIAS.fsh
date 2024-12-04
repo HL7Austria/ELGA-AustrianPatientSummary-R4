@@ -22,3 +22,4 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
 Alias: $current-smoking-status = https://termgit.elga.gv.at/ValueSet/elga-currentsmokingstatus
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
+Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevices
