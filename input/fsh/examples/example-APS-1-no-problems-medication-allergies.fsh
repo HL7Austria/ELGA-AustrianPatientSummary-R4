@@ -111,14 +111,14 @@ Usage: #inline
 Instance: APS-1-no-problems-medication-allergies-problem-1
 InstanceOf: AtIpsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#inactive "Inactive"
+* clinicalStatus = $condition-clinical#active "Active"
 * code = $sct#373572006  "Clinical finding absent (situation)"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-1-no-problems-medication-allergies-medication-summary-1
 InstanceOf: AtIpsMedicationStatement
 Usage: #inline
-* status = #unknown
+* status = #active
 * medicationCodeableConcept = $sct#787481004 "No known medications (situation)"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T10:31:58+02:00"
