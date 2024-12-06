@@ -4,7 +4,7 @@ Id: at-ips-bundle
 Title: "AT IPS Bundle"
 Description: "This AT IPS profile for the Bundle resource is derived from the general Bundle resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
 * . ^short = "AT IPS Bundle"
-* ^extension[$imposeProfile].valueCanonical = Canonical(BundleUvIps)
+* ^extension[AtIpsImposeProfile].valueCanonical = Canonical(BundleUvIps)
 
 * entry ^slicing.discriminator[0].type = #profile
 * entry ^slicing.discriminator[=].path = "resource"
