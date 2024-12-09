@@ -6,3 +6,6 @@ Description: "This AT IPS profile for the Condition resource is derived from the
 * . ^short = "AT IPS Condition"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ConditionUvIps)
 * subject only Reference(AtIpsPatient)
+* category from $condition-category-vs (extensible)
+* severity from $condition-severity-vs (extensible)
+* bodySite ^binding.strength = #extensible

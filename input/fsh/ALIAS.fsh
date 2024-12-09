@@ -20,6 +20,9 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
+Alias: $allergy-reaction = https://termgit.elga.gv.at/ValueSet/elga-allergyreaction
+Alias: $condition-category-vs = https://termgit.elga.gv.at/ValueSet/elga-problemarten
+Alias: $condition-severity-vs = https://termgit.elga.gv.at/ValueSet/elga-problemseverity
 Alias: $current-smoking-status = https://termgit.elga.gv.at/ValueSet/elga-currentsmokingstatus
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
