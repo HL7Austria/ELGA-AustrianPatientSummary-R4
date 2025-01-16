@@ -1,6 +1,6 @@
 Instance: APS-1-no-problems-medication-allergies
 InstanceOf: AtIpsBundle
-Description: "APS with no problems, medication or allergies"
+Description: "APS with no problems, medication or allergies (minimal example)"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"

@@ -26,6 +26,7 @@ Alias: $condition-severity-vs = https://termgit.elga.gv.at/ValueSet/elga-problem
 Alias: $current-smoking-status = https://termgit.elga.gv.at/ValueSet/elga-currentsmokingstatus
 Alias: $immunization-route = https://termgit.elga.gv.at/ValueSet-eimpf-medikationartanwendung.html
 Alias: $immunization-target-disease = https://termgit.elga.gv.at/ValueSet/eimpf-impfrelevanteerkrankung
+Alias: $immunization-target = https://termgit.elga.gv.at/ValueSet/eimpf-immunizationtarget
 Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevices
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
