@@ -14,4 +14,4 @@ Description: "This value set extens the existing vaccine codes from ELGA GmbH."
     where concept is-a #787482006 "No known immunizations (situation)"
 * include codes from system http://snomed.info/sct
     where concept is-a #787859002 "Vaccine product (medicinal product)"
-* include codes from ValueSet $immunization-target
+* include codes from valueset $immunization-target
