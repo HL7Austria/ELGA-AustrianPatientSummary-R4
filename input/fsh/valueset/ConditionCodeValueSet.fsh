@@ -4,7 +4,7 @@ Title: "AT IPS Condition CodeSystem"
 Description: "This value set collect the different code systems which are used for the AT IPS Condition code."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = false
+* ^experimental = true
 * ^publisher = "ELGA GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://elga.gv.at"

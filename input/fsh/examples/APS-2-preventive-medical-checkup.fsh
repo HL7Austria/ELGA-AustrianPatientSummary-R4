@@ -458,6 +458,7 @@ Usage: #inline
 * category = $observation-category#exam "Exam"
 * code = $sct#1237049003 "Evaluation of risk factors for periodontal disease"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueCodeableConcept = $sct#723509005 "High risk"
 
@@ -817,6 +818,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body height"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 173
 * valueQuantity.unit = "cm"
@@ -830,6 +832,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 68
 * valueQuantity.unit = "kg"
@@ -843,6 +846,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 22.72
 * valueQuantity.unit = "kg/m2"
@@ -858,6 +862,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 130
@@ -877,6 +882,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8867-4 "Heart rate"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 85
 * valueQuantity.unit = "/min"
@@ -890,6 +896,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $sct#276361009 "Waist circumference"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 102
 * valueQuantity.unit = "cm"
@@ -925,6 +932,7 @@ Usage: #inline
 * status = #final
 * code = $loinc#72166-2 "Tobacco smoking status"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueCodeableConcept = $loinc#LA18978-9 "Never smoker"
 
@@ -934,6 +942,7 @@ Usage: #inline
 * status = #final
 * code = $sct#61686008 "Physical exercise"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueRatio.numerator.value = 2.5
 * valueRatio.numerator.unit = "h"

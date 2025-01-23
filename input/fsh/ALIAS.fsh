@@ -17,6 +17,7 @@ Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-Ob
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
