@@ -34,3 +34,4 @@ Alias: $immunization-target = https://termgit.elga.gv.at/ValueSet/eimpf-immuniza
 Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevices
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
+Alias: $specimen-probematerial = https://termgit.elga.gv.at/ValueSet/elga-probenmaterial
