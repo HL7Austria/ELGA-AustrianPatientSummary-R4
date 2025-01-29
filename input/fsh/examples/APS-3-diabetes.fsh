@@ -55,6 +55,9 @@ Usage: #example
 // // Diagnostic Results - Performer
 * entry[+].fullUrl = "urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6"
 * entry[=].resource = example-diab-leitdokument-diagnostic-result-performer-1
+// // Diagnostic Results - Specimen
+* entry[+].fullUrl = "urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7"
+* entry[=].resource = example-diab-leitdokument-diagnostic-specimen-1
 // Vital Signs
 * entry[+].fullUrl = "urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142"
 * entry[=].resource = example-diab-leitdokument-vital-sign-1
@@ -397,6 +400,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
+* specimen = Reference(urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7)
 
 // Diagnostic Results - Performer
 Instance: example-diab-leitdokument-diagnostic-result-performer-1
@@ -418,6 +422,15 @@ Usage: #inline
 * address.city = "Wien"
 * address.postalCode = "1090"
 * address.country = "AUT"
+
+// Diagnostic Results - Specimen
+
+Instance: example-diab-leitdokument-diagnostic-specimen-1
+InstanceOf: AtIpsSpecimen
+Usage: #inline
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* status = $specimen-status#unavailable "Unavailable"
+* type = $sct#119297000 "Blood specimen"
 
 // Vital Signs
 

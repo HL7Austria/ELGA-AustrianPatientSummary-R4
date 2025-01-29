@@ -18,6 +18,7 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $specimen-status = http://hl7.org/fhir/ValueSet/specimen-status
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
@@ -27,11 +28,14 @@ Alias: $condition-severity-vs = https://termgit.elga.gv.at/ValueSet/elga-problem
 Alias: $current-smoking-status = https://termgit.elga.gv.at/ValueSet/elga-currentsmokingstatus
 Alias: $immunization-route = https://termgit.elga.gv.at/ValueSet-eimpf-medikationartanwendung.html
 Alias: $immunization-target-disease = https://termgit.elga.gv.at/ValueSet/eimpf-impfrelevanteerkrankung
-Alias: $laboratory-code = https://termgit.elga.gv.at/ValueSet/elga-laborparameter
 Alias: $laboratory-antibiogramm-code = https://termgit.elga.gv.at/ValueSet/elga-antibiogramm
+Alias: $laboratory-code = https://termgit.elga.gv.at/ValueSet/elga-laborparameter
 Alias: $laboratory-interpretation = https://termgit.elga.gv.at/ValueSet/elga-observationinterpretation
+Alias: $laboratory-structure = https://termgit.elga.gv.at/ValueSet/elga-laborstruktur
 Alias: $immunization-target = https://termgit.elga.gv.at/ValueSet/eimpf-immunizationtarget
 Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevices
+Alias: $observation-category-vs = http://hl7.org/fhir/ValueSet/observation-category
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
 Alias: $specimen-probematerial = https://termgit.elga.gv.at/ValueSet/elga-probenmaterial
+Alias: $specimen-type = https://termgit.elga.gv.at/ValueSet/elga-specimentype

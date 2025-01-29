@@ -82,6 +82,11 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-procedure-history-2
 * entry[+].fullUrl = "urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8"
 * entry[=].resource = APS-2-preventive-medical-checkup-procedure-history-3
+// Specimen for Diagnostic Results
+* entry[+].fullUrl = "urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0"
+* entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-specimen-1
+* entry[+].fullUrl = "urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9"
+* entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-specimen-2
 // Diagnostic Results
 * entry[+].fullUrl = "urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654"
 * entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-1
@@ -588,18 +593,37 @@ Usage: #inline
 // within the last 10 years
 * performedDateTime = "2014"
 
+// Diagnostic Results - Specimen
+
+Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-1
+InstanceOf: AtIpsSpecimen
+Usage: #inline
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* status = $specimen-status#unavailable "Unavailable"
+* type = $sct#119297000 "Blood specimen"
+
+Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-2
+InstanceOf: AtIpsSpecimen
+Usage: #inline
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* status = $specimen-status#available "Available"
+* type = $sct#122575003 "Urine specimen"
+
+
 // Diagnostic Results
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-1
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $observation-category#laboratory "Laboratory"
+* category[+] = $laboratory-structure#03010 "Blutbild"
 * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-2
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -616,6 +640,7 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9)
 * hasMember[+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2)
 * hasMember[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7)
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -631,6 +656,7 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-4
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -646,6 +672,7 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-5
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -660,6 +687,7 @@ Usage: #inline
 * valueQuantity.unit = "{ratio}"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #{ratio}
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-6
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -675,6 +703,7 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-7
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -690,6 +719,7 @@ Usage: #inline
 * valueQuantity.unit = "U/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #U/L
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-8
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -706,6 +736,7 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35)
 * hasMember[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b)
 * hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2)
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-9
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -717,6 +748,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-10
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -728,6 +760,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-11
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -739,6 +772,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-12
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -750,6 +784,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-13
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -761,6 +796,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-14
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -772,6 +808,7 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-15
 InstanceOf: AtIpsObservationResultsLaboratoryPathology
@@ -786,6 +823,7 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 // Diagnostic Results - Performer
 

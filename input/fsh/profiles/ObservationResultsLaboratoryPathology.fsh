@@ -19,4 +19,5 @@ Description: "This AT IPS profile for the Observation resource is derived from t
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code from AtIpsLaboratoryPathologyCodes (extensible)
 * interpretation from $laboratory-interpretation (extensible)
-//* specimen 1..1
+* category from AtIpsLaboratoryPathologyCategory (extensible)
+* specimen 1..1
