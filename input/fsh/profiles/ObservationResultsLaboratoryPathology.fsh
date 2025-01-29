@@ -20,4 +20,3 @@ Description: "This AT IPS profile for the Observation resource is derived from t
 * code from AtIpsLaboratoryPathologyCodes (extensible)
 * interpretation from $laboratory-interpretation (extensible)
 * category from AtIpsLaboratoryPathologyCategory (extensible)
-* specimen 1..1
