@@ -13,7 +13,24 @@
   background-color: #CBE9FD;
   border-left-color: #7F929E;
 }
+
+.note-red {
+  margin: 5px;
+  padding: 10px;
+  background-color:rgb(253, 203, 203);
+  border-left-color:rgb(158, 127, 127);
+  border-left-style: solid;
+  margin-bottom: 25px;
+}
+
+.markdown-toc {
+  display: none;
+}
 </style>
+
+<div markdown="1" class="note-red" >
+<strong>Der Visualization Contest ist beendet, die Fachjury bedankt sich herzlich bei allen Teilnehmer:innen für ihre Einreichungen! Die Gewinner:innen werden im Rahmen der <a href="https://erp.hl7.at/event/hl7-dicom-jahrestagung-2025-1">HL7 & DICOM Jahrestagung</a> am 05.03.2025 die prämierte Visualisierung präsentieren.</strong>
+</div>
 
 ![hl7at](contest.png){: style="width: 10%"}
 
