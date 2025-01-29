@@ -9,7 +9,6 @@ Description: "This AT IPS profile for the Immunization resource is derived from 
 * extension contains ImmunizationBasedOn named basedOn 0..1
 * vaccineCode from AtIpsImmunizationVacineCodes (extensible)
 * route from $immunization-route (extensible)
-* protocolApplied.targetDisease 1..*
 * protocolApplied.targetDisease from $immunization-target-disease (extensible)
 
 Extension:      ImmunizationBasedOn
