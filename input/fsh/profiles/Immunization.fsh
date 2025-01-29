@@ -6,3 +6,15 @@ Description: "This AT IPS profile for the Immunization resource is derived from 
 * . ^short = "AT IPS Immunization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtIpsPatient)
+* extension contains ImmunizationBasedOn named basedOn 0..1
+* vaccineCode from AtIpsImmunizationVacineCodes (extensible)
+* route from $immunization-route (extensible)
+* protocolApplied.targetDisease from $immunization-target-disease (extensible)
+
+Extension:      ImmunizationBasedOn
+Id:             immunization-basedOn
+Title:          "Immunization basedOn"
+Description:    "Authority that the immunization event is based on"
+* value[x] only Reference(CarePlan or MedicationRequest or ServiceRequest or ImmunizationRecommendation)
+* value[x] ^short = "Authority that the immunization event is based on"
+* value[x] 1..1

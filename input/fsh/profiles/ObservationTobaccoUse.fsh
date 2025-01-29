@@ -6,3 +6,4 @@ Description: "This AT IPS profile for the Observation resource is derived from t
 * . ^short = "AT IPS Observation Tobacco Use"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationTobaccoUseUvIps)
 * subject only Reference(AtIpsPatient)
+* valueCodeableConcept from $current-smoking-status (extensible)

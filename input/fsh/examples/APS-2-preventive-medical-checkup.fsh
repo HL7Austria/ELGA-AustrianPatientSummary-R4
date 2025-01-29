@@ -1,20 +1,6 @@
-Alias: $loinc = http://loinc.org
-Alias: $sct = http://snomed.info/sct
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
-Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
-Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias: $asp = https://termgit.elga.gv.at/CodeSystem/asp-liste
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $elga-laborparameterergaenzung = https://termgit.elga.gv.at/CodeSystem/elga-laborparameterergaenzung
-Alias: $observation-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $event-timing = http://hl7.org/fhir/event-timing
-
 Instance: APS-2-preventive-medical-checkup
 InstanceOf: AtIpsBundle
+Description: "APS with preventive medical checkup"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"
@@ -26,6 +12,8 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
 * entry[=].resource = APS-2-preventive-medical-checkup-author
+* entry[+].fullUrl = "urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6"
+* entry[=].resource = APS-2-organization
 // Problem List
 * entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
 * entry[=].resource = APS-2-preventive-medical-checkup-problem-1
@@ -64,7 +52,7 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33"
 * entry[=].resource = APS-2-preventive-medical-checkup-problem-17
 * entry[+].fullUrl = "urn:uuid:f235c566-01aa-457d-ab49-9e422df69863"
-* entry[=].resource = APS-2-preventive-medical-checkup-problem-17-assessment-1
+* entry[=].resource = APS-2-preventive-medical-checkup-problem-17-assessment-1 //21
 // Medication Summary
 * entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
 * entry[=].resource = APS-2-preventive-medical-checkup-medication-summary-1
@@ -94,6 +82,11 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-procedure-history-2
 * entry[+].fullUrl = "urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8"
 * entry[=].resource = APS-2-preventive-medical-checkup-procedure-history-3
+// Specimen for Diagnostic Results
+* entry[+].fullUrl = "urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0"
+* entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-specimen-1
+* entry[+].fullUrl = "urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9"
+* entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-specimen-2
 // Diagnostic Results
 * entry[+].fullUrl = "urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654"
 * entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-1
@@ -160,6 +153,10 @@ Usage: #inline
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472)
 * title = "International Patient Summary - Preventive Medical Checkup"
+* attester.mode = #personal
+* attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6)
+* extension[countryOfAffiliation].valueString = "AT"
 // Problem List
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
@@ -212,6 +209,11 @@ Usage: #inline
 * section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a)
 * section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47)
 * section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8)
+// Medical Devices
+* section[sectionMedicalDevices].title = "Medical Devices"
+* section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
+* section[sectionMedicalDevices].text.status = #empty
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
 // Diagnostic Results
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
@@ -260,10 +262,14 @@ Usage: #inline
 Instance: APS-2-preventive-medical-checkup-patient
 InstanceOf: AtIpsPatient
 Usage: #inline
-* identifier.type = $v2-0203#SS "Social Security Number"
-* identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
-* identifier.value = "0000121150"
-* identifier.assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
+* identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
+* identifier[socialSecurityNumber].value = "0000121150"
+* identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[localPatientId].type = $v2-0203#PI "Patient internal identifier"
+* identifier[localPatientId].system = "urn:oid:1.2.3.4.5"
+* identifier[localPatientId].value = "0002"
+* identifier[localPatientId].assigner.display = "Ein GDA in Österreich"
 * name.family = "Test"
 * name.given[0] = "Arnold"
 * gender = #male // 1..1 in AT Core
@@ -457,6 +463,7 @@ Usage: #inline
 * category = $observation-category#exam "Exam"
 * code = $sct#1237049003 "Evaluation of risk factors for periodontal disease"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueCodeableConcept = $sct#723509005 "High risk"
 
@@ -586,21 +593,40 @@ Usage: #inline
 // within the last 10 years
 * performedDateTime = "2014"
 
+// Diagnostic Results - Specimen
+
+Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-1
+InstanceOf: AtIpsSpecimen
+Usage: #inline
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* status = $specimen-status#unavailable "Unavailable"
+* type = $sct#119297000 "Blood specimen"
+
+Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-2
+InstanceOf: AtIpsSpecimen
+Usage: #inline
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* status = $specimen-status#available "Available"
+* type = $sct#122575003 "Urine specimen"
+
+
 // Diagnostic Results
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-1
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $observation-category#laboratory "Laboratory"
+* category[+] = $laboratory-structure#03010 "Blutbild"
 * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-2
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -614,10 +640,12 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9)
 * hasMember[+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2)
 * hasMember[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7)
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2093-3 "Cholesterin"
@@ -628,10 +656,12 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-4
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2085-9 "HDL-Cholesterin"
@@ -642,9 +672,10 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-5
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -656,10 +687,12 @@ Usage: #inline
 * valueQuantity.unit = "{ratio}"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #{ratio}
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-6
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2571-8 "Triglyceride"
@@ -670,10 +703,12 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-7
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
+* language = #de-AT
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2324-2 "Gamma-GT"
@@ -684,9 +719,10 @@ Usage: #inline
 * valueQuantity.unit = "U/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #U/L
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-8
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -700,9 +736,10 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35)
 * hasMember[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b)
 * hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2)
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-9
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -711,9 +748,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-10
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -722,9 +760,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-11
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -733,9 +772,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-12
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -744,9 +784,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-13
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -755,9 +796,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-14
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -766,9 +808,10 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
+* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-15
-InstanceOf: AtIpsObservationResultsLaboratory
+InstanceOf: AtIpsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -780,6 +823,7 @@ Usage: #inline
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/dL
+* specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 // Diagnostic Results - Performer
 
@@ -812,6 +856,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body height"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 173
 * valueQuantity.unit = "cm"
@@ -825,6 +870,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 68
 * valueQuantity.unit = "kg"
@@ -838,6 +884,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 22.72
 * valueQuantity.unit = "kg/m2"
@@ -853,6 +900,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 130
@@ -872,6 +920,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8867-4 "Heart rate"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 85
 * valueQuantity.unit = "/min"
@@ -885,6 +934,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $sct#276361009 "Waist circumference"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity.value = 102
 * valueQuantity.unit = "cm"
@@ -920,6 +970,7 @@ Usage: #inline
 * status = #final
 * code = $loinc#72166-2 "Tobacco smoking status"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueCodeableConcept = $loinc#LA18978-9 "Never smoker"
 
@@ -929,6 +980,7 @@ Usage: #inline
 * status = #final
 * code = $sct#61686008 "Physical exercise"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueRatio.numerator.value = 2.5
 * valueRatio.numerator.unit = "h"
@@ -939,3 +991,8 @@ Usage: #inline
 * valueRatio.denominator.unit = "wk"
 * valueRatio.denominator.system = "http://unitsofmeasure.org"
 * valueRatio.denominator.code = #wk
+
+Instance: APS-2-organization
+InstanceOf: AtIpsOrganization
+Usage: #inline
+* name = "MusterOrganization"
