@@ -20,7 +20,7 @@ blockquote.stu-note {
   <blockquote class="stu-note">
     <p><img src="contest.png" alt="hl7at" style="width: 5%"></p>
     <p></p>
-    <p><strong>Aufruf zum <a href="contest.html">IPS Visualization Contest</a> - Gestalte die Zukunft des Patient Summary!</strong></p>
+    <p><strong>Der <a href="contest.html">IPS Visualization Contest</a> ist beendet, die Fachjury bedankt sich herzlich bei allen Teilnehmer:innen für ihre Einreichungen!</strong></p>
     <p></p>
     <p></p>
   </blockquote>
