@@ -68,6 +68,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 
 // ------ Recommended sections ------ //
 
+* section[sectionProceduresHx] obeys ips-comp-1
 * section[sectionProceduresHx].code = $loinc#47519-4
 * section[sectionProceduresHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionProceduresHx].entry ^slicing.discriminator[=].path = "resolve()"
@@ -86,6 +87,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     immunization 0..*
 * section[sectionImmunizations].entry[immunization] only Reference(AtApsImmunization)
 
+* section[sectionMedicalDevices] obeys ips-comp-1
 * section[sectionMedicalDevices].code = $loinc#46264-8
 * section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedicalDevices].entry ^slicing.discriminator[=].path = "resolve()"
@@ -200,3 +202,8 @@ Description:    "Add the element for Country of Affiliation"
 * value[x] only string
 * value[x] ^short = "The country of affiliation of the patient. (e.g. can be ISO 3166 2 or 3 letter code)"
 * value[x] 1..1
+
+Invariant: ips-comp-1
+Description: "Either section.entry or emptyReason are present"
+Expression: "(entry.reference.exists() or emptyReason.exists())"
+Severity: #error
