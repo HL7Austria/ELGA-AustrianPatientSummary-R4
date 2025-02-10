@@ -37,5 +37,6 @@ Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevice
 Alias: $observation-category-vs = http://hl7.org/fhir/ValueSet/observation-category
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
-Alias: $specimen-probematerial = https://termgit.elga.gv.at/ValueSet/elga-probenmaterial
+Alias: $elga-probenmaterial = https://termgit.elga.gv.at/ValueSet/elga-probenmaterial
+Alias: $elga-specimentype = https://termgit.elga.gv.at/ValueSet/elga-specimentype
 Alias: $specimen-type = https://termgit.elga.gv.at/ValueSet/elga-specimentype

@@ -6,11 +6,11 @@ Description: "This AT IPS profile for the Specimen resource is derived from the 
 * . ^short = "AT IPS Specimen"
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenUvIps)
 * subject only Reference(AtIpsPatient)
-* type from $specimen-probematerial (extensible)
+* type from $elga-probenmaterial (extensible)
 * type ^binding.extension[0].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate
 * type ^binding.extension[=].extension[+].url = "valueSet"
-* type ^binding.extension[=].extension[=].valueCanonical = "https://termgit.elga.gv.at/ValueSet/elga-specimentype"
+* type ^binding.extension[=].extension[=].valueCanonical = $elga-specimentype
 * type ^binding.extension[=].extension[+].url = "documentation"
 * type ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Specimentype\" - retained for backward compatibility."
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
