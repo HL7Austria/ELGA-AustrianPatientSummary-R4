@@ -126,8 +126,8 @@ Description: "This AT APS profile for the Bundle resource is derived from the ge
 * entry[ClinicalImpression].resource 1..
 * entry[ClinicalImpression].resource only ClinicalImpression
 
-* entry[Careplan].resource 1..
-* entry[Careplan].resource only CarePlan
+* entry[CarePlan].resource 1..
+* entry[CarePlan].resource only CarePlan
 
 * entry[Consent].resource 1..
 * entry[Consent].resource only Consent
