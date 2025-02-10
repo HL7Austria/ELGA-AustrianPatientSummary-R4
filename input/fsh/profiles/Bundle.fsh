@@ -40,10 +40,10 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
     ObservationVitalSigns 0..* and
     Specimen 0..* and
     Flag 0..* and
-    Clinicalimpression 0..* and
+    ClinicalImpression 0..* and
     Careplan 0..* and
     Consent 0..* and
-    Documentreference 0..*
+    DocumentReference 0..*
 
 * entry[Composition].resource 1..
 * entry[Composition].resource only AtIpsComposition
@@ -123,8 +123,8 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
 * entry[Flag].resource 1..
 * entry[Flag].resource only FlagAlertUvIps
 
-* entry[Clinicalimpression].resource 1..
-* entry[Clinicalimpression].resource only ClinicalImpression
+* entry[ClinicalImpression].resource 1..
+* entry[ClinicalImpression].resource only ClinicalImpression
 
 * entry[Careplan].resource 1..
 * entry[Careplan].resource only CarePlan
@@ -132,5 +132,5 @@ Description: "This AT IPS profile for the Bundle resource is derived from the ge
 * entry[Consent].resource 1..
 * entry[Consent].resource only Consent
 
-* entry[Documentreference].resource 1..
-* entry[Documentreference].resource only DocumentReference
+* entry[DocumentReference].resource 1..
+* entry[DocumentReference].resource only DocumentReference
