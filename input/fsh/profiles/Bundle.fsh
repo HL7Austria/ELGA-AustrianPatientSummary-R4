@@ -41,7 +41,7 @@ Description: "This AT APS profile for the Bundle resource is derived from the ge
     Specimen 0..* and
     Flag 0..* and
     ClinicalImpression 0..* and
-    Careplan 0..* and
+    CarePlan 0..* and
     Consent 0..* and
     DocumentReference 0..*
 
