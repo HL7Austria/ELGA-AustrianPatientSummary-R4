@@ -1,5 +1,5 @@
 Instance: APS-1-no-problems-medication-allergies
-InstanceOf: AtIpsBundle
+InstanceOf: AtApsBundle
 Description: "APS with no problems, medication or allergies (minimal example)"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
@@ -28,7 +28,7 @@ Usage: #example
 * entry[=].resource = APS-1-no-problems-device-1
 
 Instance: APS-1-no-problems-medication-allergies-composition
-InstanceOf: AtIpsComposition
+InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #preliminary
@@ -68,7 +68,7 @@ Usage: #inline
 * section[sectionMedicalDevices].entry = Reference(urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05)
 
 Instance: APS-1-no-problems-medication-allergies-patient
-InstanceOf: AtIpsPatient
+InstanceOf: AtApsPatient
 Usage: #inline
 * identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
 * identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
@@ -109,14 +109,14 @@ Usage: #inline
 * deviceName.type = #user-friendly-name
 
 Instance: APS-1-no-problems-medication-allergies-problem-1
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * code = $sct#373572006  "Clinical finding absent (situation)"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-1-no-problems-medication-allergies-medication-summary-1
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $sct#787481004 "No known medications (situation)"
@@ -124,14 +124,14 @@ Usage: #inline
 * effectiveDateTime = "2024-02-08T10:31:58+02:00"
 
 Instance: APS-1-no-problems-medication-allergies-allergy-1
-InstanceOf: AtIpsAllergyIntolerance
+InstanceOf: AtApsAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * code = $sct#716186003 "No known allergy (situation)"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-1-no-problems-procedure-1
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #unknown
 * code = $sct#787480003 "No known procedures (situation)"
@@ -140,7 +140,7 @@ Usage: #inline
 * performedDateTime.extension.valueCode = #unknown
 
 Instance: APS-1-no-problems-device-use-1
-InstanceOf: AtIpsDeviceUseStatement
+InstanceOf: AtApsDeviceUseStatement
 Usage: #inline
 * status = #active
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
@@ -149,7 +149,7 @@ Usage: #inline
 * timingDateTime.extension.valueCode = #unknown
 
 Instance: APS-1-no-problems-device-1
-InstanceOf: AtIpsDevice
+InstanceOf: AtApsDevice
 Usage: #inline
 * type = $sct#787483001 "No known device use (situation)"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
@@ -158,6 +158,6 @@ Usage: #inline
 * version.value = "empty"
 
 Instance: APS-1-organization
-InstanceOf: AtIpsOrganization
+InstanceOf: AtApsOrganization
 Usage: #inline
 * name = "MusterOrganization"

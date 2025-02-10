@@ -1,5 +1,5 @@
 Instance: procedure-01
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Title: "Procedure - Surgical Placement of Coronary Stent"
 Description: "Procedure - Surgical Placement of Coronary Stent"
 Usage: #example

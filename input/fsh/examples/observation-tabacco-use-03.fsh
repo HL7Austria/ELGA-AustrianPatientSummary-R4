@@ -1,5 +1,5 @@
 Instance: tobacco-use-03
-InstanceOf: AtIpsObservationTobaccoUse
+InstanceOf: AtApsObservationTobaccoUse
 Description: "Social History - Raucher Beispiel"
 Usage: #example
 * status = #final

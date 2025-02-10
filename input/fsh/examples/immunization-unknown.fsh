@@ -1,5 +1,5 @@
 Instance: immunization-vaccine-unknown
-InstanceOf: AtIpsImmunization
+InstanceOf: AtApsImmunization
 Description: "Immunisierung mit unbekannten Impfstoff"
 Usage: #example
 * language = #de-AT

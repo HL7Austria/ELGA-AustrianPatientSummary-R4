@@ -1,6 +1,6 @@
-ValueSet: AtIpsLaboratoryPathologyCodes
-Id: at-ips-laboratory-pathology-codes
-Title: "AT IPS Laboratory/Pathology Codes"
+ValueSet: AtApsLaboratoryPathologyCodes
+Id: at-aps-laboratory-pathology-codes
+Title: "AT APS Laboratory/Pathology Codes"
 Description: "This value set combines the used value sets of ELGA for Laboratory and Pathology reports."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active

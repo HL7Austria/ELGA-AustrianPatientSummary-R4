@@ -1,5 +1,5 @@
 Instance: Patient/001
-InstanceOf: AtIpsPatient
+InstanceOf: AtApsPatient
 Description: "Patient - Female Minimal"
 Usage: #example
 * id = "002"

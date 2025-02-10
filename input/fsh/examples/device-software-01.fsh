@@ -1,5 +1,5 @@
 Instance: device-software-02
-InstanceOf: AtIpsDevice
+InstanceOf: AtApsDevice
 Description: "Beispiel einer Software"
 Usage: #example
 * id = "002"
@@ -13,7 +13,7 @@ Usage: #example
 * parent = Reference(Device/001) "Best Health Device"
 
 Instance: device-01
-InstanceOf: AtIpsDevice
+InstanceOf: AtApsDevice
 Description: "Beispiel eines Device"
 Usage: #example
 * id = "001"

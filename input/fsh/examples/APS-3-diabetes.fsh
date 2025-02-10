@@ -1,5 +1,5 @@
 Instance: APS-3-diabetes
-InstanceOf: AtIpsBundle
+InstanceOf: AtApsBundle
 Description: "Diabetes Checklist / Leitdokument"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
@@ -67,14 +67,14 @@ Usage: #example
 // Social History
 * entry[+].fullUrl = "urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e"
 * entry[=].resource = example-diab-leitdokument-social-history-1
-// Medical Devices 
+// Medical Devices
 * entry[+].fullUrl = "urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05"
 * entry[=].resource = example-diab-leitdokument-device-use-1
 * entry[+].fullUrl = "urn:uuid:a1a80313-a757-4062-b0d7-d04fd2a04602"
 * entry[=].resource = example-diab-device
 
 Instance: example-diab-leitdokument-composition
-InstanceOf: AtIpsComposition
+InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #final
@@ -95,9 +95,9 @@ Usage: #inline
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Problem list - Reported</p></div>"
 * section[sectionProblems].entry[0] = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
 * section[sectionProblems].entry[+] = Reference(urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) 
-* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad2e) 
-* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) 
+* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad2e)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde)
 // Problem List - Family history
 * section[sectionProblems].entry[+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91)
 // Problem List - periodontal disease risk
@@ -159,7 +159,7 @@ Usage: #inline
 * section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:39cd75da-2456-46a9-a703-89d8b65ae63b)
 
 Instance: example-diab-leitdokument-patient
-InstanceOf: AtIpsPatient
+InstanceOf: AtApsPatient
 Usage: #inline
 * id = "001"
 * identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
@@ -181,7 +181,7 @@ Usage: #inline
 * address.country = "AUT"
 
 Instance: example-diab-leitdokument-author
-InstanceOf: AtIpsPractitioner
+InstanceOf: AtApsPractitioner
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:1.2.40.0.10.99.1.2.3.4"
@@ -194,7 +194,7 @@ Usage: #inline
 
 // Diabetes Hauptdiagnose
 Instance: example-diab-leitdokument-problem-3
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -206,7 +206,7 @@ Usage: #inline
 
 // // Diabetes Nebendiagnosen
 Instance: example-diab-leitdokument-problem-6
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -216,7 +216,7 @@ Usage: #inline
 * recordedDate = "2021-02-08T14:01:30+00:00"
 
 Instance: example-diab-leitdokument-problem-1
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -225,7 +225,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-problem-2
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -234,7 +234,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-problem-5
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -246,7 +246,7 @@ Usage: #inline
 // Problem List - Family history
 
 Instance: example-diab-leitdokument-problem-13
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -255,7 +255,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-problem-14
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -264,7 +264,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-problem-15
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -273,7 +273,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-problem-16
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -283,7 +283,7 @@ Usage: #inline
 
 // risk of periodontal disease
 Instance: example-diab-leitdokument-problem-17
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#inactive "Inactive"
 * verificationStatus = $condition-ver-status#provisional "Provisional"
@@ -316,7 +316,7 @@ Usage: #inline
 * contained.verificationStatus = $condition-ver-status#confirmed
 * contained.code.text = "Diabetes"
 * contained.subject.reference = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-* contained.subject.display = "Susi Testpatientin" 
+* contained.subject.display = "Susi Testpatientin"
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
@@ -327,7 +327,7 @@ Usage: #inline
 * category.text = "Plan zur Patientenschulung"
 * title = "Spezialschulung für Diabetespatienten mit Retinophatie"
 * description = "Information über eine Veranstaltung des Diabetes"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin" 
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * period.end = "2024-04-12"
 * created = "2024-03-29"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
@@ -348,7 +348,7 @@ Usage: #inline
 // Medication Summary
 
 Instance: example-diab-leitdokument-medication-summary-1
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#2443061 "EBETREXAT TBL 10MG"
@@ -368,7 +368,7 @@ Usage: #inline
 // Allergies and Intolerances
 
 Instance: example-diab-leitdokument-allergy-1
-InstanceOf: AtIpsAllergyIntolerance // DiabAllergyIntolerance
+InstanceOf: AtApsAllergyIntolerance // DiabAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * code = $sct#89055006 "Benzylpenicillin Natrium"
@@ -381,7 +381,7 @@ Usage: #inline
 // History of Procedures
 
 Instance: example-diab-leitdokument-procedure-history-1
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
 * code = $sct#770606008 "Total replacement of left hip joint"
@@ -391,7 +391,7 @@ Usage: #inline
 // Diagnostic Results
 
 Instance: example-diab-leitdokument-diagnostic-result-1
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -404,7 +404,7 @@ Usage: #inline
 
 // Diagnostic Results - Performer
 Instance: example-diab-leitdokument-diagnostic-result-performer-1
-InstanceOf: AtIpsOrganization
+InstanceOf: AtApsOrganization
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:82f802a7-56a9-49b4-a675-95da08f0d7a6"
@@ -426,7 +426,7 @@ Usage: #inline
 // Diagnostic Results - Specimen
 
 Instance: example-diab-leitdokument-diagnostic-specimen-1
-InstanceOf: AtIpsSpecimen
+InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * status = $specimen-status#unavailable "Unavailable"
@@ -435,7 +435,7 @@ Usage: #inline
 // Vital Signs
 
 Instance: example-diab-leitdokument-vital-sign-1
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * language = #de-AT
@@ -453,7 +453,7 @@ Usage: #inline
 // Past History of Illness
 
 Instance: example-diab-leitdokument-illness-history-1
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved "Resolved"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -462,7 +462,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 Instance: example-diab-leitdokument-illness-history-2
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved "Resolved"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -473,7 +473,7 @@ Usage: #inline
 // Social History
 
 Instance: example-diab-leitdokument-social-history-1
-InstanceOf: AtIpsObservationTobaccoUse
+InstanceOf: AtApsObservationTobaccoUse
 Usage: #inline
 * status = #final
 * code = $loinc#72166-2 "Tobacco smoking status"
@@ -501,7 +501,7 @@ Usage: #inline
 * valueRatio.denominator.code = #wk
 
 Instance: example-diab-leitdokument-device-use-1  //todo
-InstanceOf: AtIpsDeviceUseStatement
+InstanceOf: AtApsDeviceUseStatement
 Usage: #inline
 * status = #active
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
@@ -510,7 +510,7 @@ Usage: #inline
 * timingDateTime.extension.valueCode = #unknown
 
 Instance: example-diab-device
-InstanceOf: AtIpsDevice
+InstanceOf: AtApsDevice
 Usage: #inline
 * type = $sct#787483001 "No known device use (situation)"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
@@ -519,6 +519,6 @@ Usage: #inline
 * version.value = "empty"
 
 Instance: example-diab-organization
-InstanceOf: AtIpsOrganization
+InstanceOf: AtApsOrganization
 Usage: #inline
 * name = "MusterOrganization"

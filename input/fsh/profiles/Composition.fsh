@@ -1,13 +1,13 @@
 
-Profile: AtIpsComposition
+Profile: AtApsComposition
 Parent: Composition
-Id: at-ips-composition
-Title: "AT IPS Composition"
-Description: "This AT IPS profile for the Composition resource is derived from the general Composition resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
-* . ^short = "AT IPS Composition"
+Id: at-aps-composition
+Title: "AT APS Composition"
+Description: "This AT APS profile for the Composition resource is derived from the general Composition resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* . ^short = "AT APS Composition"
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionUvIps)
-* subject only Reference(AtIpsPatient)
-* relatesTo.target[x] only Identifier or Reference(Composition or AtIpsComposition)
+* subject only Reference(AtApsPatient)
+* relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
 * extension contains CountryOfAffiliation named countryOfAffiliation 1..1
 * extension[countryOfAffiliation] ^short = "Country of affiliation of the patient. (e.g. can be ISO 3166 2 or 3 letter code)"
@@ -45,8 +45,8 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionMedications].entry contains
     medicationStatement 0..* and
     medicationRequest 0..*
-* section[sectionMedications].entry[medicationStatement] only Reference(AtIpsMedicationStatement)
-* section[sectionMedications].entry[medicationRequest] only Reference(AtIpsMedicationRequest)
+* section[sectionMedications].entry[medicationStatement] only Reference(AtApsMedicationStatement)
+* section[sectionMedications].entry[medicationRequest] only Reference(AtApsMedicationRequest)
 
 * section[sectionAllergies].code = $loinc#48765-2
 * section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
@@ -55,7 +55,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionAllergies].entry only Reference (AllergyIntolerance or DocumentReference)
 * section[sectionAllergies].entry contains
     allergyOrIntolerance 0..*
-* section[sectionAllergies].entry[allergyOrIntolerance] only Reference(AtIpsAllergyIntolerance)
+* section[sectionAllergies].entry[allergyOrIntolerance] only Reference(AtApsAllergyIntolerance)
 
 * section[sectionProblems].code = $loinc#11450-4
 * section[sectionProblems].entry ^slicing.discriminator[0].type = #profile
@@ -64,7 +64,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionProblems].entry only Reference(Condition or DocumentReference)
 * section[sectionProblems].entry contains
     problem 0..*
-* section[sectionProblems].entry[problem] only Reference(AtIpsCondition)
+* section[sectionProblems].entry[problem] only Reference(AtApsCondition)
 
 // ------ Recommended sections ------ //
 
@@ -75,7 +75,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionProceduresHx].entry only Reference(Procedure or DocumentReference)
 * section[sectionProceduresHx].entry contains
     procedure 0..*
-* section[sectionProceduresHx].entry[procedure] only Reference(AtIpsProcedure)
+* section[sectionProceduresHx].entry[procedure] only Reference(AtApsProcedure)
 
 * section[sectionImmunizations].code = $loinc#11369-6
 * section[sectionImmunizations].entry ^slicing.discriminator[0].type = #profile
@@ -84,7 +84,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionImmunizations].entry only Reference(Immunization or DocumentReference)
 * section[sectionImmunizations].entry contains
     immunization 0..*
-* section[sectionImmunizations].entry[immunization] only Reference(AtIpsImmunization)
+* section[sectionImmunizations].entry[immunization] only Reference(AtApsImmunization)
 
 * section[sectionMedicalDevices].code = $loinc#46264-8
 * section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
@@ -93,7 +93,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionMedicalDevices].entry only Reference(DeviceUseStatement or DocumentReference)
 * section[sectionMedicalDevices].entry contains
     deviceStatement 0..*
-* section[sectionMedicalDevices].entry[deviceStatement] only Reference(AtIpsDeviceUseStatement)
+* section[sectionMedicalDevices].entry[deviceStatement] only Reference(AtApsDeviceUseStatement)
 
 * section[sectionResults].code = $loinc#30954-2
 * section[sectionResults].entry ^slicing.discriminator[0].type = #type
@@ -106,9 +106,9 @@ Description: "This AT IPS profile for the Composition resource is derived from t
     resultsObservationLaboratoryPathology 0..* and
     resultsObservationRadiology 0..* and
     resultsDiagnosticReport 0..*
-* section[sectionResults].entry[resultsObservationLaboratoryPathology] only Reference(AtIpsObservationResultsLaboratoryPathology)
-* section[sectionResults].entry[resultsObservationRadiology] only Reference(AtIpsObservationResultsRadiology)
-* section[sectionResults].entry[resultsDiagnosticReport] only Reference(AtIpsDiagnosticReport)
+* section[sectionResults].entry[resultsObservationLaboratoryPathology] only Reference(AtApsObservationResultsLaboratoryPathology)
+* section[sectionResults].entry[resultsObservationRadiology] only Reference(AtApsObservationResultsRadiology)
+* section[sectionResults].entry[resultsDiagnosticReport] only Reference(AtApsDiagnosticReport)
 
 // ------ Optional sections ------ //
 
@@ -119,7 +119,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionVitalSigns].entry only Reference(Observation or DocumentReference)
 * section[sectionVitalSigns].entry contains
     vitalSign 0..*
-* section[sectionVitalSigns].entry[vitalSign] only Reference(AtIpsObservationVitalSigns)
+* section[sectionVitalSigns].entry[vitalSign] only Reference(AtApsObservationVitalSigns)
 
 * section[sectionPastIllnessHx].code = $loinc#11348-0
 * section[sectionPastIllnessHx].entry ^slicing.discriminator[0].type = #profile
@@ -128,7 +128,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionPastIllnessHx].entry only Reference(Condition or DocumentReference)
 * section[sectionPastIllnessHx].entry contains
     pastProblem 0..*
-* section[sectionPastIllnessHx].entry[pastProblem] only Reference(AtIpsCondition)
+* section[sectionPastIllnessHx].entry[pastProblem] only Reference(AtApsCondition)
 
 * section[sectionFunctionalStatus].code = $loinc#47420-5
 * section[sectionFunctionalStatus].entry ^slicing.discriminator[0].type = #profile
@@ -138,7 +138,7 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionFunctionalStatus].entry contains
     disability 0..* and
     functionalAssessment 0..*
-* section[sectionFunctionalStatus].entry[disability] only Reference(AtIpsCondition)
+* section[sectionFunctionalStatus].entry[disability] only Reference(AtApsCondition)
 * section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(ClinicalImpression)
 
 * section[sectionPlanOfCare].code = $loinc#18776-5
@@ -158,8 +158,8 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionSocialHistory].entry contains
     smokingTobaccoUse 0..1 and
     alcoholUse 0..1
-* section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(AtIpsObservationTobaccoUse)
-* section[sectionSocialHistory].entry[alcoholUse] only Reference(AtIpsObservationAlcoholUse)
+* section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(AtApsObservationTobaccoUse)
+* section[sectionSocialHistory].entry[alcoholUse] only Reference(AtApsObservationAlcoholUse)
 
 * section[sectionPregnancyHx].code = $loinc#10162-6
 * section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
@@ -169,8 +169,8 @@ Description: "This AT IPS profile for the Composition resource is derived from t
 * section[sectionPregnancyHx].entry contains
     pregnancyStatus 0..* and
     pregnancyOutcomeSummary 0..*
-* section[sectionPregnancyHx].entry[pregnancyStatus] only Reference(AtIpsObservationPregnancyStatus)
-* section[sectionPregnancyHx].entry[pregnancyOutcomeSummary] only Reference(AtIpsObservationPregnancyOutcome)
+* section[sectionPregnancyHx].entry[pregnancyStatus] only Reference(AtApsObservationPregnancyStatus)
+* section[sectionPregnancyHx].entry[pregnancyOutcomeSummary] only Reference(AtApsObservationPregnancyOutcome)
 
 * section[sectionAdvanceDirectives].code = $loinc#42348-3
 * section[sectionAdvanceDirectives].entry ^slicing.discriminator[0].type = #profile

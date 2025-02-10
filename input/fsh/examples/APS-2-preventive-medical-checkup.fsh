@@ -1,5 +1,5 @@
 Instance: APS-2-preventive-medical-checkup
-InstanceOf: AtIpsBundle
+InstanceOf: AtApsBundle
 Description: "APS with preventive medical checkup"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
@@ -144,7 +144,7 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-social-history-2
 
 Instance: APS-2-preventive-medical-checkup-composition
-InstanceOf: AtIpsComposition
+InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #final
@@ -260,7 +260,7 @@ Usage: #inline
 * section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984)
 
 Instance: APS-2-preventive-medical-checkup-patient
-InstanceOf: AtIpsPatient
+InstanceOf: AtApsPatient
 Usage: #inline
 * identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
 * identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
@@ -281,7 +281,7 @@ Usage: #inline
 * address.country = "AUT"
 
 Instance: APS-2-preventive-medical-checkup-author
-InstanceOf: AtIpsPractitioner
+InstanceOf: AtApsPractitioner
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:1.2.40.0.10.99.1.2.3.4"
@@ -293,7 +293,7 @@ Usage: #inline
 // Problem List
 
 Instance: APS-2-preventive-medical-checkup-problem-1
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -302,7 +302,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-2
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -312,7 +312,7 @@ Usage: #inline
 
 // Type-2-Diabetes
 Instance: APS-2-preventive-medical-checkup-problem-3
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -321,7 +321,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-4
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -330,7 +330,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-5
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -340,7 +340,7 @@ Usage: #inline
 
 // shall this condition be documented? "normal"
 Instance: APS-2-preventive-medical-checkup-problem-6
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -350,7 +350,7 @@ Usage: #inline
 
 // shall this condition be documented? "normal"
 Instance: APS-2-preventive-medical-checkup-problem-7
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -360,7 +360,7 @@ Usage: #inline
 
 // shall this condition be documented as medication?
 Instance: APS-2-preventive-medical-checkup-problem-8
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -372,7 +372,7 @@ Usage: #inline
 // * abatementDateTime = "2025-03"
 
 Instance: APS-2-preventive-medical-checkup-problem-9
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -381,7 +381,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-10
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -390,7 +390,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-11
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -399,7 +399,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-12
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -410,7 +410,7 @@ Usage: #inline
 // Problem List - Family history
 
 Instance: APS-2-preventive-medical-checkup-problem-13
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -419,7 +419,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-14
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -428,7 +428,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-15
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -437,7 +437,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-problem-16
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -447,7 +447,7 @@ Usage: #inline
 
 // risk of periodontal disease
 Instance: APS-2-preventive-medical-checkup-problem-17
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#inactive "Inactive"
 * verificationStatus = $condition-ver-status#provisional "Provisional"
@@ -470,7 +470,7 @@ Usage: #inline
 // Medication Summary
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-1
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#2443061 "EBETREXAT TBL 10MG"
@@ -487,7 +487,7 @@ Usage: #inline
 * dosage.doseAndRate.doseQuantity.code = #15054000"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-2
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#3779722 "ELIQUIS FTBL 2,5MG"
@@ -496,7 +496,7 @@ Usage: #inline
 * dosage.text = "S:1-0-0-1"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-3
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#3910895 "FORXIGA FTBL 10MG"
@@ -505,7 +505,7 @@ Usage: #inline
 * dosage.text = "S:1-0-0-0"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-4
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#4476685 "GEROFOL TBL 5MG"
@@ -514,7 +514,7 @@ Usage: #inline
 * dosage.text = "S:MO, MI"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-5
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#3780576 "IBANDRONSAEURE SAN FSPR 3MG"
@@ -523,7 +523,7 @@ Usage: #inline
 * dosage.text = "S:0,33/Monat, alle 3 Monate"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-6
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#1294446 "METFORMIN HEX FTBL  500MG"
@@ -532,7 +532,7 @@ Usage: #inline
 * dosage.text = "S:1-0-0-1"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-7
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#2450888 "RAMIPRIL 1A TBL  5MG"
@@ -541,7 +541,7 @@ Usage: #inline
 * dosage.text = "S:1-0-0-0"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-8
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#4466132 "ROSUVASTATIN 1A FTBL 10MG"
@@ -549,7 +549,7 @@ Usage: #inline
 * effectivePeriod.start = "2024-02-08T10:31:58+02:00"
 
 Instance: APS-2-preventive-medical-checkup-medication-summary-9
-InstanceOf: AtIpsMedicationStatement
+InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $asp#4477087 "SEMGLEE INJ 100E/ML FPEN 3ML"
@@ -560,7 +560,7 @@ Usage: #inline
 // Allergies and Intolerances
 
 Instance: APS-2-preventive-medical-checkup-allergy-1
-InstanceOf: AtIpsAllergyIntolerance
+InstanceOf: AtApsAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * code = $sct#764146007 "Penicillin"
@@ -569,7 +569,7 @@ Usage: #inline
 // History of Procedures
 
 Instance: APS-2-preventive-medical-checkup-procedure-history-1
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
 * code = $sct#770606008 "Total replacement of left hip joint"
@@ -577,7 +577,7 @@ Usage: #inline
 * performedDateTime = "2010"
 
 Instance: APS-2-preventive-medical-checkup-procedure-history-2
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
 * code = $sct#80146002 "Appendectomy"
@@ -585,7 +585,7 @@ Usage: #inline
 * performedDateTime = "1962"
 
 Instance: APS-2-preventive-medical-checkup-procedure-history-3
-InstanceOf: AtIpsProcedure
+InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
 * code = $sct#851000119109 "History of colonoscopy"
@@ -596,14 +596,14 @@ Usage: #inline
 // Diagnostic Results - Specimen
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-1
-InstanceOf: AtIpsSpecimen
+InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * status = $specimen-status#unavailable "Unavailable"
 * type = $sct#119297000 "Blood specimen"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-2
-InstanceOf: AtIpsSpecimen
+InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * status = $specimen-status#available "Available"
@@ -613,7 +613,7 @@ Usage: #inline
 // Diagnostic Results
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-1
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory "Laboratory"
@@ -626,7 +626,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-2
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -643,7 +643,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
@@ -659,7 +659,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-4
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
@@ -675,7 +675,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-5
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -690,7 +690,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-6
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
@@ -706,7 +706,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-7
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
@@ -722,7 +722,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-8
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -739,7 +739,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-9
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -751,7 +751,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-10
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -763,7 +763,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-11
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -775,7 +775,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-12
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -787,7 +787,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-13
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -799,7 +799,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-14
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -811,7 +811,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-15
-InstanceOf: AtIpsObservationResultsLaboratoryPathology
+InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -828,7 +828,7 @@ Usage: #inline
 // Diagnostic Results - Performer
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-performer-1
-InstanceOf: AtIpsOrganization
+InstanceOf: AtApsOrganization
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:1.2.40.0.34.99.4613"
@@ -850,7 +850,7 @@ Usage: #inline
 // Vital Signs
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-1
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -864,7 +864,7 @@ Usage: #inline
 * valueQuantity.code = #cm
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-2
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -878,7 +878,7 @@ Usage: #inline
 * valueQuantity.code = #kg
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-3
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -894,7 +894,7 @@ Usage: #inline
 * interpretation = $observation-interpretation#H "High"
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-4
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -914,7 +914,7 @@ Usage: #inline
 * component[=].valueQuantity.code = #mm[Hg]
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-5
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -928,7 +928,7 @@ Usage: #inline
 * valueQuantity.code = #/min
 
 Instance: APS-2-preventive-medical-checkup-vital-sign-6
-InstanceOf: AtIpsObservationVitalSigns
+InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -945,7 +945,7 @@ Usage: #inline
 // Past History of Illness
 
 Instance: APS-2-preventive-medical-checkup-illness-history-1
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved "Resolved"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -954,7 +954,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-2-preventive-medical-checkup-illness-history-2
-InstanceOf: AtIpsCondition
+InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved "Resolved"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
@@ -965,7 +965,7 @@ Usage: #inline
 // Social History
 
 Instance: APS-2-preventive-medical-checkup-social-history-1
-InstanceOf: AtIpsObservationTobaccoUse
+InstanceOf: AtApsObservationTobaccoUse
 Usage: #inline
 * status = #final
 * code = $loinc#72166-2 "Tobacco smoking status"
@@ -993,6 +993,6 @@ Usage: #inline
 * valueRatio.denominator.code = #wk
 
 Instance: APS-2-organization
-InstanceOf: AtIpsOrganization
+InstanceOf: AtApsOrganization
 Usage: #inline
 * name = "MusterOrganization"

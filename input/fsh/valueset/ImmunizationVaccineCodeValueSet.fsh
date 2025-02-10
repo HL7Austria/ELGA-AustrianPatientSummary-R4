@@ -1,6 +1,6 @@
-ValueSet: AtIpsImmunizationVacineCodes
-Id: at-ips-immunization-vacine-codes
-Title: "AT IPS Immunitzation Vacine Codes"
+ValueSet: AtApsImmunizationVacineCodes
+Id: at-aps-immunization-vacine-codes
+Title: "AT APS Immunitzation Vacine Codes"
 Description: "This value set extens the existing vaccine codes from ELGA GmbH."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active

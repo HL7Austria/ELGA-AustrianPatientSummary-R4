@@ -1,11 +1,11 @@
-Profile: AtIpsSpecimen
+Profile: AtApsSpecimen
 Parent: Specimen
-Id: at-ips-specimen
-Title: "AT IPS Specimen"
-Description: "This AT IPS profile for the Specimen resource is derived from the general Specimen resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
-* . ^short = "AT IPS Specimen"
+Id: at-aps-specimen
+Title: "AT APS Specimen"
+Description: "This AT APS profile for the Specimen resource is derived from the general Specimen resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* . ^short = "AT APS Specimen"
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenUvIps)
-* subject only Reference(AtIpsPatient)
+* subject only Reference(AtApsPatient)
 * type from $elga-probenmaterial (extensible)
 * type ^binding.extension[0].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate

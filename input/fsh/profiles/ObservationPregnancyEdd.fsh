@@ -1,8 +1,8 @@
-Profile: AtIpsObservationPregnancyEdd
+Profile: AtApsObservationPregnancyEdd
 Parent: Observation
-Id: at-ips-observationpregnancyedd
-Title: "AT IPS Observation Pregnancy Expected Delivery Date"
-Description: "This AT IPS profile for the Observation resource is derived from the general Observation resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
-* . ^short = "AT IPS Observation Pregnancy Expected Delivery Date"
+Id: at-aps-observationpregnancyedd
+Title: "AT APS Observation Pregnancy Expected Delivery Date"
+Description: "This AT APS profile for the Observation resource is derived from the general Observation resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* . ^short = "AT APS Observation Pregnancy Expected Delivery Date"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationPregnancyEddUvIps)
-* subject only Reference(AtIpsPatient)
+* subject only Reference(AtApsPatient)

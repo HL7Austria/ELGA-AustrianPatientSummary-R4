@@ -1,5 +1,5 @@
 Instance: allergy-intolerance-empty
-InstanceOf: AtIpsAllergyIntolerance
+InstanceOf: AtApsAllergyIntolerance
 Title: "AllergyIntolerance - No Known Allergies"
 Description: "AllergyIntolerance - No known allergies"
 Usage: #example

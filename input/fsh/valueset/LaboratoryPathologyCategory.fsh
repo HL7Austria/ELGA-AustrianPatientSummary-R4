@@ -1,6 +1,6 @@
-ValueSet: AtIpsLaboratoryPathologyCategory
-Id: at-ips-laboratory-pathology-category
-Title: "AT IPS Laboratory/Pathology Category"
+ValueSet: AtApsLaboratoryPathologyCategory
+Id: at-aps-laboratory-pathology-category
+Title: "AT APS Laboratory/Pathology Category"
 Description: "This value set combines the FHIR observation category and the ELGA specific laboratory report structure."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active

@@ -1,5 +1,5 @@
 Instance: alcohol-use-01
-InstanceOf: AtIpsObservationAlcoholUse
+InstanceOf: AtApsObservationAlcoholUse
 Description: "Social History - Alkohol Beispiel"
 Usage: #example
 * status = #final
