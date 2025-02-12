@@ -308,15 +308,15 @@ Usage: #inline
 Instance: example-diab-leitdokument-schulung-1
 InstanceOf: CarePlan
 Usage: #inline
-* id = "example"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Schulung zur Verbesserung der Mobilität </p>\n    </div>"
-* contained.resourceType = "Condition"
-* contained.clinicalStatus = $condition-clinical#active
-* contained.verificationStatus = $condition-ver-status#confirmed
-* contained.code.text = "Diabetes"
-* contained.subject.reference = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-* contained.subject.display = "Susi Testpatientin"
+// * contained.id = "id-contained"
+// * contained.resourceType = "Condition"
+// * contained.clinicalStatus = $condition-clinical#active
+// * contained.verificationStatus = $condition-ver-status#confirmed
+// * contained.code.text = "Diabetes"
+// * contained.subject.reference = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
+// * contained.subject.display = "Susi Testpatientin"
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
@@ -331,6 +331,7 @@ Usage: #inline
 * period.end = "2024-04-12"
 * created = "2024-03-29"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
+* addresses = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e)
 * activity.outcomeCodeableConcept = $sct#408443003 "Bereitstellung von Patienteninformationen"
 // * activity.outcomeReference = Reference(Observation/example) "Patient ist über das Ereignis informiert" // ??
 * activity.detail.code.coding[0] = $sct#409063005 "Beratung"
@@ -480,7 +481,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2019-07-15"
-* valueCodeableConcept = $current-smoking-status#8517006 "Ex-smoker"
+* valueCodeableConcept = $sct#8517006 "Ex-smoker"
 
 Instance: example-diab-leitdokument-social-history-2
 InstanceOf: Observation
