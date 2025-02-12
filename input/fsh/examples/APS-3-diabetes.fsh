@@ -310,13 +310,6 @@ InstanceOf: CarePlan
 Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Schulung zur Verbesserung der Mobilität </p>\n    </div>"
-// * contained.id = "id-contained"
-// * contained.resourceType = "Condition"
-// * contained.clinicalStatus = $condition-clinical#active
-// * contained.verificationStatus = $condition-ver-status#confirmed
-// * contained.code.text = "Diabetes"
-// * contained.subject.reference = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-// * contained.subject.display = "Susi Testpatientin"
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
