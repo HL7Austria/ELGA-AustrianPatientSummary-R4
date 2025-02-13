@@ -19,6 +19,7 @@ Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-r
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $specimen-status = http://hl7.org/fhir/specimen-status
+Alias: $cs-medikationartanwendung = https://termgit.elga.gv.at/CodeSystem/medikationartanwendung
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
@@ -27,15 +28,16 @@ Alias: $condition-category-vs = https://termgit.elga.gv.at/ValueSet/elga-problem
 Alias: $condition-severity-vs = https://termgit.elga.gv.at/ValueSet/elga-problemseverity
 Alias: $current-smoking-status = https://termgit.elga.gv.at/ValueSet/elga-currentsmokingstatus
 Alias: $immunization-route = https://termgit.elga.gv.at/ValueSet/eimpf-medikationartanwendung
-Alias: $immunization-target-disease = https://termgit.elga.gv.at/ValueSet/eimpf-impfrelevanteerkrankung
+Alias: $vs-eimpf-immunizationtarget = https://termgit.elga.gv.at/ValueSet/eimpf-immunizationtarget
 Alias: $laboratory-antibiogramm-code = https://termgit.elga.gv.at/ValueSet/elga-antibiogramm
 Alias: $laboratory-code = https://termgit.elga.gv.at/ValueSet/elga-laborparameter
 Alias: $laboratory-interpretation = https://termgit.elga.gv.at/ValueSet/elga-observationinterpretation
 Alias: $laboratory-structure = https://termgit.elga.gv.at/ValueSet/elga-laborstruktur
-Alias: $immunization-target = https://termgit.elga.gv.at/ValueSet/eimpf-immunizationtarget
 Alias: $medical-devices = https://termgit.elga.gv.at/ValueSet/elga-medicaldevices
 Alias: $observation-category-vs = http://hl7.org/fhir/ValueSet/observation-category
 Alias: $pregnancy-status = https://termgit.elga.gv.at/ValueSet/elga-pregnancystatus
 Alias: $pregnancy-summary = https://termgit.elga.gv.at/ValueSet/elga-pregnanciessummary
 Alias: $elga-probenmaterial = https://termgit.elga.gv.at/ValueSet/elga-probenmaterial
 Alias: $elga-specimentype = https://termgit.elga.gv.at/ValueSet/elga-specimentype
+Alias: $eimpf-impfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-impfstoffe
+Alias: $eimpf-historischeimpfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-historischeimpfstoffe
