@@ -9,6 +9,12 @@ Description: "This AT APS profile for the Immunization resource is derived from 
 * extension contains ImmunizationBasedOn named basedOn 0..1
 
 * vaccineCode from AtApsImmunizationVaccineCodes (extensible)
+* vaccineCode ^binding.extension[0].extension[0].url = "purpose"
+* vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
+* vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
+* vaccineCode ^binding.extension[=].extension[=].valueCanonical = $eimpf-historischeimpfstoffe
+* vaccineCode ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
 * route from $immunization-route (extensible)
 * protocolApplied 1..*
 * protocolApplied.targetDisease 1..*
