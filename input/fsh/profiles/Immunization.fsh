@@ -7,7 +7,8 @@ Description: "This AT APS profile for the Immunization resource is derived from 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtApsPatient)
 * extension contains ImmunizationBasedOn named basedOn 0..1
-* vaccineCode from AtApsImmunizationVacineCodes (extensible)
+
+* vaccineCode from AtApsImmunizationVaccineCodes (extensible)
 * route from $immunization-route (extensible)
 * protocolApplied.targetDisease from $immunization-target-disease (extensible)
 
