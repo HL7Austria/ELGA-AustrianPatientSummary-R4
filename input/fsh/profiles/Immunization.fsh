@@ -11,6 +11,8 @@ Description: "This AT APS profile for the Immunization resource is derived from 
 * vaccineCode from AtApsImmunizationVaccineCodes (extensible)
 * route from $immunization-route (extensible)
 * protocolApplied.targetDisease from $immunization-target-disease (extensible)
+* protocolApplied 1..*
+* protocolApplied.targetDisease 1..*
 
 Extension:      ImmunizationBasedOn
 Id:             immunization-basedOn
