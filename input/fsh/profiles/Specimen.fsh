@@ -15,3 +15,9 @@ Description: "This AT APS profile for the Specimen resource is derived from the 
 * type ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Specimentype\" - retained for backward compatibility."
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * collection.bodySite ^binding.strength = #extensible   // Europe Laboratory Report has an additional bodySite - this might be not relevant vor the IPS/APS: https://hl7.eu/fhir/laboratory/StructureDefinition-Specimen-eu-lab.html
+
+* condition ^slicing.discriminator.type = #pattern
+* condition ^slicing.discriminator.path = "$this"
+* condition ^slicing.rules = #open
+* condition contains insufficientsample 0..1
+* condition[insufficientsample] = $sct#281268007 "Insufficient sample (finding)"
