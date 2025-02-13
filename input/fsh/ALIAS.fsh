@@ -20,6 +20,8 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $specimen-status = http://hl7.org/fhir/specimen-status
 Alias: $cs-medikationartanwendung = https://termgit.elga.gv.at/CodeSystem/medikationartanwendung
+Alias: $cs-eimpf-impfstoffe = https://termgit.elga.gv.at/CodeSystem/eimpf-impfstoffe
+Alias: $cs-eimpf-historischeimpfstoffe = https://termgit.elga.gv.at/CodeSystem/eimpf-historischeimpfstoffe
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
