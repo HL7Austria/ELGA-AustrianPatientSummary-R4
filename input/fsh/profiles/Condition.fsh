@@ -8,5 +8,5 @@ Description: "This AT APS profile for the Condition resource is derived from the
 * subject only Reference(AtApsPatient)
 * category from $condition-category-vs (extensible)
 * severity from $condition-severity-vs (extensible)
-* code from AtApsConditionCodeSystems (extensible)
+* code from AtApsProblems (extensible)
 * bodySite ^binding.strength = #extensible

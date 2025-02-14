@@ -112,7 +112,7 @@ Instance: APS-1-no-problems-medication-allergies-problem-1
 InstanceOf: AtApsCondition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
-* code = $sct#373572006  "Clinical finding absent (situation)"
+* code = $sct#160245001  "No current problems or disability"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 Instance: APS-1-no-problems-medication-allergies-medication-summary-1
