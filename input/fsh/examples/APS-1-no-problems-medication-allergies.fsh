@@ -32,7 +32,7 @@ InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #preliminary
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Patient summary"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472)
