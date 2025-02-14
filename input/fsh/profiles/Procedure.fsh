@@ -8,3 +8,5 @@ Description: "This AT APS profile for the Procedure resource is derived from the
 * subject only Reference(AtApsPatient)
 * performer.actor only Reference(AtApsPatient or RelatedPerson or DeviceObserverUvIps or AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
 * performer.onBehalfOf only Reference(AtApsOrganization)
+* code ^binding.strength = #extensible
+* bodySite ^binding.strength = #extensible
