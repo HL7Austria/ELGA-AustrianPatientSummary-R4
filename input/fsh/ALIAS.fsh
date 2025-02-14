@@ -43,3 +43,4 @@ Alias: $elga-probenmaterial = https://termgit.elga.gv.at/ValueSet/elga-probenmat
 Alias: $elga-specimentype = https://termgit.elga.gv.at/ValueSet/elga-specimentype
 Alias: $eimpf-impfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-impfstoffe
 Alias: $eimpf-historischeimpfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-historischeimpfstoffe
+Alias: $vs-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
