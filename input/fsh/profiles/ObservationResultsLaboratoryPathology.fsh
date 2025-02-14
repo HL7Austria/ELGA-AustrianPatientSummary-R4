@@ -9,6 +9,8 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * performer only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam or AtApsPatient or RelatedPerson)
 * specimen only Reference(AtApsSpecimen)
 * hasMember only Reference(AtApsObservationResultsLaboratoryPathology)
+
+* valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #extensible
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
@@ -18,13 +20,13 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * code only CodeableConcept-uv-ips
-* code from $laboratory-code (preferred)
+* code from $laboratory-code (extensible)
 * code ^binding.extension[0].extension[0].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #preferred
+* code ^binding.extension[=].extension[=].valueCode = #extensible
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = $laboratory-antibiogramm-code
 * code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Additional preferred binding in case of antibiotic susceptibility testing."
+* code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * category only CodeableConcept-uv-ips
