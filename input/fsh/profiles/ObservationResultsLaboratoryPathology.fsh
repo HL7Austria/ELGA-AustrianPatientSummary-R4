@@ -29,14 +29,15 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
-* category only CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^definition = "A code that classifies the general type of observation being made."
-* category contains laborstruktur 1..*
-* category[laborstruktur] only CodeableConcept-uv-ips
-* category[laborstruktur] from $laboratory-structure
-* category[laborstruktur] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
+* category from $laboratory-structure (extensible)
+// * category only CodeableConcept-uv-ips
+// * category ^slicing.discriminator.type = #pattern
+// * category ^slicing.discriminator.path = "$this"
+// * category ^slicing.rules = #open
+// * category ^definition = "A code that classifies the general type of observation being made."
+// * category contains laborstruktur 1..*
+// * category[laborstruktur] only CodeableConcept-uv-ips
+// * category[laborstruktur] from $laboratory-structure
+// * category[laborstruktur] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 
 * interpretation from $laboratory-interpretation (extensible)
