@@ -12,7 +12,7 @@ Description: "This AT APS profile for the Observation resource is derived from t
 
 * valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #extensible
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = $vs-elga-nachweisergebnis
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
