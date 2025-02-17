@@ -9,7 +9,7 @@ name: ELGA-AustrianPatientSummary-R4
 title: Austrian Patient Summary (R4)
 description: The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
 status: draft # draft | active | retired | unknown
-jurisdiction: urn:iso:std:iso:3166#AUT
+jurisdiction: urn:iso:std:iso:3166#AT
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
