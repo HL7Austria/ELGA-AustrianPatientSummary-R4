@@ -7,7 +7,7 @@ Usage: #example
 * extension.valueDateTime = "2020"
 * clinicalStatus = $allergyintolerance-clinical#resolved
 * verificationStatus = $allergyintolerance-verification#confirmed
-* code = $sct#256303006 "Ambrosia-Pollen"
+* code = $sct-auszug#256303006 "Ambrosia-Pollen"
 * patient = Reference(Patient/002) "Maria Musterfrau"
 * onsetDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * onsetDateTime.extension.valueCode = #unknown

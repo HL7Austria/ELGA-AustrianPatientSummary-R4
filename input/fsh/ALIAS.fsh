@@ -5,6 +5,7 @@ Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinit
 // code systems
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
+Alias: $sct-auszug = https://termgit.elga.gv.at/CodeSystem/snomed-ct-auszug
 Alias: $event-timing = http://hl7.org/fhir/event-timing
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
