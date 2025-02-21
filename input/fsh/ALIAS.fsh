@@ -27,6 +27,8 @@ Alias: $cs-icd-10-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/icd-10-bms
 Alias: $cs-icpc2 = https://termgit.elga.gv.at/CodeSystem/icpc2
 Alias: $cs-icf = https://termgit.elga.gv.at/CodeSystem/icf
 Alias: $cs-lkat-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-2025
+Alias: $cs-elga-ergaenzungsliste = https://termgit.elga.gv.at/CodeSystem/elga-ergaenzungsliste
+Alias: $cs-rast-klassen = https://termgit.elga.gv.at/CodeSystem/rast-klassen
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
@@ -51,3 +53,4 @@ Alias: $vs-elga-vitalparameterarten = https://termgit.elga.gv.at/ValueSet/elga-v
 Alias: $vs-results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips
 Alias: $vs-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
 Alias: $vs-elga-nachweisergebnis = https://termgit.elga.gv.at/ValueSet/elga-nachweisergebnis
+Alias: $vs-observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
