@@ -148,7 +148,7 @@ InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #final
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Patient summary"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472)
@@ -564,7 +564,7 @@ Instance: APS-2-preventive-medical-checkup-allergy-1
 InstanceOf: AtApsAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
-* code = $sct#764146007 "Penicillin"
+* code = $sct-auszug#128488006 "Hausstaub"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
 // History of Procedures
@@ -589,7 +589,7 @@ Instance: APS-2-preventive-medical-checkup-procedure-history-3
 InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
-* code = $sct#851000119109 "History of colonoscopy"
+* code = $sct#73761001 "Colonoscopy (procedure)"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 // within the last 10 years
 * performedDateTime = "2014"
@@ -601,7 +601,7 @@ InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * status = $specimen-status#unavailable "Unavailable"
-* type = $sct#119297000 "Blood specimen"
+* type = $sct-auszug#119297000 "Blood specimen"
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-specimen-2
 InstanceOf: AtApsSpecimen
@@ -855,7 +855,7 @@ InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#8302-2 "Body height"
+* code = $loinc#8302-2 "Körpergröße"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
@@ -869,7 +869,7 @@ InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#29463-7 "Body weight"
+* code = $loinc#29463-7 "Körpergewicht"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
@@ -883,7 +883,7 @@ InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
+* code = $loinc#39156-5 "Body Mass Index (BMI) [Verhältnis]"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
@@ -903,12 +903,12 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
-* component[0].code = $loinc#8480-6 "Systolic blood pressure"
+* component[0].code = $loinc#8480-6 "Systolischer Blutdruck"
 * component[=].valueQuantity.value = 130
 * component[=].valueQuantity.unit = "mm[Hg]"
 * component[=].valueQuantity.system = "http://unitsofmeasure.org"
 * component[=].valueQuantity.code = #mm[Hg]
-* component[+].code = $loinc#8462-4 "Diastolic blood pressure"
+* component[+].code = $loinc#8462-4 "Diastolischer Blutdruck"
 * component[=].valueQuantity.value = 80
 * component[=].valueQuantity.unit = "mm[Hg]"
 * component[=].valueQuantity.system = "http://unitsofmeasure.org"
@@ -919,7 +919,7 @@ InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#8867-4 "Heart rate"
+* code = $loinc#8867-4 "Herzfrequenz"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
@@ -973,7 +973,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
-* valueCodeableConcept = $loinc#LA18978-9 "Never smoker"
+* valueCodeableConcept = $sct-auszug#266919005 "Never smoked tobacco"
 
 Instance: APS-2-preventive-medical-checkup-social-history-2
 InstanceOf: Observation
