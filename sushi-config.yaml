@@ -9,7 +9,7 @@ name: ELGA-AustrianPatientSummary-R4
 title: Austrian Patient Summary (R4)
 description: The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
 status: draft # draft | active | retired | unknown
-jurisdiction: urn:iso:std:iso:3166#AUT
+jurisdiction: urn:iso:std:iso:3166#AT
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
@@ -26,7 +26,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0-ballot
   hl7.at.fhir.core.r4: current
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
@@ -70,9 +70,11 @@ pages:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
+parameters:
+  excludettl: true
+#  validation: [allow-any-extensions, no-broken-links]
+  allow-extensible-warnings: true
+  display-warnings: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

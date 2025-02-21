@@ -1,7 +1,7 @@
-Profile: AtIpsObservationVitalSigns
+Profile: AtApsObservationVitalSigns
 Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Id: at-ips-observationvitalsigns
-Title: "AT IPS Observation Vital Signs"
-Description: "This AT IPS profile for the Observation resource is derived from the general vital signs profile."
-* . ^short = "AT IPS Observation Vital Signs"
-* subject only Reference(AtIpsPatient)
+Id: at-aps-observationvitalsigns
+Title: "AT APS Observation Vital Signs"
+Description: "This AT APS profile for the Observation resource is derived from the general vital signs profile."
+* . ^short = "AT APS Observation Vital Signs"
+* subject only Reference(AtApsPatient)

@@ -1,10 +1,11 @@
-Profile: AtIpsObservationResultsRadiology
-Parent: AtIpsObservationResults
-Id: at-ips-observationresultsradiology
-Title: "AT IPS Observation Results Radiology"
-Description: "This AT IPS profile for the Observation resource is derived from the \"AtIpsObservationResults\" profile and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
-* . ^short = "AT IPS Observation Results Radiology"
+Profile: AtApsObservationResultsRadiology
+Parent: Observation
+Id: at-aps-observationresultsradiology
+Title: "AT APS Observation Results Radiology"
+Description: "This AT APS profile for the Observation resource is derived from the \"AtApsObservationResults\" profile and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* . ^short = "AT APS Observation Results Radiology"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsRadiologyUvIps)
-* partOf only Reference(AtIpsImagingStudy)
-* subject only Reference(AtIpsPatient)
-* hasMember only Reference(AtIpsObservationResultsRadiology or AtIpsObservationResults)
+* partOf only Reference(AtApsImagingStudy)
+* subject only Reference(AtApsPatient)
+* performer only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam or AtApsPatient or RelatedPerson)
+* hasMember only Reference(AtApsObservationResultsRadiology)
