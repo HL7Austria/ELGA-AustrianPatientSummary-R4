@@ -6,7 +6,14 @@ Description: "This AT APS profile for the Condition resource is derived from the
 * . ^short = "AT APS Condition"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ConditionUvIps)
 * subject only Reference(AtApsPatient)
-* category from $condition-category-vs (extensible)
+
+* category from $vs-problem-type-uv-ips (extensible)
+* category ^binding.extension[0].extension[0].url = "purpose"
+* category ^binding.extension[=].extension[=].valueCode = #candidate
+* category ^binding.extension[=].extension[+].url = "valueSet"
+* category ^binding.extension[=].extension[=].valueCanonical = $condition-category-vs
+* category ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
 * severity from $condition-severity-vs (extensible)
 * code from AtApsProblems (extensible)
 * bodySite ^binding.strength = #extensible

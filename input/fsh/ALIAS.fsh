@@ -53,3 +53,4 @@ Alias: $vs-results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhi
 Alias: $vs-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
 Alias: $vs-elga-nachweisergebnis = https://termgit.elga.gv.at/ValueSet/elga-nachweisergebnis
 Alias: $vs-observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation
+Alias: $vs-problem-type-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips
