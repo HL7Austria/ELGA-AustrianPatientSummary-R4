@@ -116,6 +116,8 @@ Usage: #example
 * entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-13
 * entry[+].fullUrl = "urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2"
 * entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-14
+* entry[+].fullUrl = "urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3"
+* entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-15
 // Diagnostic Results - Performer
 * entry[+].fullUrl = "urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6"
 * entry[=].resource = APS-2-preventive-medical-checkup-diagnostic-result-performer-1
@@ -234,6 +236,7 @@ Usage: #inline
 * section[sectionResults].entry[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35)
 * section[sectionResults].entry[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b)
 * section[sectionResults].entry[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2)
+* section[sectionResults].entry[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3)
 // Vital Signs
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs"
@@ -617,9 +620,11 @@ Instance: APS-2-preventive-medical-checkup-diagnostic-result-1
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category[0] = $observation-category#laboratory "Laboratory"
-* category[+] = $laboratory-structure#03010 "Blutbild"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+// example where all levels of "Laborstruktur" are present
+* category[0] = $elga-laborparameterergaenzung#100 "Transfusions-/Transplantationsdiagnostik/Immungenetik"
+* category[+] = $elga-laborparameterergaenzung#01850 "Blutgruppenserologie"
+* category[+] = $observation-category#laboratory "Laboratory"
+* code = $loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
@@ -630,17 +635,18 @@ Instance: APS-2-preventive-medical-checkup-diagnostic-result-2
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
-* code = $elga-laborparameterergaenzung#500 "Klinische Chemie"
+* category[0] = $elga-laborparameterergaenzung#500 "Klinische Chemie/Proteindiagnostik"
+* category[+] = $observation-category#laboratory "Laboratory"
+* code = $elga-laborparameterergaenzung#500 "Klinische Chemie/Proteindiagnostik"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:56:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
-* hasMember[0] = Reference(urn:uuid:aeff2319-2cc2-4fba-9541-7a4de3d20f91)
-* hasMember[+] = Reference(urn:uuid:d16dce15-bc5a-48a5-910e-6ac039785a2a)
+* hasMember[0] = Reference(urn:uuid:d16dce15-bc5a-48a5-910e-6ac039785a2a)
 * hasMember[+] = Reference(urn:uuid:96314fcd-3b0c-4032-8cac-6eb59579d90a)
 * hasMember[+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9)
 * hasMember[+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2)
 * hasMember[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7)
+* hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3)
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
 
 Instance: APS-2-preventive-medical-checkup-diagnostic-result-3
@@ -648,7 +654,8 @@ InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
 * code = $loinc#2093-3 "Cholesterin"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
@@ -664,7 +671,8 @@ InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
 * code = $loinc#2085-9 "HDL-Cholesterin"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
@@ -679,8 +687,9 @@ Instance: APS-2-preventive-medical-checkup-diagnostic-result-5
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
-* code = $loinc#9830-1 "Cholesterol.total/Cholesterol in HDL [Mass Ratio] in Serum or Plasma"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
+* code = $loinc#9830-1 "Cholesterol.gesamt/Cholesterol in HDL [Massenverhältnis] in Serum oder Plasma"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
@@ -695,7 +704,8 @@ InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
 * code = $loinc#2571-8 "Triglyceride"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
@@ -711,7 +721,8 @@ InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * language = #de-AT
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
 * code = $loinc#2324-2 "Gamma-GT"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
@@ -815,8 +826,9 @@ Instance: APS-2-preventive-medical-checkup-diagnostic-result-15
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
-* code = $loinc#2339-0 "Glucose /B"
+* category[0] = $elga-laborparameterergaenzung#05180 "Klinische Chemie"
+* category[+] = $observation-category#laboratory "Laboratory"
+* code = $loinc#2339-0 "Glucose [Masse/Volumen] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
