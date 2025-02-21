@@ -6,4 +6,3 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * . ^short = "AT APS Observation Pregnancy Outcome"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationPregnancyOutcomeUvIps)
 * subject only Reference(AtApsPatient)
-* code from $pregnancy-summary (extensible)
