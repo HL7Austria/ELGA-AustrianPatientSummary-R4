@@ -8,4 +8,4 @@ Usage: #example
 * subject = Reference(Patient/002) "Maria Musterfrau"
 * performer = Reference(Patient/002) "Maria Musterfrau"
 * effectiveDateTime = "2019-07-15"
-* valueCodeableConcept = $sct#8517006 "Ex-smoker"
+* valueCodeableConcept = $sct-auszug#8517006 "Ex-smoker"
