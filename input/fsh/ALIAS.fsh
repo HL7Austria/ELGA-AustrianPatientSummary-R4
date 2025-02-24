@@ -29,6 +29,7 @@ Alias: $cs-icf = https://termgit.elga.gv.at/CodeSystem/icf
 Alias: $cs-lkat-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-2025
 Alias: $cs-elga-ergaenzungsliste = https://termgit.elga.gv.at/CodeSystem/elga-ergaenzungsliste
 Alias: $cs-rast-klassen = https://termgit.elga.gv.at/CodeSystem/rast-klassen
+Alias: $cs-list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
 
 // value sets
 Alias: $allergy-intolerance = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
