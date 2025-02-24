@@ -10,6 +10,9 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * specimen only Reference(AtApsSpecimen)
 * hasMember only Reference(AtApsObservationResultsLaboratoryPathology)
 
+* value[x] ^slicing.discriminator.type = #type
+* value[x] ^slicing.discriminator.path = "$this"
+* value[x] ^slicing.rules = #open
 * valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
@@ -53,6 +56,9 @@ Description: "This AT APS profile for the Observation resource is derived from t
   * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
   * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
+  * value[x] ^slicing.discriminator.type = #type
+  * value[x] ^slicing.discriminator.path = "$this"
+  * value[x] ^slicing.rules = #open
   * valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
   * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
   * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
