@@ -3,6 +3,7 @@ Parent: Immunization
 Id: at-aps-immunization
 Title: "AT APS Immunization"
 Description: "This AT APS profile for the Immunization resource is derived from the general Immunization resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* ^status = #active
 * . ^short = "AT APS Immunization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtApsPatient)

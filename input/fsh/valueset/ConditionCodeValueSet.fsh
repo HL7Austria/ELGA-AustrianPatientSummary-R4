@@ -4,7 +4,7 @@ Title: "AT APS Problems"
 Description: "This value set collects the different code systems which are used for the AT APS Condition code."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * ^publisher = "ELGA GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://elga.gv.at"

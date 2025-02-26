@@ -3,6 +3,7 @@ Parent: DiagnosticReport
 Id: at-aps-diagnosticreport
 Title: "AT APS DiagnosticReport"
 Description: "This AT APS profile for the DiagnosticReport resource is derived from the general DiagnosticReport resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+* ^status = #active
 * . ^short = "AT APS DiagnosticReport"
 * ^extension[$imposeProfile].valueCanonical = Canonical(DiagnosticReportUvIps)
 * subject only Reference(AtApsPatient or Group)

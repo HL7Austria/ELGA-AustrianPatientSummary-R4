@@ -4,7 +4,7 @@ Title: "AT APS Immunitzation Vaccine Codes"
 Description: "This value set extends the existing vaccine codes from ELGA GmbH."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
-* ^experimental = true
+* ^experimental = false
 * ^publisher = "ELGA GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://elga.gv.at"
