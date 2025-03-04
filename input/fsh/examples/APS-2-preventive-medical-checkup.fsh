@@ -627,6 +627,8 @@ Usage: #inline
 * code = $loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
+// * effectiveDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * effectiveDateTime.extension.valueCode = #unknown
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0)
