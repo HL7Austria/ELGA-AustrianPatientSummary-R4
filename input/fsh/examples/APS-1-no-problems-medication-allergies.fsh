@@ -12,20 +12,20 @@ Usage: #example
 * entry[=].resource = APS-1-no-problems-medication-allergies-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
 * entry[=].resource = APS-1-no-problems-medication-allergies-author
-* entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
-* entry[=].resource = APS-1-no-problems-medication-allergies-problem-1
-* entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
-* entry[=].resource = APS-1-no-problems-medication-allergies-medication-summary-1
-* entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
-* entry[=].resource = APS-1-no-problems-medication-allergies-allergy-1
+// * entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
+// * entry[=].resource = APS-1-no-problems-medication-allergies-problem-1
+// * entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
+// * entry[=].resource = APS-1-no-problems-medication-allergies-medication-summary-1
+// * entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
+// * entry[=].resource = APS-1-no-problems-medication-allergies-allergy-1
 * entry[+].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
 * entry[=].resource = APS-1-organization
-* entry[+].fullUrl = "urn:uuid:27ef5ea9-5c9f-418d-9830-648d15ee2094"
-* entry[=].resource = APS-1-no-problems-procedure-1
-* entry[+].fullUrl = "urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05"
-* entry[=].resource = APS-1-no-problems-device-use-1
-* entry[+].fullUrl = "urn:uuid:9faadcc1-076d-4bb4-b818-96239e2b8bc8"
-* entry[=].resource = APS-1-no-problems-device-1
+// * entry[+].fullUrl = "urn:uuid:27ef5ea9-5c9f-418d-9830-648d15ee2094"
+// * entry[=].resource = APS-1-no-problems-procedure-1
+// * entry[+].fullUrl = "urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05"
+// * entry[=].resource = APS-1-no-problems-device-use-1
+// * entry[+].fullUrl = "urn:uuid:9faadcc1-076d-4bb4-b818-96239e2b8bc8"
+// * entry[=].resource = APS-1-no-problems-device-1
 
 Instance: APS-1-no-problems-medication-allergies-composition
 InstanceOf: AtApsComposition
@@ -45,27 +45,32 @@ Usage: #inline
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #empty
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionMedications].entry = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076)
+// * section[sectionMedications].entry = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076)
+* section[sectionMedications].emptyReason = $cs-list-empty-reason#nilknown
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #empty
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b)
+// * section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b)
+* section[sectionAllergies].emptyReason = $cs-list-empty-reason#nilknown
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #empty
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionProblems].entry = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
+// * section[sectionProblems].entry = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
+* section[sectionProblems].emptyReason = $cs-list-empty-reason#nilknown
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4
 * section[sectionProceduresHx].text.status = #empty
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionProceduresHx].entry = Reference(urn:uuid:27ef5ea9-5c9f-418d-9830-648d15ee2094)
+// * section[sectionProceduresHx].entry = Reference(urn:uuid:27ef5ea9-5c9f-418d-9830-648d15ee2094)
+* section[sectionProceduresHx].emptyReason = $cs-list-empty-reason#nilknown
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
 * section[sectionMedicalDevices].text.status = #empty
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionMedicalDevices].entry = Reference(urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05)
+// * section[sectionMedicalDevices].entry = Reference(urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05)
+* section[sectionMedicalDevices].emptyReason = $cs-list-empty-reason#nilknown
 
 Instance: APS-1-no-problems-medication-allergies-patient
 InstanceOf: AtApsPatient
@@ -108,54 +113,54 @@ Usage: #inline
 * deviceName.name = "IPS Generator"
 * deviceName.type = #user-friendly-name
 
-Instance: APS-1-no-problems-medication-allergies-problem-1
-InstanceOf: AtApsCondition
-Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* code = $sct#160245001  "No current problems or disability"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// Instance: APS-1-no-problems-medication-allergies-problem-1
+// InstanceOf: AtApsCondition
+// Usage: #inline
+// * clinicalStatus = $condition-clinical#active "Active"
+// * code = $sct#160245001  "No current problems or disability"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
-Instance: APS-1-no-problems-medication-allergies-medication-summary-1
-InstanceOf: AtApsMedicationStatement
-Usage: #inline
-* status = #active
-* medicationCodeableConcept = $sct#787481004 "No known medications (situation)"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
-* effectiveDateTime = "2024-02-08T10:31:58+02:00"
+// Instance: APS-1-no-problems-medication-allergies-medication-summary-1
+// InstanceOf: AtApsMedicationStatement
+// Usage: #inline
+// * status = #active
+// * medicationCodeableConcept = $sct#787481004 "No known medications (situation)"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// * effectiveDateTime = "2024-02-08T10:31:58+02:00"
 
-Instance: APS-1-no-problems-medication-allergies-allergy-1
-InstanceOf: AtApsAllergyIntolerance
-Usage: #inline
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* code = $sct#716186003 "No known allergy (situation)"
-* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// Instance: APS-1-no-problems-medication-allergies-allergy-1
+// InstanceOf: AtApsAllergyIntolerance
+// Usage: #inline
+// * clinicalStatus = $allergyintolerance-clinical#active "Active"
+// * code = $sct#716186003 "No known allergy (situation)"
+// * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
 
-Instance: APS-1-no-problems-procedure-1
-InstanceOf: AtApsProcedure
-Usage: #inline
-* status = #unknown
-* code = $sct#787480003 "No known procedures (situation)"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
-* performedDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* performedDateTime.extension.valueCode = #unknown
+// Instance: APS-1-no-problems-procedure-1
+// InstanceOf: AtApsProcedure
+// Usage: #inline
+// * status = #unknown
+// * code = $sct#787480003 "No known procedures (situation)"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// * performedDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * performedDateTime.extension.valueCode = #unknown
 
-Instance: APS-1-no-problems-device-use-1
-InstanceOf: AtApsDeviceUseStatement
-Usage: #inline
-* status = #active
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
-* device = Reference(urn:uuid:9faadcc1-076d-4bb4-b818-96239e2b8bc8)
-* timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* timingDateTime.extension.valueCode = #unknown
+// Instance: APS-1-no-problems-device-use-1
+// InstanceOf: AtApsDeviceUseStatement
+// Usage: #inline
+// * status = #active
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// * device = Reference(urn:uuid:9faadcc1-076d-4bb4-b818-96239e2b8bc8)
+// * timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * timingDateTime.extension.valueCode = #unknown
 
-Instance: APS-1-no-problems-device-1
-InstanceOf: AtApsDevice
-Usage: #inline
-* type = $sct#787483001 "No known device use (situation)"
-* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
-* deviceName.name = "empty"
-* deviceName.type = #other
-* version.value = "empty"
+// Instance: APS-1-no-problems-device-1
+// InstanceOf: AtApsDevice
+// Usage: #inline
+// * type = $sct#787483001 "No known device use (situation)"
+// * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8)
+// * deviceName.name = "empty"
+// * deviceName.type = #other
+// * version.value = "empty"
 
 Instance: APS-1-organization
 InstanceOf: AtApsOrganization
