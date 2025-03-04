@@ -1,5 +1,6 @@
 Instance: allergy-intolerance-resolved
 InstanceOf: AtApsAllergyIntolerance
+Description: "Example of an allergy"
 Title: "AllergyIntolerance - Überwundene Allergie"
 Usage: #example
 * id = "002"
