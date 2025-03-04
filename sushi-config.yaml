@@ -27,7 +27,9 @@ publisher:
 #
 dependencies:
   hl7.fhir.uv.ips: 2.0.0-ballot
-  hl7.at.fhir.core.r4: current
+  hl7.at.fhir.core.r4: 2.0.0
+  # hl7.at.fhir.gkl.ig-tooling: 0.3.0 # temporary package for having all terminologies available
+
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
