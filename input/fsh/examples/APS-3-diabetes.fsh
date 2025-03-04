@@ -67,18 +67,13 @@ Usage: #example
 // Social History
 * entry[+].fullUrl = "urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e"
 * entry[=].resource = example-diab-leitdokument-social-history-1
-// Medical Devices
-* entry[+].fullUrl = "urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05"
-* entry[=].resource = example-diab-leitdokument-device-use-1
-* entry[+].fullUrl = "urn:uuid:a1a80313-a757-4062-b0d7-d04fd2a04602"
-* entry[=].resource = example-diab-device
 
 Instance: example-diab-leitdokument-composition
 InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #final
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Patient summary"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
@@ -125,7 +120,8 @@ Usage: #inline
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
 * section[sectionMedicalDevices].text.status = #empty
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
-* section[sectionMedicalDevices].entry = Reference(urn:uuid:490dab5c-271e-4736-8a6b-5f6f089d0a05)
+* section[sectionMedicalDevices].emptyReason = $cs-list-empty-reason#nilknown
+
 // Diagnostic Results
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
@@ -211,7 +207,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#280137006 "Diabetisches Fußsyndrom"
+* code = $sct#280137006 "Diabetic foot"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * recordedDate = "2021-02-08T14:01:30+00:00"
 
@@ -325,10 +321,10 @@ Usage: #inline
 * created = "2024-03-29"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * addresses = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e)
-* activity.outcomeCodeableConcept = $sct#408443003 "Bereitstellung von Patienteninformationen"
+* activity.outcomeCodeableConcept = $sct#408443003 "General medical practice (qualifier value)"
 // * activity.outcomeReference = Reference(Observation/example) "Patient ist über das Ereignis informiert" // ??
-* activity.detail.code.coding[0] = $sct#409063005 "Beratung"
-* activity.detail.code.coding[+] = $sct#1293061000168108 "Dient zur Förderung der Gesundheit"
+* activity.detail.code.coding[0] = $sct#409063005 "Counseling"
+* activity.detail.code.coding[+] = $sct#1293061000168108 "Health promotion service"
 * activity.detail.status = #completed
 * activity.detail.statusReason.text = "Der Hausarzt informierte den Patienten über eine Veranstaltung des Herzverbandes zur Förderung der Herzgesundheit."
 * activity.detail.doNotPerform = false
@@ -365,7 +361,7 @@ Instance: example-diab-leitdokument-allergy-1
 InstanceOf: AtApsAllergyIntolerance // DiabAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
-* code = $sct#89055006 "Benzylpenicillin Natrium"
+* code = $sct-auszug#89055006 "Benzylpenicillin Natrium"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 //* text.div = "Das ist eine optionale Beschreibung der Allergie des Arztes." // ??
 * asserter = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
@@ -388,12 +384,13 @@ Instance: example-diab-leitdokument-diagnostic-result-1
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category = $observation-category#laboratory "Laboratory"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+* category[0] = $observation-category#laboratory "Laboratory"
+* category[+] = $elga-laborparameterergaenzung#300 "Hämatologie"
+* code = $loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
-* valueCodeableConcept = $sct#278149003 "Blood group A Rh(D) positive (finding)"
+* valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 * specimen = Reference(urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7)
 
 // Diagnostic Results - Performer
@@ -424,7 +421,7 @@ InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * status = $specimen-status#unavailable "Unavailable"
-* type = $sct#119297000 "Blood specimen"
+* type = $sct-auszug#119297000 "Blood specimen"
 
 // Vital Signs
 
@@ -474,7 +471,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
 * effectiveDateTime = "2019-07-15"
-* valueCodeableConcept = $sct#8517006 "Ex-smoker"
+* valueCodeableConcept = $sct-auszug#8517006 "Ex-smoker"
 
 Instance: example-diab-leitdokument-social-history-2
 InstanceOf: Observation
@@ -493,24 +490,6 @@ Usage: #inline
 * valueRatio.denominator.unit = "wk"
 * valueRatio.denominator.system = "http://unitsofmeasure.org"
 * valueRatio.denominator.code = #wk
-
-Instance: example-diab-leitdokument-device-use-1  //todo
-InstanceOf: AtApsDeviceUseStatement
-Usage: #inline
-* status = #active
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* device = Reference(urn:uuid:a1a80313-a757-4062-b0d7-d04fd2a04602)
-* timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* timingDateTime.extension.valueCode = #unknown
-
-Instance: example-diab-device
-InstanceOf: AtApsDevice
-Usage: #inline
-* type = $sct#787483001 "No known device use (situation)"
-* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* deviceName.name = "empty"
-* deviceName.type = #other
-* version.value = "empty"
 
 Instance: example-diab-organization
 InstanceOf: AtApsOrganization
