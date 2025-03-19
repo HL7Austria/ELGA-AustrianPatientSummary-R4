@@ -319,6 +319,9 @@ def i_procedures_data(proc, data):
             proc_code_coding_cs = proc_code_coding.system
             if proc_code_coding_cs:
                 data.codesystem = proc_code_coding_cs.value
+            proc_code_coding_display = proc_code_coding.display
+            if proc_code_coding_display:
+                data.operation = proc_code_coding_display.value
     proc_status = proc.status
     if proc_status:
         data.status = proc_status.value
