@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100svh;
+    background-color: var(--color-background);
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-medium);
+    gap: var(--padding-medium);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--color-h1);
+}
+
+.h1-light {
+    font-size: var(--font-size-h1);
+    color: black;
+    font-weight: normal;
+}
+
+.span-bold {
+    color: var(--color-h1);
+    font-weight: bold;
+}
+
+.wrap-text {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        padding: var(--padding-small);
+    }
+}
+
+@media print {
+    body * {
+        display: none; /* Hide everything by default */
+    }
+    #print-area, #print-area * {
+        display: block; /* Show the print area */
+    }
+}

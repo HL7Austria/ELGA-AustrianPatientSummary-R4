@@ -1,0 +1,175 @@
+.expansion-panel {
+    border-radius: var(--border-radius-medium);
+    width: var(--width-container);
+    margin: auto;
+    max-width: 100%;
+}
+
+.expansion-panel-header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    /* padding: var(--padding-medium); */
+    padding: 70px 50px;
+}
+
+.expansion-panel-content {
+    display: none;
+    /* color: white; */
+}
+
+.expansion-panel-content p {
+    color: white;
+}
+
+.expansion-panel-title {
+    color: white;
+    font-size: 3rem;
+    padding-left: 70px;
+}
+
+.btn-collapse {
+    display: none;
+    font-size: var(--font-size-normal);
+    padding: var(--padding-small-button);
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    width: fit-content;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: .2s;
+    margin-left: auto;
+}
+
+.btn-collapse:hover {
+    background-color: white;
+    color: black;
+}
+
+.expansion-panel-open {
+    z-index: 2;
+}
+
+.expansion-panel-dynamic {
+    margin: unset;
+    width: var(--width-expansion-panel-dynamic);
+}
+
+.expansion-panel-dynamic .expansion-panel-header {
+    height: var(--height-expansion-panel-dynamic);
+    padding: unset;
+    justify-content: center;
+}
+
+.expansion-panel-dynamic .expansion-panel-title {
+    padding: unset;
+    text-align: center;
+}
+
+.expansion-panel-dynamic .expansion-panel-header img {
+    display: none;
+}
+
+.expansion-panel-dynamic .expansion-panel-title {
+    font-size: var(--font-size-normal);
+}
+
+.expansion-panel-open .expansion-panel-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-medium);
+    gap: var(--padding-medium);
+}
+
+.expansion-panel-header img {
+    width: 120px;
+}
+
+.expansion-panel-open .expansion-panel-header img {
+    width: 60px !important;
+}
+
+.expansion-panel-open .expansion-panel-header {
+    gap: var(--padding-medium);
+    height: 50px;
+    justify-content: flex-start;
+    padding: 20px var(--padding-medium) 0 var(--padding-medium);
+    /* padding: var(--padding-medium); */
+}
+
+.expansion-panel-open .expansion-panel-title {
+    font-size: 1.5rem;
+    padding-left: initial;
+}
+
+.expansion-panel-open .btn-collapse {
+    display: block;
+}
+
+.expansion-panel-open[expansion-panel-large="true"] {
+    width: var(--width-expansion-panel-large);
+}
+
+@media only screen and (max-width: 767px) {
+    .btn-collapse-small {
+        display: none !important;
+    }
+
+    .expansion-panel-header img {
+        display: none;
+    }
+    .expansion-panel-title {
+        text-align: center;
+        padding-left: initial;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
+
+.expansion-panel-stammdaten {
+    background-color: var(--color-expansion-panel-stammdaten);
+}
+
+.expansion-panel-allergien {
+    background-color: var(--color-expansion-panel-allergien);
+}
+
+.expansion-panel-aktuelle-medikamente {
+    background-color: var(--color-expansion-panel-aktuelle-medikamente);
+}
+
+.expansion-panel-vergangene-medikamente {
+    background-color: var(--color-expansion-panel-vergangene-medikamente);
+}
+
+.expansion-panel-aktuelle-diagnose {
+    background-color: var(--color-expansion-panel-aktuelle-diagnose);
+}
+
+.expansion-panel-vergangene-diagnosen {
+    background-color: var(--color-expansion-panel-vergangene-diagnosen);
+}
+
+.expansion-panel-familienanamnese {
+    background-color: var(--color-expansion-panel-familienanamnese);
+}
+
+.expansion-panel-operationen {
+    background-color: var(--color-expansion-panel-operationen);
+}
+
+.expansion-panel-lebensstil {
+    background-color: var(--color-expansion-panel-lebensstil);
+}
+
+.expansion-panel-durchgeführte-tests {
+    background-color: var(--color-expansion-panel-durchgeführte-tests);
+}
+
+.expansion-panel-gemessene-werte {
+    background-color: var(--color-expansion-panel-gemessene-werte);
+}
