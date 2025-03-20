@@ -1,0 +1,47 @@
+:root {
+    /* PADDING */
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-big: 30px;
+    --padding-small-button: 5px 20px;
+    --padding-medium-button: 10px 20px;
+
+    /* COLOR */
+    --color-primary: hsl(0, 0%, 100%);
+    --color-secondary: #2697b9b7;
+    --color-primary-focus: #2697b9b7;
+    --color-h1: #2697b9b7;
+    --color-border: #007ca1b7;
+    --color-background: hsl(0, 0%, 95%);
+    --color-button-primary: var(--color-h1);
+    --color-expansion-panel-stammdaten: #2697b9b7;
+    --color-expansion-panel-allergien: #2699b9d7;
+    --color-expansion-panel-aktuelle-medikamente: #539ecc;
+    --color-expansion-panel-vergangene-medikamente:  #4b93c0b6;
+    --color-expansion-panel-aktuelle-diagnose:#54a831;
+    --color-expansion-panel-vergangene-diagnosen: #57973bbd;
+    --color-expansion-panel-familienanamnese:  #7b973bd0;
+    --color-expansion-panel-operationen: hsl(19, 97%, 45%, 0.726);
+    --color-expansion-panel-lebensstil: hsl(9, 97%, 45%, 0.726);
+    --color-expansion-panel-durchgeführte-tests: hsl(0, 97%, 45%, 0.582);
+    --color-expansion-panel-gemessene-werte:hsl(335, 97%, 45%, 0.58);
+
+    /* FONT */
+    --font-size-h1: 1rem;
+    --font-size-big-letter: 2rem;
+    --font-size-normal: 1rem;
+    --font-size-small: 0.75rem;
+
+    /* BORDER */
+    --border-radius-small: 10px;
+    --border-radius-medium: 20px;
+
+    /* HEIGHT */
+    --height-expansion-panel-dynamic: 50px;
+    --height-div-introduction: 350px;
+
+    /* WIDTH */
+    --width-container: 1000px;
+    --width-expansion-panel-large: 1500px;
+    --width-expansion-panel-dynamic: 250px;
+}

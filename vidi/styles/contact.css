@@ -1,0 +1,32 @@
+.container-contact {
+    display: flex;
+    gap: var(--padding-medium);
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius-medium);
+    width: var(--width-container);
+    max-width: 100%;
+    margin: auto;
+}
+
+.div-contact-img {
+    display: flex;
+    justify-content: center;
+}
+
+.div-contact-img img {
+    width: 100%;
+    max-width: 250px;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-contact {
+        padding: var(--padding-small);
+    }
+    .div-contact-img {
+        display: none;
+    }
+
+    .div-contact-data {
+        width: 100%;
+    }
+}

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="ips, international patient summary">
+    <meta name="author" content="Hannah Vinatzer">
+    <title>VIDi IPS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/view.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/zoom.css">
+    <link rel="stylesheet" href="styles/tabulator.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/expansion-panel.css">
+    <!-- <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator_modern.min.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator_materialize.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tabulator-tables@6.2.5/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.2.5/dist/js/tabulator.min.js"></script>
+    <script src="scripts/drag.js" defer></script>
+    <script src="scripts/expansion-panel.js" defer></script>
+    <script src="scripts/view.js" defer></script>
+    <script type="module" src="scripts/tables/_loader.js" defer></script>
+    <script src="scripts/zoom.js" defer></script>
+    <script src="scripts/print.js" defer></script>
+    <script type="module" defer>
+        import { loadFrom } from './scripts/tables/_loader.js';
+        import example from './scripts/tables/_ips_as_vidi_example.json' with {type: 'json'};
+        loadFrom(example);
+    </script>
+</head>
+<body>
+    <div class="container-zoom">
+        <button type="button" aria-label="Zoom in" onclick="toggleZoomScreenRelativeChange('15')" class="btn-zoom">
+            <img src = "assets/icons/zoom_in.webp"></img>
+        </button>
+        <button type="button" aria-label="Zoom out" onclick="toggleZoomScreenRelativeChange('-15')" class="btn-zoom">
+            <img src = "assets/icons/zoom_out.webp"></img>
+        </button>
+    </div>
+    <main>
+        <div class="container-view">
+            <input type="radio" id="view_simple" name="view" value="simple">
+            <label for="view_simple">
+                <h1><span class="span-big-letter">V</span><br>vereinfachte<br>Ansicht</h1>
+            </label>
+            <input type="radio" id="view_advanced" name="view" value="advanced" checked>
+            <label for="view_advanced">
+                <h1><span class="span-big-letter">I</span><br>informative<br>Ansicht</h1>
+            </label>
+            <input type="radio" id="view_dynamic" name="view" value="dynamic">
+            <label for="view_dynamic">
+                <h1><span class="span-big-letter">D</span><br>dynamische<br>Ansicht</h1>
+            </label>
+            <button type="button" aria-label="Information" class="btn-information" onclick="window.open('https://gitlab.com/elga-gmbh/vidi#vidi')">
+                <img src="assets/img/icon_info.png" width="24" height="24">
+            </button>
+        </div>
+        <div class="container-content" id="container-simple">
+            <div class="div-introduction">
+                <div class="div-img-introduction">
+                    <img class="img-description" data-view="simple" src="assets/img/introduction_simple.jpg" alt="Beschreibung">
+                </div>
+                <div class="div-description">
+                    <h1><span class="h1-light">Sehr geehrter </span>Herr Mustermann<span class="h1-light">,</span></h1>
+                    <p>
+                        in dieser Ansicht finden Sie all Ihre medizinischen Daten übersichtlich und vereinfacht dargestellt.
+                        <p>Bei Fragen wenden Sie sich bitte an <span class="span-bold">Ihre Hausärztin, Frau Musterfrau</span>, die Erstellerin Ihres IPS. </p>
+                    </p>
+                </p>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-stammdaten">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/stammdaten.png" alt="Stammdaten">
+                    <span class="expansion-panel-title">Meine Personendaten</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>Hier werden allgemeine Informationen über Ihre Person festgehalten:</p>
+                    <table class="table-horizontal">
+                        <tr>
+                          <th>Name:</th>
+                          <td>Max Mustermann</td>
+                          <th>Adresse:</th>
+                          <td>Am Schulweg 5, Hainfeld, 3100, AUT</td>
+                        </tr>
+                        <tr>
+                          <th>Geschlecht:</th>
+                          <td>männlich</td>
+                          <th>Identifikationsnummer:</th>
+                          <td>0000121150</td>
+                        </tr>
+                        <tr>
+                          <th>Geburtsdatum:</th>
+                          <td>11.12.1950</td>
+                          <th></th>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <th>Verfasserin des Dokuments:</th>
+                          <td>Hausarzt:ärztin Marlene Musterfrau</td>
+                          <th></th>
+                          <td></td>
+                        </tr>
+                      </table>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-allergien">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/allergien.png" alt="Allergien">
+                    <span class="expansion-panel-title">Meine Allergien</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier werden alle Stoffe aufgelistet, gegen diese Sie allergisch sind. Hier finden Sie eine Erklärung, was man unter einer Allergie versteht:
+                    </br></br><a class="a-explanation" href="https://befunddolmetscher.de/allergie" target="_blank">Erklärung Allergie</a>
+                    </p>
+                    <div id="v_allergies"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-aktuelle-medikamente">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/aktuelle_medikamente.png" alt="Meine Medikamente">
+                    <span class="expansion-panel-title">Meine Medikamente</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier finden Sie all jene Medikamente, die Sie zur Zeit einnehmen. Hier finden Sie eine Erklärung, wie Dosierungen angegeben werden:
+                    </br></br><a class="a-explanation" href="https://www.deutschesapothekenportal.de/download/public/arbeitshilfen/dap_arbeitshilfe_86.pdf" target="_blank">Erklärung Dosierung</a>
+                    </p>
+                    <div id="v_current_medication"></div>
+                    </br>
+                    <p>
+                        Hier werden all jene Medikamente aufgelistet, die Sie in der Vergangenheit eingenommen haben.</a>
+                    </p>
+                    <div id="v_past_medication"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-aktuelle-diagnose">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/aktuelle_diagnose.png" alt="Aktuelle Diagnose">
+                    <span class="expansion-panel-title">Meine Diagnosen</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier finden Sie ihre aktuellen Diagnosen, die von einem medizinischen Fachsperonal gestellt wurden.<br>
+                        Falls möglich wird neben der Diagnose eine Erklärung dieser angegeben.
+                        <div id="v_current_problems"></div>
+                    </p>
+                    <p>
+                        Hier finden Sie Ihre vergangenen Diagnosen, welche bereits gelöst wurden oder nicht mehr aktuell sind:
+                    </p>
+                    <div id="v_past_problems"></div>
+
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-familienanamnese">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/familienanamnese.png" alt="Familienanamnese">
+                    <span class="expansion-panel-title">Meine Familienanamnese</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>Hier finden Sie Ihre Familienanamnese, darunter versteht man folgendes:</br></br> <a class="a-explanation" href="https://befunddolmetscher.de/familienanamnese" target="_blank">Erklärung Familienanamnese</a></p>
+                    <div id="v_family_problems"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-operationen">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/operationen.png" alt="Meine Operationen">
+                    <span class="expansion-panel-title">Meine Operationen</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        In dieser Sektion finden Sie Operationen und Eingriffe, die bei Ihnen durchgeführt wurden. Falls möglich wird neben dem Name der Operation und Eingriffes eine Erklärung angeführt.
+                    </p>
+                    <div id="v_procedures"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-lebensstil">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/lebensstil.png" alt="Mein Lebensstil">
+                    <span class="expansion-panel-title">Mein Lebensstil</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier werden relevante Punkte zu Ihrem Lebensstil festgehalten.
+                    </p>
+                    <div id="v_socialhistory"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-durchgeführte-tests">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/durchgeführte_tests.png" alt="Durchgeführte Tests">
+                    <span class="expansion-panel-title">Durchgeführte Tests</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier werden alle Tests, sowie deren Ergebnisse, aufgelistet die an Ihnen durchgeführt wurden.
+                        Diese durchgeführten Test wurden unter Beobachtung von medizinischem Fachpersonal durchgeführt und von diesen ausgwertet.
+                    </p>
+                    <div id="v_vitalsigns"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+            <div class="expansion-panel expansion-panel-gemessene-werte">
+                <div class="expansion-panel-header">
+                    <img src="assets/icons/gemessene_werte.png" alt="Gemessene Werte">
+                    <span class="expansion-panel-title">Laborwerte</span>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                </div>
+                <div class="expansion-panel-content">
+                    <p>
+                        Hier werden alle Ihre gemessenen Werte und deren Ergebnisse augelistet. Diese Werte wurden von medizinischen Fachpersonal erhoben und ausgwertet.
+                    </p>
+                    <div id="v_results"></div>
+                    <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-content" id="container-advanced">
+            <div class="div-introduction">
+                <div class="div-img-introduction">
+                    <img class="img-description active" data-view="advanced-static" src="assets/img/introduction_advanced_static.jpg" alt="Beschreibung">
+                    <img class="img-description" data-view="advanced-dynamic" src="assets/img/introduction_advanced_dynamic.jpg" alt="Beschreibung">
+                </div>
+                <div class="div-description">
+                    <h1><span class="h1-light">Sehr geehrte:r</span> Experte:in<span class="h1-light">,</span></h1>
+                    <p>
+                        hier finden Sie alle relevanten medizinischen Informationen zu Herrn <span class="span-bold">Max Mustermann</span>.
+                    </p>
+                    <p>Dieser IPS wurde von <span class="span-bold">Hausärztin Frau Musterfrau erstellt</span> und mit den angegebenen Informationen befüllt.</p>
+                    <div id="div-switch-expansion-panel">
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                name="toggle-expansion-panel"
+                                id="toggle-expansion-panel"
+                                unchecked
+                                >
+                            <span class="slider"></span>
+                        </label>
+                        <span>Alles Ausklappen</span>
+                    </div>
+                    <button class="btn-print" type="button" aria-label="Drucken">IPS Drucken</button>
+                </div>
+            </div>
+            <div class="container-expansion-panels-advanced">
+                <p id="description-dynamic">
+                    Ziehen Sie jene Sektion, welche Sie anschauen möchten, aus der Box und klicken Sie darauf.<br><br>
+                    Sobald Sie eine Sektion fertig betrachtet haben, klappen Sie die Sektion ein und ziehen Sie diese wieder in die graue Box.
+                </p>
+                <div class="expansion-panel expansion-panel-stammdaten">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/stammdaten.png" alt="Stammdaten">
+                        <span class="expansion-panel-title">Personendaten</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <table class="table-horizontal">
+                            <tr>
+                              <th>Name:</th>
+                              <td>Max Mustermann</td>
+                              <th>Adresse:</th>
+                              <td>Am Schulweg 5, Hainfeld, 3100, AUT</td>
+                            </tr>
+                            <tr>
+                              <th>Geschlecht:</th>
+                              <td>männlich</td>
+                              <th>Identifikationsnummer:</th>
+                              <td>0000121150</td>
+                            </tr>
+                            <tr>
+                              <th>Geburtsdatum:</th>
+                              <td>11.12.1950</td>
+                              <th></th>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <th>Verfasserin des Dokuments:</th>
+                              <td>Hausarzt:ärztin Marlene Musterfrau</td>
+                              <th></th>
+                              <td></td>
+                            </tr>
+                          </table>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-allergien">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/allergien.png" alt="Allergien">
+                        <span class="expansion-panel-title">Allergien</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_allergies"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-aktuelle-medikamente">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/aktuelle_medikamente.png" alt="Aktuelle Medikamente">
+                        <span class="expansion-panel-title">Aktuelle Medikamente</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_current_medication"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-vergangene-medikamente">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/vergangene_medikamente.png" alt="Vergangene Medikamente">
+                        <span class="expansion-panel-title">Vergangene Medikamente</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_past_medication"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-aktuelle-diagnose">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/aktuelle_diagnose.png" alt="Aktuelle Diagnose">
+                        <span class="expansion-panel-title">Aktuelle Diagnose</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_current_problems"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-vergangene-diagnosen">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/vergangene_diagnosen.png" alt="Vergangene Diagnosen">
+                        <span class="expansion-panel-title">Vergangene Diagnosen</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_past_problems"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-familienanamnese">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/familienanamnese.png" alt="Familienanamnese">
+                        <span class="expansion-panel-title">Familienanamnese</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_family_problems"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-operationen">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/operationen.png" alt="Operationen">
+                        <span class="expansion-panel-title">Operationen</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_procedures"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-lebensstil">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/lebensstil.png" alt="Lebensstil">
+                        <span class="expansion-panel-title">Lebensstil</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_socialhistory"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-durchgeführte-tests" expansion-panel-large="true">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/durchgeführte_tests.png" alt="Durchgeführte Tests">
+                        <span class="expansion-panel-title">Durchgeführte Tests</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_vitalsigns"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+                <div class="expansion-panel expansion-panel-gemessene-werte" expansion-panel-large="true">
+                    <div class="expansion-panel-header">
+                        <img src="assets/icons/gemessene_werte.png" alt="Gemessene Werte">
+                        <span class="expansion-panel-title">Laborwerte</span>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-small">Einklappen</button>
+                    </div>
+                    <div class="expansion-panel-content">
+                        <div id="i_results"></div>
+                        <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-contact">
+            <div class="div-contact-img">
+                <img src="assets/img/contact.png" alt="Contact">
+            </div>
+            <div class="div-contact-data">
+                <h1 class="h1-light">Bei Fragen oder Anregungen melden Sie sich gerne bei uns unter:</h1>
+                <p>E-Mail: <strong>firma@info.com</strong></p>
+                <p>Telefonnummer: <strong>+43 123 456 789</strong></p>
+                <p>Anschrift: <strong>Hauptplatz 1, 8010 Graz</strong></p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

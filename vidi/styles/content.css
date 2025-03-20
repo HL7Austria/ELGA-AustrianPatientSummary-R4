@@ -1,0 +1,99 @@
+.container-content, .container-expansion-panels-advanced {
+    background-color: white;
+    padding: var(--padding-medium);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-medium);
+    border-radius: var(--border-radius-medium);
+}
+
+#container-simple {
+    display: none;
+}
+
+.container-expansion-panels-dynamic {
+    background-color: var(--color-background);
+    width: fit-content;
+}
+
+.div-introduction {
+    display: flex;
+    width: var(--width-container);
+    max-width: 100%;
+    margin: auto;
+ }
+
+.div-img-introduction, .div-description {
+    flex: 1;
+} 
+
+.div-introduction img {
+    /* width: 100%;
+    max-width: 400px; */
+    height: 350px;
+    width: auto !important;
+}
+
+.btn-print {
+    font-size: var(--font-size-normal);
+    padding: var(--padding-small-button);
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    width: fit-content;
+    background-color: transparent;
+    color: var(--color-h1);
+    border: 2px solid var(--color-h1);
+    float: right;
+}
+
+.btn-print:hover {
+    background-color: var(--color-h1);;
+    color: white;
+}
+
+.a-explanation {
+    padding-right: var(--padding-medium);
+    cursor: pointer;
+    color: white;
+}
+
+.a-group-explanation  {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--padding-small);
+    flex-direction: row;
+}
+
+.table-horizontal {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-horizontal th, .table-horizontal td {
+    padding: var(--padding-small);
+    text-align: left;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-content {
+        padding: var(--padding-small);
+    }
+    .div-img-introduction {
+        display: none;
+    }
+
+    .div-description {
+        width: 100%;
+    }
+
+    .table-horizontal, .table-horizontal tbody, .table-horizontal tr {
+        display: block;
+    }
+    
+    .table-horizontal th, .table-horizontal td {
+        display: block;
+        padding: var(--padding-small) 0;
+    }
+}

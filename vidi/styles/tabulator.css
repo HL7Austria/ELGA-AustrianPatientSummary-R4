@@ -1,0 +1,50 @@
+.tabulator {
+    color: white !important;
+}
+
+.tabulator-cell {
+    height: auto !important;
+    line-height: normal;
+}
+
+.tabulator-header, .tabulator-col, .tabulator-row, .tabulator, .tabulator-table {
+    background-color: transparent !important;
+    border-color: white !important;
+    color: white;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=descending] .tabulator-col-content .tabulator-col-sorter {
+    color: white !important;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=ascending] .tabulator-col-content .tabulator-col-sorter {
+    color: white !important;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=none] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+    border-bottom: 10px solid rgb(202, 202, 202) !important;
+    border-top: none !important;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=descending] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+    border-top: 10px solid white !important;
+    color: white !important;
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=ascending] .tabulator-col-content .tabulator-col-sorter .tabulator-arrow {
+    border-bottom: 10px solid white !important;
+    color: white !important;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter {
+    top: 6px !important;
+    align-items: initial !important;
+}
+
+
+
+@media (max-width: 800px) {
+    .tabulator-row-handle {
+        display: inline-flex !important;
+    }
+}
