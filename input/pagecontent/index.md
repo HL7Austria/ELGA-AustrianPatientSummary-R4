@@ -27,24 +27,3 @@ Das Patient Summary ist daher keine vollständige Krankenakte, sondern eine Zusa
 Das Profil des APS leitet direkt vom [HL7AT Core IG](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) ab. Um darüber hinaus die Vorgaben des IPS zu erfüllen, wird auf die [imposeProfile-Extension](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) zurückgegriffen. Zusätzlich wurden bei der Erstellung des APS die Vorgaben aus dem Requirements Catalogue im Rahmen von [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en) berücksichtigt.
 
 [![overview](austrian-ips-context.drawio.png){: style="width: 60%"}](austrian-ips-context.drawio.png)
-
-### Abhängigkeiten zu anderen Implementierungsleitfäden
-
-{% include dependency-table.xhtml %}
-
-### Cross Version Analyse
-
-{% include cross-version-analysis.xhtml %}
-
-### Globale Profile
-
-{% include globals-table.xhtml %}
-
-### Lizenz und rechtliche Bedingungen
-HL7®, HEALTH LEVEL SEVEN® und FHIR® sind Marken im Besitz von Health Level Seven International, eingetragen beim United States Patent and Trademark Office.
-
-Dieser Implementierungsleitfaden enthält und verweist auf geistiges Eigentum, das Dritten gehört („Third Party IP“). Mit der Annahme dieser Lizenzbedingungen werden keine Rechte in Bezug auf das geistige Eigentum Dritter gewährt. Der Lizenznehmer ist allein dafür verantwortlich, alle erforderlichen Lizenzen oder Genehmigungen für die Nutzung des geistigen Eigentums Dritter in Verbindung mit der Spezifikation oder auf andere Weise zu ermitteln und einzuholen.
-
-#### IP-Statements
-
-{% include ip-statements.xhtml %}
