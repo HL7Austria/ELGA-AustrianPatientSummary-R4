@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.at.fhir.elga.ips
-canonical: https://fhir.hl7.at/elga-austrianpatientsummary-r4
+id: hl7.at.fhir.elga.aps.r4
+canonical: https://fhir.hl7.at/elga/aps/r4
 name: ELGA-AustrianPatientSummary-R4
 title: Austrian Patient Summary (R4)
 description: The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
