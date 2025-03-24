@@ -1,4 +1,4 @@
-import IpsToVidi_new
+import IpsToVidi
 import os
 import glob
 import shutil
@@ -13,7 +13,7 @@ transformed_dir = os.path.join(directory, '..', 'vidi', 'scripts', 'tables')
 
 for source in list(glob.glob(bundle_dir + os.sep + 'Bundle-*.json')):
     target = source.replace(bundle_dir, transformed_dir).replace('.json', '_vidi.json')
-    IpsToVidi_new.transform(source, target)
+    IpsToVidi.transform(source, target)
 
     html_filename = os.path.basename(source).replace('.json', '.html')
     vidi_filename = os.path.basename(target)
