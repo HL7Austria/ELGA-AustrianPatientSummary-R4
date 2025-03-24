@@ -51,8 +51,9 @@ dependencies:
 pages:
   index.md:
     title: Home
-  contest.md:
-    title: IPS Visualization Contest
+  imprint.md:
+    title: Impressum
+
 # pages:
 #   index.md:
 #     title: Example Home
@@ -88,7 +89,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  IPS Visualization Contest: contest.html
+  Impressum: imprint.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
