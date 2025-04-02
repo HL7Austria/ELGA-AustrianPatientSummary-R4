@@ -95,8 +95,8 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Impressum: imprint.html
   Artifacts: artifacts.html
+  Impressum: imprint.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
