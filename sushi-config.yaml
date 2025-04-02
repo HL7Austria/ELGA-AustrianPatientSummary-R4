@@ -9,17 +9,23 @@ name: ELGA-AustrianPatientSummary-R4
 title: Austrian Patient Summary (R4)
 description: The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).
 status: draft # draft | active | retired | unknown
-jurisdiction: urn:iso:std:iso:3166#AT
+experimental: false
+jurisdiction: urn:iso:std:iso:3166#AT # https://www.hl7.org/fhir/valueset-jurisdiction.html
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+# copyright: CC0-1.0
 publisher:
   name: ELGA GmbH
   url: https://elga.gv.at
-  # email: test@example.org
+contact:
+  - name: ELGA GmbH
+    telecom:
+      - system: url
+        value: https://elga.gv.at
+        use: work
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
