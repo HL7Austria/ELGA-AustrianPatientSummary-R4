@@ -9,12 +9,19 @@
 
 Menu
 
-- Home
-- Inhalt / ToC (?)
+- Home (Generelle Einleitung)
+- Inhalt / ToC (?) (automatisch erstellt)
 - Hintergrund
-- Spezifikation
-- Artifacts
-- About
+  - Warum die IPS (und nicht EPS)?
+  - Umfeld
+  - Geschichte
+  - Design Choice
+- Funktionale Anforderungen
+  - Use Cases
+  - Basis für alle anderen Leitfäden
+  - (Konformitätsprüfung, Datentypen, etc. -> Meta IG)
+- Artifacts (automatisch erstellt)
+- ELGA IG (NKR -> IV Leitfäden)
   - Impressum
   - Legal
   - Authors / Contributors
