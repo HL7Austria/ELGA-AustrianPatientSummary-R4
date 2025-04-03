@@ -59,6 +59,8 @@ pages:
     title: Home
   imprint.md:
     title: Impressum
+  contributors.md:
+    title: Autoren und Mitwirkende
 
 # pages:
 #   index.md:
@@ -97,7 +99,9 @@ parameters:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Impressum: imprint.html
+  About:
+    Autoren und Mitwirkende: contributors.html
+    Impressum: imprint.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
