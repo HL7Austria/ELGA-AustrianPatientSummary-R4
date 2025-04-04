@@ -61,6 +61,8 @@ pages:
     title: Impressum
   contributors.md:
     title: Autoren und Mitwirkende
+  info.md:
+    title: Informationen über dieses Dokument
 
 # pages:
 #   index.md:
@@ -102,6 +104,7 @@ menu:
   About:
     Autoren und Mitwirkende: contributors.html
     Impressum: imprint.html
+  ELGA IGs: info.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
