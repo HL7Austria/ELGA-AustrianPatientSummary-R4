@@ -1,0 +1,14 @@
+{
+  "name" : "hl7.at.fhir.templatex",
+  "type" : "fhir.template",
+  "license" : "CC0-1.0",
+  "description" : "Austrian FHIR® IG Base Template - for use by anyone in the Austrian domain",
+  "author" : "http://fhir.hl7.at/",
+  "canonical" : "http://fhir.org/templates/hl7.at.fhir.templatex",
+  "base" : "fhir.base.template",
+  "dependencies" : {
+    "fhir.base.template" : "current"
+  },
+  "version" : "0.5.1",
+  "date" : "20240706071054"
+}

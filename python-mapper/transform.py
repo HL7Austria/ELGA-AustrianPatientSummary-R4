@@ -15,7 +15,7 @@ for source in list(glob.glob(bundle_dir + os.sep + 'Bundle-*.json')):
     target = source.replace(bundle_dir, transformed_dir).replace('.json', '_vidi.json')
     IpsToVidi.transform(source, target)
 
-    html_filename = os.path.basename(source).replace('.json', '.html')
+    html_filename = os.path.basename(source).replace('.json', '.vidi.html')
     vidi_filename = os.path.basename(target)
 
     shutil.copyfile(os.path.join(vidi_dir, 'index.html'), os.path.join(vidi_dir, html_filename))
