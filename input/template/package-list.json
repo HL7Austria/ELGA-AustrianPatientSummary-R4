@@ -1,8 +1,8 @@
 {
-  "package-id" : "hl7.at.fhir.templatex",
+  "package-id" : "hl7.at.fhir.template",
   "title" : "Austrian FHIR® IG Base Template",
   "introduction" : "For use by anyone in the Austrian domain",
-  "canonical" : "http://fhir.org/templates/hl7.at.fhir.templatex",
+  "canonical" : "http://fhir.org/templates/hl7.at.fhir.template",
   "list" : [
     {
       "version" : "current",
@@ -13,7 +13,7 @@
     },
     {
       "version" : "0.5.1",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.5.1",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.5.1",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -23,7 +23,7 @@
     },
     {
       "version" : "0.5.0",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.5.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.5.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -32,7 +32,7 @@
     },
     {
       "version" : "0.4.0",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.4.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.4.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -41,7 +41,7 @@
     },
     {
       "version" : "0.3.0",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.3.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.3.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -50,7 +50,7 @@
     },
     {
       "version" : "0.2.0",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.2.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.2.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -59,7 +59,7 @@
     },
     {
       "version" : "0.1.0",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.1.0",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.1.0",
       "status" : "release",
       "sequence" : "Publications",
       "fhirversion" : "4.0.1",
@@ -69,7 +69,7 @@
     {
       "version" : "0.0.1",
       "desc" : "First release",
-      "path" : "http://fhir.org/templates/hl7.at.fhir.templatex/0.0.1",
+      "path" : "http://fhir.org/templates/hl7.at.fhir.template/0.0.1",
       "status" : "release",
       "sequence" : "Publications",
       "date" : "2022-10-04"

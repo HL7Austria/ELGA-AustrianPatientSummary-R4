@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>TESTTEST {{site.data.pages[page.path].title | escape_once}} - {{site.data.fhir.ig.title | escape_once}} v{{site.data.fhir.ig.version | escape_once}}</title>
+    <title>{{site.data.pages[page.path].title | escape_once}} - {{site.data.fhir.ig.title | escape_once}} v{{site.data.fhir.ig.version | escape_once}}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,7 +18,7 @@
     <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="{{site.data.info.assets}}assets/css/prism.css" rel="stylesheet" />
-    <link href="{{site.data.info.assets}}assets/css/cqf.css" rel="stylesheet" />
+    <!-- <link href="{{site.data.info.assets}}assets/css/cqf.css" rel="stylesheet" /> -->
     {% include fragment-css.html %}
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -48,7 +48,7 @@
         <!-- at-fhir-ig-template begin -->
         <div class="row">
           <div class="col-1">
-            <img id="header-logo" src="{{site.data.infos.assets}}assets/images/hl7atlogo.png"/>
+            <img id="header-logo" src="{{site.data.infos.assets}}logo.jpg"/>
           </div>
           <div class="col-11">
         <!-- at-fhir-ig-template end -->
