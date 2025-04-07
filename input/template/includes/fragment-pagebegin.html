@@ -59,9 +59,11 @@
 {% assign status = site.data.fhir.ig.status %}
 {% endif %}
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">{{site.data.fhir.ig.title | escape_once}}</span>
-            <br/>
-            <span style="display:inline-block;">{{site.data.fhir.ig.version}} - {{status}}
+          <p>
+            <!-- at-fhir-ig-template begin -->
+            <span style="font-size:12pt;font-weight:bold">{{site.data.fhir.ig.title | escape_once}}</span><br/>
+            <span class="label label-info">{{site.data.fhir.ig.version}} - {{status}}
+              <!--
 {% assign igId = site.data.fhir.ig.id | prepend: "ImplementationGuide/" %}
 {% for jurisdiction in site.data.resources[igId].jurisdictions %}
 {% if jurisdiction.flag %}
@@ -71,7 +73,8 @@
 {% else %}
   {{jurisdiction.name}}
 {% endif %}
-{% endfor %}
+{% endfor %} -->
+            <!-- at-fhir-ig-template end -->
             </span>
         <!-- at-fhir-ig-template begin -->
           </div>
