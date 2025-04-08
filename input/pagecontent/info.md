@@ -2,7 +2,7 @@
 
 *Medieneigentümer, Herausgeber, Hersteller, Verleger:*<br/>
 ELGA GmbH, Treustraße 35-43, Wien, Österreich. Telefon: +43.1.2127050<br/>
-Internet: [www.elga.gv.at](https://www.elga.gv.at), Email: [cda@elga.gv.at](mailto:cda@elga.gv.at)<br/>
+Internet: [www.elga.gv.at](https://www.elga.gv.at), Email: [standards@elga.gv.at](mailto:standards@elga.gv.at)<br/>
 Geschäftsführer: Mag. Dr. Stefan Sabutsch, Dr. Edith Bulant-Wodak, MBA
 
 *Redaktion, Projektleitung, Koordination:*<br/>
@@ -12,7 +12,7 @@ Dr. Emmanuel Helm, [emmanuel.helm@elga.gv.at](mailto:emmanuel.helm@elga.gv.at)
 
 *Nutzung:* Das Dokument enthält geistiges Eigentum der Health Level Seven® Int. und HL7® Austria, Erdbergweg 7/8, 8052 Graz; [www.hl7.at](https://www.hl7.at).
 
-*Download* unter [gesundheit.gv.at](https://www.gesundheit.gv.at) und [elga.gv.at/cda](https://www.elga.gv.at/cda). *TODO*
+*Download* unter [fhir.hl7.at](https://fhir.hl7.at)
 
 Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medizinischer Dokumente ausdrücklich erlaubt. Andere Arten der Nutzung und auch auszugsweise Wiedergabe bedürfen der Genehmigung des Medieneigentümers. 
 
@@ -22,8 +22,7 @@ Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medi
 
 Soweit im Text Bezeichnungen nur im generischen Maskulinum angeführt sind, beziehen sie sich auf Männer, Frauen und andere Geschlechtsidentitäten in gleicher Weise. Unter dem Begriff "Patient" werden sowohl Bürger, Kunden und Klienten zusammengefasst, welche an einem Behandlungs- oder Pflegeprozess teilnehmen als auch gesunde Bürger, die derzeit nicht an einem solchen teilnehmen. Es wird ebenso darauf hingewiesen, dass umgekehrt der Begriff Bürger auch Patienten, Kunden und Klienten mit einbezieht. 
 
-## Verwendete Standards und gesetzliche Grundlagen
-inkl. Hinweis auf Revisionen
+## Gesetzliche Grundlagen
 
 ### Lizenzinformationen
 
@@ -37,9 +36,9 @@ HL7® und FHIR® sind die eingetragenen Marken von Health Level Seven Internatio
 
 ### Verbindlichkeit
 
-Die Verbindlichkeit und die Umsetzungsfrist dieses Leitfadens sind im Gesundheitstelematikgesetz 2012, BGBl.I Nr.111/2012 sowie in den darauf fußenden ELGA-Verordnungen geregelt. TODO
+Die Verbindlichkeit und die Umsetzungsfrist dieses Leitfadens sind im Gesundheitstelematikgesetz 2012, BGBl.I Nr.111/2012 sowie in den darauf fußenden ELGA-Verordnungen geregelt.
 
-Der Leitfaden in seiner jeweils aktuell gültigen Fassung sowie die aktualisierten Terminologien sind vom zuständigen Minister auf www.gesundheit.gv.at zu veröffentlichen. Der Zeitplan zur Bereitstellung der Datenaustauschformate wird durch das Gesundheitstelematikgesetz 2012 und darauf basierenden Durchführungsverordnungen durch den zuständigen Bundesminister vorgegeben. Hauptversionen, also Aktualisierungen des Implementierungsleitfadens, welche zusätzliche verpflichtende Konformitätskriterien enthalten ("Mandatory" [M], "Required" [R] und "Fixed" [F]), sind mit ihren Fristen zur Bereitstellung per Verordnung kundzumachen. Andere Aktualisierungen (Nebenversionen) dürfen auch ohne Änderung dieser Verordnung unter www.gesundheit.gv.at veröffentlicht werden.
+Der Leitfaden in seiner jeweils aktuell gültigen Fassung sowie die aktualisierten Terminologien sind vom zuständigen Minister auf [www.gesundheit.gv.at](https://www.gesundheit.gv.at) zu veröffentlichen. Der Zeitplan zur Bereitstellung der Datenaustauschformate wird durch das Gesundheitstelematikgesetz 2012 und darauf basierenden Durchführungsverordnungen durch den zuständigen Bundesminister vorgegeben. Hauptversionen, also Aktualisierungen des Implementierungsleitfadens, welche zusätzliche verpflichtende Konformitätskriterien enthalten ("Mandatory" [M], "Required" [R] und "Fixed" [F]), sind mit ihren Fristen zur Bereitstellung per Verordnung kundzumachen. Andere Aktualisierungen (Nebenversionen) dürfen auch ohne Änderung dieser Verordnung unter www.gesundheit.gv.at veröffentlicht werden.
 
 Die Anwendung dieses Implementierungsleitfadens hat im Einklang mit österreichischem und europäischem Recht, insbesondere mit den relevanten Materiengesetzen (z.B. Ärztegesetz 1998, Apothekenbetriebsordnung 2005, Krankenanstalten- und Kuranstaltengesetz, Gesundheits- und Krankenpflegegesetz, Rezeptpflichtgesetz, Datenschutzgesetz, Gesundheitstelematikgesetz 2012, DSGVO) zu erfolgen. Technische Möglichkeiten können gesetzliche Bestimmungen selbstverständlich nicht verändern, vielmehr sind die technischen Möglichkeiten im Einklang mit den Gesetzen zu nutzen.
 
@@ -94,6 +93,6 @@ Das Redaktionsteam bestand aus folgenden Personen[^1]:
 </tbody></table>
 
 
-Teilnehmer der Arbeitsgruppe Integrierte Versorgung Herzinsuffizienz[^1]: *TODO*
+Teilnehmer der Arbeitsgruppe Austrian Patient Summary[^1]: *TODO*
 
 [^1]: Personen sind in alphabetischer Reihenfolge ohne Titel angegeben.
