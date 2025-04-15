@@ -22,7 +22,9 @@ Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medi
 
 Aus Gründen der Lesbarkeit wird im Text das generische Maskulinum verwendet. Es bezieht sich gleichermaßen auf alle Geschlechter. Der Begriff "Patient" schließt auch Bürgerinnen und Bürger, Kundinnen und Kunden sowie Klientinnen und Klienten ein – unabhängig davon, ob sie aktuell an einem Behandlungs- oder Pflegeprozess teilnehmen.
 
-## Gesetzliche Grundlagen
+### Gesetzliche Grundlagen
+
+Gemäß § 2 Abs. 9 lit. f GTelG 2012 umfassen „ELGA-Gesundheitsdaten“ die zur weiteren Behandlung, Betreuung oder Sicherung der Versorgungskontinuität von ELGA-Teilnehmer/inne/n wesentlich sein könnten auch Patient/inn/endaten gemäß Art. 14 Abs. 2 lit. b sublit. i der Richtlinie 2011/24/EU über die Ausübung der Patientenrechte in der grenzüberschreitenden Gesundheitsversorgung („patient summary“).
 
 ### Lizenzinformationen
 
