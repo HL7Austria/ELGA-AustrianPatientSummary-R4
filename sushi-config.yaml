@@ -56,11 +56,21 @@ dependencies:
 #
 pages:
   index.md:
-    title: Home
+    title: Start
+  background.md:
+    title: Hintergrund
+  anforderungen.md:
+    title: Funktionale Anforderungen
+  terminologies.md:
+    title: Terminologien
   imprint.md:
     title: Impressum
   contributors.md:
     title: Autoren und Mitwirkende
+  resources.md:
+    title: Ressourcen
+  info.md:
+    title: Informationen über dieses Dokument
 
 # pages:
 #   index.md:
@@ -96,10 +106,18 @@ parameters:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
-  About:
+  Start: index.html
+  Inhalt: toc.html
+  Hintergrund: background.html
+  Funktionale Anforderungen: anforderungen.html
+  Artefakte: artifacts.html
+  Terminologien: terminologies.html
+  Ressourcen: resources.html
+  ELGA IG:gi
+    Informationen über dieses Dokument: info.html
     Autoren und Mitwirkende: contributors.html
     Impressum: imprint.html
 
