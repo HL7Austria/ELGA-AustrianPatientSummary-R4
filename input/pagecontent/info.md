@@ -56,18 +56,18 @@ Das Redaktionsteam bestand aus folgenden Personen[^1]:
 <th> Rolle
 </th></tr>
 <tr>
+<td> Sonja Gradwohl
+</td>
+<td> ELGA GmbH
+</td>
+<td> Autorin
+</td></tr>
+<tr>
 <td> Emmanuel Helm
 </td>
 <td> ELGA GmbH
 </td>
 <td> Projektleiter, Fachkoordinator
-</td></tr>
-<tr>
-<td> Andrea Klostermann
-</td>
-<td> ELGA GmbH
-</td>
-<td> Autorin
 </td></tr>
 <tr>
 <td> Gabriel Kleinoscheg
@@ -77,18 +77,18 @@ Das Redaktionsteam bestand aus folgenden Personen[^1]:
 <td> Autor
 </td></tr>
 <tr>
+<td> Andrea Klostermann
+</td>
+<td> ELGA GmbH
+</td>
+<td> Autorin
+</td></tr>
+<tr>
 <td> Nikolaus Krondraf 
 </td>
 <td> ELGA GmbH
 </td>
 <td> Autor
-</td></tr>
-<tr>
-<td> Sonja Gradwohl
-</td>
-<td> ELGA GmbH
-</td>
-<td> Autorin
 </td></tr>
 </tbody></table>
 
