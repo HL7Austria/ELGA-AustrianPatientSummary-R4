@@ -1,8 +1,8 @@
 ### Einleitung
 
-> Das ist der FHIR® Implementation Guide (IG) für das Austrian Patient Summary (APS). Die Vorgaben beruhen auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für das [International Patient Summary (IPS), Version 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/), und sind auch kompatibel mit den Vorgaben für das Patient Summary für den grenzüberschreitenden Datenaustausch in der EU (MyHealth@EU Patient Summary Requirements Catalogue).
+> Das ist der FHIR® Implementation Guide (IG) für das Austrian Patient Summary (APS). Die Vorgaben beruhen auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für das [International Patient Summary (IPS), Version 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) und sind kompatibel mit den Vorgaben für das Patient Summary für den grenzüberschreitenden Datenaustausch in der EU (MyHealth@EU Patient Summary Requirements Catalogue).
 
-Ein Patient Summary ist eine standardisierte Zusammenfassung von grundlegenden medizinischen Informationen zu einem Patienten, um Angehörigen von Gesundheitsberufen einen schnellen Überblick über die wesentlichen Fakten zum Gesundheitszustand des Patienten zu verschaffen.
+Das Austrian Patient Summary (APS) ist eine standardisierte, zusammenfassende Kurzakte die wesentlichen medizinischen Informationen eines Patienten enthält. Es dient dazu, Angehörigen von Gesundheitsberufen in Notfall-, Routine- oder grenzüberschreitenden Behandlungssituationen einen schnellen Überblick über den Gesundheitszustand des Patienten zu bieten.
 
 Das Patient Summary soll zur sicheren und zuverlässigen Gesundheitsversorgung beitragen, sowohl im Fall von unerwarteten oder ungeplanten Behandlungen (Unfall, Notfall), als auch bei geplanten Behandlungen, im Rahmen von organisationsübergreifenden Behandlungspfaden und bei der grenzüberschreitenden Gesundheitsversorgung.
 
