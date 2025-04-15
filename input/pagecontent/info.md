@@ -18,9 +18,9 @@ Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medi
 
 *Haftungsausschluss:* Die Arbeiten für den vorliegenden Leitfaden wurden von den Autoren gemäß dem Stand der Technik und mit größtmöglicher Sorgfalt erbracht und über ein öffentliches Kommentierungsverfahren kontrolliert. Die Nutzung des vorliegenden Leitfadens erfolgt in ausschließlicher Verantwortung der Anwender. Aus der Verwendung des vorliegenden Leitfadens können keinerlei Rechtsansprüche gegen die Autoren, Herausgeber oder Mitwirkenden erhoben und/oder abgeleitet werden. Ein allfälliger Widerspruch zum geltenden Recht ist jedenfalls nicht beabsichtigt und von den Erstellern des Dokumentes nicht gewünscht. 
 
-### Sprachliche Gleichbehandlung
+### Hinweis zur Sprachverwendung
 
-Soweit im Text Bezeichnungen nur im generischen Maskulinum angeführt sind, beziehen sie sich auf Männer, Frauen und andere Geschlechtsidentitäten in gleicher Weise. Unter dem Begriff "Patient" werden sowohl Bürger, Kunden und Klienten zusammengefasst, welche an einem Behandlungs- oder Pflegeprozess teilnehmen als auch gesunde Bürger, die derzeit nicht an einem solchen teilnehmen. Es wird ebenso darauf hingewiesen, dass umgekehrt der Begriff Bürger auch Patienten, Kunden und Klienten mit einbezieht. 
+Aus Gründen der Lesbarkeit wird im Text das generische Maskulinum verwendet. Es bezieht sich gleichermaßen auf alle Geschlechter. Der Begriff "Patient" schließt auch Bürgerinnen und Bürger, Kundinnen und Kunden sowie Klientinnen und Klienten ein – unabhängig davon, ob sie aktuell an einem Behandlungs- oder Pflegeprozess teilnehmen.
 
 ## Gesetzliche Grundlagen
 
