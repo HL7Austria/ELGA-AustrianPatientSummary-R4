@@ -4,18 +4,12 @@
 
 Das Austrian Patient Summary (APS) ist eine standardisierte, zusammenfassende Kurzakte die wesentlichen medizinischen Informationen eines Patienten enthält. Es dient dazu, Angehörigen von Gesundheitsberufen in Notfall-, Routine- oder grenzüberschreitenden Behandlungssituationen einen schnellen Überblick über den Gesundheitszustand des Patienten zu bieten.
 
-Das Patient Summary soll zur sicheren und zuverlässigen Gesundheitsversorgung beitragen, sowohl im Fall von unerwarteten oder ungeplanten Behandlungen (Unfall, Notfall), als auch bei geplanten Behandlungen, im Rahmen von organisationsübergreifenden Behandlungspfaden und bei der grenzüberschreitenden Gesundheitsversorgung.
-
 Ein Patient Summary enthält allgemeine demografische Daten des Patienten (z.B. Name, Geburtsdatum, Geschlecht), eine Zusammenfassung der für die weitere medizinische Behandlung wesentlichen Erkenntnisse und Inhalte aus den Krankenakten des Patienten (z.B. aktuelle medizinische Probleme, Allergien, größere chirurgische Eingriffe, medizinische Implantate) sowie die aktuelle Medikation.
-
-Ziel des Patient Summary ist es
-- dem GDA einen schnellen Überblick über die (in ELGA) verfügbaren Informationen zu einem Patienten zu ermöglichen;
-- die wesentlichen Gesundheitsinformationen eines Patienten eindeutig und hochstrukturiert vorliegen zu haben und in andere Sprachen übersetzbar zu machen.
 
 #### Umfang
 
 Das Patient Summary ist
-- ein minimaler und nicht-vollständiger Datensatz,
+- ein minimaler, hochstrukturierter, nicht-vollständiger Datensatz über die (in ELGA) verfügbaren Gesundheitsdaten,
 - geeignet für alle medizinischen Fachrichtungen und Gesundheitseinrichtungen,
 - unabhängig von der aktuellen Situation des Patienten,
 - für die grenzüberschreitende Gesundheitsversorgung vorgesehen.
