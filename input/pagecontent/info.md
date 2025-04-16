@@ -14,9 +14,9 @@ Dr. Emmanuel Helm, [emmanuel.helm@elga.gv.at](mailto:emmanuel.helm@elga.gv.at)
 
 *Download* unter [fhir.hl7.at](https://fhir.hl7.at)
 
-Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medizinischer Dokumente ausdrücklich erlaubt. Andere Arten der Nutzung und auch auszugsweise Wiedergabe bedürfen der Genehmigung des Medieneigentümers. 
+Die Nutzung ist ohne Lizenz- und Nutzungsgebühren zum Zweck der Erstellung medizinischer Dokumente ausdrücklich erlaubt. Andere Arten der Nutzung und auch auszugsweise Wiedergabe bedürfen der Genehmigung des Medieneigentümers.
 
-*Haftungsausschluss:* Die Arbeiten für den vorliegenden Leitfaden wurden von den Autoren gemäß dem Stand der Technik und mit größtmöglicher Sorgfalt erbracht und über ein öffentliches Kommentierungsverfahren kontrolliert. Die Nutzung des vorliegenden Leitfadens erfolgt in ausschließlicher Verantwortung der Anwender. Aus der Verwendung des vorliegenden Leitfadens können keinerlei Rechtsansprüche gegen die Autoren, Herausgeber oder Mitwirkenden erhoben und/oder abgeleitet werden. Ein allfälliger Widerspruch zum geltenden Recht ist jedenfalls nicht beabsichtigt und von den Erstellern des Dokumentes nicht gewünscht. 
+*Haftungsausschluss:* Die Arbeiten für den vorliegenden Leitfaden wurden von den Autoren gemäß dem Stand der Technik und mit größtmöglicher Sorgfalt erbracht und über ein öffentliches Kommentierungsverfahren kontrolliert. Die Nutzung des vorliegenden Leitfadens erfolgt in ausschließlicher Verantwortung der Anwender. Aus der Verwendung des vorliegenden Leitfadens können keinerlei Rechtsansprüche gegen die Autoren, Herausgeber oder Mitwirkenden erhoben und/oder abgeleitet werden. Ein allfälliger Widerspruch zum geltenden Recht ist jedenfalls nicht beabsichtigt und von den Erstellern des Dokumentes nicht gewünscht.
 
 ### Hinweis zur Sprachverwendung
 
@@ -48,7 +48,7 @@ Die Einhaltung der gesetzlichen Bestimmungen liegt im Verantwortungsbereich der 
 
 ## Autoren und Mitwirkende
 
-Das Redaktionsteam bestand aus folgenden Personen[^1]: 
+Das Redaktionsteam bestand aus folgenden Personen[^1]:
 <table class="wikitable">
 <tbody><tr>
 <th> Name
@@ -86,7 +86,7 @@ Das Redaktionsteam bestand aus folgenden Personen[^1]:
 <td> Autorin
 </td></tr>
 <tr>
-<td> Nikolaus Krondraf 
+<td> Nikolaus Krondraf
 </td>
 <td> ELGA GmbH
 </td>
