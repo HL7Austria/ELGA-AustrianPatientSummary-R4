@@ -5,7 +5,7 @@ name: PublishIG
 # Run on updates to the master
 on:
   push:
-    branches: [ main, narrative-additions ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
