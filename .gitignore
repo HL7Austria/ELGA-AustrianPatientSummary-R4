@@ -7,3 +7,5 @@ Thumbs.db
 /template
 /python-mapper/__pycache__
 /.vscode
+**/.index.db
+**/.index.json
