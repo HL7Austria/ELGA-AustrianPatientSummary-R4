@@ -1,0 +1,20 @@
+@startmindmap
+<style>
+node {
+    MaximumWidth 100
+}
+</style>
+
++[#6BA3CC] APS
+++ EU
++++ EHDS
+++++ Xt-EHR
++++[#6BA3CC] MyHealth@EU Anforderungskatalog
++++ eHN Guideline
+-- HL7
+--- EPS
+---[#6BA3CC] IPS
+-- Österreich
+--- Nationale Projekte
+---[#6BA3CC] FHIR-/CDA- Implementierungsleitfäden
+@endmindmap
