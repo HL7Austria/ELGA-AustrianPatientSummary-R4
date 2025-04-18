@@ -59,7 +59,7 @@ pages:
     title: Start
   background.md:
     title: Hintergrund
-  anforderungen.md:
+  requirements.md:
     title: Funktionale Anforderungen
   terminologies.md:
     title: Terminologien
@@ -112,7 +112,7 @@ menu:
   Start: index.html
   Inhalt: toc.html
   Hintergrund: background.html
-  Funktionale Anforderungen: anforderungen.html
+  Funktionale Anforderungen: requirements.html
   Artefakte: artifacts.html
   Terminologien: terminologies.html
   Ressourcen: resources.html
