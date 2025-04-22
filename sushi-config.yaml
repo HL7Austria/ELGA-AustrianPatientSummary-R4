@@ -63,8 +63,8 @@ pages:
     title: Funktionale Anforderungen
   terminologies.md:
     title: Terminologien
-  imprint.md:
-    title: Impressum
+  framework.md:
+    title: Technische und rechtliche Rahmenbedingungen
   contributors.md:
     title: Autoren und Mitwirkende
   resources.md:
@@ -119,7 +119,7 @@ menu:
   ELGA IG:
     Informationen über dieses Dokument: info.html
     Autoren und Mitwirkende: contributors.html
-    Impressum: imprint.html
+    Rahmenbedingungen: framework.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
