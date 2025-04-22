@@ -9,7 +9,9 @@ node {
 ++ EU
 +++ EHDS
 ++++ Xt-EHR
-+++[#6BA3CC] MyHealth@EU Anforderungskatalog
++++ MyHealth@EU (Patient Summary)
+++++[#6BA3CC] Anforderungskatalog
+++++ CDA-Implementierungsleitfaden
 +++ eHN Guideline
 -- HL7
 --- EPS
