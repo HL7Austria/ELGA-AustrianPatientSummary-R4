@@ -23,6 +23,10 @@ In Österreich hat man sich darauf geeinigt, dass das IPS die Grundlage für das
 
 Das APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für das [International Patient Summary (IPS), Version 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) auf. Nachdem es in FHIR® allerdings nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz des APS gegen beide Spezifikationen validiert werden.
 
+<div class="dragon" markdown="1">
+Beim Lesen der APS-Profile müssen insofern auch immer die IPS-Profile berücksichtigt werden. So ist das `subject` in der [AT APS Composition](StructureDefinition-at-aps-composition.html) mit `0..1` modelliert. In der [Composition (IPS)](https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Composition-uv-ips.html) ist das `subject` allerdings mit `1..1` modelliert. Die strengere Regel wird bei der Validierung einer Instanz schlagend.
+</div>
+
 #### FHIR® R4
 
 Aktuell gibt es das IPS nur auf Basis von FHIR® R4. Ob und wann das IPS auch in R5 bzw. R6 zur Verfügung steht ist noch nicht klar. Deshalb wird das APS zurzeit auch nur in FHIR® R4 spezifiziert.
