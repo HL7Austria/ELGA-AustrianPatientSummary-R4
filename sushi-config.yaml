@@ -64,7 +64,7 @@ pages:
   terminologies.md:
     title: Terminologien
   framework.md:
-    title: Technische und rechtliche Rahmenbedingungen
+    title: Technische Rahmenbedingungen
   contributors.md:
     title: Autoren und Mitwirkende
   resources.md:
@@ -119,7 +119,7 @@ menu:
   ELGA IG:
     Informationen über dieses Dokument: info.html
     Autoren und Mitwirkende: contributors.html
-    Rahmenbedingungen: framework.html
+    Technische Rahmenbedingungen: framework.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
