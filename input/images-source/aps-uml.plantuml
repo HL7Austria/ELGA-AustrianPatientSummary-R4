@@ -1,52 +1,43 @@
 @startuml
-
-skinparam linetype ortho
 skinparam actorStyle awesome
 
-skinparam actor<<Atkeur>> {
+skinparam actor<<Akteur>> {
   BackgroundColor #575756
   BorderColor Black
 }
 
-skinparam rectangle<<Atkeur>> {
-  MinimumWidth 10000
+skinparam rectangle<<Akteur>> {
   BackgroundColor #decabd
-  ' BorderColor black
-  ' ArrowColor black
-  ' ActorBorderColor black
-  ' ActorFontName Courier
+  ActorFontName Courier
 }
 
 skinparam usecase {
   BackgroundColor #b8d5e8
-  ' BorderColor black
-  ' ArrowColor black
-  ' ActorBorderColor black
-  ' ActorFontName Courier
+  ActorFontName Courier
 }
 
-
-left to right direction
-actor Patient <<Atkeur>> as patient
-actor GDA <<Atkeur>> as gda
-rectangle "e-Medikation"<<Atkeur>> as reg_emed
-rectangle " e-Impfpass "<<Atkeur>> as reg_impf
-rectangle "    etc.    "<<Atkeur>> as reg_etc
-rectangle "Bestehende Register"<<Atkeur>> as reg_bestReg
+top to bottom direction
+actor Patient <<Akteur>> as patient
+actor GDA <<Akteur>> as gda
+rectangle "e-Medikation"<<Akteur>> as reg_emed
+rectangle "e-Impfpass"<<Akteur>> as reg_impf
+rectangle "weitere Register"<<Akteur>> as reg_etc
+rectangle "Zentrale Anwendung"<<Akteur>> as zentr_Anwendung
 
 package "Austrian Patient Summary" {
-  usecase "UC1 aktualisieren/erstellen" as UC1
-  usecase "UC2 lesen" as UC2
+  usecase "UC1 APS aggregieren" as UC1
+  usecase "UC2 APS lesen" as UC2
 }
 
-patient -- UC2
-gda -- UC2
-gda -- UC1
+:patient: -right- UC2
+:gda: -up- UC2
+:UC2: .> UC1 : <<include>>
+UC1 .> zentr_Anwendung : <<include>>
 
-UC1 -- reg_bestReg
-reg_bestReg <|-down- reg_emed
-reg_bestReg <|-down- reg_impf
-reg_bestReg <|-down- reg_etc
+zentr_Anwendung <|-down- reg_emed
+zentr_Anwendung <|-down- reg_impf
+zentr_Anwendung <|-down- reg_etc
+
 
 
 @enduml
