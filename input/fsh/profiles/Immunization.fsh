@@ -7,7 +7,7 @@ Description: "This AT APS profile for the Immunization resource is derived from 
 * . ^short = "AT APS Immunization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtApsPatient)
-* extension contains ImmunizationBasedOn named basedOn 0..1
+* extension contains AtApsExtImmunizationBasedOn named basedOn 0..1
 
 * vaccineCode from AtApsImmunizationVaccineCodes (extensible)
 * vaccineCode ^binding.extension[0].extension[0].url = "purpose"
@@ -20,13 +20,3 @@ Description: "This AT APS profile for the Immunization resource is derived from 
 * protocolApplied 1..*
 * protocolApplied.targetDisease 1..*
 * protocolApplied.targetDisease from $vs-eimpf-immunizationtarget (extensible)
-
-Extension:      ImmunizationBasedOn
-Id:             immunization-basedOn
-Title:          "Immunization basedOn"
-Description:    "Authority that the immunization event is based on"
-Context:        AtApsImmunization
-
-* value[x] only Reference(CarePlan or MedicationRequest or ServiceRequest or ImmunizationRecommendation)
-* value[x] ^short = "Authority that the immunization event is based on"
-* value[x] 1..1

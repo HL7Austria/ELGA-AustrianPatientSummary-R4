@@ -10,7 +10,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * subject only Reference(AtApsPatient)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
-* extension contains CountryOfAffiliation named countryOfAffiliation 1..1
+* extension contains AtApsExtCompositionCountryOfAffiliation named countryOfAffiliation 1..1
 * extension[countryOfAffiliation] ^short = "Country of affiliation of the patient. (e.g. can be ISO 3166 2 or 3 letter code)"
 
 * section ^slicing.discriminator.type = #pattern
@@ -194,16 +194,6 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionAlerts].entry[alertsFlag] only Reference(FlagAlertUvIps)
 
 * section[sectionPatientStory].code = $loinc#81338-6
-
-Extension:      CountryOfAffiliation
-Id:             country-of-affiliation
-Title:          "Country of Affiliation element"
-Description:    "Add the element for Country of Affiliation"
-Context:        AtApsComposition
-
-* value[x] only string
-* value[x] ^short = "The country of affiliation of the patient. (e.g. can be ISO 3166 2 or 3 letter code)"
-* value[x] 1..1
 
 Invariant: ips-comp-1
 Description: "Either section.entry or emptyReason are present"
