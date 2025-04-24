@@ -1,10 +1,10 @@
 Instance: AtApsExamplePatient01
 InstanceOf: AtApsPatient
 Title: "AtApsPatient-Beispiel"
-Description: "Weiblich minimal"
+Description: "Mimimalbeispiel einer Patientin"
 Usage: #example
 * id = "at-aps-example-patient-01"
-* identifier[localPatientId].type = $v2-0203#PI "Patient internal identifier"
+* identifier[localPatientId].type = $cs-v2-0203#PI "Patient internal identifier"
 * identifier[localPatientId].system = "urn:oid:1.2.3.4.5"
 * identifier[localPatientId].value = "0001"
 * identifier[localPatientId].assigner.display = "Ein GDA in Österreich"

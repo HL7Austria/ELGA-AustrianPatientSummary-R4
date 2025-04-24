@@ -12,9 +12,9 @@ Description: "This AT APS profile for the Condition resource is derived from the
 * category ^binding.extension[0].extension[0].url = "purpose"
 * category ^binding.extension[=].extension[=].valueCode = #candidate
 * category ^binding.extension[=].extension[+].url = "valueSet"
-* category ^binding.extension[=].extension[=].valueCanonical = $condition-category-vs
+* category ^binding.extension[=].extension[=].valueCanonical = $vs-elga-problemarten
 * category ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
-* severity from $condition-severity-vs (extensible)
+* severity from $vs-elga-problemseverity (extensible)
 * code from AtApsProblems (extensible)
 * bodySite ^binding.strength = #extensible

@@ -6,8 +6,8 @@ Usage: #example
 * id = "at-aps-example-immunization-01-unknown"
 * language = #de-AT
 * status = #completed
-* vaccineCode.coding[0] = $sct#787482006 "Unbekannte Immunissierungen"
+* vaccineCode.coding[0] = $cs-sct#787482006 "Unbekannte Immunissierungen"
 * patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * occurrenceDateTime = "1998-06-04T00:00:00+02:00"
-* protocolApplied.targetDisease[0] = $sct#10021000234102 "Masern und Mumps Impfstoffprodukt"
+* protocolApplied.targetDisease[0] = $cs-sct#10021000234102 "Masern und Mumps Impfstoffprodukt"
 * protocolApplied.doseNumberString = "unknown"

@@ -1,4 +1,4 @@
-Instance: APS-3-diabetes
+Instance: AtApsExample03Diabetes
 InstanceOf: AtApsBundle
 Description: "Diabetes Checklist / Leitdokument"
 Usage: #example
@@ -8,161 +8,158 @@ Usage: #example
 * timestamp = "2025-01-08T14:01:30+00:00"
 // Composition
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
-* entry[=].resource = example-diab-leitdokument-composition
+* entry[=].resource = AtApsExample03Diabetes-composition
 // Patient
 * entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-* entry[=].resource = example-diab-leitdokument-patient
+* entry[=].resource = AtApsExample03Diabetes-patient
 // Author
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
-* entry[=].resource = example-diab-leitdokument-author
+* entry[=].resource = AtApsExample03Diabetes-author
 // Organisation
 * entry[+].fullUrl = "urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6"
-* entry[=].resource = example-diab-organization
+* entry[=].resource = AtApsExample03Diabetes-organization
 // Problem List
 * entry[+].fullUrl = "urn:uuid:72e85b9d-004d-4104-b166-86d129948bae"
-* entry[=].resource = example-diab-leitdokument-problem-1
+* entry[=].resource = AtApsExample03Diabetes-problem-1
 * entry[+].fullUrl = "urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5"
-* entry[=].resource = example-diab-leitdokument-problem-2
+* entry[=].resource = AtApsExample03Diabetes-problem-2
 * entry[+].fullUrl = "urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e"
-* entry[=].resource = example-diab-leitdokument-problem-3
+* entry[=].resource = AtApsExample03Diabetes-problem-3
 * entry[+].fullUrl = "urn:uuid:61db6213-22ab-405a-825a-0ae6905fad2e"
-* entry[=].resource = example-diab-leitdokument-problem-6
+* entry[=].resource = AtApsExample03Diabetes-problem-6
 * entry[+].fullUrl = "urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde"
-* entry[=].resource = example-diab-leitdokument-problem-5
+* entry[=].resource = AtApsExample03Diabetes-problem-5
 // Problem List - Family history
 * entry[+].fullUrl = "urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91"
-* entry[=].resource = example-diab-leitdokument-problem-14
+* entry[=].resource = AtApsExample03Diabetes-problem-14
 // Problem List - periodontal disease risk
 * entry[+].fullUrl = "urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33"
-* entry[=].resource = example-diab-leitdokument-problem-17
+* entry[=].resource = AtApsExample03Diabetes-problem-17
 * entry[+].fullUrl = "urn:uuid:f235c566-01aa-457d-ab49-9e422df69863"
-* entry[=].resource = example-diab-leitdokument-problem-17-assessment-1 //21
+* entry[=].resource = AtApsExample03Diabetes-problem-17-assessment-1 //21
 // Schulungen
 * entry[+].fullUrl = "urn:uuid:39cd75da-2456-46a9-a703-89d8b65ae63b"
-* entry[=].resource = example-diab-leitdokument-schulung-1
+* entry[=].resource = AtApsExample03Diabetes-schulung-1
 // Medication Summary
 * entry[+].fullUrl = "urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076"
-* entry[=].resource = example-diab-leitdokument-medication-summary-1
+* entry[=].resource = AtApsExample03Diabetes-medication-summary-1
 // Allergies and Intolerances
 * entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
-* entry[=].resource = example-diab-leitdokument-allergy-1
+* entry[=].resource = AtApsExample03Diabetes-allergy-1
 // History of Procedures
 * entry[+].fullUrl = "urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a"
-* entry[=].resource = example-diab-leitdokument-procedure-history-1
+* entry[=].resource = AtApsExample03Diabetes-procedure-history-1
 // // Diagnostic Results
 * entry[+].fullUrl = "urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654"
-* entry[=].resource = example-diab-leitdokument-diagnostic-result-1
+* entry[=].resource = AtApsExample03Diabetes-diagnostic-result-1
 // // Diagnostic Results - Performer
 * entry[+].fullUrl = "urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6"
-* entry[=].resource = example-diab-leitdokument-diagnostic-result-performer-1
+* entry[=].resource = AtApsExample03Diabetes-diagnostic-result-performer-1
 // // Diagnostic Results - Specimen
 * entry[+].fullUrl = "urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7"
-* entry[=].resource = example-diab-leitdokument-diagnostic-specimen-1
+* entry[=].resource = AtApsExample03Diabetes-diagnostic-specimen-1
 // Vital Signs
 * entry[+].fullUrl = "urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142"
-* entry[=].resource = example-diab-leitdokument-vital-sign-1
+* entry[=].resource = AtApsExample03Diabetes-vital-sign-1
 // Past History of Illness
 * entry[+].fullUrl = "urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4"
-* entry[=].resource = example-diab-leitdokument-illness-history-1
+* entry[=].resource = AtApsExample03Diabetes-illness-history-1
 // Social History
 * entry[+].fullUrl = "urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e"
-* entry[=].resource = example-diab-leitdokument-social-history-1
+* entry[=].resource = AtApsExample03Diabetes-social-history-1
 
-Instance: example-diab-leitdokument-composition
+Instance: AtApsExample03Diabetes-composition
 InstanceOf: AtApsComposition
 Usage: #inline
 // * language = #de-AT
 * status = #final
-* type = $loinc#60591-5 "Patient summary"
+* type = $cs-loinc#60591-5 "Patient summary"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * title = "Diabetes Leitdokument"
-* attester.mode = #personal
-* attester.party = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* attester.party.display = "Validiert von"
-* custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6)
+* custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6) "Muster-Organisation"
 * extension[countryOfAffiliation].valueString = "AT"
 // Problem List
-* section[sectionProblems].title = "Problem List"
-* section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
+* section[sectionProblems].title = "Gesundheitsprobleme und Risiken"
+* section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
 * section[sectionProblems].text.status = #empty
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Problem list - Reported</p></div>"
-* section[sectionProblems].entry[0] = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad2e)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde)
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionProblems].entry[0] = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae) "AtApsExample03Diabetes-problem-1"
+* section[sectionProblems].entry[+] = Reference(urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5) "AtApsExample03Diabetes-problem-2"
+* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) "AtApsExample03Diabetes-problem-3"
+* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad2e) "AtApsExample03Diabetes-problem-6"
+* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "AtApsExample03Diabetes-problem-5"
 // Problem List - Family history
-* section[sectionProblems].entry[+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91) "AtApsExample03Diabetes-problem-14"
 // Problem List - periodontal disease risk
-* section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "AtApsExample03Diabetes-problem-17"
 // Medication Summary
-* section[sectionMedications].title = "Medication Summary"
-* section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
+* section[sectionMedications].title = "Medikationsliste"
+* section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>History of Medication use Narrative</p></div>"
-* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076)
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExample03Diabetes-medication-summary-1"
 // Allergies and Intolerances
-* section[sectionAllergies].title = "Allergies and Intolerances"
-* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section[sectionAllergies].title = "Allergien und Intoleranzen"
+* section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
 * section[sectionAllergies].text.status = #empty
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Allergies and adverse reactions Document</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b)
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExample03Diabetes-allergy-1"
 // History of Procedures
-* section[sectionProceduresHx].title = "History of Procedures"
-* section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
+* section[sectionProceduresHx].title = "Eingriffe und Therapien"
+* section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
 * section[sectionProceduresHx].text.status = #empty
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>History of Procedures Document</p></div>"
-* section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a)
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "AtApsExample03Diabetes-procedure-history-1"
 // Medical Devices
-* section[sectionMedicalDevices].title = "Medical Devices"
-* section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
+* section[sectionMedicalDevices].title = "Implantate, medizinische Geräte und Heilbehelfe"
+* section[sectionMedicalDevices].code = $cs-loinc#46264-8 "Anamnese zum Einsatz von Medizinprodukten"
 * section[sectionMedicalDevices].text.status = #empty
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>narrative needs to be generated</p></div>"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionMedicalDevices].emptyReason = $cs-list-empty-reason#nilknown
 
 // Diagnostic Results
-* section[sectionResults].title = "Diagnostic Results"
-* section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+* section[sectionResults].title = "Diagnostische Resultate"
+* section[sectionResults].code = $cs-loinc#30954-2 "Relevante diagnostische Tests und/oder Labordaten"
 * section[sectionResults].text.status = #empty
-* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Relevant diagnostic tests/laboratory data Narrative</p></div>"
-* section[sectionResults].entry[0] = Reference(urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654)
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionResults].entry[0] = Reference(urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654) "AtApsExample03Diabetes-diagnostic-result-1"
 //* section[sectionResults].entry[+] = Reference(urn:uuid:aeff2319-2cc2-4fba-9541-7a4de3d20f91)
 // Vital Signs
-* section[sectionVitalSigns].title = "Vital Signs"
-* section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs"
+* section[sectionVitalSigns].title = "Vitalparameter"
+* section[sectionVitalSigns].code = $cs-loinc#8716-3 "Vitalparameter"
 * section[sectionVitalSigns].text.status = #empty
-* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Vital signs</p></div>"
-* section[sectionVitalSigns].entry[0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142)
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionVitalSigns].entry[0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142) "AtApsExample03Diabetes-vital-sign-1"
 // Past History of Illness
-* section[sectionPastIllnessHx].title = "Past History of Illness"
-* section[sectionPastIllnessHx].code = $loinc#11348-0 "History of Past illness Narrative"
+* section[sectionPastIllnessHx].title = "Vergangene Gesundheitsprobleme und Risiken"
+* section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Vergangene Gesundheitsprobleme und Risiken"
 * section[sectionPastIllnessHx].text.status = #empty
-* section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>History of Past illness Narrative</p></div>"
-* section[sectionPastIllnessHx].entry[0] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4)
+* section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionPastIllnessHx].entry[0] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "AtApsExample03Diabetes-illness-history-1"
 // Social History
-* section[sectionSocialHistory].title = "Social History"
-* section[sectionSocialHistory].code = $loinc#29762-2 "Social history Narrative"
+* section[sectionSocialHistory].title = "Lebensstil / Soziale Umstände und Verhalten"
+* section[sectionSocialHistory].code = $cs-loinc#29762-2 "Sozialanamnese"
 * section[sectionSocialHistory].text.status = #empty
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Social history Narrative</p></div>"
-* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e)
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "AtApsExample03Diabetes-social-history-1"
 // Care Plan
-* section[sectionPlanOfCare].title = "Plan of Care"
-* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
+* section[sectionPlanOfCare].title = "Behandlungsplan"
+* section[sectionPlanOfCare].code = $cs-loinc#18776-5 "Behandlungsplan - Notiz"
 * section[sectionPlanOfCare].text.status = #empty
-* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Plan of care note</p></div>"
-* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:39cd75da-2456-46a9-a703-89d8b65ae63b)
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:39cd75da-2456-46a9-a703-89d8b65ae63b) "AtApsExample03Diabetes-schulung-1"
 
-Instance: example-diab-leitdokument-patient
+Instance: AtApsExample03Diabetes-patient
 InstanceOf: AtApsPatient
 Usage: #inline
 * id = "001"
-* identifier[socialSecurityNumber].type = $v2-0203#SS "Social Security number"
+* identifier[socialSecurityNumber].type = $cs-v2-0203#SS "Social Security number"
 * identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
 * identifier[socialSecurityNumber].value = "0000121150"
 * identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
-* identifier[localPatientId].type = $v2-0203#PI "Patient internal identifier"
+* identifier[localPatientId].type = $cs-v2-0203#PI "Patient internal identifier"
 * identifier[localPatientId].system = "urn:oid:1.2.3.4.5"
 * identifier[localPatientId].value = "0002"
 * identifier[localPatientId].assigner.display = "Ein GDA in Österreich"
@@ -176,7 +173,7 @@ Usage: #inline
 * address.postalCode = "3100"
 * address.country = "AUT"
 
-Instance: example-diab-leitdokument-author
+Instance: AtApsExample03Diabetes-author
 InstanceOf: AtApsPractitioner
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
@@ -189,123 +186,123 @@ Usage: #inline
 // Problem List
 
 // Diabetes Hauptdiagnose
-Instance: example-diab-leitdokument-problem-3
+Instance: AtApsExample03Diabetes-problem-3
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 //* category[diabetes] = VsIvDiagnosekategorie#73211009 "Diabetes mellitus"
-* code = $sct#105401000119101 "Diabetes mellitus due to pancreatic injury (disorder)"
+* code = $cs-sct#105401000119101 "Diabetes mellitus aufgrund einer Verletzung der Bauchspeicheldrüse"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * recordedDate = "2024-02-08T14:01:30+00:00"
 
 // // Diabetes Nebendiagnosen
-Instance: example-diab-leitdokument-problem-6
+Instance: AtApsExample03Diabetes-problem-6
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#280137006 "Diabetic foot"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#280137006 "Diabetischer Fuß"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * recordedDate = "2021-02-08T14:01:30+00:00"
 
-Instance: example-diab-leitdokument-problem-1
+Instance: AtApsExample03Diabetes-problem-1
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#700379002 "Chronic kidney disease stage 3B"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#700379002 "CKD - Chronische Niereninsuffizienz Grad 3B"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-problem-2
+Instance: AtApsExample03Diabetes-problem-2
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#711150003 "Long-term current use of anticoagulant"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#711150003 "Langfristige Einnahme von Antikoagulantien"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-problem-5
+Instance: AtApsExample03Diabetes-problem-5
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#38341003 "Hypertensive disorder"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#38341003 "Arterielle Hypertonie"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 
 // Problem List - Family history
 
-Instance: example-diab-leitdokument-problem-13
+Instance: AtApsExample03Diabetes-problem-13
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#160303001 "Family history of diabetes mellitus (situation)"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#160303001 "Diabetes mellitus in der Familienanamnese"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-problem-14
+Instance: AtApsExample03Diabetes-problem-14
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#312824007 "Family history of cancer of colon"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#312824007 "Familienanamnese: Kolonkarzinom"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-problem-15
+Instance: AtApsExample03Diabetes-problem-15
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#134439009 "Family history: premature coronary heart disease"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#134439009 "Familienanamnese: vorzeitige koronare Herzkrankheit"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-problem-16
+Instance: AtApsExample03Diabetes-problem-16
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#active "Active"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#160314003 "FH: Hypercholesterolemia"
+* clinicalStatus = $cs-condition-clinical#active "Active"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#160314003 "Hypercholesterinämie in der Familienanamnese"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 // risk of periodontal disease
-Instance: example-diab-leitdokument-problem-17
+Instance: AtApsExample03Diabetes-problem-17
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#inactive "Inactive"
-* verificationStatus = $condition-ver-status#provisional "Provisional"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#2556008 "Periodontal disease (disorder)"
+* clinicalStatus = $cs-condition-clinical#inactive "Inactive"
+* verificationStatus = $cs-condition-ver-status#provisional "Provisional"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#2556008 "Parodontalerkrankung"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* stage.assessment = Reference(urn:uuid:f235c566-01aa-457d-ab49-9e422df69863)
+* stage.assessment = Reference(urn:uuid:f235c566-01aa-457d-ab49-9e422df69863) "AtApsExample03Diabetes-problem-17-assessment-1"
 
-Instance: example-diab-leitdokument-problem-17-assessment-1
+Instance: AtApsExample03Diabetes-problem-17-assessment-1
 InstanceOf: Observation
 Usage: #inline
 * status = #final
-* category = $observation-category#exam "Exam"
-* code = $sct#1237049003 "Evaluation of risk factors for periodontal disease"
+* category = $cs-observation-category#exam "Exam"
+* code = $cs-sct#1237049003 "Bewertung der Risikofaktoren für Parodontalerkrankungen"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
-* valueCodeableConcept = $sct#723509005 "High risk"
+* valueCodeableConcept = $cs-sct#723509005 "Hohes Risiko"
 
 // Careplan Schulungen
 
-Instance: example-diab-leitdokument-schulung-1
+Instance: AtApsExample03Diabetes-schulung-1
 InstanceOf: CarePlan
 Usage: #inline
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n <p>Schulung zur Verbesserung der Mobilität </p>\n    </div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Schulung zur Verbesserung der Mobilität </p></div>"
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
@@ -320,11 +317,11 @@ Usage: #inline
 * period.end = "2024-04-12"
 * created = "2024-03-29"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
-* addresses = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e)
-* activity.outcomeCodeableConcept = $sct#408443003 "General medical practice (qualifier value)"
+* addresses = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) "AtApsExample03Diabetes-problem-3"
+* activity.outcomeCodeableConcept = $cs-sct#408443003 "Allgemeines Verfahren"
 // * activity.outcomeReference = Reference(Observation/example) "Patient ist über das Ereignis informiert" // ??
-* activity.detail.code.coding[0] = $sct#409063005 "Counseling"
-* activity.detail.code.coding[+] = $sct#1293061000168108 "Health promotion service"
+* activity.detail.code.coding[0] = $cs-sct#409063005 "Beratung"
+* activity.detail.code.coding[+] = $cs-sct#1293061000168108 "Dienst für Gesundheitsförderung"
 * activity.detail.status = #completed
 * activity.detail.statusReason.text = "Der Hausarzt informierte den Patienten über eine Veranstaltung des Herzverbandes zur Förderung der Herzgesundheit."
 * activity.detail.doNotPerform = false
@@ -337,31 +334,27 @@ Usage: #inline
 
 // Medication Summary
 
-Instance: example-diab-leitdokument-medication-summary-1
+Instance: AtApsExample03Diabetes-medication-summary-1
 InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
-* medicationCodeableConcept = $asp#2443061 "EBETREXAT TBL 10MG"
+* medicationCodeableConcept = $cs-asp-liste#2443061 "EBETREXAT TBL 10MG"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * effectivePeriod.start = "2024-02-08T10:31:58+02:00"
 // "S:0-0-0-2 / FR"
 * dosage.sequence = 1
-* dosage.timing.repeat.when = $event-timing#NIGHT "Night"
+* dosage.timing.repeat.when = $cs-event-timing#NIGHT "Night"
 * dosage.timing.repeat.dayOfWeek = #fri
-* dosage.route = $sct#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 2
-* dosage.doseAndRate.doseQuantity.unit = "Tablet"
-* dosage.doseAndRate.doseQuantity.system = "https://standardterms.edqm.eu/"
-* dosage.doseAndRate.doseQuantity.code = #15054000"
-
+* dosage.route = $cs-sct#26643006 "Oraler Verabreichungsweg"
+* dosage.doseAndRate.doseQuantity = 2 $cs-elga-medikationmengenart#{TAB} "Tablet"
 
 // Allergies and Intolerances
 
-Instance: example-diab-leitdokument-allergy-1
+Instance: AtApsExample03Diabetes-allergy-1
 InstanceOf: AtApsAllergyIntolerance // DiabAllergyIntolerance
 Usage: #inline
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* code = $sct-auszug#89055006 "Benzylpenicillin Natrium"
+* clinicalStatus = $cs-allergyintolerance-clinical#active "Active"
+* code = $cs-sct#89055006 "Benzylpenicillin-Natrium"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 //* text.div = "Das ist eine optionale Beschreibung der Allergie des Arztes." // ??
 * asserter = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
@@ -370,35 +363,35 @@ Usage: #inline
 
 // History of Procedures
 
-Instance: example-diab-leitdokument-procedure-history-1
+Instance: AtApsExample03Diabetes-procedure-history-1
 InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
-* code = $sct#770606008 "Total replacement of left hip joint"
+* code = $cs-sct#770606008 "Totalersatz des linken Hüftgelenks"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * performedDateTime = "2010"
 
 // Diagnostic Results
 
-Instance: example-diab-leitdokument-diagnostic-result-1
+Instance: AtApsExample03Diabetes-diagnostic-result-1
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Usage: #inline
 * status = #final
-* category[0] = $observation-category#laboratory "Laboratory"
-* category[+] = $elga-laborparameterergaenzung#300 "Hämatologie"
-* code = $loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
+* category[0] = $cs-observation-category#laboratory "Laboratory"
+* category[+] = $cs-elga-laborparameterergaenzung#300 "Hämatologie"
+* code = $cs-loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
-* valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
-* specimen = Reference(urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7)
+* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+* valueCodeableConcept = $cs-sct#278149003 "Blutgruppe A Rh(D) positiv"
+* specimen = Reference(urn:uuid:e3567418-073e-4fd7-af4e-5fd7ee4785f7) "AtApsExample03Diabetes-diagnostic-specimen-1"
 
 // Diagnostic Results - Performer
-Instance: example-diab-leitdokument-diagnostic-result-performer-1
+Instance: AtApsExample03Diabetes-diagnostic-result-performer-1
 InstanceOf: AtApsOrganization
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:oid:82f802a7-56a9-49b4-a675-95da08f0d7a6"
+* identifier.value = "urn:oid:1.2.40.0.34.99.4613"
 * identifier.assigner.display = "Bundesministerium für Gesundheit"
 * name = "Amadeus Spital - Labor"
 * telecom[0].system = #phone
@@ -416,82 +409,73 @@ Usage: #inline
 
 // Diagnostic Results - Specimen
 
-Instance: example-diab-leitdokument-diagnostic-specimen-1
+Instance: AtApsExample03Diabetes-diagnostic-specimen-1
 InstanceOf: AtApsSpecimen
 Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* status = $specimen-status#unavailable "Unavailable"
-* type = $sct-auszug#119297000 "Blood specimen"
+* status = $cs-specimen-status#unavailable "Unavailable"
+* type = $cs-sct#119297000 "Blutprobe"
 
 // Vital Signs
 
-Instance: example-diab-leitdokument-vital-sign-1
+Instance: AtApsExample03Diabetes-vital-sign-1
 InstanceOf: AtApsObservationVitalSigns
 Usage: #inline
 * status = #final
 * language = #de-AT
-* category[VSCat] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#8302-2 "Körpergröße"
+* category[VSCat] = $cs-observation-category#vital-signs "Vital Signs"
+* code = $cs-loinc#8302-2 "Körpergröße"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
-* valueQuantity.value = 173
-* valueQuantity.unit = "cm"
-* valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.code = #cm
+* valueQuantity = 173 'cm' "cm"
 
 
 // Past History of Illness
 
-Instance: example-diab-leitdokument-illness-history-1
+Instance: AtApsExample03Diabetes-illness-history-1
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#resolved "Resolved"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#161419000 "History of measles"
+* clinicalStatus = $cs-condition-clinical#resolved "Resolved"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#161419000 "Zustand nach Masern"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
-Instance: example-diab-leitdokument-illness-history-2
+Instance: AtApsExample03Diabetes-illness-history-2
 InstanceOf: AtApsCondition
 Usage: #inline
-* clinicalStatus = $condition-clinical#resolved "Resolved"
-* verificationStatus = $condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#161423008 "History of chickenpox (situation)"
+* clinicalStatus = $cs-condition-clinical#resolved "Resolved"
+* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
+* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
+* code = $cs-sct#161423008 "Zustand nach Windpocken"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 
 // Social History
 
-Instance: example-diab-leitdokument-social-history-1
+Instance: AtApsExample03Diabetes-social-history-1
 InstanceOf: AtApsObservationTobaccoUse
 Usage: #inline
 * status = #final
-* code = $loinc#72166-2 "Tobacco smoking status"
+* code = $cs-loinc#72166-2 "Raucherstatus"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2019-07-15"
-* valueCodeableConcept = $sct-auszug#8517006 "Ex-smoker"
+* valueCodeableConcept = $cs-sct#8517006 "Ehemalig rauchende Person"
 
-Instance: example-diab-leitdokument-social-history-2
+Instance: AtApsExample03Diabetes-social-history-2
 InstanceOf: Observation
 Usage: #inline
 * status = #final
-* code = $sct#61686008 "Physical exercise"
+* code = $cs-sct#61686008 "Körperliche Aktivität"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6)
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
-* valueRatio.numerator.value = 2.5
-* valueRatio.numerator.unit = "h"
-* valueRatio.numerator.system = "http://unitsofmeasure.org"
-* valueRatio.numerator.code = #h
+* valueRatio.numerator = 2.5 'h' "h"
 * valueRatio.numerator.comparator = #>
-* valueRatio.denominator.value = 1
-* valueRatio.denominator.unit = "wk"
-* valueRatio.denominator.system = "http://unitsofmeasure.org"
-* valueRatio.denominator.code = #wk
+* valueRatio.denominator = 1 'wk' "wk"
 
-Instance: example-diab-organization
+Instance: AtApsExample03Diabetes-organization
 InstanceOf: AtApsOrganization
 Usage: #inline
-* name = "MusterOrganization"
+* name = "Muster-Organization"

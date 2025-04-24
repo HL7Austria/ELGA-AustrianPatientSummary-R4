@@ -9,4 +9,4 @@ Description: "This AT APS profile for the Device resource is derived from the ge
 * patient only Reference(AtApsPatient)
 * deviceName 1..*
 * version 1..*
-* type from $medical-devices (extensible)
+* type from $vs-elga-medicaldevices (extensible)

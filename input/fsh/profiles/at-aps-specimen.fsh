@@ -7,11 +7,11 @@ Description: "This AT APS profile for the Specimen resource is derived from the 
 * . ^short = "AT APS Specimen"
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenUvIps)
 * subject only Reference(AtApsPatient)
-* type from $elga-probenmaterial (extensible)
+* type from $vs-elga-probenmaterial (extensible)
 * type ^binding.extension[0].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate
 * type ^binding.extension[=].extension[+].url = "valueSet"
-* type ^binding.extension[=].extension[=].valueCanonical = $elga-specimentype
+* type ^binding.extension[=].extension[=].valueCanonical = $vs-elga-specimentype
 * type ^binding.extension[=].extension[+].url = "documentation"
 * type ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Specimentype\" - retained for backward compatibility."
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -21,4 +21,4 @@ Description: "This AT APS profile for the Specimen resource is derived from the 
 * condition ^slicing.discriminator.path = "$this"
 * condition ^slicing.rules = #open
 * condition contains insufficientsample 0..1
-* condition[insufficientsample] = $sct#281268007 "Insufficient sample (finding)"
+* condition[insufficientsample] = $cs-sct#281268007 "Insufficient sample (finding)"

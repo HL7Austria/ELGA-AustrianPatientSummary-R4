@@ -16,6 +16,6 @@ This material contains content from LOINC (http://loinc.org). LOINC is copyright
 * include codes from system $cs-icd-10-bmsgpk-2025
 * include codes from system $cs-icpc2
 * include codes from system $cs-icf
-* include codes from system $sct
+* include codes from system $cs-sct
 * include codes from system $cs-lkat-bmsgpk-2025
-* include codes from system $loinc
+* include codes from system $cs-loinc

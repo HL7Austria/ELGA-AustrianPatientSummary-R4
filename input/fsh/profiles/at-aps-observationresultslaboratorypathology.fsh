@@ -24,16 +24,16 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * code only CodeableConcept-uv-ips
-* code from $laboratory-code (extensible)
+* code from $vs-elga-laborparameter (extensible)
 * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #extensible
 * code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = $laboratory-antibiogramm-code
+* code ^binding.extension[=].extension[=].valueCanonical = $vs-elga-antibiogramm
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
-* category from $laboratory-structure (extensible)
+* category from $vs-elga-laborstruktur (extensible)
 // * category only CodeableConcept-uv-ips
 // * category ^slicing.discriminator.type = #pattern
 // * category ^slicing.discriminator.path = "$this"
@@ -41,18 +41,18 @@ Description: "This AT APS profile for the Observation resource is derived from t
 // * category ^definition = "A code that classifies the general type of observation being made."
 // * category contains laborstruktur 1..*
 // * category[laborstruktur] only CodeableConcept-uv-ips
-// * category[laborstruktur] from $laboratory-structure
+// * category[laborstruktur] from $vs-elga-laborstruktur
 // * category[laborstruktur] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 
 * interpretation from AtApsObservationInterpretation (extensible)
 
 * component
   * code only CodeableConcept-uv-ips
-  * code from $laboratory-code (extensible)
+  * code from $vs-elga-laborparameter (extensible)
   * code ^binding.extension[0].extension[0].url = "purpose"
   * code ^binding.extension[=].extension[=].valueCode = #extensible
   * code ^binding.extension[=].extension[+].url = "valueSet"
-  * code ^binding.extension[=].extension[=].valueCanonical = $laboratory-antibiogramm-code
+  * code ^binding.extension[=].extension[=].valueCanonical = $vs-elga-antibiogramm
   * code ^binding.extension[=].extension[+].url = "documentation"
   * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
   * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"

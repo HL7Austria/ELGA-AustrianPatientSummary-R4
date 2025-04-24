@@ -38,7 +38,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 
 // ------ Required sections ------ //
 
-* section[sectionMedications].code = $loinc#10160-0
+* section[sectionMedications].code = $cs-loinc#10160-0
 * section[sectionMedications].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedications].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionMedications].entry ^slicing.rules = #open
@@ -49,7 +49,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionMedications].entry[medicationStatement] only Reference(AtApsMedicationStatement)
 * section[sectionMedications].entry[medicationRequest] only Reference(AtApsMedicationRequest)
 
-* section[sectionAllergies].code = $loinc#48765-2
+* section[sectionAllergies].code = $cs-loinc#48765-2
 * section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAllergies].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAllergies].entry ^slicing.rules = #open
@@ -58,7 +58,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     allergyOrIntolerance 0..*
 * section[sectionAllergies].entry[allergyOrIntolerance] only Reference(AtApsAllergyIntolerance)
 
-* section[sectionProblems].code = $loinc#11450-4
+* section[sectionProblems].code = $cs-loinc#11450-4
 * section[sectionProblems].entry ^slicing.discriminator[0].type = #profile
 * section[sectionProblems].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionProblems].entry ^slicing.rules = #open
@@ -70,7 +70,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 // ------ Recommended sections ------ //
 
 * section[sectionProceduresHx] obeys ips-comp-1
-* section[sectionProceduresHx].code = $loinc#47519-4
+* section[sectionProceduresHx].code = $cs-loinc#47519-4
 * section[sectionProceduresHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionProceduresHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionProceduresHx].entry ^slicing.rules = #open
@@ -79,7 +79,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     procedure 0..*
 * section[sectionProceduresHx].entry[procedure] only Reference(AtApsProcedure)
 
-* section[sectionImmunizations].code = $loinc#11369-6
+* section[sectionImmunizations].code = $cs-loinc#11369-6
 * section[sectionImmunizations].entry ^slicing.discriminator[0].type = #profile
 * section[sectionImmunizations].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionImmunizations].entry ^slicing.rules = #open
@@ -89,7 +89,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionImmunizations].entry[immunization] only Reference(AtApsImmunization)
 
 * section[sectionMedicalDevices] obeys ips-comp-1
-* section[sectionMedicalDevices].code = $loinc#46264-8
+* section[sectionMedicalDevices].code = $cs-loinc#46264-8
 * section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedicalDevices].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionMedicalDevices].entry ^slicing.rules = #open
@@ -98,7 +98,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     deviceStatement 0..*
 * section[sectionMedicalDevices].entry[deviceStatement] only Reference(AtApsDeviceUseStatement)
 
-* section[sectionResults].code = $loinc#30954-2
+* section[sectionResults].code = $cs-loinc#30954-2
 * section[sectionResults].entry ^slicing.discriminator[0].type = #type
 * section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionResults].entry ^slicing.discriminator[+].type = #profile
@@ -115,7 +115,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 
 // ------ Optional sections ------ //
 
-* section[sectionVitalSigns].code = $loinc#8716-3
+* section[sectionVitalSigns].code = $cs-loinc#8716-3
 * section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
 * section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionVitalSigns].entry ^slicing.rules = #open
@@ -124,7 +124,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     vitalSign 0..*
 * section[sectionVitalSigns].entry[vitalSign] only Reference(AtApsObservationVitalSigns)
 
-* section[sectionPastIllnessHx].code = $loinc#11348-0
+* section[sectionPastIllnessHx].code = $cs-loinc#11348-0
 * section[sectionPastIllnessHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPastIllnessHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPastIllnessHx].entry ^slicing.rules = #open
@@ -133,7 +133,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     pastProblem 0..*
 * section[sectionPastIllnessHx].entry[pastProblem] only Reference(AtApsCondition)
 
-* section[sectionFunctionalStatus].code = $loinc#47420-5
+* section[sectionFunctionalStatus].code = $cs-loinc#47420-5
 * section[sectionFunctionalStatus].entry ^slicing.discriminator[0].type = #profile
 * section[sectionFunctionalStatus].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionFunctionalStatus].entry ^slicing.rules = #open
@@ -144,7 +144,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionFunctionalStatus].entry[disability] only Reference(AtApsCondition)
 * section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(ClinicalImpression)
 
-* section[sectionPlanOfCare].code = $loinc#18776-5
+* section[sectionPlanOfCare].code = $cs-loinc#18776-5
 * section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPlanOfCare].entry ^slicing.rules = #open
@@ -153,7 +153,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     carePlan 0..*
 * section[sectionPlanOfCare].entry[carePlan] only Reference(CarePlan)
 
-* section[sectionSocialHistory].code = $loinc#29762-2
+* section[sectionSocialHistory].code = $cs-loinc#29762-2
 * section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
 * section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionSocialHistory].entry ^slicing.rules = #open
@@ -164,7 +164,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(AtApsObservationTobaccoUse)
 * section[sectionSocialHistory].entry[alcoholUse] only Reference(AtApsObservationAlcoholUse)
 
-* section[sectionPregnancyHx].code = $loinc#10162-6
+* section[sectionPregnancyHx].code = $cs-loinc#10162-6
 * section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPregnancyHx].entry ^slicing.rules = #open
@@ -175,7 +175,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
 * section[sectionPregnancyHx].entry[pregnancyStatus] only Reference(AtApsObservationPregnancyStatus)
 * section[sectionPregnancyHx].entry[pregnancyOutcomeSummary] only Reference(AtApsObservationPregnancyOutcome)
 
-* section[sectionAdvanceDirectives].code = $loinc#42348-3
+* section[sectionAdvanceDirectives].code = $cs-loinc#42348-3
 * section[sectionAdvanceDirectives].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAdvanceDirectives].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAdvanceDirectives].entry ^slicing.rules = #open
@@ -184,7 +184,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     advanceDirectivesConsent 0..*
 * section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
 
-* section[sectionAlerts].code = $loinc#104605-1
+* section[sectionAlerts].code = $cs-loinc#104605-1
 * section[sectionAlerts].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAlerts].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAlerts].entry ^slicing.rules = #open
@@ -193,7 +193,7 @@ Description: "This AT APS profile for the Composition resource is derived from t
     alertsFlag 0..*
 * section[sectionAlerts].entry[alertsFlag] only Reference(FlagAlertUvIps)
 
-* section[sectionPatientStory].code = $loinc#81338-6
+* section[sectionPatientStory].code = $cs-loinc#81338-6
 
 Invariant: ips-comp-1
 Description: "Either section.entry or emptyReason are present"
