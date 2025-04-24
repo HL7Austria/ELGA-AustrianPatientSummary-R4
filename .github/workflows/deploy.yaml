@@ -78,8 +78,7 @@ jobs:
       run: |
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
-        unset DISPLAY
-        java -Djava.awt.headless=true -jar -Xmx10g -Xms10g ./input-cache/publisher.jar -ig ig.ini
+        java -jar -Dfile.encoding=UTF-8 -Xmx10g -Xms10g ./input-cache/publisher.jar -ig ig.ini
 
     - name: Transform Bundles
       run: python python-mapper/transform.py
