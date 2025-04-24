@@ -8,4 +8,4 @@ Description: "This AT APS profile for the Observation resource is derived from t
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationPregnancyStatusUvIps)
 * subject only Reference(AtApsPatient)
 * hasMember only Reference(AtApsObservationPregnancyEdd)
-* valueCodeableConcept from $pregnancy-status (extensible)
+* valueCodeableConcept from $vs-elga-pregnancystatus (extensible)

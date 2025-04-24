@@ -7,5 +7,5 @@ Description: "This AT APS profile for the AllergyIntolerance resource is derived
 * . ^short = "AT APS AllergyIntolerance"
 * ^extension[$imposeProfile].valueCanonical = Canonical(AllergyIntoleranceUvIps)
 * patient only Reference(AtApsPatient)
-* code from $allergy-intolerance (extensible)
-* reaction.manifestation from $allergy-reaction (extensible)
+* code from $vs-elga-allergyorintoleranceagent (extensible)
+* reaction.manifestation from $vs-elga-allergyreaction (extensible)
