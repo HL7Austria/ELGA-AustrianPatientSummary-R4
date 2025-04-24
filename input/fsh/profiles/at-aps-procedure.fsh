@@ -1,6 +1,6 @@
 Profile: AtApsProcedure
 Parent: Procedure
-Id: at-aps-Procedure
+Id: at-aps-procedure
 Title: "AT APS Procedure"
 Description: "This AT APS profile for the Procedure resource is derived from the general Procedure resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
 * ^status = #active
