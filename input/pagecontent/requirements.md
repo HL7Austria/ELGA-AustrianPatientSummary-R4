@@ -1,6 +1,6 @@
 ### Module der Austrian Patient Summary
 
-Die Austrian Patient Summary (APS) besteht aus folgenden Modulen:
+Die Austrian Patient Summary (APS) besteht aus folgenden Abschnitten (Modulen):
 
 
 [![overview](APS_Sections.drawio.png){: style="width: 60%"}](APS_Sections.drawio.png)
@@ -36,37 +36,71 @@ Im Folgenden werden die Inhalte der Module zusammenfassend beschrieben und, sofe
 | **Vitalparameter (Vital Signs)** | Der Abschnitt umfasst Informationen wie Blutdruck, Körpertemperatur, Herzfrequenz, Atemfrequenz, Größe, Gewicht, Body-Mass-Index, Kopfumfang oder Pulsoximetrie. Insbesondere können auffällige Vitalparameter oder körperliche Befunde wie der letzte, maximale und/oder minimale Werte, der Ausgangswert oder relevante Trends angegeben werden. | 0..1 | AtApsObservationVitalSigns | Observation or DocumentReference |
 | **Vergangene Gesundheitsprobleme und Risiken (History of Past Illness)** | Der Abschnitt enthält eine Beschreibung der historischen klinischen Probleme oder Erkrankungen, die für die Patientin oder den Patienten in der Vergangenheit diagnostiziert wurden. | 0..1 | AtApsCondition | Condition or DocumentReference Titel: Krankengeschichte? oder "Risiken" entfern? |
 | **Schwangerschaftshistorie (History of Pregnancy)** | Dieser Abschnitt ermöglicht die Dokumentation eines Schwangerschaftsstatus inkl. geplantem Entbindungstermin und eine kurze Zusammenfassung von vergangenen Schwangerschaften. | 0..1 | AtApsObservationPregnancyStatus AtApsObservationPregnancyOutcome | Observation or DocumentReference) |
-| **Lebensstil / Soziale Umstände und Verhalten (Social History)** | Dieser Abschnitt dokumentiert den aktuellen Lebensstil einer Person, z.B. den Raucherstatus und Informationen zum Alkoholkonsum. | 0..1 | AtApsObservationPregnancyOutcome | Observation or DocumentReference Titel? |
-| **Beeinträchtigungen (Functional Status)** | Dieser Abschnitt enthält eine Beschreibung der Mobilität bzw. Fähigkeit der Patientin oder des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden. | 0..1 | AtApsObservationAlcoholUse | Condition or ClinicalImpression or DocumentReference |
-| **Behandlungsplan (Plan of Care)** | Dieser Abschnitt enthält den Behandlungsplan inkl. Vorschlägen, Zielen und Anordnungen zur Überwachung, Verfolgung oder Verbesserung des Zustands des Patienten. Die einzelnen Untersuchungen, Schulungen etc. können im Abschnitt History of Procedures dokumentiert werden. | 0..1 |  | CarePlan |
+| **Lebensstil / Soziale Umstände und Verhalten (Social History)** | Dieser Abschnitt dokumentiert den aktuellen Lebensstil einer Person, z.B. den Raucherstatus und Informationen zum Alkoholkonsum. | 0..1 | AtApsObservationTobaccoUse AtApsObservationAlcoholUse | Observation or DocumentReference Titel? |
+| **Beeinträchtigungen (Functional Status)** | Dieser Abschnitt enthält eine Beschreibung der Mobilität bzw. Fähigkeit der Patientin oder des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden. | 0..1 | AtApsCondition | Condition or ClinicalImpression or DocumentReference |
+| **Behandlungsplan (Plan of Care)** | Dieser Abschnitt enthält den Behandlungsplan inkl. Vorschlägen, Zielen und Anordnungen zur Kontrolle oder Verbesserung des Zustands des Patienten, zur Planung der nächsten empfohlenen oder vereinbarten Untersuchungen, Kontrolltermine und Schulungen. Durchgeführte Maßnahmen wie Untersuchungen oder Schulungen können im Abschnitt History of Procedures dokumentiert werden.| 0..1 |  | CarePlan |
 | **Willenserklärungen und andere juridische Dokumente (AdvanceDirectives)** | Dieser Abschnitt kann aktuelle Verfügungen von Patienten beinhalten. | 0..1 |  | Consent or DocumentReference |
-| **Warnungen (Alerts)** | Dieser Abschnitt enthält Warnmeldungen. Sie sollen auf potenzielle Bedenken und Gefahren hinweisen. | 0..1 |  | Flag or DocumentReference FlagAlertUvIps |
+| **Warnungen (Alerts)** | Dieser Abschnitt ermöglicht Warnmeldungen, wenn bestimmte Umstände (z.B. Grenzwerte werden für einen gewissen Zeitraum überschritten, wie Blutdruck, Gewicht, subjektives Befinden) eintreten. | 0..1 |  | Flag or DocumentReference FlagAlertUvIps |
 | **Patientenbericht (Patient Story)** | Der Abschnitt enthält narrativen Text sowie optionale Ressourcen, die zum Ausdruck bringen, was für den Patienten wichtig ist. Dazu können Bedürfnisse, Stärken, Werte, Bedenken und Präferenzen für andere, die Unterstützung und Pflege anbieten, gehören. | 0..1 |  |  |
 
+<br>
+<br>
 
 ### Anwendungsfallbeschreibung
 
 <div>{% include aps-uml.svg %}</div>
 <br clear="all"/>
 
-#### UC1 Patient Summary aktualisieren/erstellen
-Basierend neuer Dokumentation in den angebundenen Registern wird die APS automatische aktualisiert, sobald ein lesender Zugriff auf die APS stattfindet. Die Information der APS dient im Weiteren dazu, fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen.
+#### UC1 Patient Summary generieren
+
+##### Akteure
+
+- Gesundheitsdiensteanbieter (GDA)
+- Patient
+
+##### Beschreibung
+
+Basierend neuer Dokumentation in den angebundenen Registern wird das APS automatisch aktualisiert, sobald ein lesender Zugriff darauf stattfindet. Die Inhalte des APS dienen im Weiteren dazu, fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf dem APS basierende Dokumentklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+
+##### Auslöser
+
+Bei Abruf des Patient Summary wird automatisch ein Prozess gestartet, der die angebundenen Register auf neue oder aktualisierte Dokumente/Informationen überprüft und diese Inhalte in das Patient Summary übernimmt.
+
+##### Vorbedingungen
+
+Ein berechtigter Akteur hat lesenend auf das Patient Summary (UC2) zugegriffen.
+
+##### Ergebnis
+
+Das Patient Summary wurde mit den aktuellsten Gesundheitsinformatinen aus allen verfügbaren Registern generiert.
+
+<br>
 
 #### UC2 Patient Summary lesen
 
-Umfasst: 
-- Behandlungsplan: Einsicht, Kontrolle und Planung der nächsten empfohlenen oder vereinbarten Termine,  Kontrolltermine und Untersuchungen.
-- Gesamtübersicht aller erfassten Daten und deren Bearbeitungen einsehen.
-- Lebensstil: Einsicht und Kontrolle der vereinbarten Ziele (z.B. Rauchen, Bewegung, Alkohol).
-- Hilfsgeräte/Apps erfassen und Behandlungsdaten manuell oder automatisiert speichern.
-- Messwerte beobachten und im Anlassfall Rückmeldungen von einem Arzt erhalten (z.B. Grenzwerte werden für einen gewissen Zeitraum überschritten, wie Blutdruck, Gewicht, subjektives Befinden).
+##### Akteure
 
-TODO
+- Gesundheitsdiensteanbieter (GDA)
+- Patient
 
+##### Beschreibung
 
-#### Beteiligte Akteure und Rollen
-TODO
+Ein GDA ruft die aktuellste Version des Patient Summary seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf sein aktuelles Patient Summary zugreifen. Das Patient Summary bietet in modular aufgebauten Abschnitten eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
 
+##### Verwendete Anwendungsfälle
 
-### Generierung der APS
-Zusammenspiel mit CDA
+- UC1 Patient Summary generieren
+
+##### Auslöser
+
+- Konsultation durch GDA
+- Informationswunsch durch Patienten
+- Bedarf für Notfallversorgung, fachärztliche Zweitmeinung, etc.
+
+##### Vorbedingungen
+
+Der jeweilige Akteur ist berechtigt auf das Patient Summary zuzugreifen.
+
+##### Ergebnis
+
+Die aktuelle Version des Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
