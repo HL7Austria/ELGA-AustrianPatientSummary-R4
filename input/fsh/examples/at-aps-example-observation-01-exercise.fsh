@@ -1,13 +1,12 @@
-Instance: observation-exercise-02
+Instance: AtApsExampleObservation01Exercise
 InstanceOf: Observation
-Description: "Patient Story - Workout Beispiel"
+Title: "Patient Story-Beispiel"
+Description: "Körperliche Aktivität"
 Usage: #example
 * status = #final
-* id = "002"
-* code = $loinc#89555-7 "How many days per week did you engage in moderate to strenuous physical activity in the last 30 days"
-* subject = Reference(Patient/002) "Maria Musterfrau"
-* performer = Reference(Patient/002) "Maria Musterfrau"
+* id = "at-aps-example-observation-01-exercise"
+* code = $loinc#89555-7 "An wie vielen Tagen pro Woche haben Sie in den letzten 30 Tagen mäßige bis anstrengende körperliche Aktivitäten ausgeübt?"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
+* performer = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * effectiveDateTime = "2024-12-02"
-* valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.value = 3
-* valueQuantity.unit = "days per week"
+* valueQuantity = 3 'd/wk' "Tage pro Woche"

@@ -1,24 +1,26 @@
-Instance: device-software-02
+Instance: AtApsExampleDevice02Software
 InstanceOf: AtApsDevice
-Description: "Beispiel einer Software"
+Title: "AtApsDevice-Beispiel 2"
+Description: "Software eines Medizinprodukts"
 Usage: #example
-* id = "002"
-* patient = Reference(Patient/002) "Maria Musterfrau"
+* id = "at-aps-example-device-02-software"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * type = $sct#706687001 "Software"
 * deviceName[0].name = "Best Health Software Application"
 * deviceName[0].type = #model-name
 * deviceName[1].name = "Good Health System"
 * deviceName[1].type = #manufacturer-name
 * version.value = "1.0.5"
-* parent = Reference(Device/001) "Best Health Device"
+* parent = Reference(Device/at-aps-example-device-01) "Best Health Device"
 
-Instance: device-01
+Instance: AtApsExampleDevice01
 InstanceOf: AtApsDevice
-Description: "Beispiel eines Device"
+Title: "AtApsDevice-Beispiel 1"
+Description: "Medizinprodukt"
 Usage: #example
-* id = "001"
-* patient = Reference(Patient/002) "Maria Musterfrau"
-* type = $sct#49062001 "Device"
+* id = "at-aps-example-device-01"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
+* type = $sct#49062001 "Gerät"
 * deviceName[0].name = "Best Health Device"
 * deviceName[0].type = #model-name
 * version.value = "1"

@@ -1,14 +1,14 @@
-Instance: procedure-01
+Instance: AtApsExampleProcedure01
 InstanceOf: AtApsProcedure
-Title: "Procedure - Surgical Placement of Coronary Stent"
-Description: "Procedure - Surgical Placement of Coronary Stent"
+Title: "AtApsProcedure-Beispiel"
+Description: "Chirurgische Platzierung eines Koronarstents"
 Usage: #example
-* id = "001"
+* id = "at-aps-example-procedure-01"
 * status = #completed
-* category = $sct#387713003 "Surgical procedure"
-* code.coding[0] = $sct#36969009 "Placement of stent in coronary artery"
-* code.coding[+] = $sct#233258006 "Balloon angioplasty of artery"
-* code.text = "Previous balloon angioplasty on mid-LAD stenosis with STENT Implantation"
-* subject = Reference(Patient/002) "Maria Musterfrau"
+* category = $sct#387713003 "Chirurgische Prozedur"
+* code.coding[0] = $sct#36969009 "Einsetzen eines Stents in Koronararterie"
+* code.coding[+] = $sct#233258006 "Durchleuchtungsgeführte Angioplastie einer Arterie mit Kontrastmittel"
+* code.text = "Vorherige Ballonangioplastie bei mittlerer LAD-Stenose mit STENT-Implantation"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * performedPeriod.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * performedPeriod.extension.valueCode = #unknown
