@@ -1,6 +1,6 @@
 Instance: AtApsExampleBundle02PreventiveMedicalCheckup
 InstanceOf: AtApsBundle
-Description: "APS with preventive medical checkup"
+Description: "APS für Vorsorgeuntersuchung"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"
@@ -482,7 +482,7 @@ Usage: #inline
 * dosage.sequence = 1
 * dosage.timing.repeat.when = $event-timing#NIGHT "Night"
 * dosage.timing.repeat.dayOfWeek = #fri
-* dosage.route = $sct#26643006 "Oral use"
+* dosage.route = $sct#26643006 "Oraler Verabreichungsweg"
 * dosage.doseAndRate.doseQuantity = 2 $cs-elga-medikationmengenart#{TAB} "Tablet"
 
 Instance: AtApsExampleBundle02-medication-summary-2
