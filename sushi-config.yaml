@@ -96,7 +96,7 @@ parameters:
 #  validation: [allow-any-extensions, no-broken-links]
   allow-extensible-warnings: true
   display-warnings: true
-  path-expansion-params: '../resources/Parameters-expanstion-parameters.json' # for using SNOMED CT Austrian Extension
+  path-expansion-params: '../resources/at-aps-expansion-parameters-sct.json' # for using SNOMED CT Austrian Extension
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
