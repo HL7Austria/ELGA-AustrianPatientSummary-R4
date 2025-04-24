@@ -427,6 +427,7 @@ Usage: #inline
 * code = $loinc#8302-2 "Körpergröße"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
 * performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
+* effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity = 173 'cm' "cm"
 
 
