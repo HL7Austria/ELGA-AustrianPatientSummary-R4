@@ -1,7 +1,7 @@
 Instance: AtApsExamplePatient01
 InstanceOf: AtApsPatient
 Title: "AtApsPatient-Beispiel"
-Description: "Weiblich minimal"
+Description: "Mimimalbeispiel einer Patientin"
 Usage: #example
 * id = "at-aps-example-patient-01"
 * identifier[localPatientId].type = $v2-0203#PI "Patient internal identifier"
