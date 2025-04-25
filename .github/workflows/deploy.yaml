@@ -85,11 +85,11 @@ jobs:
 
     - name: Move vidi files
       run: |
-        cp ./vidi/Bundle*.html ./temp/pages/
-        cp ./vidi/favicon.ico ./temp/pages/
-        cp -r ./vidi/scripts ./temp/pages/
-        cp -r ./vidi/styles ./temp/pages/
-        cp -r ./vidi/assets/* ./temp/pages/assets/
+        cp ./vidi/Bundle*.html ./output/
+        cp ./vidi/favicon.ico ./output/
+        cp -r ./vidi/scripts ./output/
+        cp -r ./vidi/styles ./output/
+        cp -r ./vidi/assets/* ./output/assets/
 
     - name: Move index file
       run: |
