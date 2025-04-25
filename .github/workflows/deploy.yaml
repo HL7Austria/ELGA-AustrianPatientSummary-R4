@@ -91,12 +91,6 @@ jobs:
         cp -r ./vidi/styles ./temp/pages/
         cp -r ./vidi/assets/* ./temp/pages/assets/
 
-    - name: Re-run jekyll
-      run: |
-        cd ./temp/pages
-        jekyll build --destination "../../output"
-        cd ../..
-
     - name: Move index file
       run: |
         mv ./input/landing_page/_index.yml ./output/
