@@ -108,13 +108,14 @@ Der jeweilige Akteur ist berechtigt auf das Patient Summary zuzugreifen.
 Die aktuelle Version des Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
 
 
-### Beispiel einer Patient Journey
+### Patient Journey
 
-Das folgenden Anwendungsbeispiele veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Sie dienen dazu, beispielhaft die Darstellung und Nutzung des APS zu demonstrieren.
+Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Sie dienen dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
 
-### Fallbeispiel 1
-Frau [Susanne Testpatientin](StructureDefinition-at-aps-example-journey-01-patient.html), geboren am 12. Nov. 1950, fühlt sich nicht gut und besucht deshalb am 8. April 2025 Dr. Hannes Hausarzt. Dieser ruft das aktuelle APS seiner Patientin ab.
-Die Patientin ist übergewichtig. Dr. Hausarzt ist bekannt, dass es eine familiäre Vorbelastung bezüglich Herzkreislauferkrankungen gibt.
+#### Beispiel einer Patient Journey
+Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 12. November 1950, fühlt sich nicht gut und besucht deshalb am 8. April 2025 [Dr. Hanna Hausärztin]
+(Practitioner-at-aps-example-practitioner-01). Diese ruft das aktuelle APS ihrer Patientin ab.
+Die Patientin ist übergewichtig. Dr. Hausärztin ist bekannt, dass es eine familiäre Vorbelastung bezüglich Herzkreislauferkrankungen gibt.
 Allergien sind keine bekannt.
 TODO.
 
