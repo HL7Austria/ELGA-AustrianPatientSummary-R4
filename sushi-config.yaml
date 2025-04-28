@@ -33,6 +33,7 @@ contact:
 #
 dependencies:
   hl7.fhir.uv.ips: 2.0.0-ballot
+  hl7.fhir.uv.ipa: 1.1.0
   hl7.at.fhir.core.r4: 2.0.0
   # hl7.at.fhir.gkl.ig-tooling: 0.4.0 # temporary package for having all terminologies available
 

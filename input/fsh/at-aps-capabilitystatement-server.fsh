@@ -93,7 +93,7 @@ Usage: #definition
 * rest.resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].operation.extension.valueCode = #MAY
 * rest.resource[=].operation.name = "docref"
-* rest.resource[=].operation.definition = "https://hl7.org/fhir/uv/ipa/OperationDefinition-docref.html"
+* rest.resource[=].operation.definition = "http://hl7.org/fhir/uv/ipa/OperationDefinition/docref"
 
 // no changes made by the APS
 * rest.resource[+].type = #Flag
