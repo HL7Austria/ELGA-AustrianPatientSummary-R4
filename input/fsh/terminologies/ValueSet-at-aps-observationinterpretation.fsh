@@ -1,7 +1,7 @@
 ValueSet: AtApsObservationInterpretation
 Id: at-aps-observationinterpretation
 Title: "AT APS ObservationInterpretation"
-Description: "This value set extends the existing value set from ELGA GmbH."
+Description: "Dieses Value-Set bildet die in Österreich gebräuchlichen Interpretationen von Untersuchungsergebnissen ab."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
 * ^experimental = false

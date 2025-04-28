@@ -2,7 +2,7 @@ Profile: AtApsOrganization
 Parent: HL7ATCoreOrganization
 Id: at-aps-organization
 Title: "AT APS Organization"
-Description: "This AT APS profile for the Organization resource is derived from the corresponding HL7® Austria FHIR® Core profile and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+Description: "Das AT APS-Profil für die Organization-Ressource ist vom entsprechenden Profil aus dem HL7® Austria FHIR® Core IG abgeleitet und stellt zusätzlich die Konformität gegenüber dem IPS-Profil sicher, indem die so genannte [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile)-Erweiterung verwendet wird."
 * ^status = #active
 * . ^short = "AT APS Organization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(OrganizationUvIps)

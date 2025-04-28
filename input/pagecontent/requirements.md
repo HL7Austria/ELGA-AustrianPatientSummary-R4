@@ -114,7 +114,7 @@ Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien fü
 
 #### Beispiel einer Patient Journey
 Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 12. November 1950, fühlt sich nicht gut und besucht deshalb am 8. April 2025 [Dr. Hanna Hausärztin]
-(Practitioner-at-aps-example-practitioner-01). Diese ruft das aktuelle APS ihrer Patientin ab.
+(Practitioner-at-aps-example-practitioner-01.html). Diese ruft das aktuelle APS ihrer Patientin ab.
 Die Patientin ist übergewichtig. Dr. Hausärztin ist bekannt, dass es eine familiäre Vorbelastung bezüglich Herzkreislauferkrankungen gibt.
 Allergien sind keine bekannt.
 TODO.

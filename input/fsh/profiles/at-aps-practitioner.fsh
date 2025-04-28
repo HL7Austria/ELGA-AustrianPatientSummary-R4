@@ -2,7 +2,7 @@ Profile: AtApsPractitioner
 Parent: HL7ATCorePractitioner
 Id: at-aps-practitioner
 Title: "AT APS Practitioner"
-Description: "This AT APS profile for the Practitioner resource is derived from the corresponding HL7® Austria FHIR® Core profile and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+Description: "Das AT APS-Profil für die Practitioner-Ressource ist vom entsprechenden Profil aus dem HL7® Austria FHIR® Core IG abgeleitet und stellt zusätzlich die Konformität gegenüber dem IPS-Profil sicher, indem die so genannte [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile)-Erweiterung verwendet wird."
 * ^status = #active
 * . ^short = "AT APS Practitioner"
 * ^extension[$imposeProfile].valueCanonical = Canonical(PractitionerUvIps)

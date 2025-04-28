@@ -2,7 +2,7 @@ Profile: AtApsObservationResultsRadiology
 Parent: Observation
 Id: at-aps-observationresultsradiology
 Title: "AT APS Observation Results Radiology"
-Description: "This AT APS profile for the Observation resource is derived from the \"AtApsObservationResults\" profile and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt zum einen die österreichischen Vorgaben (z.B. Patient und zu verwendende Value-Sets) und stellt andererseits die Konformität gegenüber dem IPS-Profil sicher, indem die so genannte [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile)-Erweiterung verwendet wird."
 * ^status = #active
 * . ^short = "AT APS Observation Results Radiology"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsRadiologyUvIps)
