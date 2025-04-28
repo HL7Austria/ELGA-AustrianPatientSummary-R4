@@ -14,7 +14,12 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #open
+* valueString only string
+* valueString ^sliceName = "valueString"
+* valueQuantity only Quantity
+* valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
+* valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
