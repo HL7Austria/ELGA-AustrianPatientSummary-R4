@@ -14,6 +14,8 @@ Description: "Das AT APS-Profil für die Immunization-Ressource berücksichtigt 
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
 * vaccineCode ^binding.extension[=].extension[=].valueCanonical = $vs-eimpf-historischeimpfstoffe
+* vaccineCode ^binding.extension[=].extension[+].url = "key"
+* vaccineCode ^binding.extension[=].extension[=].valueId = "HistoricVaccines"
 * vaccineCode ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * route from $vs-eimpf-medikationartanwendung (extensible)
