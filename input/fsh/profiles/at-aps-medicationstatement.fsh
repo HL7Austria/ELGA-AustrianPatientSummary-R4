@@ -2,7 +2,7 @@ Profile: AtApsMedicationStatement
 Parent: MedicationStatement
 Id: at-aps-medicationstatement
 Title: "AT APS MedicationStatement"
-Description: "This AT APS profile for the MedicationStatement resource is derived from the general MedicationStatement resource in absence of a corresponding profile in the HL7® Austria FHIR® Core implementation guide and also ensures IPS conformity via the IPS profile referenced by the so-called [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) extension."
+Description: "Das AT APS-Profil für die MedicationStatement-Ressource berücksichtigt zum einen die österreichischen Vorgaben (z.B. Patient und zu verwendende Value-Sets) und stellt andererseits die Konformität gegenüber dem IPS-Profil sicher, indem die so genannte [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile)-Erweiterung verwendet wird."
 * ^status = #active
 * . ^short = "AT APS MedicationStatement"
 * ^extension[$imposeProfile].valueCanonical = Canonical(MedicationStatementIPS)
