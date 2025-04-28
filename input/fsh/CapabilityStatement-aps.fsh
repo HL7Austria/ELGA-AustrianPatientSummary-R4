@@ -5,7 +5,7 @@ Usage: #definition
 * url = "https://fhir.hl7.at/elga/aps/r4/CapabilityStatement/at-aps-capabilitystatement-server"
 * name = "AtApsCapabilityStatementServer"
 * status = #active
-* experimental = true
+* experimental = false
 * date = "2025-04-28T13:30:00+01:00"
 * publisher = "ELGA GmbH"
 * contact.telecom.system = #url
