@@ -110,7 +110,7 @@ Die aktuelle Version des Patient Summary wird angezeigt und steht zur Behandlung
 
 ### Patient Journey
 
-Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Sie dienen dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
+Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Sie dienen dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext des APS zu demonstrieren.
 
 #### Beispiel einer Patient Journey
 Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 12. November 1950, fühlt sich nicht gut und besucht deshalb am 8. April 2025 [Dr. Hanna Hausärztin]
