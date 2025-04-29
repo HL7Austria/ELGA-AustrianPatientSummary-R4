@@ -13,6 +13,8 @@ Description: "Das AT APS-Profil für die Condition-Ressource berücksichtigt zum
 * category ^binding.extension[=].extension[=].valueCode = #candidate
 * category ^binding.extension[=].extension[+].url = "valueSet"
 * category ^binding.extension[=].extension[=].valueCanonical = $vs-elga-problemarten
+* category ^binding.extension[=].extension[+].url = "key"
+* category ^binding.extension[=].extension[=].valueId = "ElgaProblemType"
 * category ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * severity from $vs-elga-problemseverity (extensible)

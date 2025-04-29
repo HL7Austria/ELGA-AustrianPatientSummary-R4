@@ -1,5 +1,6 @@
 Instance: AtApsExample03Diabetes
 InstanceOf: AtApsBundle
+Title: "AtApsBundle-Beispiel 3"
 Description: "Diabetes Checklist / Leitdokument"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"

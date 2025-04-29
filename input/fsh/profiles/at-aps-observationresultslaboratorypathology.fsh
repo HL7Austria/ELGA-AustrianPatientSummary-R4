@@ -14,13 +14,20 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #open
+* valueString only string
+* valueString ^sliceName = "valueString"
+* valueQuantity only Quantity
+* valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept from $vs-results-coded-values-laboratory-pathology-uv-ips (extensible)
+* valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = $vs-elga-nachweisergebnis
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Nachweisergebnis\" - to include missing values of the IPS ValueSet."
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ProofValue"
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * code only CodeableConcept-uv-ips
@@ -31,6 +38,8 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
 * code ^binding.extension[=].extension[=].valueCanonical = $vs-elga-antibiogramm
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
+* code ^binding.extension[=].extension[+].url = "key"
+* code ^binding.extension[=].extension[=].valueId = "Antibiogram"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * category from $vs-elga-laborstruktur (extensible)
@@ -55,6 +64,8 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
   * code ^binding.extension[=].extension[=].valueCanonical = $vs-elga-antibiogramm
   * code ^binding.extension[=].extension[+].url = "documentation"
   * code ^binding.extension[=].extension[=].valueMarkdown = "Additional binding in case of antibiotic susceptibility testing."
+  * code ^binding.extension[=].extension[+].url = "key"
+  * code ^binding.extension[=].extension[=].valueId = "ComponentAntibiogram"
   * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
   * value[x] ^slicing.discriminator.type = #type
@@ -67,6 +78,8 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
   * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = $vs-elga-nachweisergebnis
   * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
   * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Nachweisergebnis\" - to include missing values of the IPS ValueSet."
+  * valueCodeableConcept ^binding.extension[=].extension[+].url = "key"
+  * valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ComponentProofValue"
   * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
   * interpretation from AtApsObservationInterpretation (extensible)

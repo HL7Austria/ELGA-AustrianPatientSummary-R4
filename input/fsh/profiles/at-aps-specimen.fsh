@@ -14,6 +14,8 @@ Description: "Das AT APS-Profil für die Specimen-Ressource berücksichtigt zum 
 * type ^binding.extension[=].extension[=].valueCanonical = $vs-elga-specimentype
 * type ^binding.extension[=].extension[+].url = "documentation"
 * type ^binding.extension[=].extension[=].valueMarkdown = "An additional binding to the ELGA Valueset \"Specimentype\" - retained for backward compatibility."
+* type ^binding.extension[=].extension[+].url = "key"
+* type ^binding.extension[=].extension[=].valueId = "BackwardCompatibilitySpecimenType"
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * collection.bodySite ^binding.strength = #extensible   // Europe Laboratory Report has an additional bodySite - this might be not relevant vor the IPS/APS: https://hl7.eu/fhir/laboratory/StructureDefinition-Specimen-eu-lab.html
 

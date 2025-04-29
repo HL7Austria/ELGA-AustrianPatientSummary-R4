@@ -33,6 +33,7 @@ contact:
 #
 dependencies:
   hl7.fhir.uv.ips: 2.0.0-ballot
+  hl7.fhir.uv.ipa: 1.1.0
   hl7.at.fhir.core.r4: 2.0.0
   # hl7.at.fhir.gkl.ig-tooling: 0.4.0 # temporary package for having all terminologies available
 
@@ -63,14 +64,15 @@ pages:
     title: Funktionale Anforderungen
   terminologies.md:
     title: Terminologien
-  framework.md:
-    title: Technische Rahmenbedingungen
-  contributors.md:
-    title: Autoren und Mitwirkende
-  resources.md:
-    title: Ressourcen
   info.md:
     title: Informationen über dieses Dokument
+  contributors.md:
+    title: Autoren und Mitwirkende
+  framework.md:
+    title: Technische Rahmenbedingungen
+  # resources.md:
+  #   title: Ressourcen
+
 
 # pages:
 #   index.md:
@@ -111,12 +113,12 @@ parameters:
 menu:
   Start: index.html
   Inhalt: toc.html
+  Artefakte: artifacts.html
   Hintergrund: background.html
   Funktionale Anforderungen: requirements.html
-  Artefakte: artifacts.html
   Terminologien: terminologies.html
-  Ressourcen: resources.html
-  ELGA IG:
+  # Ressourcen: resources.html
+  Weitere Infos:
     Informationen über dieses Dokument: info.html
     Autoren und Mitwirkende: contributors.html
     Technische Rahmenbedingungen: framework.html
