@@ -107,17 +107,37 @@ Der jeweilige Akteur ist berechtigt auf das Patient Summary zuzugreifen.
 
 Die aktuelle Version des Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
 
-
 ### Patient Journey
 
 Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
 
 #### Beispiel einer Patient Journey
-Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 12. November 1950, fühlt sich nicht gut und besucht deshalb am 8. April 2025 [Dr. Hanna Hausärztin]
-(Practitioner-at-aps-example-practitioner-01.html). Diese ruft das aktuelle APS ihrer Patientin ab.
-Die Patientin ist übergewichtig. Dr. Hausärztin ist bekannt, dass es eine familiäre Vorbelastung bezüglich Herzkreislauferkrankungen gibt.
-Allergien sind keine bekannt.
-TODO.
+
+**1. Arztbesuch**
+
+Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2024 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können.
+
+Im Abschnitt [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin, eine in der Kindheit durchgemachte Windpocken-Erkrankung.
+Der Abschnitt **Gesundheitsprobleme und Risiken** zeigt eine familiäre Vorbelastung bezüglich Diabetes mellitus.
+
+**Allergien und Intoleranzen** sind keine bekannt.
+
+Aus dem Abschnitt **Eingriffe und Therapien** geht hervor, dass bei Frau Testpatientin im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt "Implantate, medizinische Geräte und Heilbehelfe" hervorgeht. (Todo: evtl beispielhaft den zugrundeliegenden Befund referenzieren?). Weiters ersichtlich ist eine Bilddarmentferung (2015) und eine durchgeführte Koloskopie (2012).
+
+Die **Medikationsliste** zeigt ein Blutdrucksenkendes Mittel (RAMIPRIL) (Todo: Angabe als Dauermedikation).
+
+Bei der Kontrolle der eingetragenen **Impfungen** sieht Dr. Hausärztin, dass noch keine Masernimpfung vorliegt. Die Patientin gibt an, dass in der Kindheit eine Erkrankung durchgemacht wurde, Dr. Hausärztin dokumentiert dies im e-Impfpass der Patientin. (Todo: muss sie zusätzlich die durchgemachte Krankheit in past illness dokumentieren?)
+
+Im Anschluss untersucht Dr. Hausarzt die Patientin und misst Körpergröße und -gewicht, Blutdruck und Puls (**Vitalparameter**) und erhebt den Raucherstauts, Alkoholkonsum und körperliche Aktivität (**Lebensstil**)der Patientin und dokumentiert dies in einem Befund.
+Bei der Untersuchung wird eine Parodontalerkrankung diagnostiziert.
+
+Zuletzt veranlasst Dr. Hausärztin eine Labordiagnostik und einen Zahnarztbesuch. (Todo: Careplan?)
+
+Dr. speichert ihren soeben erstellten Befund und ruft die automatisch [aktualisierte AP](Bundle-AtApsExampleBundle-Journey-2.html) erneut auf.
+
+**2. Arztbesuch**
+
+Die Laborbefunde sind eingetroffen, die APS wurde aktualisiert.
 
 <!-- Nach dem Besuch: Verschriebnes ramipril
 
