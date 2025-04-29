@@ -12,8 +12,8 @@ Usage: #example
 * entry[=].resource = AtApsExampleBundle-Journey-1-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
 * entry[=].resource = AtApsExampleBundle-Journey-1-author-device
-* entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f473"
-* entry[=].resource = AtApsExampleBundle-Journey-1-practitioner
+// * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f473"
+// * entry[=].resource = AtApsExampleBundle-Journey-1-practitioner
 * entry[+].fullUrl = "urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6"
 * entry[=].resource = AtApsExampleBundle-Journey-1-custodian
 // Problem List
@@ -22,15 +22,15 @@ Usage: #example
 // Problem List - Family history
 * entry[+].fullUrl = "urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e"
 * entry[=].resource = AtApsExampleBundle-Journey-1-problem-13
-* entry[+].fullUrl = "urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91"
 // Problem List - periodontal disease risk
 // * entry[+].fullUrl = "urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33"
 // * entry[=].resource = AtApsExampleBundle-Journey-1-problem-17
 // * entry[+].fullUrl = "urn:uuid:f235c566-01aa-457d-ab49-9e422df69863"
 // * entry[=].resource = AtApsExampleBundle-Journey-1-problem-17-assessment-1 //21
 // Medication Summary
-* entry[=].resource = AtApsExampleBundle-Journey-1-medication-summary-7
 * entry[+].fullUrl = "urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a"
+* entry[=].resource = AtApsExampleBundle-Journey-1-medication-summary-7
+
 
 // Allergies and Intolerances
 * entry[+].fullUrl = "urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b"
@@ -140,7 +140,7 @@ Usage: #inline
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:6d15d84f-2faf-4141-ac0c-fb9cf8496abe) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-1-medication-summary-7)"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-1-medication-summary-7)"
 
 // Allergies and Intolerances
 * section[sectionAllergies].title = "Allergien und Intoleranzen"
@@ -154,7 +154,10 @@ Usage: #inline
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
 * section[sectionProceduresHx].text.status = #empty
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-1-procedure-history-1)"
+* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-1-procedure-history-1)"
+* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "Appendektomie (AtApsExampleBundle-Journey-1-procedure-history-2)"
+* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "Koloskopie (AtApsExampleBundle-Journey-1-procedure-history-3)"
+
 
 // Medical Devices
 * section[sectionMedicalDevices].title = "Implantate, medizinische Geräte und Heilbehelfe"
@@ -338,15 +341,6 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#160303001 "Diabetes mellitus in der Familienanamnese"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-
-Instance: AtApsExampleBundle-Journey-1-problem-14
-InstanceOf: AtApsCondition
-Usage: #inline
-* clinicalStatus = $cs-condition-clinical#active "Active"
-* verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
-* category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
-* code = $cs-sct#312824007 "Familienanamnese: Kolonkarzinom"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExampleBundle-Journey-1-problem-15
@@ -829,7 +823,7 @@ Usage: #inline
 Instance: AtApsExampleBundle-Journey-1-author-device
 InstanceOf: Device
 Usage: #inline
-* patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
+* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * type = $cs-sct#49062001 "Gerät"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"
