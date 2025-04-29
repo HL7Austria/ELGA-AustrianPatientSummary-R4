@@ -1,5 +1,6 @@
 Instance: AtApsExampleBundle02PreventiveMedicalCheckup
 InstanceOf: AtApsBundle
+Title: "AtApsBundle-Beispiel 2"
 Description: "APS für Vorsorgeuntersuchung"
 Usage: #example
 * identifier.system = "http://system-to-be-defined.com"
