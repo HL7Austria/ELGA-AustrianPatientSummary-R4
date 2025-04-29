@@ -9,5 +9,5 @@ Usage: #example
 * vaccineCode.coding[0] = $cs-sct#787482006 "Unbekannte Immunisierungen"
 * patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * occurrenceDateTime = "1998-06-04T00:00:00+02:00"
-* protocolApplied.targetDisease[0] = $cs-sct#10021000234102 "Masern und Mumps Impfstoffprodukt"
+* protocolApplied.targetDisease[0] = $cs-sct#836499004 "Masern-Mumps Impfstoffkombination"
 * protocolApplied.doseNumberString = "unknown"
