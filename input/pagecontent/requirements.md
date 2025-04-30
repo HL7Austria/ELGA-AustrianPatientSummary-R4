@@ -3,7 +3,7 @@
 Die Austrian Patient Summary (APS) besteht aus folgenden Abschnitten (Modulen):
 
 
-[![overview](APS_Sections.drawio.png){: style="width: 60%"}](APS_Sections.drawio.png)
+[![overview](APS_Sections.drawio.png){: style="width: 100%"}](APS_Sections.drawio.png)
 <br>
 
 Im Folgenden werden die Inhalte der Module zusammenfassend beschrieben und, sofern österreichspezifische Anpassungen der internationalen Spezifikation (Profile) vorgenommen wurden, kurz begründet. (TODO)
@@ -115,16 +115,18 @@ Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien fü
 
 **1. Arztbesuch**
 
-Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2024 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können.
+Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2024 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können:
+- Die **Medikationsliste** zeigt, die in der zentralen Anwendung e-Medikation verfügbaren Medikationsdaten der Patientin. Ihr wurde vor ca. 2 Monaten von ihrem Internisten .  Informationen zeigt ein blutdrucksenkendes Mittel (RAMIPRIL) (Todo: Angabe als Dauermedikation).
+- Aus der Sektion **Allergien und Intoleranzen** geht eine Hausstaubmilbenallergie hervor.
 
-Im Abschnitt [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin, eine in der Kindheit durchgemachte Windpocken-Erkrankung.
 Der Abschnitt **Gesundheitsprobleme und Risiken** zeigt eine familiäre Vorbelastung bezüglich Diabetes mellitus.
+Im Abschnitt [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin, eine in der Kindheit durchgemachte Windpocken-Erkrankung.
 
-**Allergien und Intoleranzen** sind keine bekannt.
+
 
 Aus dem Abschnitt **Eingriffe und Therapien** geht hervor, dass bei Frau Testpatientin im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt "Implantate, medizinische Geräte und Heilbehelfe" hervorgeht. (Todo: evtl beispielhaft den zugrundeliegenden Befund referenzieren?). Weiters ersichtlich ist eine Bilddarmentferung (2015) und eine durchgeführte Koloskopie (2012).
 
-Die **Medikationsliste** zeigt ein Blutdrucksenkendes Mittel (RAMIPRIL) (Todo: Angabe als Dauermedikation).
+
 
 Bei der Kontrolle der eingetragenen **Impfungen** sieht Dr. Hausärztin, dass noch keine Masernimpfung vorliegt. Die Patientin gibt an, dass in der Kindheit eine Erkrankung durchgemacht wurde, Dr. Hausärztin dokumentiert dies im e-Impfpass der Patientin. (Todo: muss sie zusätzlich die durchgemachte Krankheit in past illness dokumentieren?)
 
