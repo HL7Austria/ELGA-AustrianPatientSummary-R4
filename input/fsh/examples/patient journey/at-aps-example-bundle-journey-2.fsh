@@ -492,8 +492,9 @@ Usage: #inline
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * device = Reference(urn:uuid:a1a80313-a757-4062-b0d7-d04fd2a04603) "Hüftprothese"
 * device.display = "Verwendetes Gerät: Hüftprothese"
-* timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* timingDateTime.extension.valueCode = #unknown
+// * timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * timingDateTime.extension.valueCode = #unknown
+* timingPeriod.start = "2020"
 * bodySite = $cs-sct#362905007 "Gesamtes linkes Hüftgelenk"
 * bodySite.coding[0].display = "Gesamtes linkes Hüftgelenk"
 
