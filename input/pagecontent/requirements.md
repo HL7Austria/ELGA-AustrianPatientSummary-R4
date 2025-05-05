@@ -1,18 +1,18 @@
-### Module der Austrian Patient Summary
+### Sektionen der Austrian Patient Summary
 
-Die Austrian Patient Summary (APS) besteht aus folgenden Abschnitten (Modulen):
+Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen (Module):
 
 
-[![overview](APS_Sections.drawio.png){: style="width: 100%"}](APS_Sections.drawio.png)
+[![overview](APS_Sections.drawio.png){: style="width: 85%"}](APS_Sections.drawio.png)
 <br>
 
-Im Folgenden werden die Inhalte der Module zusammenfassend beschrieben und, sofern österreichspezifische Anpassungen der internationalen Spezifikation (Profile) vorgenommen wurden, kurz begründet. (TODO)
+Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, sofern österreichspezifische Anpassungen der internationalen Spezifikation (Profile) vorgenommen wurden, kurz begründet. (TODO)
 <br>
 <br>
 
 **ADMINISTRATIVE DATEN**
 
-| **Modul** | **Beschreibung** | **Konformität** | **Profile** | **Anmerkung / TODO** |
+| **Sektion** | **Beschreibung** | **Konformität** | **Profile** | **Anmerkung / TODO** |
 |---|---|---|---|---|
 | **Patient (Subject)** | Patientendaten, inkl. Angabe von Kontaktpersonenen, Hausarzt bzw. primäre Ansprechpartner. | 1..1 | [AtApsPatient](StructureDefinition-at-aps-patient.html) |  |
 | **Verfasser (Author)** | Automatische Erstellung des Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html) | 1..1 analog zu Kompl. Immunisierungsst. <br>Prüfen: auch zutreffend für evt. zukünft. mixed Erstellung: z.B. Patient Story erstellt durch Patienten oder Persistenzkennzeichnung von Dokumenten, PS-Kuratierung durch GDA? |
@@ -24,24 +24,24 @@ Im Folgenden werden die Inhalte der Module zusammenfassend beschrieben und, sofe
 
 **MEDIZINISCHE DATEN**
 
-| **Modul** | **Beschreibung** | **Konformität** | **AT APS Profile** | **IPS Profile Anmerkung / TODO** |
+| **Sektion** | **Beschreibung** | **Konformität** | **AT APS Profile** | **IPS Profile Anmerkung / TODO** |
 |---|---|---|---|---|
-| **Medikationsliste (Medication Summary)** | Der Abschnitt enthält eine Beschreibung der aktuell relevanten Medikamente des Patienten bzw. liefert Information über das Nichtvorhandensein. | 1..1 | [AtApsMedication](StructureDefinition-at-aps-medication.html) <br>[AtApsMedicationRequest](StructureDefinition-at-aps-medicationrequest.html) <br>[AtApsMedicationStatement](StructureDefinition-at-aps-medicationstatement.html) | MedicationStatement MedicationRequest MedicationAdministration MedicationDispense DocumentReference <br>Prüfen: Wieso wird AtApsMedication nicht in der Composition verwendet? |
-| **Allergien und Intoleranzen (Allergies and Intolerances)** | In dem Abschnitt werden die relevanten Allergien oder Unverträglichkeiten des Patienten dokumentiert, wobei die Art der Reaktion (z.B. Ausschlag, Anaphylaxie usw.), vorzugsweise die auslösenden Stoffe, sowie optional die Kritikalität und die Bestimmtheit der Allergie beschrieben werden. Zumindest sollten die derzeit aktiven und alle relevanten früheren Allergien und Nebenwirkungen aufgeführt werden. Liegen keine Informationen über Allergien vor oder sind keine Allergien bekannt, sollte dies in diesem Abschnitt deutlich dokumentiert werden. | 1..1 | [AtApsAllergyIntolerance](StructureDefinition-at-aps-allergyintolerance.html) | AllergyIntolerance DocumentReference |
-| **Gesundheitsprobleme und Risiken (Problems)** | Der Abschnitt listet und beschreibt klinische Probleme oder Erkrankungen (kodierte Diagnosen), die derzeit für den Patienten relevant sind bzw. liefert Information über das Nichtvorhandensein. | 1..1 | [AtApsCondition](StructureDefinition-at-aps-condition.html) | Condition DocumentReference |
-| **Impfungen (Immunization)** | Der Abschnitt beschreibt den aktuellen Impfstatus eines Patienten und die dazugehörige Impfhistorie. | 0..1 | [AtApsImmunization](StructureDefinition-at-aps-immunization.html) | Immunization or DocumentReference |
-| **Eingriffe und Therapien (History of Procedures)** | Der Abschnitt enthält eine Beschreibung früherer Eingriffe und Therapien. Darunter fallen zum Beispiel invasive diagnostische Verfahren (z.B. Herzkatheteruntersuchung), therapeutische Verfahren (z.B. Dialyse) und chirurgische Eingriffe (z.B. Appendektomie). Außerdem können hier auch Teilnahmen an Schulungen oder Beratungen dokumentiert werden. | 1..1 | [AtApsProcedure](StructureDefinition-at-aps-procedure.html) | Procedure or DocumentReference <br>Prüfen: Warum werden absolvierte Schulungen nicht im Careplan (Status completed) dokumentiert? |
-| **Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)** | Der Abschnitt über Medical Devices enthält Informationen und kodierte Einträge, die den Gebrauch von Medizinprodukten in der Krankengeschichte beschreiben, z.B. Insulinpumpen oder Herzschrittmacher. | 1..1 | [AtApsDeviceUseStatement](StructureDefinition-at-aps-deviceusestatement.html) | DeviceUseStatement or DocumentReference |
-| **Diagnostische Resultate (Results)** | Der Abschnitt fasst Untersuchungsergebnisse zusammen, die am Patienten erhoben oder anhand von biologischen In-vitro-Proben erstellt wurden. Dabei kann es sich um Laborergebnisse, Ergebnisse der anatomischen Pathologie oder um radiologische Ergebnisse handeln. | 0..1 | [AtApsObservationResultsLaboratoryPathology](StructureDefinition-at-aps-observationresultslaboratorypathology.html) <br>[AtApsObservationResultsRadiology](StructureDefinition-at-aps-observationresultsradiology.html) <br>[AtApsDiagnosticReport](StructureDefinition-at-aps-diagnosticreport.html) | Observation or DiagnosticReport or DocumentReference |
-| **Vitalparameter (Vital Signs)** | Der Abschnitt umfasst Informationen wie Blutdruck, Körpertemperatur, Herzfrequenz, Atemfrequenz, Größe, Gewicht, Body-Mass-Index, Kopfumfang oder Pulsoximetrie. Insbesondere können auffällige Vitalparameter oder körperliche Befunde wie der letzte, maximale und/oder minimale Wert, der Ausgangswert oder relevante Trends angegeben werden. | 0..1 | [AtApsObservationVitalSigns](StructureDefinition-at-aps-observationvitalsigns.html) | Observation or DocumentReference |
-| **Vergangene Gesundheitsprobleme und Risiken (History of Past Illness)** | Der Abschnitt enthält eine Beschreibung der historischen klinischen Probleme oder Erkrankungen, die für die Patientin oder den Patienten in der Vergangenheit diagnostiziert wurden. | 0..1 | [AtApsCondition](StructureDefinition-at-aps-observationvitalsigns.html) | Condition or DocumentReference <br>Prüfen: Titel: Krankengeschichte? oder "Risiken" entfernen? |
-| **Schwangerschaftshistorie (History of Pregnancy)** | Dieser Abschnitt ermöglicht die Dokumentation eines Schwangerschaftsstatus inkl. geplantem Entbindungstermin und eine kurze Zusammenfassung von vergangenen Schwangerschaften. | 0..1 | [AtApsObservationPregnancyStatus](StructureDefinition-at-aps-observationpregnancystatus.html) <br>[AtApsObservationPregnancyOutcome](StructureDefinition-at-aps-observationpregnancyoutcome.html) [AtApsObservationPregnancyEdd](StructureDefinition-at-aps-observationpregnancyedd.html) | Observation or DocumentReference |
-| **Lebensstil / Soziale Umstände und Verhalten (Social History)** | Dieser Abschnitt dokumentiert den aktuellen Lebensstil einer Person, z.B. den Raucherstatus und Informationen zum Alkoholkonsum. | 0..1 | [AtApsObservationTobaccoUse](StructureDefinition-at-aps-observationtobaccouse.html) <br>[AtApsObservationAlcoholUse](StructureDefinition-at-aps-observationalcoholuse.html) | Observation or DocumentReference Titel? |
-| **Beeinträchtigungen (Functional Status)** | Dieser Abschnitt enthält eine Beschreibung der Mobilität bzw. Fähigkeit der Patientin oder des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden. | 0..1 | [AtApsCondition](StructureDefinition-at-aps-condition.html) | Condition or ClinicalImpression or DocumentReference |
-| **Behandlungsplan (Plan of Care)** | Dieser Abschnitt enthält den Behandlungsplan inkl. Vorschlägen, Zielen und Anordnungen zur Kontrolle oder Verbesserung des Zustands des Patienten, zur Planung der nächsten empfohlenen oder vereinbarten Untersuchungen, Kontrolltermine und Schulungen. Durchgeführte Maßnahmen wie Untersuchungen oder Schulungen können im Abschnitt "History of Procedures" dokumentiert werden.| 0..1 |  | [CarePlan](https://hl7.org/fhir/R4/careplan.html) |
-| **Willenserklärungen und andere juridische Dokumente (AdvanceDirectives)** | Dieser Abschnitt kann aktuelle Verfügungen von Patienten beinhalten. | 0..1 |  | [Consent](https://hl7.org/fhir/R4/consent.html) or DocumentReference |
-| **Warnungen (Alerts)** | Dieser Abschnitt ermöglicht Warnmeldungen, wenn bestimmte Umstände eintreten (z.B. wenn Grenzwerte für Blutdruck, Gewicht oder subjektives Befinden einen gewissen Zeitraum überschritten werden). | 0..1 |  | Flag or DocumentReference [FlagAlertUvIps](https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Flag-alert-uv-ips.html) |
-| **Patientenbericht (Patient Story)** | Der Abschnitt enthält narrativen Text sowie optionale Ressourcen, die zum Ausdruck bringen, was für den Patienten wichtig ist. Dazu können Bedürfnisse, Stärken, Werte, Bedenken und Präferenzen gehören, die für Personen relevant sind, die Unterstützung und Pflege anbieten. | 0..1 |  |  |
+| **Medikationsliste (Medication Summary)** | Diese Sektion enthält eine Beschreibung der aktuell relevanten Medikamente des Patienten bzw. liefert Information über das Nichtvorhandensein. | 1..1 | [AtApsMedication](StructureDefinition-at-aps-medication.html) <br>[AtApsMedicationRequest](StructureDefinition-at-aps-medicationrequest.html) <br>[AtApsMedicationStatement](StructureDefinition-at-aps-medicationstatement.html) | MedicationStatement MedicationRequest MedicationAdministration MedicationDispense DocumentReference |
+| **Allergien und Intoleranzen (Allergies and Intolerances)** | In dieser Sektion werden die relevanten Allergien oder Unverträglichkeiten des Patienten dokumentiert, wobei die Art der Reaktion (z.B. Ausschlag, Anaphylaxie usw.), vorzugsweise die auslösenden Stoffe, sowie optional die Kritikalität und die Bestimmtheit der Allergie beschrieben werden. Zumindest sollten die derzeit aktiven und alle relevanten früheren Allergien und Nebenwirkungen aufgeführt werden. Liegen keine Informationen über Allergien vor oder sind keine Allergien bekannt, sollte dies ebenfalls dokumentiert werden. | 1..1 | [AtApsAllergyIntolerance](StructureDefinition-at-aps-allergyintolerance.html) | AllergyIntolerance DocumentReference |
+| **Gesundheitsprobleme und Risiken (Problems)** | Diese Sektion listet und beschreibt klinische Probleme oder Erkrankungen (kodierte Diagnosen), die derzeit für den Patienten relevant sind bzw. liefert Information über das Nichtvorhandensein. | 1..1 | [AtApsCondition](StructureDefinition-at-aps-condition.html) | Condition DocumentReference |
+| **Eingriffe und Therapien (History of Procedures)** | Diese Sektion enthält eine Beschreibung früherer Eingriffe und Therapien. Darunter fallen zum Beispiel invasive diagnostische Verfahren (z.B. Herzkatheteruntersuchung), therapeutische Verfahren (z.B. Dialyse) und chirurgische Eingriffe (z.B. Appendektomie). Außerdem können hier auch Teilnahmen an Schulungen oder Beratungen dokumentiert werden. | 1..1 | [AtApsProcedure](StructureDefinition-at-aps-procedure.html) | Procedure or DocumentReference |
+| **Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)** | Diese Sektion enthält Informationen und kodierte Einträge, die den Gebrauch von Medizinprodukten in der Krankengeschichte beschreiben, z.B. Insulinpumpen oder Herzschrittmacher. | 1..1 | [AtApsDeviceUseStatement](StructureDefinition-at-aps-deviceusestatement.html) | DeviceUseStatement or DocumentReference |
+| **Impfungen (Immunization)** | Die Sektion beschreibt den aktuellen Impfstatus eines Patienten und die dazugehörige Impfhistorie. | 0..1 | [AtApsImmunization](StructureDefinition-at-aps-immunization.html) | Immunization or DocumentReference |
+| **Diagnostische Resultate (Results)** | Die Sektion fasst Untersuchungsergebnisse zusammen, die am Patienten erhoben oder anhand von biologischen In-vitro-Proben erstellt wurden. Dabei kann es sich um Laborergebnisse, Ergebnisse der anatomischen Pathologie oder um radiologische Ergebnisse handeln. | 0..1 | [AtApsObservationResultsLaboratoryPathology](StructureDefinition-at-aps-observationresultslaboratorypathology.html) <br>[AtApsObservationResultsRadiology](StructureDefinition-at-aps-observationresultsradiology.html) <br>[AtApsDiagnosticReport](StructureDefinition-at-aps-diagnosticreport.html) | Observation or DiagnosticReport or DocumentReference |
+| **Vitalparameter (Vital Signs)** | Die Sektion umfasst Informationen wie Blutdruck, Körpertemperatur, Herzfrequenz, Atemfrequenz, Größe, Gewicht, Body-Mass-Index, Kopfumfang oder Pulsoximetrie. Insbesondere können auffällige Vitalparameter oder körperliche Befunde wie der letzte, maximale und/oder minimale Wert, der Ausgangswert oder relevante Trends angegeben werden. | 0..1 | [AtApsObservationVitalSigns](StructureDefinition-at-aps-observationvitalsigns.html) | Observation or DocumentReference |
+| **Vergangene Gesundheitsprobleme und Risiken (History of Past Illness)** | Die Sektion enthält eine Beschreibung der historischen klinischen Probleme oder Erkrankungen, die für die Patientin oder den Patienten in der Vergangenheit diagnostiziert wurden. | 0..1 | [AtApsCondition](StructureDefinition-at-aps-observationvitalsigns.html) | Condition or DocumentReference <br>Prüfen: Titel: "Risiken" entfernen? |
+| **Beeinträchtigungen (Functional Status)** | Diese Sektion enthält eine Beschreibung der Mobilität bzw. Fähigkeit der Patientin oder des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden. | 0..1 | [AtApsCondition](StructureDefinition-at-aps-condition.html) | Condition or ClinicalImpression or DocumentReference |
+| **Behandlungsplan (Plan of Care)** | Die Sektion enthält den Behandlungsplan inkl. Vorschlägen, Zielen und Anordnungen zur Kontrolle oder Verbesserung des Zustands des Patienten, zur Planung der nächsten empfohlenen oder vereinbarten Untersuchungen, Kontrolltermine und Schulungen. Durchgeführte Maßnahmen wie Untersuchungen oder Schulungen können in der Sektion "History of Procedures" dokumentiert werden.| 0..1 |  | [CarePlan](https://hl7.org/fhir/R4/careplan.html) |
+| **Lebensstil / Soziale Umstände und Verhalten (Social History)** | Diese Sektion dokumentiert den aktuellen Lebensstil einer Person, z.B. den Raucherstatus und Informationen zum Alkoholkonsum. | 0..1 | [AtApsObservationTobaccoUse](StructureDefinition-at-aps-observationtobaccouse.html) <br>[AtApsObservationAlcoholUse](StructureDefinition-at-aps-observationalcoholuse.html) | Observation or DocumentReference Titel? |
+| **Schwangerschaftshistorie (History of Pregnancy)** | Die Sektion ermöglicht die Dokumentation eines Schwangerschaftsstatus inkl. geplantem Entbindungstermin und eine kurze Zusammenfassung von vergangenen Schwangerschaften. | 0..1 | [AtApsObservationPregnancyStatus](StructureDefinition-at-aps-observationpregnancystatus.html) <br>[AtApsObservationPregnancyOutcome](StructureDefinition-at-aps-observationpregnancyoutcome.html) [AtApsObservationPregnancyEdd](StructureDefinition-at-aps-observationpregnancyedd.html) | Observation or DocumentReference |
+| **Willenserklärungen und andere juridische Dokumente (AdvanceDirectives)** | Die Sektion kann aktuelle Verfügungen von Patienten beinhalten. | 0..1 |  | [Consent](https://hl7.org/fhir/R4/consent.html) or DocumentReference |
+| **Warnungen (Alerts)** | Die Sektion ermöglicht Warnmeldungen, wenn bestimmte Umstände eintreten (z.B. wenn Grenzwerte für Blutdruck, Gewicht oder subjektives Befinden einen gewissen Zeitraum überschritten werden). | 0..1 |  | Flag or DocumentReference [FlagAlertUvIps](https://hl7.org/fhir/uv/ips/2024Sep/StructureDefinition-Flag-alert-uv-ips.html) |
+| **Patientenbericht (Patient Story)** | Die Sektion enthält narrativen Text sowie optionale Ressourcen, die zum Ausdruck bringen, was für den Patienten wichtig ist. Dazu können Bedürfnisse, Stärken, Werte, Bedenken und Präferenzen gehören, die für Personen relevant sind, die Unterstützung und Pflege anbieten. | 0..1 |  |  |
 
 <br>
 <br>
@@ -57,8 +57,7 @@ Folgendes Use Case Diagramm stellt die im Kontext Implementierungsleitfaden rele
 
 ##### Akteure
 
-- Gesundheitsdiensteanbieter (GDA)
-- Patient
+- Zentrale Anwendung Patient Summary
 
 ##### Beschreibung
 
@@ -70,11 +69,11 @@ Bei Abruf des Patient Summary wird automatisch ein Prozess gestartet, der die an
 
 ##### Vorbedingungen
 
-Ein berechtigter Akteur hat lesenden auf das Patient Summary (UC2) zugegriffen.
+Ein berechtigter Akteur hat lesenden auf das Patient Summary (UC2) zugegriffen. In den angebundenen Registern liegen Daten für den Patienten vor.
 
 ##### Ergebnis
 
-Das Patient Summary wurde mit den aktuellsten Gesundheitsinformationen aus allen verfügbaren Registern aggregiert.
+Das Patient Summary wurde mit den aktuellsten Gesundheitsinformationen der angebundenen Register aggregiert.
 
 <br>
 
@@ -87,7 +86,7 @@ Das Patient Summary wurde mit den aktuellsten Gesundheitsinformationen aus allen
 
 ##### Beschreibung
 
-Ein GDA ruft die aktuellste Version des Patient Summary seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf sein aktuelles Patient Summary zugreifen. Das Patient Summary bietet in modular aufgebauten Abschnitten eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
+Ein GDA ruft die aktuellste Version des Patient Summary seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf sein aktuelles Patient Summary zugreifen. Das Patient Summary bietet in modular aufgebauten Abschnitten (Sektionen) eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
 
 ##### Verwendete Anwendungsfälle
 
@@ -115,37 +114,27 @@ Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien fü
 
 **1. Arztbesuch**
 
-Frau [Susanne Testpatientin](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2024 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können:
-- Die **Medikationsliste** zeigt, die in der zentralen Anwendung e-Medikation verfügbaren Medikationsdaten der Patientin. Ihr wurde vor ca. 2 Monaten von ihrem Internisten .  Informationen zeigt ein blutdrucksenkendes Mittel (RAMIPRIL) (Todo: Angabe als Dauermedikation).
-- Aus der Sektion **Allergien und Intoleranzen** geht eine Hausstaubmilbenallergie hervor.
+Frau [Maria Musterfrau](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2025 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS (Journey-1)](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können:
 
-Der Abschnitt **Gesundheitsprobleme und Risiken** zeigt eine familiäre Vorbelastung bezüglich Diabetes mellitus.
-Im Abschnitt [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin, eine in der Kindheit durchgemachte Windpocken-Erkrankung.
+- Die [Medikationsliste](Bundle-AtApsExampleBundle-Journey-1.html#medikationsliste) zeigt Dr. Hausärztin, die in der zentralen Anwendung e-Medikation verfügbaren Medikationsdaten der Patientin an. Dieser wurden vor ca. 2 Monaten nach einem Krankenhausaufenthalt aufgrund von zu hohem Blutdruck Ramipril (5 mg) verordnet. (Todo: Angabe als Dauermedikation).
 
+- Um sich das genauer anzusehen, kann Dr. Hausärztin in der Sektion [Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#gesundheitsprobleme-und-risiken) unter der dort angeführten "Arterielle Hypertonie" das zugrundeliegende Quelldokument, nämlich den Entlassungsbrief aus dem AKH Amadeus einsehen. Weiters ist in dieser Sektion ersichtlich, dass eine eine familiäre Vorbelastung bezüglich Diabetes mellitus vorliegt.
 
+- In der Sektion [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin eine in der Kindheit durchgemachte Windpocken-Erkrankung.
 
-Aus dem Abschnitt **Eingriffe und Therapien** geht hervor, dass bei Frau Testpatientin im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt "Implantate, medizinische Geräte und Heilbehelfe" hervorgeht. (Todo: evtl beispielhaft den zugrundeliegenden Befund referenzieren?). Weiters ersichtlich ist eine Bilddarmentferung (2015) und eine durchgeführte Koloskopie (2012).
+- Aus der Sektion [Allergien und Intoleranzen](Bundle-AtApsExampleBundle-Journey-1.html#allergien-und-intoleranzen) geht eine Hausstaubmilbenallergie hervor.
 
+- Die Sektion [Eingriffe und Therapien](Bundle-AtApsExampleBundle-Journey-1.html#eingriffe-und-therapien) gibt Auskunft darüber, dass bei Frau Musterfrau im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt [Implantate, medizinische Geräte und Heilbehelfe](Bundle-AtApsExampleBundle-Journey-1.html#implantate-medizinische-geräte-und-heilbehelfe) hervorgeht. Weiters ersichtlich ist eine Bilddarmentferung (2015) und eine durchgeführte Koloskopie (2012).
 
+- Bei der Kontrolle der eingetragenen [Impfungen](Bundle-AtApsExampleBundle-Journey-1.html#impfungen) sieht Dr. Hausärztin, dass am 8. Jänner eine Diphtherie-Pertussis-Poliomyelitis-Tetanus-Impfung durchgeführt wurde.
 
-Bei der Kontrolle der eingetragenen **Impfungen** sieht Dr. Hausärztin, dass noch keine Masernimpfung vorliegt. Die Patientin gibt an, dass in der Kindheit eine Erkrankung durchgemacht wurde, Dr. Hausärztin dokumentiert dies im e-Impfpass der Patientin. (Todo: muss sie zusätzlich die durchgemachte Krankheit in past illness dokumentieren?)
-
-Im Anschluss untersucht Dr. Hausarzt die Patientin und misst Körpergröße und -gewicht, Blutdruck und Puls (**Vitalparameter**) und erhebt den Raucherstauts, Alkoholkonsum und körperliche Aktivität (**Lebensstil**)der Patientin und dokumentiert dies in einem Befund.
+Im Anschluss untersucht Dr. Hausärztin die Patientin und misst Körpergröße und -gewicht, Blutdruck und Puls (*Vitalparameter*) und erhebt den Raucherstauts, Alkoholkonsum und körperliche Aktivität (*Lebensstil*) der Patientin und dokumentiert dies in einem neuen Befund.
 Bei der Untersuchung wird eine Parodontalerkrankung diagnostiziert.
 
-Zuletzt veranlasst Dr. Hausärztin eine Labordiagnostik und einen Zahnarztbesuch. (Todo: Careplan?)
+Zuletzt veranlasst Dr. Hausärztin eine Labordiagnostik und empfiehlt einen Zahnarztbesuch. (Todo: Careplan)
 
-Dr. speichert ihren soeben erstellten Befund und ruft die automatisch [aktualisierte AP](Bundle-AtApsExampleBundle-Journey-2.html) erneut auf.
+Dr. Hausärztin speichert ihren soeben erstellten Befund und kontrolliert die automatisch von der zentralen Anwendung aktualisierte [APS (Journey-2)](Bundle-AtApsExampleBundle-Journey-2.html) durch erneute Abfrage.
 
 **2. Arztbesuch**
 
-Die Laborbefunde sind eingetroffen, die APS wurde aktualisiert.
-
-<!-- Nach dem Besuch: Verschriebnes ramipril
-
-StructureDefinition-ex-diab-journey-1-transaction.html
-
-mit plötzlich aufgetretenem Unwohlsein, Schwindel und Atembeschwerden in die Notaufnahme. Dort wird sie von einem Team aus ärztlichem Fachpersonal und Pflegepersonal betreut. Die verantwortliche Ärztin im Spital, Dr. Martina Meier, ruft das [**aktuellste IPS Dokument (11. Januar 2024)**](Bundle-UC1-SwissIpsDocument1.html) von Frau Wegmüller ab, welches der [Hausarzt](PractitionerRole-FamilienHausarztAtHausarzt.html) am 11. Januar 2024 erstellt hat. Frau Dr. Meier sieht darin dokumentiert, dass Frau Wegmüller an [Diabetes](Condition-DiabetesMellitus.html) und [Bluthochdruck](Condition-HighBloodPressure.html) leidet und deswegen [Metformin](MedicationStatement-MedStatMetformin.html) und [Candesartan](MedicationStatement-MedStatCandesartan.html) einnimmt, ausserdem ist eine [koronare Herzkrankheit](Condition-CoronaryHeartDisease.html) bekannt, weswegen Frau Wegmüller vor 2 Jahren einen [Stent](Procedure-StentPlacement.html) erhalten hat. Allergien und Intoleranzen von Frau Wegmüller wurden durch ihren Hausarzt bisher noch nicht erfragt.   
-
-Aufgrund dieser Vorinformationen vermutet Dr. Meier als Grund für das Unwohlsein und die Atembeschwerden einen [Herzinfarkt](Condition-12d8debe-5e03-465d-83f3-17675be9db4a.html), der sich dann auch im EKG und den Laboruntersuchungen bestätigt. Frau Wegmüller wird ins Herzkatheterlabor gebracht, wo sich zeigt, dass ein Herzkranzgefäss beinahe verschlossen ist und sie einen weiteren [Stent](Procedure-d646c888-7af0-4439-8aae-9fd490054583.html) braucht. Weil Frau Dr. Meier so gut informiert war konnte sie schnell richtig handeln und so geht es Frau Wegmüller schnell besser. Zur Überwachung wird sie auf die kardiologische Überwachungsstation (Kardio-IMC) aufgenommen.    
-Dort wird sie weiterhin von [Dr. Meier](PractitionerRole-869a4dd9-3a4a-4838-ad1e-42453d341147.html) betreut und am Ende des Spitalaufenthalts wird ein [**neues IPS Dokument (3. Mai 2024)**](Bundle-UC1-SwissIpsDocument2.html) mit den aktuellsten und ergänzten Informationen für Fr. Wegmüller erstellt. -->
+Dr. Hausarzt bespricht die Laborergebnisse, die am 13. Februar eingetroffen sind, mit der Patientin. Die Ergebnisse sind in der APS in der Sektion [Diagnostische Resultate (Journey-3)](Bundle-AtApsExampleBundle-Journey-3.html#diagnostische-resultate) ersichtlich.
