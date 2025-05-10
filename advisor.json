@@ -1,0 +1,14 @@
+{
+  "suppress" : [
+    //All filters containing: `#dom-6` - ISiK resources do not contain a narrative.
+    // Ignore this best practice warning for now.
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    "NO_VALID_DISPLAY_FOUND_LANG_NONE",
+    "NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR",
+    "Display_Name_for__should_be_one_of__instead_of",
+    "Terminology_TX_ValueSet_NotFound",
+    "UNKNOWN_CODESYSTEM",
+    "Terminology_TX_NoValid_3_CC",
+    "Terminology_TX_NoValid_2_CC"
+  ]
+}
