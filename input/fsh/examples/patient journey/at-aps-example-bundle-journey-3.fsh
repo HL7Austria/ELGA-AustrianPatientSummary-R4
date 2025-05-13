@@ -7,7 +7,7 @@ Usage: #example
 * type = #document
 * timestamp = "2025-02-15T14:31:30+00:00"
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
-* entry[=].resource = AtApsExampleBundle-Journey-3-composition 
+* entry[=].resource = AtApsExampleBundle-Journey-3-composition
 * entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
 * entry[=].resource = AtApsExampleBundle-Journey-3-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
@@ -304,7 +304,7 @@ Usage: #inline
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "Entlassungsbrief AKH Amadeus"
 
-// Provenance 
+// Provenance
 Instance: AtApsExampleBundle-Journey-3-provenance-1
 InstanceOf: Provenance
 Usage: #inline
@@ -365,7 +365,7 @@ Usage: #inline
 * code = $cs-sct#128488006 "Hausstaub"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
-// 
+//
 Instance: AtApsExampleBundle-Journey-3-Immunization-1
 InstanceOf: AtApsImmunization
 Usage: #inline
@@ -443,8 +443,6 @@ Usage: #inline
 * code = $cs-loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* effectiveDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* effectiveDateTime.extension.valueCode = #unknown
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
 * valueCodeableConcept = $cs-sct#278149003 "Blutgruppe A Rh(D) positiv"
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0) "AtApsExampleBundle-Journey-3-diagnostic-specimen-1"
@@ -778,15 +776,16 @@ Usage: #inline
 * effectiveDateTime = "2019-07-15"
 * valueQuantity = 2 '/d' "wine glasses per day"
 
-Instance: AtApsExampleBundle-Journey-3-deviceUse-Hueftprothese 
+Instance: AtApsExampleBundle-Journey-3-deviceUse-Hueftprothese
 InstanceOf: AtApsDeviceUseStatement
 Usage: #inline
 * status = #active
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * device = Reference(urn:uuid:a1a80313-a757-4062-b0d7-d04fd2a04603) "Hüftprothese"
 * device.display = "Verwendetes Gerät: Hüftprothese"
-* timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* timingDateTime.extension.valueCode = #unknown
+// * timingDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+// * timingDateTime.extension.valueCode = #unknown
+* timingPeriod.start = "2020"
 * bodySite = $cs-sct#362905007 "Gesamtes linkes Hüftgelenk"
 * bodySite.coding[0].display = "Gesamtes linkes Hüftgelenk"
 
