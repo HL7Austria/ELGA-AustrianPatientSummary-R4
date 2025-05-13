@@ -1,7 +1,0 @@
-Profile: AtApsOberservation
-Parent: Observation
-Id: at-aps-oberservation
-Title: "AT APS Oberservation"
-Description: "TODO"
-* ^status = #active
-* . ^short = "At APS Oberservation"
