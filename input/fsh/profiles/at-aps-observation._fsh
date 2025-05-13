@@ -1,5 +1,5 @@
 Profile: AtApsOberservation
-Parent: Oberservation
+Parent: Observation
 Id: at-aps-oberservation
 Title: "AT APS Oberservation"
 Description: "TODO"
