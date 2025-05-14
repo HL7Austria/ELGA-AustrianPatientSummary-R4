@@ -6,6 +6,11 @@ Das Austrian Patient Summary (APS) ist eine standardisierte, zusammenfassende Ku
 
 Ein Patient Summary enthält allgemeine demografische Daten des Patienten (z.B. Name, Geburtsdatum, Geschlecht), eine Zusammenfassung der für die weitere medizinische Behandlung wesentlichen Erkenntnisse und Inhalte aus den Krankenakten des Patienten (z.B. aktuelle medizinische Probleme, Allergien, größere chirurgische Eingriffe, medizinische Implantate) sowie die aktuelle Medikation.
 
+### Informationen für den Ballot
+TODO
+- Slicing
+- Beispiele noch unvollständig weil Unklarheiten
+
 #### Umfang
 
 Das Patient Summary ist
