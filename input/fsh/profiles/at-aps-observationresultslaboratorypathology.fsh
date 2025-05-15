@@ -1,5 +1,5 @@
 Profile: AtApsObservationResultsLaboratoryPathology
-Parent: Observation
+Parent: AtApsObservation
 Id: at-aps-observationresultslaboratorypathology
 Title: "AT APS Observation Results Laboratory Pathology"
 Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt zum einen die österreichischen Vorgaben (z.B. Patient und zu verwendende Value-Sets) und stellt andererseits die Konformität gegenüber dem IPS-Profil sicher, indem die so genannte [`imposeProfile`](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile)-Erweiterung verwendet wird."
