@@ -42,7 +42,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionMedications].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedications].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionMedications].entry ^slicing.rules = #open
-* section[sectionMedications].entry only Reference (MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
+* section[sectionMedications].entry only Reference (MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or AtApsDocumentReference)
 * section[sectionMedications].entry contains
     medicationStatement 0..* and
     medicationRequest 0..*
@@ -53,7 +53,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAllergies].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAllergies].entry ^slicing.rules = #open
-* section[sectionAllergies].entry only Reference (AllergyIntolerance or DocumentReference)
+* section[sectionAllergies].entry only Reference (AllergyIntolerance or AtApsDocumentReference)
 * section[sectionAllergies].entry contains
     allergyOrIntolerance 0..*
 * section[sectionAllergies].entry[allergyOrIntolerance] only Reference(AtApsAllergyIntolerance)
@@ -62,7 +62,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionProblems].entry ^slicing.discriminator[0].type = #profile
 * section[sectionProblems].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionProblems].entry ^slicing.rules = #open
-* section[sectionProblems].entry only Reference(Condition or DocumentReference)
+* section[sectionProblems].entry only Reference(Condition or AtApsDocumentReference)
 * section[sectionProblems].entry contains
     problem 0..*
 * section[sectionProblems].entry[problem] only Reference(AtApsCondition)
@@ -74,7 +74,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionProceduresHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionProceduresHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionProceduresHx].entry ^slicing.rules = #open
-* section[sectionProceduresHx].entry only Reference(Procedure or DocumentReference)
+* section[sectionProceduresHx].entry only Reference(Procedure or AtApsDocumentReference)
 * section[sectionProceduresHx].entry contains
     procedure 0..*
 * section[sectionProceduresHx].entry[procedure] only Reference(AtApsProcedure)
@@ -83,7 +83,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionImmunizations].entry ^slicing.discriminator[0].type = #profile
 * section[sectionImmunizations].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionImmunizations].entry ^slicing.rules = #open
-* section[sectionImmunizations].entry only Reference(Immunization or DocumentReference)
+* section[sectionImmunizations].entry only Reference(Immunization or AtApsDocumentReference)
 * section[sectionImmunizations].entry contains
     immunization 0..*
 * section[sectionImmunizations].entry[immunization] only Reference(AtApsImmunization)
@@ -93,7 +93,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedicalDevices].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionMedicalDevices].entry ^slicing.rules = #open
-* section[sectionMedicalDevices].entry only Reference(DeviceUseStatement or DocumentReference)
+* section[sectionMedicalDevices].entry only Reference(DeviceUseStatement or AtApsDocumentReference)
 * section[sectionMedicalDevices].entry contains
     deviceStatement 0..*
 * section[sectionMedicalDevices].entry[deviceStatement] only Reference(AtApsDeviceUseStatement)
@@ -104,7 +104,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionResults].entry ^slicing.discriminator[+].type = #profile
 * section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionResults].entry ^slicing.rules = #open
-* section[sectionResults].entry only Reference(AtApsObservation or DiagnosticReport or DocumentReference)
+* section[sectionResults].entry only Reference(AtApsObservation or DiagnosticReport or AtApsDocumentReference)
 * section[sectionResults].entry contains
     resultsObservationLaboratoryPathology 0..* and
     resultsObservationRadiology 0..* and
@@ -119,7 +119,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
 * section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionVitalSigns].entry ^slicing.rules = #open
-* section[sectionVitalSigns].entry only Reference(AtApsObservation or DocumentReference)
+* section[sectionVitalSigns].entry only Reference(AtApsObservation or AtApsDocumentReference)
 * section[sectionVitalSigns].entry contains
     vitalSign 0..*
 * section[sectionVitalSigns].entry[vitalSign] only Reference(AtApsObservationVitalSigns)
@@ -128,7 +128,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPastIllnessHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPastIllnessHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPastIllnessHx].entry ^slicing.rules = #open
-* section[sectionPastIllnessHx].entry only Reference(Condition or DocumentReference)
+* section[sectionPastIllnessHx].entry only Reference(Condition or AtApsDocumentReference)
 * section[sectionPastIllnessHx].entry contains
     pastProblem 0..*
 * section[sectionPastIllnessHx].entry[pastProblem] only Reference(AtApsCondition)
@@ -137,7 +137,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionFunctionalStatus].entry ^slicing.discriminator[0].type = #profile
 * section[sectionFunctionalStatus].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionFunctionalStatus].entry ^slicing.rules = #open
-* section[sectionFunctionalStatus].entry only Reference(Condition or ClinicalImpression or DocumentReference)
+* section[sectionFunctionalStatus].entry only Reference(Condition or ClinicalImpression or AtApsDocumentReference)
 * section[sectionFunctionalStatus].entry contains
     disability 0..* and
     functionalAssessment 0..*
@@ -148,7 +148,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPlanOfCare].entry ^slicing.rules = #open
-* section[sectionPlanOfCare].entry only Reference(AtApsCareplan or DocumentReference)
+* section[sectionPlanOfCare].entry only Reference(AtApsCareplan or AtApsDocumentReference)
 * section[sectionPlanOfCare].entry contains
     carePlan 0..*
 * section[sectionPlanOfCare].entry[carePlan] only Reference(AtApsCareplan)
@@ -157,7 +157,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
 * section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionSocialHistory].entry ^slicing.rules = #open
-* section[sectionSocialHistory].entry only Reference(AtApsObservation or DocumentReference)
+* section[sectionSocialHistory].entry only Reference(AtApsObservation or AtApsDocumentReference)
 * section[sectionSocialHistory].entry contains
     smokingTobaccoUse 0..1 and
     alcoholUse 0..1
@@ -168,7 +168,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPregnancyHx].entry ^slicing.rules = #open
-* section[sectionPregnancyHx].entry only Reference(AtApsObservation or DocumentReference)
+* section[sectionPregnancyHx].entry only Reference(AtApsObservation or AtApsDocumentReference)
 * section[sectionPregnancyHx].entry contains
     pregnancyStatus 0..* and
     pregnancyOutcomeSummary 0..*
@@ -179,7 +179,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionAdvanceDirectives].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAdvanceDirectives].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAdvanceDirectives].entry ^slicing.rules = #open
-* section[sectionAdvanceDirectives].entry only Reference(Consent or DocumentReference)
+* section[sectionAdvanceDirectives].entry only Reference(Consent or AtApsDocumentReference)
 * section[sectionAdvanceDirectives].entry contains
     advanceDirectivesConsent 0..*
 * section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
@@ -188,7 +188,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionAlerts].entry ^slicing.discriminator[0].type = #profile
 * section[sectionAlerts].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionAlerts].entry ^slicing.rules = #open
-* section[sectionAlerts].entry only Reference(Flag or DocumentReference)
+* section[sectionAlerts].entry only Reference(Flag or AtApsDocumentReference)
 * section[sectionAlerts].entry contains
     alertsFlag 0..*
 * section[sectionAlerts].entry[alertsFlag] only Reference(FlagAlertUvIps)

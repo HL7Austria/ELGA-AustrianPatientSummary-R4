@@ -134,4 +134,4 @@ Description: "Das AT APS-Profil für die Bundle-Ressource berücksichtigt zum ei
 * entry[Consent].resource only Consent
 
 * entry[DocumentReference].resource 1..
-* entry[DocumentReference].resource only DocumentReference
+* entry[DocumentReference].resource only AtApsDocumentReference
