@@ -104,7 +104,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionResults].entry ^slicing.discriminator[+].type = #profile
 * section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionResults].entry ^slicing.rules = #open
-* section[sectionResults].entry only Reference(Observation or DiagnosticReport or DocumentReference)
+* section[sectionResults].entry only Reference(AtApsObservation or DiagnosticReport or DocumentReference)
 * section[sectionResults].entry contains
     resultsObservationLaboratoryPathology 0..* and
     resultsObservationRadiology 0..* and
@@ -119,7 +119,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
 * section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionVitalSigns].entry ^slicing.rules = #open
-* section[sectionVitalSigns].entry only Reference(Observation or DocumentReference)
+* section[sectionVitalSigns].entry only Reference(AtApsObservation or DocumentReference)
 * section[sectionVitalSigns].entry contains
     vitalSign 0..*
 * section[sectionVitalSigns].entry[vitalSign] only Reference(AtApsObservationVitalSigns)
@@ -157,7 +157,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
 * section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionSocialHistory].entry ^slicing.rules = #open
-* section[sectionSocialHistory].entry only Reference(Observation or DocumentReference)
+* section[sectionSocialHistory].entry only Reference(AtApsObservation or DocumentReference)
 * section[sectionSocialHistory].entry contains
     smokingTobaccoUse 0..1 and
     alcoholUse 0..1
@@ -168,7 +168,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPregnancyHx].entry ^slicing.rules = #open
-* section[sectionPregnancyHx].entry only Reference(Observation or DocumentReference)
+* section[sectionPregnancyHx].entry only Reference(AtApsObservation or DocumentReference)
 * section[sectionPregnancyHx].entry contains
     pregnancyStatus 0..* and
     pregnancyOutcomeSummary 0..*
