@@ -128,7 +128,7 @@ Description: "Das AT APS-Profil für die Bundle-Ressource berücksichtigt zum ei
 * entry[ClinicalImpression].resource only ClinicalImpression
 
 * entry[CarePlan].resource 1..
-* entry[CarePlan].resource only CarePlan
+* entry[CarePlan].resource only AtApsCareplan
 
 * entry[Consent].resource 1..
 * entry[Consent].resource only Consent
