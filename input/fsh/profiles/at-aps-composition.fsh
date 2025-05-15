@@ -45,9 +45,13 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionMedications].entry only Reference (MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or AtApsDocumentReference)
 * section[sectionMedications].entry contains
     medicationStatement 0..* and
-    medicationRequest 0..*
+    medicationRequest 0..* and
+    medicationAdministration 0..* and
+    medicationDispense 0..*
 * section[sectionMedications].entry[medicationStatement] only Reference(AtApsMedicationStatement)
 * section[sectionMedications].entry[medicationRequest] only Reference(AtApsMedicationRequest)
+* section[sectionMedications].entry[medicationAdministration] only Reference(AtApsMedicationAdministration)
+* section[sectionMedications].entry[medicationDispense] only Reference(AtApsMedicationDispense)
 
 * section[sectionAllergies].code = $cs-loinc#48765-2
 * section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
