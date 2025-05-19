@@ -146,7 +146,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
     disability 0..* and
     functionalAssessment 0..*
 * section[sectionFunctionalStatus].entry[disability] only Reference(AtApsCondition)
-* section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(ClinicalImpression)
+* section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(AtApsClinicalImpression)
 
 * section[sectionPlanOfCare].code = $cs-loinc#18776-5
 * section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
@@ -186,7 +186,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionAdvanceDirectives].entry only Reference(Consent or AtApsDocumentReference)
 * section[sectionAdvanceDirectives].entry contains
     advanceDirectivesConsent 0..*
-* section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
+* section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(AtApsConsent)
 
 * section[sectionAlerts].code = $cs-loinc#104605-1
 * section[sectionAlerts].entry ^slicing.discriminator[0].type = #profile
@@ -195,7 +195,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionAlerts].entry only Reference(Flag or AtApsDocumentReference)
 * section[sectionAlerts].entry contains
     alertsFlag 0..*
-* section[sectionAlerts].entry[alertsFlag] only Reference(FlagAlertUvIps)
+* section[sectionAlerts].entry[alertsFlag] only Reference(AtApsFlagAlert)
 
 * section[sectionPatientStory].code = $cs-loinc#81338-6
 
