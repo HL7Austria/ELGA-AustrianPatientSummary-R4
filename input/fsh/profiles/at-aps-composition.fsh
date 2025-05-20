@@ -152,10 +152,10 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
 * section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPlanOfCare].entry ^slicing.rules = #open
-* section[sectionPlanOfCare].entry only Reference(AtApsCareplan or AtApsDocumentReference)
+* section[sectionPlanOfCare].entry only Reference(AtApsCarePlan or AtApsDocumentReference)
 * section[sectionPlanOfCare].entry contains
     carePlan 0..*
-* section[sectionPlanOfCare].entry[carePlan] only Reference(AtApsCareplan)
+* section[sectionPlanOfCare].entry[carePlan] only Reference(AtApsCarePlan)
 
 * section[sectionSocialHistory].code = $cs-loinc#29762-2
 * section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile

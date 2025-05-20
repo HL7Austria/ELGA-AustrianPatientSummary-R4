@@ -4,4 +4,5 @@ Id: at-aps-consent
 Title: "AT APS Consent"
 Description: "TODO"
 * ^status = #active
-* . ^short = "At APS Consent"
+* . ^short = "AT APS Consent"
+* patient only Reference(AtApsPatient)

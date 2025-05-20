@@ -1,7 +1,8 @@
-Profile: AtApsCareplan
+Profile: AtApsCarePlan
 Parent: CarePlan
 Id: at-aps-careplan
-Title: "AT APS Careplan"
+Title: "AT APS CarePlan"
 Description: "TODO"
 * ^status = #active
-* . ^short = "At APS Careplan"
+* . ^short = "AT APS CarePlan"
+* subject only Reference(AtApsPatient or Group)

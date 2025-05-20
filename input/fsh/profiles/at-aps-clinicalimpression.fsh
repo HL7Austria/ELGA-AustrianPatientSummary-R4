@@ -1,7 +1,8 @@
 Profile: AtApsClinicalImpression
 Parent: ClinicalImpression
-Id: at-aps-clinicalimpression 
-Title: "AT APS Clinical Impression "
+Id: at-aps-clinicalimpression
+Title: "AT APS ClinicalImpression"
 Description: "TODO"
 * ^status = #active
-* . ^short = "At APS Clinical Impression "
+* . ^short = "AT APS ClinicalImpression"
+* subject only Reference(AtApsPatient or Group)
