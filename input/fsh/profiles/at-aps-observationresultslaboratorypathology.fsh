@@ -6,7 +6,6 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
 * ^status = #active
 * . ^short = "AT APS Observation Results Laboratory Pathology"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryPathologyUvIps)
-* subject only Reference(AtApsPatient or Group or Device or Location)
 * performer only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam or AtApsPatient or RelatedPerson)
 * specimen only Reference(AtApsSpecimen)
 * hasMember only Reference(AtApsObservationResultsLaboratoryPathology)
