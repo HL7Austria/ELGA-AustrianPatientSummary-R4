@@ -163,53 +163,53 @@ Usage: #inline
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExampleBundle02-medication-summary-1"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:98285578-0bb6-42b2-908c-5bcc5e3992e0) "AtApsExampleBundle02-medication-summary-2"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:769a289d-a518-469a-8100-7943550e359f) "AtApsExampleBundle02-medication-summary-3"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:9cb3b3df-7b15-4270-af39-5f2f819e692e) "AtApsExampleBundle02-medication-summary-4"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:da89fd22-0d4f-4220-a625-b9ddf5eb330d) "AtApsExampleBundle02-medication-summary-5"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:e526f7e5-2f76-484e-acde-d6f2365f0859) "AtApsExampleBundle02-medication-summary-6"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:6d15d84f-2faf-4141-ac0c-fb9cf8496abe) "AtApsExampleBundle02-medication-summary-7"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "AtApsExampleBundle02-medication-summary-8"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:cf4b2e92-51e6-44de-9406-5406e66e9d45) "AtApsExampleBundle02-medication-summary-9"
+* section[sectionMedications].entry[medicationStatement][0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExampleBundle02-medication-summary-1"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:98285578-0bb6-42b2-908c-5bcc5e3992e0) "AtApsExampleBundle02-medication-summary-2"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:769a289d-a518-469a-8100-7943550e359f) "AtApsExampleBundle02-medication-summary-3"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:9cb3b3df-7b15-4270-af39-5f2f819e692e) "AtApsExampleBundle02-medication-summary-4"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:da89fd22-0d4f-4220-a625-b9ddf5eb330d) "AtApsExampleBundle02-medication-summary-5"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:e526f7e5-2f76-484e-acde-d6f2365f0859) "AtApsExampleBundle02-medication-summary-6"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:6d15d84f-2faf-4141-ac0c-fb9cf8496abe) "AtApsExampleBundle02-medication-summary-7"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "AtApsExampleBundle02-medication-summary-8"
+* section[sectionMedications].entry[medicationStatement][+] = Reference(urn:uuid:cf4b2e92-51e6-44de-9406-5406e66e9d45) "AtApsExampleBundle02-medication-summary-9"
 // Allergies and Intolerances
 * section[sectionAllergies].title = "Allergien und Intoleranzen"
 * section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
 * section[sectionAllergies].text.status = #empty
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle02-allergy-1"
+* section[sectionAllergies].entry[allergyOrIntolerance][0] = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle02-allergy-1"
 // Problem List
 * section[sectionProblems].title = "Gesundheitsprobleme und Risiken"
 * section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
 * section[sectionProblems].text.status = #empty
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProblems].entry[0] = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae) "AtApsExampleBundle02-problem-1"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5) "AtApsExampleBundle02-problem-2"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) "AtApsExampleBundle02-problem-3"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:194cac84-0ee2-40b4-8dda-1866318d234c) "AtApsExampleBundle02-problem-4"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "AtApsExampleBundle02-problem-5"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:b62c11b1-c478-4d04-ae6f-5f73543f2bb1) "AtApsExampleBundle02-problem-6"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:8d3a18fb-3610-4bfb-9aa4-1169cc6dd2dd) "AtApsExampleBundle02-problem-7"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:c5d400b1-b58b-41ed-9776-cfcdaf48f2e6) "AtApsExampleBundle02-problem-8"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:32d90aaa-6577-4c5d-9771-d8f606ebf0b9) "AtApsExampleBundle02-problem-9"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:2040058f-9537-4b26-9367-5ca5ac0ddb58) "AtApsExampleBundle02-problem-10"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:b7b2a10d-7295-4fd1-ad21-81bca78dc45a) "AtApsExampleBundle02-problem-11"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:ebfb60a8-a753-459d-a796-a191a4dbd91d) "AtApsExampleBundle02-problem-12"
+* section[sectionProblems].entry[problem][0] = Reference(urn:uuid:72e85b9d-004d-4104-b166-86d129948bae) "AtApsExampleBundle02-problem-1"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:82fa32f6-39d6-4fc9-9624-90a48fd3d3a5) "AtApsExampleBundle02-problem-2"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) "AtApsExampleBundle02-problem-3"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:194cac84-0ee2-40b4-8dda-1866318d234c) "AtApsExampleBundle02-problem-4"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "AtApsExampleBundle02-problem-5"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:b62c11b1-c478-4d04-ae6f-5f73543f2bb1) "AtApsExampleBundle02-problem-6"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:8d3a18fb-3610-4bfb-9aa4-1169cc6dd2dd) "AtApsExampleBundle02-problem-7"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:c5d400b1-b58b-41ed-9776-cfcdaf48f2e6) "AtApsExampleBundle02-problem-8"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:32d90aaa-6577-4c5d-9771-d8f606ebf0b9) "AtApsExampleBundle02-problem-9"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:2040058f-9537-4b26-9367-5ca5ac0ddb58) "AtApsExampleBundle02-problem-10"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:b7b2a10d-7295-4fd1-ad21-81bca78dc45a) "AtApsExampleBundle02-problem-11"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:ebfb60a8-a753-459d-a796-a191a4dbd91d) "AtApsExampleBundle02-problem-12"
 // Problem List - Family history
-* section[sectionProblems].entry[+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "AtApsExampleBundle02-problem-13"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91) "AtApsExampleBundle02-problem-14"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:e66d8ac1-a124-4e94-be22-969c9b117ce5) "AtApsExampleBundle02-problem-15"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:5ab717ff-c0a0-409e-83db-0fa6f8619f68) "AtApsExampleBundle02-problem-16"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "AtApsExampleBundle02-problem-13"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91) "AtApsExampleBundle02-problem-14"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:e66d8ac1-a124-4e94-be22-969c9b117ce5) "AtApsExampleBundle02-problem-15"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:5ab717ff-c0a0-409e-83db-0fa6f8619f68) "AtApsExampleBundle02-problem-16"
 // Problem List - periodontal disease risk
-* section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "AtApsExampleBundle02-problem-17"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "AtApsExampleBundle02-problem-17"
 // History of Procedures
 * section[sectionProceduresHx].title = "Eingriffe und Therapien"
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
 * section[sectionProceduresHx].text.status = #empty
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProceduresHx].entry[0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "AtApsExampleBundle02-procedure-history-1"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "AtApsExampleBundle02-procedure-history-2"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "AtApsExampleBundle02-procedure-history-3"
+* section[sectionProceduresHx].entry[procedure][0] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "AtApsExampleBundle02-procedure-history-1"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "AtApsExampleBundle02-procedure-history-2"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "AtApsExampleBundle02-procedure-history-3"
 // Medical Devices
 * section[sectionMedicalDevices].title = "Implantate, medizinische Geräte und Heilbehelfe"
 * section[sectionMedicalDevices].code = $cs-loinc#46264-8 "Anamnese zum Einsatz von Medizinprodukten"
@@ -221,13 +221,13 @@ Usage: #inline
 * section[sectionResults].code = $cs-loinc#30954-2 "Relevante diagnostische Tests und/oder Labordaten"
 * section[sectionResults].text.status = #empty
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionResults].entry[0] = Reference(urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654) "AtApsExampleBundle02-diagnostic-result-1"
-* section[sectionResults].entry[+] = Reference(urn:uuid:aeff2319-2cc2-4fba-9541-7a4de3d20f91) "AtApsExampleBundle02-diagnostic-result-2"
-* section[sectionResults].entry[+] = Reference(urn:uuid:d16dce15-bc5a-48a5-910e-6ac039785a2a) "AtApsExampleBundle02-diagnostic-result-3"
-* section[sectionResults].entry[+] = Reference(urn:uuid:96314fcd-3b0c-4032-8cac-6eb59579d90a) "AtApsExampleBundle02-diagnostic-result-4"
-* section[sectionResults].entry[+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9) "AtApsExampleBundle02-diagnostic-result-5"
-* section[sectionResults].entry[+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2) "AtApsExampleBundle02-diagnostic-result-6"
-* section[sectionResults].entry[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7) "AtApsExampleBundle02-diagnostic-result-7"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][0] = Reference(urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654) "AtApsExampleBundle02-diagnostic-result-1"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:aeff2319-2cc2-4fba-9541-7a4de3d20f91) "AtApsExampleBundle02-diagnostic-result-2"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:d16dce15-bc5a-48a5-910e-6ac039785a2a) "AtApsExampleBundle02-diagnostic-result-3"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:96314fcd-3b0c-4032-8cac-6eb59579d90a) "AtApsExampleBundle02-diagnostic-result-4"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9) "AtApsExampleBundle02-diagnostic-result-5"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2) "AtApsExampleBundle02-diagnostic-result-6"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7) "AtApsExampleBundle02-diagnostic-result-7"
 // * section[sectionResults].entry[+] = Reference(urn:uuid:4fe4b16a-14cb-4fd6-9da6-02c4b3797fdc)
 // * section[sectionResults].entry[+] = Reference(urn:uuid:24ff8632-0ccd-4279-88b2-325fdd936ecb)
 // * section[sectionResults].entry[+] = Reference(urn:uuid:8c11ad58-94ec-469c-ba4d-bfba9063067d)
@@ -235,32 +235,32 @@ Usage: #inline
 // * section[sectionResults].entry[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35)
 // * section[sectionResults].entry[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b)
 // * section[sectionResults].entry[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2)
-* section[sectionResults].entry[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3) "AtApsExampleBundle02-diagnostic-result-15"
+* section[sectionResults].entry[resultsObservationLaboratoryPathology][+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3) "AtApsExampleBundle02-diagnostic-result-15"
 // Vital Signs
 * section[sectionVitalSigns].title = "Vitalparameter"
 * section[sectionVitalSigns].code = $cs-loinc#8716-3 "Vitalparameter"
 * section[sectionVitalSigns].text.status = #empty
 * section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionVitalSigns].entry[0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142) "AtApsExampleBundle02-vital-sign-1"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:428259da-e0f7-4780-b1e3-c177515edd37) "AtApsExampleBundle02-vital-sign-2"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:daf9c15d-14d4-429c-b658-6842fdff67d8) "AtApsExampleBundle02-vital-sign-3"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:8248cc70-65a2-4d37-ae14-a3ef2abf8f32) "AtApsExampleBundle02-vital-sign-4"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:4d3f7ac4-fd0a-49af-a56b-303a2dbe67d1) "AtApsExampleBundle02-vital-sign-5"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:be35e603-6b99-4bb5-ad70-8499f6b55df1) "AtApsExampleBundle02-vital-sign-6"
+* section[sectionVitalSigns].entry[vitalSign][0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142) "AtApsExampleBundle02-vital-sign-1"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:428259da-e0f7-4780-b1e3-c177515edd37) "AtApsExampleBundle02-vital-sign-2"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:daf9c15d-14d4-429c-b658-6842fdff67d8) "AtApsExampleBundle02-vital-sign-3"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:8248cc70-65a2-4d37-ae14-a3ef2abf8f32) "AtApsExampleBundle02-vital-sign-4"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:4d3f7ac4-fd0a-49af-a56b-303a2dbe67d1) "AtApsExampleBundle02-vital-sign-5"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:be35e603-6b99-4bb5-ad70-8499f6b55df1) "AtApsExampleBundle02-vital-sign-6"
 // Past History of Illness
 * section[sectionPastIllnessHx].title = "Vergangene Gesundheitsprobleme und Risiken"
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Anamnese früherer Krankheiten"
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionPastIllnessHx].entry[0] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "AtApsExampleBundle02-illness-history-1"
-* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "AtApsExampleBundle02-illness-history-2"
+* section[sectionPastIllnessHx].entry[pastProblem][0] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "AtApsExampleBundle02-illness-history-1"
+* section[sectionPastIllnessHx].entry[pastProblem][+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "AtApsExampleBundle02-illness-history-2"
 // Social History
 * section[sectionSocialHistory].title = "Lebensstil / Soziale Umstände und Verhalten"
 * section[sectionSocialHistory].code = $cs-loinc#29762-2 "Sozialanamnese"
 * section[sectionSocialHistory].text.status = #empty
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "AtApsExampleBundle02-social-history-1"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "AtApsExampleBundle02-social-history-2"
+* section[sectionSocialHistory].entry[smokingTobaccoUse][0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "AtApsExampleBundle02-social-history-1"
+* section[sectionSocialHistory].entry[alcoholUse][+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "AtApsExampleBundle02-social-history-2"
 
 Instance: AtApsExampleBundle02-patient
 InstanceOf: AtApsPatient

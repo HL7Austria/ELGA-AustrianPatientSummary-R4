@@ -94,14 +94,14 @@ Usage: #inline
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-1-medication-summary-7)"
+* section[sectionMedications].entry[medicationStatement][0] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-1-medication-summary-7)"
 
 // Allergien und Intoleranzen (Allergies and Intolerances)
 * section[sectionAllergies].title = "Allergien und Intoleranzen"
 * section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
 * section[sectionAllergies].text.status = #empty
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle-Journey-1-allergy-1"
+* section[sectionAllergies].entry[allergyOrIntolerance][0] = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle-Journey-1-allergy-1"
 
 // Gesundheitsprobleme und Risiken (Problems)
 // Problems
@@ -109,46 +109,46 @@ Usage: #inline
 * section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
 * section[sectionProblems].text.status = #empty
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "Arterielle Hypertonie (AtApsExampleBundle-Journey-1-problem-5)"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "Arterielle Hypertonie (AtApsExampleBundle-Journey-1-problem-5)"
 // Problems - Family history
-* section[sectionProblems].entry[+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "Diabetes mellitus in der Familienanamnese (AtApsExampleBundle-Journey-1-problem-13)"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "Diabetes mellitus in der Familienanamnese (AtApsExampleBundle-Journey-1-problem-13)"
 
 // Eingriffe und Therapien (History of Procedures)
 * section[sectionProceduresHx].title = "Eingriffe und Therapien"
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
 * section[sectionProceduresHx].text.status = #empty
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-1-procedure-history-1)"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "Appendektomie (AtApsExampleBundle-Journey-1-procedure-history-2)"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "Koloskopie (AtApsExampleBundle-Journey-1-procedure-history-3)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-1-procedure-history-1)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "Appendektomie (AtApsExampleBundle-Journey-1-procedure-history-2)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "Koloskopie (AtApsExampleBundle-Journey-1-procedure-history-3)"
 
 // Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)
 * section[sectionMedicalDevices].title = "Implantate, medizinische Geräte und Heilbehelfe"
 * section[sectionMedicalDevices].code = $cs-loinc#46264-8 "Anamnese zum Einsatz von Medizinprodukten"
 * section[sectionMedicalDevices].text.status = #empty
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedicalDevices].entry[+]  = Reference(urn:uuid:490dab5c-271e-4736-8a6b-d04fd2a04606) "Hüftprothese"
+* section[sectionMedicalDevices].entry[deviceStatement][+]  = Reference(urn:uuid:490dab5c-271e-4736-8a6b-d04fd2a04606) "Hüftprothese"
 
 // Impfungen (Immunization)
 * section[sectionImmunizations].title = "Impfungen"
 * section[sectionImmunizations].code = $cs-loinc#11369-6 "Impfungen"
 * section[sectionImmunizations].text.status = #empty
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionImmunizations].entry[+]  = Reference(urn:uuid:590dab5c-271e-4736-8a6b-d04fd2a04607) "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
+* section[sectionImmunizations].entry[immunization][+]  = Reference(urn:uuid:590dab5c-271e-4736-8a6b-d04fd2a04607) "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
 
 // Diagnostic Results
 * section[sectionResults].title = "Diagnostische Resultate"
 * section[sectionResults].code = $cs-loinc#30954-2 "Relevante diagnostische Tests oder Labordaten"
 * section[sectionResults].text.status = #empty
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionResults].emptyReason[+] = $cs-list-empty-reason#nilknown
+* section[sectionResults].emptyReason = $cs-list-empty-reason#nilknown
 
 // Past History of Illness
 * section[sectionPastIllnessHx].title = "Vergangene Gesundheitsprobleme und Risiken"
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Anamnese früherer Krankheiten"
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-1-illness-history-2)"
+* section[sectionPastIllnessHx].entry[pastProblem][+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-1-illness-history-2)"
 
 //***************************************************************************************/
 

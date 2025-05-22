@@ -118,14 +118,14 @@ Usage: #inline
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-2-medication-summary-7)"
+* section[sectionMedications].entry[medicationStatement][0] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "RAMIPRIL 1A TBL  5MG (AtApsExampleBundle-Journey-2-medication-summary-7)"
 
 // Allergien und Intoleranzen (Allergies and Intolerances)
 * section[sectionAllergies].title = "Allergien und Intoleranzen"
 * section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
 * section[sectionAllergies].text.status = #empty
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle-Journey-2-allergy-1"
+* section[sectionAllergies].entry[allergyOrIntolerance][0] = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle-Journey-2-allergy-1"
 
 // Gesundheitsprobleme und Risiken (Problems)
 // Problems
@@ -133,11 +133,11 @@ Usage: #inline
 * section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
 * section[sectionProblems].text.status = #empty
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "Arterielle Hypertonie (AtApsExampleBundle-Journey-2-problem-5)"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:9d1c0b74-20c1-4603-a95a-71e6a1dc8fde) "Arterielle Hypertonie (AtApsExampleBundle-Journey-2-problem-5)"
 // Problems - Family history
-* section[sectionProblems].entry[+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "Diabetes mellitus in der Familienanamnese (AtApsExampleBundle-Journey-2-problem-13)"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:3f3140b1-9478-4491-b7bf-10560f38da0e) "Diabetes mellitus in der Familienanamnese (AtApsExampleBundle-Journey-2-problem-13)"
 // Problems - periodontal disease risk
-* section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "Parodontalerkrankung (AtApsExampleBundle-Journey-2-problem-17)"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "Parodontalerkrankung (AtApsExampleBundle-Journey-2-problem-17)"
 
 
 // Eingriffe und Therapien (History of Procedures)
@@ -145,58 +145,58 @@ Usage: #inline
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
 * section[sectionProceduresHx].text.status = #empty
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-2-procedure-history-1)"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "Appendektomie (AtApsExampleBundle-Journey-2-procedure-history-2)"
-* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "Koloskopie (AtApsExampleBundle-Journey-2-procedure-history-3)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:75c46c35-8f4e-4232-b026-5672c60d076a) "Totalersatz des linken Hüftgelenks (AtApsExampleBundle-Journey-2-procedure-history-1)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8103f99c-64f0-4dd5-b92e-5c9680c91e47) "Appendektomie (AtApsExampleBundle-Journey-2-procedure-history-2)"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:8a825f17-1599-4928-b384-0ca4a62daba8) "Koloskopie (AtApsExampleBundle-Journey-2-procedure-history-3)"
 
 // Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)
 * section[sectionMedicalDevices].title = "Implantate, medizinische Geräte und Heilbehelfe"
 * section[sectionMedicalDevices].code = $cs-loinc#46264-8 "Anamnese zum Einsatz von Medizinprodukten"
 * section[sectionMedicalDevices].text.status = #empty
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedicalDevices].entry = Reference(urn:uuid:490dab5c-271e-4736-8a6b-d04fd2a04606) "Hüftprothese"
+* section[sectionMedicalDevices].entry[deviceStatement][0] = Reference(urn:uuid:490dab5c-271e-4736-8a6b-d04fd2a04606) "Hüftprothese"
 
 // Impfungen (Immunization)
 * section[sectionImmunizations].title = "Impfungen"
 * section[sectionImmunizations].code = $cs-loinc#11369-6 "Impfungen"
 * section[sectionImmunizations].text.status = #empty
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionImmunizations].entry[+]  = Reference(urn:uuid:590dab5c-271e-4736-8a6b-d04fd2a04607) "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
+* section[sectionImmunizations].entry[immunization][+]  = Reference(urn:uuid:590dab5c-271e-4736-8a6b-d04fd2a04607) "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
 
 // Diagnostische Resultate (Results)
 * section[sectionResults].title = "Diagnostische Resultate"
 * section[sectionResults].code = $cs-loinc#30954-2 "Relevante diagnostische Tests oder Labordaten"
 * section[sectionResults].text.status = #empty
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionResults].emptyReason[0] = $cs-list-empty-reason#nilknown
+* section[sectionResults].emptyReason = $cs-list-empty-reason#nilknown
 
 // Vitalparameter (Vital Signs)
 * section[sectionVitalSigns].title = "Vitalparameter"
 * section[sectionVitalSigns].code = $cs-loinc#8716-3 "Vitalparameter"
 * section[sectionVitalSigns].text.status = #empty
 * section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionVitalSigns].entry[0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142) "Körpergröße (AtApsExampleBundle-Journey-2-vital-sign-1)"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:428259da-e0f7-4780-b1e3-c177515edd37) "Körpergewicht (AtApsExampleBundle-Journey-2-vital-sign-2)"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:daf9c15d-14d4-429c-b658-6842fdff67d8) "BMI (AtApsExampleBundle-Journey-2-vital-sign-3)"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:8248cc70-65a2-4d37-ae14-a3ef2abf8f32) "Blutdruck (AtApsExampleBundle-Journey-2-vital-sign-4)"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:4d3f7ac4-fd0a-49af-a56b-303a2dbe67d1) "Herzfrequenz (AtApsExampleBundle-Journey-2-vital-sign-5)"
+* section[sectionVitalSigns].entry[vitalSign][0] = Reference(urn:uuid:74c5e186-d765-4c93-a624-c9b0746e8142) "Körpergröße (AtApsExampleBundle-Journey-2-vital-sign-1)"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:428259da-e0f7-4780-b1e3-c177515edd37) "Körpergewicht (AtApsExampleBundle-Journey-2-vital-sign-2)"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:daf9c15d-14d4-429c-b658-6842fdff67d8) "BMI (AtApsExampleBundle-Journey-2-vital-sign-3)"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:8248cc70-65a2-4d37-ae14-a3ef2abf8f32) "Blutdruck (AtApsExampleBundle-Journey-2-vital-sign-4)"
+* section[sectionVitalSigns].entry[vitalSign][+] = Reference(urn:uuid:4d3f7ac4-fd0a-49af-a56b-303a2dbe67d1) "Herzfrequenz (AtApsExampleBundle-Journey-2-vital-sign-5)"
 
 // Vergangene Gesundheitsprobleme und Risiken (History of  Past Illness)
 * section[sectionPastIllnessHx].title = "Vergangene Gesundheitsprobleme und Risiken"
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Anamnese früherer Krankheiten"
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "Masern (AtApsExampleBundle-Journey-3-illness-history-1)"
-* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-2-illness-history-2)"
+* section[sectionPastIllnessHx].entry[pastProblem][+] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "Masern (AtApsExampleBundle-Journey-3-illness-history-1)"
+* section[sectionPastIllnessHx].entry[pastProblem][+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-2-illness-history-2)"
 
 // Social History
 * section[sectionSocialHistory].title = "Lebensstil / Soziale Umstände und Verhalten"
 * section[sectionSocialHistory].code = $cs-loinc#29762-2 "Sozialanamnese"
 * section[sectionSocialHistory].text.status = #empty
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "Raucherstatus (AtApsExampleBundle-Journey-2-social-history-1)"
+* section[sectionSocialHistory].entry[smokingTobaccoUse][0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "Raucherstatus (AtApsExampleBundle-Journey-2-social-history-1)"
 * section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Körperliche Aktivität (AtApsExampleBundle-Journey-2-social-history-2)"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94985) "Alkoholkonsum (AtApsExampleBundle-Journey-2-social-history-3)"
+* section[sectionSocialHistory].entry[alcoholUse][+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94985) "Alkoholkonsum (AtApsExampleBundle-Journey-2-social-history-3)"
 
 
 //***************************************************************************************/
