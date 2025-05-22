@@ -9,8 +9,9 @@ Ein Patient Summary enthält allgemeine demografische Daten des Patienten (z.B. 
 <div class="note-to-balloters" markdown="1">
 **Informationen für den Ballot**
 
+- Besonderes Augenmerk sollte auf die Profile der jeweiligen Ressourcen gelegt werden. Diese wurden so weit wie möglich angepasst, sodass z.B. nur der [AT APS Patient](StructureDefinition-at-aps-patient.html) verwendet werden darf. Im weiteren erhoffen wir uns Feedback, wie weit/tief die Profilierung gehen soll. Schließlich soll das APS nicht alle möglichen FHIR®-Ressourcen profilieren.
 - In der [AT APS Composition](StructureDefinition-at-aps-composition.html) wurde die Reihenfolge der `section`-Elemente festgelegt, wobei weitere `section`-Elemente (`openAtEnd`) angelegt werden dürfen. Ebenso wurde die Reihenfolge der `entry`-Elemente innerhalb der einzelnen `section`-Elemente festgelegt und es dürfen nur die angeführten Profile verwendet werden. Der Grund für diese Entscheidung beruht auf der Annahme, dass dadurch Instanzen schneller validiert werden können.
-- Beispiele noch unvollständig weil Unklarheiten ...
+- Im Rahmen der [Beispiele](artifacts.html#example-example-instances) erhoffen wir uns Feedback, wie der Ursprung der Information innerhalb einer APS-Instanz bestenfalls abgebildet werden kann (z.B. DocumentReference, Provenance, Meta.source, etc.) - siehe z.B. [AtApsExampleBundle-Journey-1](Bundle-AtApsExampleBundle-Journey-1.html).
 </div>
 
 #### Umfang
