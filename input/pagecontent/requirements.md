@@ -18,6 +18,7 @@ Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, s
 | **Verfasser (Author)** | Automatische Erstellung des Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html)<br/>[AtApsPractitioner](StructureDefinition-at-aps-practitioner.html) |
 | **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Entfällt bei automatischer Erstellung. | 0..* |  |
 | **Verwahrer des Dokuments (Custodian)** | Organisation, die das Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
+
 <br>
 <br>
 
