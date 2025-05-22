@@ -7,7 +7,7 @@ Usage: #example
 * type = #document
 * timestamp = "2025-02-08T14:31:30+00:00"
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
-* entry[=].resource = AtApsExampleBundle-Journey-2-composition 
+* entry[=].resource = AtApsExampleBundle-Journey-2-composition
 * entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
 * entry[=].resource = AtApsExampleBundle-Journey-2-patient
 * entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
@@ -259,7 +259,7 @@ Usage: #inline
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "Entlassungsbrief AKH Amadeus"
 
-// Provenance 
+// Provenance
 Instance: AtApsExampleBundle-Journey-2-provenance-1
 InstanceOf: Provenance
 Usage: #inline
@@ -320,7 +320,7 @@ Usage: #inline
 * code = $cs-sct#128488006 "Hausstaub"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
-// 
+//
 Instance: AtApsExampleBundle-Journey-2-Immunization-1
 InstanceOf: AtApsImmunization
 Usage: #inline
@@ -463,7 +463,7 @@ Usage: #inline
 * valueCodeableConcept = $cs-sct#266919005 "Nie Tabak geraucht"
 
 Instance: AtApsExampleBundle-Journey-2-social-history-2
-InstanceOf: Observation
+InstanceOf: AtApsObservation
 Usage: #inline
 * status = #final
 * code = $cs-sct#61686008 "Körperliche Aktivität"
@@ -485,7 +485,7 @@ Usage: #inline
 * effectiveDateTime = "2019-07-15"
 * valueQuantity = 2 '/d' "wine glasses per day"
 
-Instance: AtApsExampleBundle-Journey-2-deviceUse-Hueftprothese 
+Instance: AtApsExampleBundle-Journey-2-deviceUse-Hueftprothese
 InstanceOf: AtApsDeviceUseStatement
 Usage: #inline
 * status = #active
