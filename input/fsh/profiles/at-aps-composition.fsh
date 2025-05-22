@@ -125,18 +125,16 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionResults].entry ^slicing.discriminator[+].type = #profile
 * section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionResults].entry ^slicing.rules = #closed
+* section[sectionResults].entry ^slicing.rules = #openAtEnd
 * section[sectionResults].entry ^slicing.ordered = true
-* section[sectionResults].entry only Reference(AtApsObservation or AtApsObservationResultsLaboratoryPathology or AtApsObservationResultsRadiology or AtApsDiagnosticReport or AtApsDocumentReference)
+* section[sectionResults].entry only Reference(AtApsObservation or AtApsDiagnosticReport or AtApsDocumentReference)
 * section[sectionResults].entry contains
     resultsObservationLaboratoryPathology 0..* and
     resultsObservationRadiology 0..* and
-    observation 0..* and
     resultsDiagnosticReport 0..* and
     document 0..*
 * section[sectionResults].entry[resultsObservationLaboratoryPathology] only Reference(AtApsObservationResultsLaboratoryPathology)
 * section[sectionResults].entry[resultsObservationRadiology] only Reference(AtApsObservationResultsRadiology)
-* section[sectionResults].entry[observation] only Reference(AtApsObservation)
 * section[sectionResults].entry[resultsDiagnosticReport] only Reference(AtApsDiagnosticReport)
 * section[sectionResults].entry[document] only Reference(AtApsDocumentReference)
 
@@ -145,15 +143,13 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionVitalSigns].code = $cs-loinc#8716-3
 * section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
 * section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionVitalSigns].entry ^slicing.rules = #closed
+* section[sectionVitalSigns].entry ^slicing.rules = #openAtEnd
 * section[sectionVitalSigns].entry ^slicing.ordered = true
-* section[sectionVitalSigns].entry only Reference(AtApsObservation or AtApsObservationVitalSigns or AtApsDocumentReference)
+* section[sectionVitalSigns].entry only Reference(AtApsObservation or AtApsDocumentReference)
 * section[sectionVitalSigns].entry contains
     vitalSign 0..* and
-    observation 0..* and
     document 0..*
 * section[sectionVitalSigns].entry[vitalSign] only Reference(AtApsObservationVitalSigns)
-* section[sectionVitalSigns].entry[observation] only Reference(AtApsObservation)
 * section[sectionVitalSigns].entry[document] only Reference(AtApsDocumentReference)
 
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0
@@ -197,17 +193,15 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionSocialHistory].code = $cs-loinc#29762-2
 * section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
 * section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionSocialHistory].entry ^slicing.rules = #closed
+* section[sectionSocialHistory].entry ^slicing.rules = #openAtEnd
 * section[sectionSocialHistory].entry ^slicing.ordered = true
-* section[sectionSocialHistory].entry only Reference(AtApsObservation or AtApsObservationTobaccoUse or AtApsObservationAlcoholUse or AtApsDocumentReference)
+* section[sectionSocialHistory].entry only Reference(AtApsObservation or AtApsDocumentReference)
 * section[sectionSocialHistory].entry contains
     smokingTobaccoUse 0..1 and
     alcoholUse 0..1 and
-    observation 0..* and
     document 0..*
 * section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference(AtApsObservationTobaccoUse)
 * section[sectionSocialHistory].entry[alcoholUse] only Reference(AtApsObservationAlcoholUse)
-* section[sectionSocialHistory].entry[observation] only Reference(AtApsObservation)
 * section[sectionSocialHistory].entry[document] only Reference(AtApsDocumentReference)
 
 * section[sectionPregnancyHx].code = $cs-loinc#10162-6
@@ -215,15 +209,13 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPregnancyHx].entry ^slicing.rules = #closed
 * section[sectionPregnancyHx].entry ^slicing.ordered = true
-* section[sectionPregnancyHx].entry only Reference(AtApsObservation or AtApsObservationPregnancyStatus or AtApsObservationPregnancyOutcome or AtApsDocumentReference)
+* section[sectionPregnancyHx].entry only Reference(AtApsObservationPregnancyStatus or AtApsObservationPregnancyOutcome or AtApsDocumentReference)
 * section[sectionPregnancyHx].entry contains
     pregnancyStatus 0..* and
     pregnancyOutcomeSummary 0..* and
-    observation 0..* and
     document 0..*
 * section[sectionPregnancyHx].entry[pregnancyStatus] only Reference(AtApsObservationPregnancyStatus)
 * section[sectionPregnancyHx].entry[pregnancyOutcomeSummary] only Reference(AtApsObservationPregnancyOutcome)
-* section[sectionPregnancyHx].entry[observation] only Reference(AtApsObservation)
 * section[sectionPregnancyHx].entry[document] only Reference(AtApsDocumentReference)
 
 * section[sectionAdvanceDirectives].code = $cs-loinc#42348-3
