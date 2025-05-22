@@ -79,20 +79,20 @@ Usage: #example
 * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-6
 * entry[+].fullUrl = "urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7"
 * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-7
-* entry[+].fullUrl = "urn:uuid:4fe4b16a-14cb-4fd6-9da6-02c4b3797fdc"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-8
-* entry[+].fullUrl = "urn:uuid:24ff8632-0ccd-4279-88b2-325fdd936ecb"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-9
-* entry[+].fullUrl = "urn:uuid:8c11ad58-94ec-469c-ba4d-bfba9063067d"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-10
-* entry[+].fullUrl = "urn:uuid:8c7f9e94-b834-474e-818c-bbd6c3ce3e17"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-11
-* entry[+].fullUrl = "urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-12
-* entry[+].fullUrl = "urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-13
-* entry[+].fullUrl = "urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-14
+// * entry[+].fullUrl = "urn:uuid:4fe4b16a-14cb-4fd6-9da6-02c4b3797fdc"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-8
+// * entry[+].fullUrl = "urn:uuid:24ff8632-0ccd-4279-88b2-325fdd936ecb"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-9
+// * entry[+].fullUrl = "urn:uuid:8c11ad58-94ec-469c-ba4d-bfba9063067d"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-10
+// * entry[+].fullUrl = "urn:uuid:8c7f9e94-b834-474e-818c-bbd6c3ce3e17"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-11
+// * entry[+].fullUrl = "urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-12
+// * entry[+].fullUrl = "urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-13
+// * entry[+].fullUrl = "urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-14
 * entry[+].fullUrl = "urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d3"
 * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-15
 // Diagnostic Results - Performer
@@ -214,6 +214,7 @@ Usage: #inline
 * section[sectionResults].entry[+] = Reference(urn:uuid:30c8a990-ea39-4dcb-9e1e-b9ac74afffc9) "Cholesterol in Blut oder Serum (AtApsExampleBundle-Journey-3-diagnostic-result-5)"
 * section[sectionResults].entry[+] = Reference(urn:uuid:f29ac02d-762e-436e-b40c-667ab89e15f2) "Triglyceride (AtApsExampleBundle-Journey-3-diagnostic-result-6)"
 * section[sectionResults].entry[+] = Reference(urn:uuid:28a773ea-38c7-4c77-86c4-7764325756e7) "Gamma-GT (AtApsExampleBundle-Journey-3-diagnostic-result-7)"
+// * section[sectionResults].entry[+] = Reference(urn:uuid:4fe4b16a-14cb-4fd6-9da6-02c4b3797fdc) "Urindiagnostik (AtApsExampleBundle-Journey-3-diagnostic-result-8)"
 
 // Vitalparameter (Vital Signs)
 * section[sectionVitalSigns].title = "Vitalparameter"
@@ -231,6 +232,7 @@ Usage: #inline
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Anamnese früherer Krankheiten"
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "Masern (AtApsExampleBundle-Journey-3-illness-history-1)"
 * section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-3-illness-history-2)"
 
 // Social History
@@ -331,7 +333,7 @@ Usage: #inline
 * category = $cs-observation-category#exam "Exam"
 * code = $cs-sct#1237049003 "Bewertung der Risikofaktoren für Parodontalerkrankungen"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f473) "Dr. Hanna Hausärztin"
 * effectiveDateTime = "2025-02-08T14:31:30+00:00"
 * valueCodeableConcept = $cs-sct#723509005 "Hohes Risiko"
 
@@ -534,94 +536,94 @@ Usage: #inline
 * valueQuantity = 54 'U/L' "U/L"
 * specimen = Reference(urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0) "AtApsExampleBundle-Journey-3-diagnostic-specimen-1"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-8
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-elga-laborparameterergaenzung#1400 "Urindiagnostik"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2024-02-08T07:56:06+01:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* hasMember[0] = Reference(urn:uuid:24ff8632-0ccd-4279-88b2-325fdd936ecb) "Leukocytes in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-9)"
-* hasMember[+] = Reference(urn:uuid:8c11ad58-94ec-469c-ba4d-bfba9063067d) "Protein in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-10)"
-* hasMember[+] = Reference(urn:uuid:8c7f9e94-b834-474e-818c-bbd6c3ce3e17) "Glucose in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-11)"
-* hasMember[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35) "Blood in Urine by Visual (AtApsExampleBundle-Journey-3-diagnostic-result-12)"
-* hasMember[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b) "Nitrite in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-13)"
-* hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2) "Urobilinogen in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-14)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-8
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-elga-laborparameterergaenzung#1400 "Urindiagnostik"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2024-02-08T07:56:06+01:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * hasMember[0] = Reference(urn:uuid:24ff8632-0ccd-4279-88b2-325fdd936ecb) "Leukocytes in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-9)"
+// * hasMember[+] = Reference(urn:uuid:8c11ad58-94ec-469c-ba4d-bfba9063067d) "Protein in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-10)"
+// * hasMember[+] = Reference(urn:uuid:8c7f9e94-b834-474e-818c-bbd6c3ce3e17) "Glucose in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-11)"
+// * hasMember[+] = Reference(urn:uuid:e6e05f94-92be-4ae3-bf49-b0b7d4a62b35) "Blood in Urine by Visual (AtApsExampleBundle-Journey-3-diagnostic-result-12)"
+// * hasMember[+] = Reference(urn:uuid:33e09da2-5f43-4046-b2eb-cf190031826b) "Nitrite in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-13)"
+// * hasMember[+] = Reference(urn:uuid:b675680e-9469-41b1-adc1-093904e3a1d2) "Urobilinogen in Urine (AtApsExampleBundle-Journey-3-diagnostic-result-14)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-9
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#33052-2 "Leukocytes [Presence] in Urine"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-9
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#33052-2 "Leukocytes [Presence] in Urine"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-10
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#2887-8 "Protein [Presence] in Urine"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-10
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#2887-8 "Protein [Presence] in Urine"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-11
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#2349-9 "Glucose [Presence] in Urine"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-11
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#2349-9 "Glucose [Presence] in Urine"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-12
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#53963-5 "Blood [Presence] in Urine by Visual"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-12
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#53963-5 "Blood [Presence] in Urine by Visual"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-13
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#32710-6 "Nitrite [Presence] in Urine"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-13
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#32710-6 "Nitrite [Presence] in Urine"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
-Instance: AtApsExampleBundle-Journey-3-diagnostic-result-14
-InstanceOf: AtApsObservationResultsLaboratoryPathology
-Usage: #inline
-* status = #final
-* category = $cs-observation-category#laboratory "Laboratory"
-* code = $cs-loinc#13658-0 "Urobilinogen [Presence] in Urine"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* effectiveDateTime = "2025-02-13T14:31:30+00:00"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
-* valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
-* specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
+// Instance: AtApsExampleBundle-Journey-3-diagnostic-result-14
+// InstanceOf: AtApsObservationResultsLaboratoryPathology
+// Usage: #inline
+// * status = #final
+// * category = $cs-observation-category#laboratory "Laboratory"
+// * code = $cs-loinc#13658-0 "Urobilinogen [Presence] in Urine"
+// * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
+// * effectiveDateTime = "2025-02-13T14:31:30+00:00"
+// * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+// * valueCodeableConcept = $cs-sct#260415000 "Not detected (qualifier value)"
+// * specimen = Reference(urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9) "Urine specimen (AtApsExampleBundle-Journey-3-diagnostic-specimen-2)"
 
 Instance: AtApsExampleBundle-Journey-3-diagnostic-result-15
 InstanceOf: AtApsObservationResultsLaboratoryPathology
@@ -667,7 +669,7 @@ Usage: #inline
 * category[VSCat] = $cs-observation-category#vital-signs "Vital Signs"
 * code = $cs-loinc#8302-2 "Körpergröße"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f473) "Dr. Hanna Hausärztin"
 * effectiveDateTime = "2025-02-08T14:31:30+00:00"
 * valueQuantity = 173 'cm' "cm"
 

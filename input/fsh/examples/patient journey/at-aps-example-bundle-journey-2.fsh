@@ -186,6 +186,7 @@ Usage: #inline
 * section[sectionPastIllnessHx].code = $cs-loinc#11348-0 "Anamnese früherer Krankheiten"
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "Masern (AtApsExampleBundle-Journey-3-illness-history-1)"
 * section[sectionPastIllnessHx].entry[+] = Reference(urn:uuid:ce2589a2-a5e5-4520-808f-8118e2863a95) "Windpocken (AtApsExampleBundle-Journey-2-illness-history-2)"
 
 // Social History
@@ -195,7 +196,7 @@ Usage: #inline
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "Raucherstatus (AtApsExampleBundle-Journey-2-social-history-1)"
 * section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Körperliche Aktivität (AtApsExampleBundle-Journey-2-social-history-2)"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Alkoholkonsum (AtApsExampleBundle-Journey-2-social-history-3)"
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94985) "Alkoholkonsum (AtApsExampleBundle-Journey-2-social-history-3)"
 
 
 //***************************************************************************************/
@@ -286,7 +287,7 @@ Usage: #inline
 * category = $cs-observation-category#exam "Exam"
 * code = $cs-sct#1237049003 "Bewertung der Risikofaktoren für Parodontalerkrankungen"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f473) "Dr. Hanna Hausärztin"
 * effectiveDateTime = "2025-02-08T14:31:30+00:00"
 * valueCodeableConcept = $cs-sct#723509005 "Hohes Risiko"
 
@@ -376,7 +377,7 @@ Usage: #inline
 * category[VSCat] = $cs-observation-category#vital-signs "Vital Signs"
 * code = $cs-loinc#8302-2 "Körpergröße"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
-* performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
+* performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f473) "Dr. Hanna Hausärztin"
 * effectiveDateTime = "2025-02-08T14:31:30+00:00"
 * valueQuantity = 173 'cm' "cm"
 
