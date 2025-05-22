@@ -158,6 +158,26 @@ Usage: #inline
 * title = "International Patient Summary - Preventive Medical Checkup"
 * custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6) "Muster-Organisation"
 * extension[countryOfAffiliation].valueString = "AT"
+// Medication Summary
+* section[sectionMedications].title = "Medikationsliste"
+* section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
+* section[sectionMedications].text.status = #empty
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExampleBundle02-medication-summary-1"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:98285578-0bb6-42b2-908c-5bcc5e3992e0) "AtApsExampleBundle02-medication-summary-2"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:769a289d-a518-469a-8100-7943550e359f) "AtApsExampleBundle02-medication-summary-3"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:9cb3b3df-7b15-4270-af39-5f2f819e692e) "AtApsExampleBundle02-medication-summary-4"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:da89fd22-0d4f-4220-a625-b9ddf5eb330d) "AtApsExampleBundle02-medication-summary-5"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:e526f7e5-2f76-484e-acde-d6f2365f0859) "AtApsExampleBundle02-medication-summary-6"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:6d15d84f-2faf-4141-ac0c-fb9cf8496abe) "AtApsExampleBundle02-medication-summary-7"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "AtApsExampleBundle02-medication-summary-8"
+* section[sectionMedications].entry[+] = Reference(urn:uuid:cf4b2e92-51e6-44de-9406-5406e66e9d45) "AtApsExampleBundle02-medication-summary-9"
+// Allergies and Intolerances
+* section[sectionAllergies].title = "Allergien und Intoleranzen"
+* section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
+* section[sectionAllergies].text.status = #empty
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle02-allergy-1"
 // Problem List
 * section[sectionProblems].title = "Gesundheitsprobleme und Risiken"
 * section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
@@ -182,26 +202,6 @@ Usage: #inline
 * section[sectionProblems].entry[+] = Reference(urn:uuid:5ab717ff-c0a0-409e-83db-0fa6f8619f68) "AtApsExampleBundle02-problem-16"
 // Problem List - periodontal disease risk
 * section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "AtApsExampleBundle02-problem-17"
-// Medication Summary
-* section[sectionMedications].title = "Medikationsliste"
-* section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
-* section[sectionMedications].text.status = #empty
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExampleBundle02-medication-summary-1"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:98285578-0bb6-42b2-908c-5bcc5e3992e0) "AtApsExampleBundle02-medication-summary-2"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:769a289d-a518-469a-8100-7943550e359f) "AtApsExampleBundle02-medication-summary-3"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:9cb3b3df-7b15-4270-af39-5f2f819e692e) "AtApsExampleBundle02-medication-summary-4"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:da89fd22-0d4f-4220-a625-b9ddf5eb330d) "AtApsExampleBundle02-medication-summary-5"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:e526f7e5-2f76-484e-acde-d6f2365f0859) "AtApsExampleBundle02-medication-summary-6"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:6d15d84f-2faf-4141-ac0c-fb9cf8496abe) "AtApsExampleBundle02-medication-summary-7"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:ecf9728f-fa50-4b46-b8f7-7768174df72a) "AtApsExampleBundle02-medication-summary-8"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:cf4b2e92-51e6-44de-9406-5406e66e9d45) "AtApsExampleBundle02-medication-summary-9"
-// Allergies and Intolerances
-* section[sectionAllergies].title = "Allergien und Intoleranzen"
-* section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
-* section[sectionAllergies].text.status = #empty
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExampleBundle02-allergy-1"
 // History of Procedures
 * section[sectionProceduresHx].title = "Eingriffe und Therapien"
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"

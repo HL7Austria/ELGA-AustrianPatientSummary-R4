@@ -6,10 +6,12 @@ Das Austrian Patient Summary (APS) ist eine standardisierte, zusammenfassende Ku
 
 Ein Patient Summary enthält allgemeine demografische Daten des Patienten (z.B. Name, Geburtsdatum, Geschlecht), eine Zusammenfassung der für die weitere medizinische Behandlung wesentlichen Erkenntnisse und Inhalte aus den Krankenakten des Patienten (z.B. aktuelle medizinische Probleme, Allergien, größere chirurgische Eingriffe, medizinische Implantate) sowie die aktuelle Medikation.
 
-### Informationen für den Ballot
-TODO
-- Slicing
-- Beispiele noch unvollständig weil Unklarheiten
+<div class="note-to-balloters" markdown="1">
+**Informationen für den Ballot**
+
+- In der [AT APS Composition](StructureDefinition-at-aps-composition.html) wurde die Reihenfolge der `section`-Elemente festgelegt, wobei weitere `section`-Elemente (`openAtEnd`) angelegt werden dürfen. Ebenso wurde die Reihenfolge der `entry`-Elemente innerhalb der einzelnen `section`-Elemente festgelegt und es dürfen nur die angeführten Profile verwendet werden. Der Grund für diese Entscheidung beruht auf der Annahme, dass dadurch Instanzen schneller validiert werden können.
+- Beispiele noch unvollständig weil Unklarheiten ...
+</div>
 
 #### Umfang
 

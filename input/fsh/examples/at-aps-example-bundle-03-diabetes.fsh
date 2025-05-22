@@ -81,6 +81,18 @@ Usage: #inline
 * title = "Diabetes Leitdokument"
 * custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6) "Muster-Organisation"
 * extension[countryOfAffiliation].valueString = "AT"
+// Medication Summary
+* section[sectionMedications].title = "Medikationsliste"
+* section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
+* section[sectionMedications].text.status = #empty
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExample03Diabetes-medication-summary-1"
+// Allergies and Intolerances
+* section[sectionAllergies].title = "Allergien und Intoleranzen"
+* section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
+* section[sectionAllergies].text.status = #empty
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExample03Diabetes-allergy-1"
 // Problem List
 * section[sectionProblems].title = "Gesundheitsprobleme und Risiken"
 * section[sectionProblems].code = $cs-loinc#11450-4 "Problemliste"
@@ -95,18 +107,6 @@ Usage: #inline
 * section[sectionProblems].entry[+] = Reference(urn:uuid:caa77334-fbfc-4129-a101-1b01c595dd91) "AtApsExample03Diabetes-problem-14"
 // Problem List - periodontal disease risk
 * section[sectionProblems].entry[+] = Reference(urn:uuid:fa46fccb-5c24-4a40-a478-d6da4902ff33) "AtApsExample03Diabetes-problem-17"
-// Medication Summary
-* section[sectionMedications].title = "Medikationsliste"
-* section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
-* section[sectionMedications].text.status = #empty
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionMedications].entry[0] = Reference(urn:uuid:acac4c94-a752-4cf5-9a6b-0d84237d5076) "AtApsExample03Diabetes-medication-summary-1"
-// Allergies and Intolerances
-* section[sectionAllergies].title = "Allergien und Intoleranzen"
-* section[sectionAllergies].code = $cs-loinc#48765-2 "Allergien und unerwünschte Wirkungen"
-* section[sectionAllergies].text.status = #empty
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionAllergies].entry = Reference(urn:uuid:768eb9cb-00f3-4ab1-bfc2-ff835cb3b89b) "AtApsExample03Diabetes-allergy-1"
 // History of Procedures
 * section[sectionProceduresHx].title = "Eingriffe und Therapien"
 * section[sectionProceduresHx].code = $cs-loinc#47519-4 "Anamnese der Prozeduren oder Maßnahmen"
@@ -119,7 +119,6 @@ Usage: #inline
 * section[sectionMedicalDevices].text.status = #empty
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionMedicalDevices].emptyReason = $cs-list-empty-reason#nilknown
-
 // Diagnostic Results
 * section[sectionResults].title = "Diagnostische Resultate"
 * section[sectionResults].code = $cs-loinc#30954-2 "Relevante diagnostische Tests und/oder Labordaten"
@@ -139,18 +138,18 @@ Usage: #inline
 * section[sectionPastIllnessHx].text.status = #empty
 * section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionPastIllnessHx].entry[0] = Reference(urn:uuid:82301518-66ca-4b4c-821d-087adf643cc4) "AtApsExample03Diabetes-illness-history-1"
-// Social History
-* section[sectionSocialHistory].title = "Lebensstil / Soziale Umstände und Verhalten"
-* section[sectionSocialHistory].code = $cs-loinc#29762-2 "Sozialanamnese"
-* section[sectionSocialHistory].text.status = #empty
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
-* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "AtApsExample03Diabetes-social-history-1"
 // Care Plan
 * section[sectionPlanOfCare].title = "Behandlungsplan"
 * section[sectionPlanOfCare].code = $cs-loinc#18776-5 "Behandlungsplan - Notiz"
 * section[sectionPlanOfCare].text.status = #empty
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:39cd75da-2456-46a9-a703-89d8b65ae63b) "AtApsExample03Diabetes-schulung-1"
+// Social History
+* section[sectionSocialHistory].title = "Lebensstil / Soziale Umstände und Verhalten"
+* section[sectionSocialHistory].code = $cs-loinc#29762-2 "Sozialanamnese"
+* section[sectionSocialHistory].text.status = #empty
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
+* section[sectionSocialHistory].entry[0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "AtApsExample03Diabetes-social-history-1"
 
 Instance: AtApsExample03Diabetes-patient
 InstanceOf: AtApsPatient

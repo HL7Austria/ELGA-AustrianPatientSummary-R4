@@ -122,16 +122,16 @@ Description: "Das AT APS-Profil für die Bundle-Ressource berücksichtigt zum ei
 * entry[Specimen].resource only AtApsSpecimen
 
 * entry[Flag].resource 1..
-* entry[Flag].resource only FlagAlertUvIps
+* entry[Flag].resource only AtApsFlagAlert
 
 * entry[ClinicalImpression].resource 1..
-* entry[ClinicalImpression].resource only ClinicalImpression
+* entry[ClinicalImpression].resource only AtApsClinicalImpression
 
 * entry[CarePlan].resource 1..
-* entry[CarePlan].resource only CarePlan
+* entry[CarePlan].resource only AtApsCarePlan
 
 * entry[Consent].resource 1..
-* entry[Consent].resource only Consent
+* entry[Consent].resource only AtApsConsent
 
 * entry[DocumentReference].resource 1..
-* entry[DocumentReference].resource only DocumentReference
+* entry[DocumentReference].resource only AtApsDocumentReference
