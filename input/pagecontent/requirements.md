@@ -15,9 +15,9 @@ Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, s
 | **Sektion** | **Beschreibung** | **Konformität** | **Profile** |
 |---|---|---|---|
 | **Patient (Subject)** | Patientendaten, inkl. Angabe von Kontaktpersonenen, Hausarzt bzw. primäre Ansprechpartner. | 1..1 | [AtApsPatient](StructureDefinition-at-aps-patient.html) |
-| **Verfasser (Author)** | Automatische Erstellung des Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html)<br/>[AtApsPractitioner](StructureDefinition-at-aps-practitioner.html) |
+| **Verfasser (Author)** | Automatische Erstellung der Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html) |
 | **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Entfällt bei automatischer Erstellung. | 0..* |  |
-| **Verwahrer des Dokuments (Custodian)** | Organisation, die das Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
+| **Verwahrer des Dokuments (Custodian)** | Organisation, die die Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
 
 <br>
 <br>
@@ -61,7 +61,7 @@ Folgendes Use Case Diagramm stellt die im Kontext Implementierungsleitfaden rele
 
 ##### Beschreibung
 
-Die Inhalte des APS werden automatisch aus den angebundenen Registern zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Das APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf dem APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+Die Inhalte der APS werden automatisch aus den angebundenen Registern zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf dem APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
 
 ##### Auslöser
 
