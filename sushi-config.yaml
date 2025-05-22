@@ -61,7 +61,7 @@ pages:
   background.md:
     title: Hintergrund
   requirements.md:
-    title: Funktionale Anforderungen
+    title: Die "APS"
   # terminologies.md:
   #   title: Terminologien
   info.md:
@@ -70,8 +70,7 @@ pages:
     title: Autoren und Mitwirkende
   framework.md:
     title: Technische Rahmenbedingungen
-  # resources.md:
-  #   title: Ressourcen
+
 
 
 # pages:
@@ -115,9 +114,8 @@ menu:
   Inhalt: toc.html
   Artefakte: artifacts.html
   Hintergrund: background.html
-  Funktionale Anforderungen: requirements.html
+  Die "APS": requirements.html
   # Terminologien: terminologies.html
-  # Ressourcen: resources.html
   Weitere Infos:
     Informationen über dieses Dokument: info.html
     Autoren und Mitwirkende: contributors.html

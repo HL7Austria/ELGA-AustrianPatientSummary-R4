@@ -6,7 +6,7 @@ Usage: #example
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f23"
 * type = #document
 * timestamp = "2025-02-15T14:31:30+00:00"
-* entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
+* entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7c"
 * entry[=].resource = AtApsExampleBundle-Journey-3-composition
 * entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
 * entry[=].resource = AtApsExampleBundle-Journey-3-patient
