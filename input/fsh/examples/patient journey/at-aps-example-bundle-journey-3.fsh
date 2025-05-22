@@ -241,9 +241,8 @@ Usage: #inline
 * section[sectionSocialHistory].text.status = #empty
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionSocialHistory].entry[smokingTobaccoUse][0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "Raucherstatus (AtApsExampleBundle-Journey-3-social-history-1)"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Körperliche Aktivität (AtApsExampleBundle-Journey-3-social-history-2)"
 * section[sectionSocialHistory].entry[alcoholUse][+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Alkoholkonsum (AtApsExampleBundle-Journey-3-social-history-3)"
-
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Körperliche Aktivität (AtApsExampleBundle-Journey-3-social-history-2)"
 
 //***************************************************************************************/
 
@@ -327,7 +326,7 @@ Usage: #inline
 * stage.assessment = Reference(urn:uuid:f235c566-01aa-457d-ab49-9e422df69863) "AtApsExampleBundle-Journey-3-problem-17-assessment-1"
 
 Instance: AtApsExampleBundle-Journey-3-problem-17-assessment-1
-InstanceOf: Observation
+InstanceOf: AtApsObservation
 Usage: #inline
 * status = #final
 * category = $cs-observation-category#exam "Exam"
@@ -756,7 +755,7 @@ Usage: #inline
 * valueCodeableConcept = $cs-sct#266919005 "Nie Tabak geraucht"
 
 Instance: AtApsExampleBundle-Journey-3-social-history-2
-InstanceOf: Observation
+InstanceOf: AtApsObservation
 Usage: #inline
 * status = #final
 * code = $cs-sct#61686008 "Körperliche Aktivität"
