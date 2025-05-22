@@ -62,8 +62,8 @@ pages:
     title: Hintergrund
   requirements.md:
     title: Funktionale Anforderungen
-  terminologies.md:
-    title: Terminologien
+  # terminologies.md:
+  #   title: Terminologien
   info.md:
     title: Informationen über dieses Dokument
   contributors.md:
@@ -116,7 +116,7 @@ menu:
   Artefakte: artifacts.html
   Hintergrund: background.html
   Funktionale Anforderungen: requirements.html
-  Terminologien: terminologies.html
+  # Terminologien: terminologies.html
   # Ressourcen: resources.html
   Weitere Infos:
     Informationen über dieses Dokument: info.html
