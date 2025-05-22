@@ -65,15 +65,15 @@ Die Inhalte der APS werden automatisch aus den angebundenen Registern zusammenge
 
 ##### Auslöser
 
-Bei Abruf des Patient Summary wird automatisch ein Prozess gestartet, der die angebundenen Register auf neue oder aktualisierte Daten überprüft und diese Inhalte in das Patient Summary übernimmt.
+Bei Abruf der Patient Summary wird automatisch ein Prozess gestartet, der die angebundenen Register auf neue oder aktualisierte Daten überprüft und diese Inhalte in die Patient Summary übernimmt.
 
 ##### Vorbedingungen
 
-Ein berechtigter Akteur hat lesenden auf das Patient Summary (UC2) zugegriffen. In den angebundenen Registern liegen Daten für den Patienten vor.
+Ein berechtigter Akteur hat lesenden auf die Patient Summary (UC2) zugegriffen. In den angebundenen Registern liegen Daten für den Patienten vor.
 
 ##### Ergebnis
 
-Das Patient Summary wurde mit den aktuellsten Gesundheitsinformationen der angebundenen Register aggregiert.
+Die Patient Summary wurde mit den aktuellsten Gesundheitsinformationen der angebundenen Register aggregiert.
 
 <br>
 
@@ -86,7 +86,7 @@ Das Patient Summary wurde mit den aktuellsten Gesundheitsinformationen der angeb
 
 ##### Beschreibung
 
-Ein GDA ruft die aktuellste Version des Patient Summary seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf sein aktuelles Patient Summary zugreifen. Das Patient Summary bietet in modular aufgebauten Abschnitten (Sektionen) eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
+Ein GDA ruft die aktuellste Version der Patient Summary seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf seine aktuelle Patient Summary zugreifen. Die Patient Summary bietet in modular aufgebauten Abschnitten (Sektionen) eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
 
 ##### Verwendete Anwendungsfälle
 
@@ -100,21 +100,21 @@ Ein GDA ruft die aktuellste Version des Patient Summary seines Patienten über s
 
 ##### Vorbedingungen
 
-Der jeweilige Akteur ist berechtigt auf das Patient Summary zuzugreifen.
+Der jeweilige Akteur ist berechtigt auf die Patient Summary zuzugreifen.
 
 ##### Ergebnis
 
-Die aktuelle Version des Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
+Die aktuelle Version der Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
 
 ### Patient Journey
 
-Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das International Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
+Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für die International Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
 
 #### Beispiel einer Patient Journey
 
 **1. Arztbesuch**
 
-Frau [Maria Musterfrau](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2025 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft das aktuelle [APS (Journey-1)](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können:
+Frau [Maria Musterfrau](Patient-at-aps-example-patient-01.html), geboren am 17. April 1989, nimmt am 8. Februar 2025 bei ihrer neuen Ärztin [Dr. Hanna Hausärztin](Practitioner-at-aps-example-practitioner-01.html) eine Vorsorgeuntersuchung in Anspruch. Diese ruft die aktuelle [APS (Journey-1)](Bundle-AtApsExampleBundle-Journey-1.html) ihrer Patientin ab, um eine Zusammenfassung bereits dokumentierter Erkrankungen und Befunde einsehen zu können:
 
 - Die [Medikationsliste](Bundle-AtApsExampleBundle-Journey-1.html#medikationsliste) zeigt Dr. Hausärztin, die in der zentralen Anwendung e-Medikation verfügbaren Medikationsdaten der Patientin an. Dieser wurden vor ca. 2 Monaten nach einem Krankenhausaufenthalt aufgrund von zu hohem Blutdruck Ramipril (5 mg) verordnet.
 
