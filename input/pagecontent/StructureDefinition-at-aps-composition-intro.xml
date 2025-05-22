@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="note-to-balloters" markdown="1">
-		In der [AT APS Composition](StructureDefinition-at-aps-composition.html) wurde die Reihenfolge der `section`-Elemente festgelegt, wobei weitere `section`-Elemente (`openAtEnd`) angelegt werden dürfen. Ebenso wurde die Reihenfolge der `entry`-Elemente innerhalb der einzelnen `section`-Elemente festgelegt und es dürfen nur die angeführten Profile verwendet werden. Der Grund für diese Entscheidung beruht auf der Annahme, dass dadurch Instanzen schneller validiert werden können.
+	<blockquote class="note-to-balloters">
+		In der <a href="StructureDefinition-at-aps-composition.html">AT APS Composition</a> wurde die Reihenfolge der <code>section</code>-Elemente festgelegt, wobei weitere <code>section</code>-Elemente (<code>openAtEnd</code>) angelegt werden dürfen. Ebenso wurde die Reihenfolge der <code>entry</code>-Elemente innerhalb der einzelnen <code>section</code>-Elemente festgelegt und es dürfen nur die angeführten Profile verwendet werden. Der Grund für diese Entscheidung beruht auf der Annahme, dass dadurch Instanzen schneller validiert werden können.
 	</blockquote>
 </div>
