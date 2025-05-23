@@ -62,8 +62,8 @@ Usage: #example
 // Specimen for Diagnostic Results
 * entry[+].fullUrl = "urn:uuid:5218bc54-5d55-42fa-aa0c-169b61577ad0"
 * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-specimen-1
-* entry[+].fullUrl = "urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9"
-* entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-specimen-2
+// * entry[+].fullUrl = "urn:uuid:ee1e26a1-caba-45f7-928e-d93fc1a47da9"
+// * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-specimen-2
 // Diagnostic Results
 * entry[+].fullUrl = "urn:uuid:725bcf71-22e6-473b-a879-49a4b63cd654"
 * entry[=].resource = AtApsExampleBundle-Journey-3-diagnostic-result-1
@@ -241,7 +241,7 @@ Usage: #inline
 * section[sectionSocialHistory].text.status = #empty
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Narrativer Text muss generiert werden.</p></div>"
 * section[sectionSocialHistory].entry[smokingTobaccoUse][0] = Reference(urn:uuid:d0a5bbf1-6d01-4d44-bac5-05f12c98411e) "Raucherstatus (AtApsExampleBundle-Journey-3-social-history-1)"
-* section[sectionSocialHistory].entry[alcoholUse][+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Alkoholkonsum (AtApsExampleBundle-Journey-3-social-history-3)"
+* section[sectionSocialHistory].entry[alcoholUse][+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94985) "Alkoholkonsum (AtApsExampleBundle-Journey-3-social-history-3)"
 * section[sectionSocialHistory].entry[+] = Reference(urn:uuid:9add5c32-1ded-43d6-b163-c3fe13f94984) "Körperliche Aktivität (AtApsExampleBundle-Journey-3-social-history-2)"
 
 //***************************************************************************************/
