@@ -1,6 +1,6 @@
-- name: ELGA-AustrianPatientSummary-R4 - Ballot - 2025
+- name: ELGA-AustrianPatientSummary-R4
 - version: 0.1.0-STU1
 - description: FHIR&reg; R4 Implementation Guide for the Austrian Patient Summary.
 - last_published: %%date%%
 - branch: %%branch%%
-- type: draft
+- type: official
