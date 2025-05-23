@@ -1,0 +1,7 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="note-to-balloters">
+		<p>Dieses Value-Set wurde für das Austrian Patient Summary (APS) entworfen und wird auf den <a href="https://termgit.elga.gv.at/">österreichische e-Health Terminologieserver</a> verschoben, abhängig vom Ergebnis des Ballots.</p>
+		<p>Eine Expansion dieses Value-Sets ist zurzeit nicht möglich, weil das referenzierte Value-Set (https://termgit.elga.gv.at/ValueSet/eimpf-impfstoffe) vom IG Publisher nicht aufgelöst werden kann.</p>
+	</blockquote>
+</div>

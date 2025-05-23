@@ -3,3 +3,11 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# A lot of German display names can't be found. For now, this is not a problem.
+NO_VALID_DISPLAY_FOUND_LANG_NONE
+NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR
+Display_Name_for__should_be_one_of__instead_of
+
+# Errors related to terminologies which cannot be resolved because termgit.elga.gv.at cannot yet provide packages or be used as proper tx
+%https://termgit.elga.gv.at/%

@@ -268,7 +268,7 @@ def i_medication_data(med, data):
                 data.code = med_code_coding_code.value
             med_code_coding_system = med_code_coding.system
             if med_code_coding_system:
-                data.codeSystem = med_code_coding_system
+                data.codesystem = med_code_coding_system.value
 
 def problems_data(condi, data):
     condi_code = condi.code

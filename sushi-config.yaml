@@ -32,7 +32,8 @@ contact:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 2.0.0-ballot
+  hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ipa: 1.1.0
   hl7.at.fhir.core.r4: 2.0.0
   # hl7.at.fhir.gkl.ig-tooling: 0.4.0 # temporary package for having all terminologies available
 
@@ -56,11 +57,21 @@ dependencies:
 #
 pages:
   index.md:
-    title: Home
-  imprint.md:
-    title: Impressum
+    title: Start
+  background.md:
+    title: Hintergrund
+  requirements.md:
+    title: Die "APS"
+  # terminologies.md:
+  #   title: Terminologien
+  info.md:
+    title: Informationen über dieses Dokument
   contributors.md:
     title: Autoren und Mitwirkende
+  framework.md:
+    title: Technische Rahmenbedingungen
+
+
 
 # pages:
 #   index.md:
@@ -86,7 +97,7 @@ parameters:
 #  validation: [allow-any-extensions, no-broken-links]
   allow-extensible-warnings: true
   display-warnings: true
-  path-expansion-params: '../resources/Parameters-expanstion-parameters.json' # for using SNOMED CT Austrian Extension
+  path-expansion-params: '../resources/Parameters-AtApsExpansionParametersSCT.json' # for using SNOMED CT Austrian Extension
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -96,13 +107,19 @@ parameters:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Artifacts: artifacts.html
-  About:
-    Autoren und Mitwirkende: contributors.html
-    Impressum: imprint.html
 
+
+menu:
+  Start: index.html
+  Inhalt: toc.html
+  Artefakte: artifacts.html
+  Hintergrund: background.html
+  Die "APS": requirements.html
+  # Terminologien: terminologies.html
+  Weitere Infos:
+    Informationen über dieses Dokument: info.html
+    Autoren und Mitwirkende: contributors.html
+    Technische Rahmenbedingungen: framework.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

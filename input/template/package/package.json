@@ -1,14 +1,12 @@
 {
-  "name" : "hl7.at.fhir.template",
+  "name" : "hl7.at.fhir.elga.aps.template",
   "type" : "fhir.template",
   "license" : "CC0-1.0",
-  "description" : "Austrian FHIR® IG Base Template - for use by anyone in the Austrian domain",
-  "author" : "http://fhir.hl7.at/",
-  "canonical" : "http://fhir.org/templates/hl7.at.fhir.template",
-  "base" : "fhir.base.template",
+  "description" : "APS Template",
+  "author" : "https://elga.gv.at",
+  "base" : "hl7.at.fhir.template",
   "dependencies" : {
-    "fhir.base.template" : "current"
+    "hl7.at.fhir.template" : "current"
   },
-  "version" : "0.5.1",
-  "date" : "20240706071054"
+  "version" : "0.1.0"
 }

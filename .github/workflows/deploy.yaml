@@ -63,6 +63,9 @@ jobs:
     - name: Install dependencies
       run: python -m pip install --upgrade pip lxml python-dateutil
 
+    - name: Setup Graphviz
+      uses: ts-graphviz/setup-graphviz@v2
+
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
       with:
@@ -75,25 +78,18 @@ jobs:
       run: |
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
-        unset DISPLAY
-        java -Djava.awt.headless=true -jar -Xmx10g -Xms10g ./input-cache/publisher.jar -ig ig.ini
+        java -jar -Dfile.encoding=UTF-8 -Xmx10g -Xms10g ./input-cache/publisher.jar -ig ig.ini
 
     - name: Transform Bundles
       run: python python-mapper/transform.py
 
     - name: Move vidi files
       run: |
-        cp ./vidi/Bundle*.html ./temp/pages/
-        cp ./vidi/favicon.ico ./temp/pages/
-        cp -r ./vidi/scripts ./temp/pages/
-        cp -r ./vidi/styles ./temp/pages/
-        cp -r ./vidi/assets/* ./temp/pages/assets/
-
-    - name: Re-run jekyll
-      run: |
-        cd ./temp/pages
-        jekyll build --destination "../../output"
-        cd ../..
+        cp ./vidi/Bundle*.html ./output/
+        cp ./vidi/favicon.ico ./output/
+        cp -r ./vidi/scripts ./output/
+        cp -r ./vidi/styles ./output/
+        cp -r ./vidi/assets/* ./output/assets/
 
     - name: Move index file
       run: |
