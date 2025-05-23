@@ -11,7 +11,7 @@ description: The FHIR® implementation guide Austrian Patient Summary is derived
 status: draft # draft | active | retired | unknown
 experimental: false
 jurisdiction: urn:iso:std:iso:3166#AT # https://www.hl7.org/fhir/valueset-jurisdiction.html
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: STU1 # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
