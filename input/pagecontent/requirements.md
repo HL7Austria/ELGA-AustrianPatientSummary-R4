@@ -111,7 +111,7 @@ Die aktuelle Version der Patient Summary wird angezeigt und steht zur Behandlung
 
 ### Patient Journey
 
-Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für die International Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
+Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das Austrian Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
 
 #### *Beispiel*
 
@@ -127,7 +127,7 @@ Frau [Maria Musterfrau](Patient-at-aps-example-patient-01.html), geboren am 17. 
 
 - Aus der Sektion [Allergien und Intoleranzen](Bundle-AtApsExampleBundle-Journey-1.html#allergien-und-intoleranzen) geht eine Hausstaubmilbenallergie hervor.
 
-- Die Sektion [Eingriffe und Therapien](Bundle-AtApsExampleBundle-Journey-1.html#eingriffe-und-therapien) gibt Auskunft darüber, dass bei Frau Musterfrau im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt [Implantate, medizinische Geräte und Heilbehelfe](Bundle-AtApsExampleBundle-Journey-1.html#implantate-medizinische-geräte-und-heilbehelfe) hervorgeht. Weiters ersichtlich ist eine Bilddarmentferung (2015) und eine durchgeführte Koloskopie (2012).
+- Die Sektion [Eingriffe und Therapien](Bundle-AtApsExampleBundle-Journey-1.html#eingriffe-und-therapien) gibt Auskunft darüber, dass bei Frau Musterfrau im Jahr 2010 das Hüftgelenk ersetzt werden musste und sie daher links ein Hüftimplantat trägt, wie im Abschnitt [Implantate, medizinische Geräte und Heilbehelfe](Bundle-AtApsExampleBundle-Journey-1.html#implantate-medizinische-geräte-und-heilbehelfe) hervorgeht. Weiters ersichtlich ist eine Blinddarmentfernung (2015) und eine durchgeführte Koloskopie (2012).
 
 - Bei der Kontrolle der eingetragenen [Impfungen](Bundle-AtApsExampleBundle-Journey-1.html#impfungen) sieht Dr. Hausärztin, dass am 8. Jänner eine Diphtherie-Pertussis-Poliomyelitis-Tetanus-Impfung durchgeführt wurde.
 
