@@ -11,7 +11,7 @@ Auf Ebene der EU gibt es im Rahmen vom grenzüberschreitenden Datenaustausch (My
 
 Zusätzlich ist mit 26. März 2025 die Verordnung zum Europäischen Gesundheitsdatenraum (European Health Data Space, EHDS) in Kraft getreten. Ein zentrales Element dieser Verordnung ist die Definition der Prioritären Kategorien personenbezogener elektronischer Gesundheitsdaten für die Primärnutzung. Darunter fällt unter anderem die sogenannte Patientenkurzakte (= Patient Summary). Im Rahmen des mit der Verordnung verknüpften Projekts Extended Electronic Health Record (Xt-EHR) soll neben anderen Aufgaben auch die EU-weite Spezifikation für das EEHRxF erarbeitet werden, wobei hier eng mit HL7EU zusammengearbeitet wird.
 
-In Österreich haben vor allem nationale Projekte (z.B. zur Umsetzung des EHDS oder zur Integrierten Versorung) sowie die bestehenden CDA® oder FHIR® Implementierungsleitfäden Einfluss auf die Spezifikation der APS.
+In Österreich haben vor allem nationale Projekte (z.B. zur Umsetzung des EHDS oder zur Integrierten Versorgung) sowie die bestehenden CDA® oder FHIR® Implementierungsleitfäden Einfluss auf die Spezifikation der APS.
 
 #### Fokus auf IPS
 
