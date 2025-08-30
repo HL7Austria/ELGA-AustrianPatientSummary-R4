@@ -61,7 +61,13 @@ Folgendes Use Case Diagramm stellt die im Kontext Implementierungsleitfaden rele
 
 **Beschreibung**
 
-Die Inhalte der APS werden automatisch aus den angebundenen Registern zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+Die Inhalte der APS werden automatisch aus den angebundenen Registern (e-Medikation, e-Impfpass, etc.) zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+
+<blockquote>
+    <p>
+        <b>Note:</b> Wie die Aggregation genauer erfolgt, kann zum aktuellen Zeitpunkt noch nicht beschrieben werden und wird in einer späteren Version der APS ergänzt.
+    </p>
+</blockquote>
 
 **Auslöser**
 
