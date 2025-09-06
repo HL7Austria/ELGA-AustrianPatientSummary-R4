@@ -27,7 +27,6 @@ Usage: #inline
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "APS Generator"
 * title = "Austrian Patient Summary"
 * custodian = Reference(urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd) "Muster-Organization"
-* extension[countryOfAffiliation].valueString = "AT"
 * section[sectionMedications].title = "Medikationsliste"
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"
 * section[sectionMedications].text.status = #empty

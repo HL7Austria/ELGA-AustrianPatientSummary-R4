@@ -10,8 +10,6 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * subject only Reference(AtApsPatient)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
-* extension contains AtApsExtCompositionCountryOfAffiliation named countryOfAffiliation 1..1
-* extension[countryOfAffiliation] ^short = "Country of affiliation of the patient. (e.g. can be ISO 3166 2 or 3 letter code)"
 
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
