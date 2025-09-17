@@ -1,11 +1,18 @@
 ### Sektionen der Austrian Patient Summary
 
-Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen (Module):
+Die **Austrian Patient Summary (APS)** ist ein **FHIR-Dokument** vom Typ Bundle ([AtApsBundle](StructureDefinition-at-aps-bundle.html)). Die im Bundle enthaltene Composition-Ressource ([AtApsComposition](StructureDefinition-at-aps-composition.html)) definiert die übergeordnete Struktur und beschreibt, welche administrativen sowie medizinisch-fachlichen Inhalte in Form von FHIR-Ressourcen verpflichtend, empfohlen oder optional enthalten sein müssen.
+Die in der APS verwendeten FHIR-Ressourcen enthalten sowohl menschenlesbare Darstellungen (Narrative) als auch maschinenverarbeitbare Informationen, für die automatische Weiterverarbeitung und Interoperabilität.
 
-[![overview](APS_Sections.drawio.png){: style="width: 85%"}](APS_Sections.drawio.png)
+Die nachfolgende Abbildung veranschaulicht den inhaltlichen Aufbau der APS:<br>
+[![overview](APS_Sections.drawio.png){: style="width: 75%"}](APS_Sections.drawio.png)
 <br>
 
-Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, sofern österreichspezifische Anpassungen der internationalen Spezifikation (Profile) vorgenommen wurden, kurz begründet.
+Begriffsdefintion:<br>
+**Required**: Ein als Required gekennzeichnetes Element ist ein Pflichtfeld und muss vorhanden sein. In FHIR wird diese Verpflichtung durch die Kardinalität festgelegt, typischerweise 1..1 oder 1..\*.<br>
+**Recommended**: Elemente mit diesem Status sind dringend empfohlen, aber nicht verpflichtend. Sie sollen befüllt werden, sofern Informationen verfügbar sind. In FHIR-Profilen wird dies typischerweise durch Must Support oder erläuternde Kommentare kenntlich gemacht. Systeme müssen das Element verarbeiten können, sind jedoch nicht verpflichtet, es stets bereitzustellen.<br>
+**Optional**: Ein als Optional gekennzeichnetes Element kann verwendet werden, ist jedoch nicht verpflichtend. In FHIR wird dies meist durch die Kardinalität 0..1 oder 0..\* abgebildet.<br>
+
+Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrieben. Sofern im Vergleich zur internationalen Spezifikation österreichspezifische Anpassungen (Profile) vorgenommen wurden, werden diese angeführt und begründet.
 <br>
 <br>
 
