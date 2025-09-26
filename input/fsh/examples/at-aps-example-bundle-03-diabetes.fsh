@@ -304,7 +304,7 @@ Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Schulung zur Verbesserung der Mobilität </p></div>"
 * identifier.value = "12345"
-* instantiatesUri = "http://example.org/protocol-for-heart-association-event"
+//* instantiatesUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
 * replaces.display = "Plan"
 * partOf.display = "Plan"
