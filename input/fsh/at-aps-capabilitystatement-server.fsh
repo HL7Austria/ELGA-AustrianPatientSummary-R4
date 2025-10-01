@@ -10,7 +10,7 @@ Usage: #definition
 * publisher = "ELGA GmbH"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://elga.gv.at"
-* description = "Dieser Abschnitt beschreibt die erwarteten Fähigkeiten eines FHIR®-Servers, der die Austrian Patient Summary (APS) unterstützt. Die Liste gibt relevante FHIR®-Profile und -Operationen für diesen Zweck wieder."
+* description = "Dieser Abschnitt beschreibt die erwarteten Fähigkeiten eines FHIR®-Servers, der die Austrian Patient Summary (APS) unterstützt. Die Liste gibt relevante FHIR®-Profile und -Operationen für diesen Zweck wieder. Um eine APS abzurufen, soll die $summary-Operation der Patient Resource verwendet werden."
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
@@ -37,6 +37,7 @@ Usage: #definition
 * rest.resource[=].operation.extension.valueCode = #SHOULD
 * rest.resource[=].operation.name = "summary"
 * rest.resource[=].operation.definition = "http://hl7.org/fhir/uv/ips/OperationDefinition/summary"
+* rest.resource[=].operation.documentation = "Operation zum Abrufen einer APS"
 
 * rest.resource[+].type = #AllergyIntolerance
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
