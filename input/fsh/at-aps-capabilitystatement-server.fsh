@@ -10,7 +10,7 @@ Usage: #definition
 * publisher = "ELGA GmbH"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://elga.gv.at"
-* description = "Dieser Abschnitt beschreibt die erwarteten Fähigkeiten eines FHIR®-Servers, der die Austrian Patient Summary (APS) unterstützt. Die Liste gibt relevante FHIR®-Profile und -Operationen für diesen Zweck wieder. Um eine APS abzurufen, soll die $summary-Operation der Patient Resource verwendet werden."
+* description = "Dieser Abschnitt beschreibt die erwarteten Fähigkeiten eines FHIR®-Servers, der die Austrian Patient Summary (APS) unterstützt. Die Liste gibt relevante FHIR®-Profile und -Operationen für diesen Zweck wieder."
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
