@@ -127,7 +127,9 @@ Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quell
 
 ### Patient Journey
 
-Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien für das Austrian Patient Summary Dokument. Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt entstehenden Dokumente im Kontext der APS zu demonstrieren.
+Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien der "Austrian Patient Summary". Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt vorhandenen Informationen im Kontext der APS darzustellen.
+
+Da derzeit noch nicht abschließend festgelegt ist, welche Dokumente und Systeme als Datenquellen für die APS herangezogen werden, werden im Folgenden bestimmte Annahmen getroffen. So könnten relevante Informationen beispielsweise aus Laborbefunden oder Ambulanzbefunden extrahiert werden.
 
 #### *Beispiel*
 
@@ -139,7 +141,7 @@ Frau [Maria Musterfrau](Patient-at-aps-example-patient-01.html), geboren am 17. 
 
 - Um sich das genauer anzusehen, kann Dr. Hausärztin in der Sektion [Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#gesundheitsprobleme-und-risiken) unter der dort angeführten "Arteriellen Hypertonie" das zugrundeliegende Quelldokument, nämlich den Entlassungsbrief aus dem AKH Amadeus einsehen. Weiters ist in dieser Sektion ersichtlich, dass eine familiäre Vorbelastung bezüglich Diabetes mellitus vorliegt.
 
-- In der Sektion [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin eine in der Kindheit durchgemachte Windpocken-Erkrankung.
+- In der Sektion [Vergangene Gesundheitsprobleme und Risiken](Bundle-AtApsExampleBundle-Journey-1.html#vergangene-gesundheitsprobleme-und-risiken) sieht Dr. Hausärztin eine in der Kindheit durchgemachte Windpocken-Erkrankung, basierend auf einem referenzierten Ambulanzbefund.
 
 - Aus der Sektion [Allergien und Intoleranzen](Bundle-AtApsExampleBundle-Journey-1.html#allergien-und-intoleranzen) geht eine Hausstaubmilbenallergie hervor.
 
