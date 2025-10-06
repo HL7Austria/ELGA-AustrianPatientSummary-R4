@@ -18,7 +18,7 @@ Eine Patient Summary enthält allgemeine demografische Daten des Patienten (z.B.
 
 Die Patient Summary ist
 - ein minimaler, hochstrukturierter, nicht-vollständiger Datensatz über die (in ELGA) verfügbaren Gesundheitsdaten,
-- geeignet für alle medizinischen Fachrichtungen und Gesundheitseinrichtungen,
+- geeignet für alle berechtigten Angehörigen der Gesundheitsdienste,
 - unabhängig von der aktuellen Situation des Patienten,
 - für die grenzüberschreitende Gesundheitsversorgung vorgesehen.
 
