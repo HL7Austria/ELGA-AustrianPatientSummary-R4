@@ -1,6 +1,6 @@
 ### Sektionen der Austrian Patient Summary
 
-Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen (Module):
+Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen:
 <br><br>
 [![overview](APS_Sections.drawio.png){: style="width: 75%"}](APS_Sections.drawio.png)
 <br>
@@ -53,85 +53,11 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 
 ### Anwendungsfallbeschreibung
 
-Folgendes Use Case Diagramm stellt die im Kontext Implementierungsleitfaden relevanten Funktionen der Austrian Patient Summary dar.
-
-<div>{% include aps-uml.svg %}</div>
-<br clear="all"/>
-
-#### APS aggregieren (UC1)
-
-**Akteure**
-
-- Zentrale Anwendung Patient Summary
-
-**Beschreibung**
-
-Die Inhalte der APS werden automatisch aus den angebundenen Registern (e-Medikation, e-Impfpass, etc.) zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
-
-<blockquote>
-    <p>
-        <b>Note:</b> Wie die Aggregation genauer erfolgt, kann zum aktuellen Zeitpunkt noch nicht beschrieben werden und wird in einer späteren Version der APS ergänzt.
-    </p>
-</blockquote>
-
-**Auslöser**
-
-Bei Abruf der APS wird automatisch ein Prozess gestartet, der die angebundenen Register auf neue oder aktualisierte Daten überprüft und diese Inhalte in die Patient Summary übernimmt.
-
-**Vorbedingungen**
-
-Ein berechtigter Akteur hat lesend auf die APS (UC2) zugegriffen. In den angebundenen Registern liegen Daten für den Patienten vor.
-
-**Ergebnis**
-
-Die Austrian Patient Summary wurde mit den aktuellsten Gesundheitsinformationen der angebundenen Register aggregiert.
-
-<br>
-
-#### APS lesen (UC2)
-
-**Akteure**
-
-- Gesundheitsdiensteanbieter (GDA)
-- Patient
-
-**Beschreibung**
-
-Ein GDA ruft die aktuellste Version der APS seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf seine aktuelle Patient Summary zugreifen. Die Patient Summary bietet in modular aufgebauten Abschnitten (Sektionen) eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind.
-
-**Verwendete Anwendungsfälle**
-
-- UC1 Patient Summary generieren
-
-**Auslöser**
-
-- Konsultation durch GDA
-- Informationswunsch durch Patienten
-- Bedarf für Notfallversorgung, fachärztliche Zweitmeinung, etc.
-
-**Vorbedingungen**
-
-Der jeweilige Akteur ist berechtigt auf die Patient Summary zuzugreifen.
-
-**Ergebnis**
-
-Die aktuelle Version der Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung.
-
-<br>
-
-### Datenherkunft
-
-Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quellen bzw. über welche Mechanismen die Informationen in die APS übernommen werden. Insbesondere ist offen, ob bestimmte Angaben über e-Befunde bereitgestellt und diese als Quelldokumente herangezogen werden können. Grundsätzlich soll die Herkunft der Daten jeweils in Meta.source abgelegt werden; die konkrete Formatvorgabe für dieses Feld befindet sich noch in Ausarbeitung. Um zukünftige Anwendungsfälle abdecken zu können, besteht zudem die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
-
-<br>
-
-### Patient Journey
-
-Das folgende Anwendungsbeispiel veranschaulicht potenzielle Einsatzszenarien der "Austrian Patient Summary". Es dient dazu, beispielhaft die zum jeweiligen Zeitpunkt vorhandenen Informationen im Kontext der APS darzustellen.
+Das folgende Anwendungsbeispiel beschreibt den primären Einsatzfall der Austrian Patient Summary und zeigt, wie die zu einem bestimmten Zeitpunkt verfügbaren Informationen im Rahmen der APS dargestellt werden.
 
 Da derzeit noch nicht abschließend festgelegt ist, welche Dokumente und Systeme als Datenquellen für die APS herangezogen werden, werden im Folgenden bestimmte Annahmen getroffen. So könnten relevante Informationen beispielsweise aus Laborbefunden oder Ambulanzbefunden extrahiert werden.
 
-#### *Beispiel*
+#### Patient Journey *Beispiel*
 
 **1. Arztbesuch**
 
