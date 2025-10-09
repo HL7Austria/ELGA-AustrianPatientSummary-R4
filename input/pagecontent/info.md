@@ -50,4 +50,4 @@ Der Leitfaden in seiner jeweils aktuell gültigen Fassung sowie die aktualisiert
 
 Die Anwendung dieses Implementierungsleitfadens hat im Einklang mit österreichischem und europäischem Recht, insbesondere mit den relevanten Materiengesetzen (z.B. Ärztegesetz 1998, Apothekenbetriebsordnung 2005, Krankenanstalten- und Kuranstaltengesetz, Gesundheits- und Krankenpflegegesetz, Rezeptpflichtgesetz, Datenschutzgesetz, Gesundheitstelematikgesetz 2012, DSGVO) zu erfolgen. Technische Möglichkeiten können gesetzliche Bestimmungen selbstverständlich nicht verändern, vielmehr sind die technischen Möglichkeiten im Einklang mit den Gesetzen zu nutzen.
 
-Die Einhaltung der gesetzlichen Bestimmungen liegt im Verantwortungsbereich der Ersteller der CDA-Dokumente.
+Die Einhaltung der gesetzlichen Bestimmungen liegt im Verantwortungsbereich der Ersteller der FHIR-Dokumente.
