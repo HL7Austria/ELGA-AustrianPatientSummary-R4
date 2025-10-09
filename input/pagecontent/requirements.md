@@ -51,13 +51,13 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 <br>
 <br>
 
-### Anwendungsfallbeschreibung
+### Anwendungsfallbeschreibung - Patient Journey
 
 Das folgende Anwendungsbeispiel beschreibt den primären Einsatzfall der Austrian Patient Summary und zeigt, wie die zu einem bestimmten Zeitpunkt verfügbaren Informationen im Rahmen der APS dargestellt werden.
 
 Da derzeit noch nicht abschließend festgelegt ist, welche Dokumente und Systeme als Datenquellen für die APS herangezogen werden, werden im Folgenden bestimmte Annahmen getroffen. So könnten relevante Informationen beispielsweise aus Laborbefunden oder Ambulanzbefunden extrahiert werden.
 
-#### Patient Journey *Beispiel*
+*Beispiel*
 
 **1. Arztbesuch**
 
