@@ -1,47 +1,40 @@
-Das folgende Kapitel soll die wichtigsten Prinzipen der APS zusammenfassen und Unterschiede zur IPS aufzeigen.
+#### Kontext und Verwendung von Patient Summary
 
-TODO: Was soll in dieses Kapitel:
-- Auf welche Standards baut die APS auf
-- Wie wird die APS erzeugt
-- Mögliche Quellen (Dokumente/Anwendungen)
-- zum aktuellen Zeitpunkt noch offene Punkte 
+Die Patient Summary ist eine standardisierte Kurzakte, die die wesentlichen medizinischen Informationen eines Patienten zusammenfasst und eine kohärente Momentaufnahme bietet. Sie ist rein informativ und nicht zur direkten Ausführung oder maschinellen Verarbeitung bestimmt.
+Die APS gewährleistet die nationale Implementierbarkeit unter Beibehaltung der semantischen und strukturellen Kompatibilität mit den IPS-Spezifikationen.
 
-******************************
+#### Patientensicherheit
 
-Die APS gewährleistet die nationale Implementierbarkeit unter Beibehaltung der semantischen und strukturellen Kompatibilität mit den IPS-Spezifikationen. Sie ist erweiterbar ausgelegt, um zukünftige Anforderungen, spezifische klinische Anwendungsfälle unter Einhaltung österreichischer Rahmenbedingungen abzubilden. Die nachstehenden Punkte fassen die wesentlichen Designprinzipien der APS zusammen.
+Ein korrektes Verständnis der Datenelemente der Patient Summary ist entscheidend, damit Behandler fundierte Entscheidungen treffen können und Fehler vermieden werden. Daher sind sicherheitskritische Datenelemente für Ersteller und Nutzer der Patient Summary verpflichtend zu berücksichtigen. 
 
-### Beziehung zu HL7AT Core, IPS und MyHealth@EU
+Elemente, die mit ["Is-modifier" ("?!")](https://hl7.org/fhir/R4/conformance-rules.html#isModifier) oder „SHALL:handle” gekennzeichnet sind, dürfen weder bei der Erstellung noch bei der Weiterverarbeitung oder Anzeige der APS ignoriert werden und sind für menschliche Überprüfung sichtbar (SHOULD:display) zu machen.
 
-Die APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für die [International Patient Summary (IPS), Version 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) auf.
-Nachdem es in FHIR® nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz der APS gegen beide Spezifikationen validiert werden.
-Zusätzlich wurden bei der Erstellung der APS die Vorgaben aus dem Requirements Catalogue im Rahmen von [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en) berücksichtigt, insbesondere im Hinblick auf die Erweiterung der verpflichtend zu befüllenden Sektionen. Weitere Erläuterungen finden sich im Kapitel [Hintergrund](background.html).
+Beispiele für sicherheitsrelevante Fälle:
+* Eine dokumentierte Allergie (*AllergyIntolerance*), deren Schweregrad (*severity*) als schwer (*severe*) eingestuft ist.
+* Eine Diagnose (*Condition*), deren Verifikationsstatus (*verificationStatus*) widerlegt ist (*refuted*), also ausgeschlossen wurde.
+* Eine Medikation (*MedicationStatement*), deren Status *stopped* lautet.
+* Ein Laborergebnis (*Observation*), dessen Status vorläufig (*preliminary*) ist, also noch nicht validiert wurde.
 
-[![overview](austrian-ips-context.drawio.png){: style="width: 60%"}](austrian-ips-context.drawio.png)
+Die korrekte Übersetzung und Darstellung von Inhalten hat ebenfalls Auswirkungen auf die Patientensicherheit.
 
-<div class="dragon" markdown="1">
+#### Structuring Terminology Choices
 
-</div>
+Die APS wird in diesem Leitfaden als HL7-FHIR-Dokument vom Typ "Bundle" spezifiziert.
+Die APS Composition legt fest, dass nur jene Profile verwendet werden dürfen, die vorgesehene Sektionen und Entries enthalten. Eine Ausnahme bilden die Sektionen *Diagnostische Resultate*, *Vitalparameter* und *Lebensstil* mit der slicing.rule „openAtEnd“. 
+Erklärung?
+Reihenfolge der Sektionen?
+TODO:
+* Bevorzugte Terminologie SNOMED CD, LOINC, UCUM, ergänzt mit nationalen Value Sets und Mappings ?  Hinweis auf Snomed Lizenzen, Terminologieserver
+* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben
 
-### FHIR® R4
-
-Aktuell gibt es die IPS nur auf Basis von FHIR® R4. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
-
-### Struktur der Patient Summary
-
-Das APS wird in diesem Leitfaden als HL7-FHIR-Dokument vom Typ "Bundle" spezifiziert. TODO: kurze Erklärung
-
-### Verwendete Terminologien
-
-TODO: Bevorzugte Terminologie SNOMED CD, LOINC, UCUM und weitere möglich  ?  Hinweis auf Snomed Lizenzen, Terminologieserver
-
-### Erstellung und Abruf der IPS
+#### Erstellung und Abruf der APS
 
 Folgendes Use Case Diagramm stellt die relevanten Funktionen der Austrian Patient Summary dar.
 
 <div>{% include aps-uml.svg %}</div>
 <br clear="all"/>
 
-#### APS aggregieren (UC1)
+##### APS aggregieren (UC1)
 
 | **Element** | **Beschreibung** |
 |---|---|
@@ -53,7 +46,7 @@ Folgendes Use Case Diagramm stellt die relevanten Funktionen der Austrian Patien
 
 <br>
 
-#### APS lesen (UC2)
+##### APS lesen (UC2)
 
 | **Element** | **Beschreibung** |
 |---|---|
@@ -64,24 +57,83 @@ Folgendes Use Case Diagramm stellt die relevanten Funktionen der Austrian Patien
 | **Vorbedingungen** | Der jeweilige Akteur ist berechtigt auf die Patient Summary zuzugreifen. |
 | **Ergebnis** | Die aktuelle Version der Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung. |
 
-### Datenherkunft
+
+### Designkonventionen
+
+#### Profilierungsansatz
+
+Wie bei der IPS wurde bei der APS folgender Profilierungsansatz gewählt: Anstatt die Ressourcen streng zu beschränken, wurden hauptsächlich die Pflichtelemente des Minimaldatensatzes festgelegt, während anderen offen bleiben.
+Dieser Ansatz erleichtert die Wiederverwendung der Profile und erlaubt den schrittweisen Zugriff auf zusätzliche relevante Informationen, um zukünftige Anforderungen und spezifische klinische Anwendungsfälle abzubilden.
+* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben ?
+
+##### Beziehung zu HL7AT Core, IPS und MyHealth@EU
+
+Die APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für die [International Patient Summary (IPS), Version 2.0.0-ballot](https://hl7.org/fhir/uv/ips/2024Sep/) auf.<br>
+Nachdem es in FHIR® nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz der APS gegen beide Spezifikationen validiert werden.<br>
+Zusätzlich wurden bei der Erstellung der APS die Vorgaben aus dem Requirements Catalogue im Rahmen von [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en) berücksichtigt, insbesondere im Hinblick auf die Erweiterung der verpflichtend zu befüllenden Sektionen. Weitere Erläuterungen finden sich im Kapitel [Hintergrund](background.html).
+
+[![overview](austrian-ips-context.drawio.png){: style="width: 60%"}](austrian-ips-context.drawio.png)
+
+<div class="dragon" markdown="1">
+
+</div>
+
+##### FHIR® R4
+
+Aktuell gibt es die IPS nur auf Basis von FHIR® R4. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
+
+#### Open Slicing
+
+TODO @Gabriel: bitte für die APS anpassen
+One of the important and useful capabilities of FHIR profiling is slicing, where multiple sets of constraints for a specific use case can be defined for a resource element or a complex element group (slicing can be used with repeating, type choice or non-repeating elements). Most of the slices specified in this guide are open (i.e. slicing.rules is not closed), which means that it is possible for resource instances with elements that do not match any of the defined slices to still be conformant with the profile as long as they satisfy the remaining profile constraints.
+
+Having this clear is important for correctly understanding the published profiles. For example, the optional section of Social History has open slicing on the entry element allowing for the use of the IPS Tobacco Use profile, the IPS Alcohol Use profile, or any other Observation or DocumentReference. Therefore, while specific IPS profiles are described in this guide, other profiles may also be included as well.
+
+Die narrativen Texte (Human-readable Narrative) sind ein verpflichtender Bestandteil jeder Sektion der IPS-Komposition. Sie dienen dazu, die klinischen Informationen eines Patienten in einer für Menschen lesbaren Form bereitzustellen – unabhängig von der technischen Struktur oder Sprache der Daten.
+
+#### Narrativer Text und Übersetzungen
+
+Obwohl strukturierte Daten (FHIR-Resources, Terminologien wie SNOMED CT) in der Patient Summary bevorzugt werden, kann nicht jedes System alle Informationen kodieren oder interpretieren. Daher enthält die Patient Summary Composition die Anforderung, dass jede Sektion einen menschenlesbaren narrativen Text enthalten muss. Dies steht im Einklang mit den Grundsätzen von FHIR-Dokumenten und stellt insbesondere im grenzüberschreitenden Austausch sicher, dass alle relevanten Inhalte weiterhin zugänglich sind (Sicherheits- und Fallback-Funktion). 
+
+Der narrative Text ist auch für den rechtlichen Unterzeichner des Dokuments (Attester) von Bedeutung, da er den präsentierten und prüfbaren Dokumentinhalt darstellt. Da in Österreich die APS automatisch generiert wird, entfällt der Attester.
+
+FHIR bietet Mechanismen zur Unterstützung von mehrsprachigen Übersetzungen über erweiterte Datentypen (z. B. CodeableConcept, Coding).
+
+Gemäß IPS-Standard bestehen derzeit keine Einschränkungen hinsichtlich der Gestaltung narrativer Beschreibungen. Es wird jedoch empfohlen, folgende Punkte zu beachten:
+- der Inhalt von Composition.section.text (verpflichtend) nicht in Composition.text zu duplizieren,
+- Verwendung verständlicher, gebräuchlicher Begriffe
+- Konsistente Reihenfolge der Tabellen (und gegebenenfalls Erläuterung der Reihenfolge)
+- Einbindung mehrsprachiger Beschreibungen (mit entsprechenden Tags), wenn möglich
+- Berücksichtigung der Aktualität der Informationen in den Beschreibungen via meta.lastUpdated, wenn möglich
+
+
+#### Linking Narrative to Discrete FHIR Resources
+TODO ?
+
+#### Medication Lists in the IPS
+TODO ?
+
+#### Medicinal Product Identification
+TODO ?
+
+#### Datenherkunft
 
 Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quellen bzw. über welche Mechanismen die Informationen in die APS übernommen werden. Insbesondere ist offen, ob bestimmte Angaben über e-Befunde bereitgestellt und diese als Quelldokumente herangezogen werden können. Grundsätzlich soll die Herkunft der Daten jeweils in Meta.source abgelegt werden; die konkrete Formatvorgabe für dieses Feld befindet sich noch in Ausarbeitung. Um zukünftige Anwendungsfälle abdecken zu können, besteht zudem die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 
-### Patient Safety in IPS Context
+#### Use of Persistent Identifiers in IPS
+TODO ?
 
-Patient safety is foundational in healthcare and its importance is even more pronounced in the context of cross-border care information exchange. Understanding specific data elements from IPS profiles is critical to ensuring that clinicians have accurate, timely, and relevant information to make informed decisions. Ignoring or misinterpreting these elements can lead to adverse events.
+#### Must Support und Verpflichtungen
 
-Elements throughout this IPS guide have [obligations for both Creators and Consumers](./Must-Support-and-Obligations.html) of IPS documents, many of which impact patient safety. Elements flagged with ["Is-modifier" (shown as "?!")](https://hl7.org/fhir/R4/conformance-rules.html#isModifier) or those with a SHALL:handle obligation cannot be safely ignored in patient summary sharing. Implementers that are developing IPS consuming functions, either viewers or services that use the information in the IPS need to pay careful attention to obligations and "Is-modifier" flags. Many IPS documents will not populate the elements, particularly in a testing context, but when these elements are populated, or have unusual values, it is important that the clinical facts they convey are understood. Experience gained from the IPS development process has demonstrated that they are easily missed.
+Die APS folgt den Grundsätzen des IPS-Standards in Bezug auf „Must Support“ und Verpflichtungen:
+Ein Element, das als Must Support gekennzeichnet ist, muss von Implementierungen unterstützt werden – d.h. Systeme müssen in der Lage sein, das Element zu erfassen, zu speichern, zu übermitteln und anzuzeigen, sofern entsprechende Informationen verfügbar sind.
+Wenn Daten für ein Must Support-Element nicht vorliegen, darf das Element weggelassen oder mit einem geeigneten Data Absent Reason-Code versehen werden. 
+Pflichtfelder gemäß FHIR-Definition (cardinality 1..1 oder 1..*) müssen immer befüllt werden.
 
-Here are some examples of clinical safety cases where ignoring data may introduce patient risk to downstream care:
+TODO @Gabriel: Derzeit ist die Must Support Kennzechnung in den Profilen der APS visuell nicht sichtbar.
 
-- The IPS includes an allergy (AllergyIntolerance) where the reaction "severity" (an element with SHALL:handle obligations) is severe
-- The IPS includes an immunization (Immunization) where the "occurenceDateTime" (an element with SHALL:handle obligation) is so old that immunity is no longer conferred 
-- The IPS includes a problem (Condition) which the "verificationStatus" (an is-Modifier) is "refuted", meaning that the problem has been ruled out
-- The IPS includes a medication (MedicationRequest or MedicationStatus) where the "status" (an is-Modifier) is "stopped"
-- The IPS includes a lab result (Observation) where the "status" (an is-Modifier) is "preliminary", meaning this result may be incomplete or unverified
+#### Leere Sektionen und fehlende Daten
 
-While this specification does not precisely define how downstream consumers should manage these elements, it is often recommended these elements be available for human-review (often shown as an obligation of SHOULD:display). Of course, language translation and presentation of textual narrative also have implications for patient safety as described with the [Design Conventions](./Design-Conventions.html) of the guide. The above highlights on is-Modifier flags and obligations are indicators of some critical elements for safe and effective clinical care.
+Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Informationen vorliegen oder verfügbar sind, muss „Composition.section.emptyReason“ befüllt werden, sodass der Grund dafür ersichtlich ist. Nicht verpflichtende Sektionen dürfen bei der Erstellung der Patient Summary weggelassen werden.
+Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
 
-Ultimately, patient safety benefits from consistent, accurate, and context-aware handling of IPS documents. Creators and consumers of IPS documents should be aware that all data may impact patient safety.
