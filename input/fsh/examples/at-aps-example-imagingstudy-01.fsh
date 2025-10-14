@@ -15,7 +15,7 @@ Usage: #example
 * series.uid = "2.16.124.113543.6003.2588828330.45298.17418.2723805630"
 * series.number = 3
 * series.modality = $DCM#CT
-* series.description = "CT Surview 180"
+* series.description = "CT-Überblick 180"
 * series.numberOfInstances = 1
 * series.bodySite = $cs-sct#67734004 "Upper Trunk Structure"
 * series.instance.uid = "2.16.124.113543.6003.189642796.63084.16748.2599092903"
