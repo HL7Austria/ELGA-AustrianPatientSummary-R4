@@ -12,4 +12,4 @@ Usage: #example
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * period.start = "2015-01-17"
 * period.end = "2016-12-01"
-* author = Reference(Practitioner/example) "Nancy Nurse"
+* author = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
