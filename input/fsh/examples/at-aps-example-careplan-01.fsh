@@ -4,17 +4,17 @@ Title: "AtApsCarePlan-Beispiel"
 Description: "Care Plan"
 Usage: #example
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n</div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Ein einfacher Pflegeplan, der angibt, dass ein Patient aufgrund von Adipositas einmal täglich sein Gewicht messen soll.</p>\n</div>"
 * contained = p1
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-obesity"
-* basedOn.display = "Management of Type 2 Diabetes"
-* replaces.display = "Plan from urgent care clinic"
-* partOf.display = "Overall wellness plan"
+* basedOn.display = "Behandlung von Typ-2-Diabetes"
+* replaces.display = "Plan der Klinik"
+* partOf.display = "Allgemeiner Wellnessplan"
 * status = #active
 * intent = #plan
-* category.text = "Weight management plan"
-* description = "Manage obesity and weight loss"
+* category.text = "Gewichtsmanagementplan"
+* description = "Übergewicht und Gewichtsverlust managen"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * encounter = Reference(Encounter/home)
 * period.end = "2017-06-01"
@@ -24,7 +24,7 @@ Usage: #example
 * addresses = Reference(p1) "obesity"
 * goal = Reference(Goal/example)
 * activity.outcomeCodeableConcept = $cs-sct#161832001 "Progressive weight loss"
-* activity.outcomeReference = Reference(Observation/example) "Weight Measured"
+* activity.outcomeReference = Reference(Observation/example) "Gewicht gemessen"
 
 Instance: p1
 InstanceOf: Condition

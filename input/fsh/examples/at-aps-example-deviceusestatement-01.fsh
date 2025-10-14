@@ -8,4 +8,4 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * device = Reference(Device/AtApsExampleDevice01)
-* reasonReference = Reference(Procedure/example) "Appendectomy (surgery)"
+* reasonReference = Reference(Procedure/example) "Blinddarmentfernung (Operation)"
