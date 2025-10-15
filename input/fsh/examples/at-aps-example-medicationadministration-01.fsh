@@ -12,5 +12,5 @@ Usage: #example
 * reasonCode = $cs-sct#59621000 "Hypertonie"
 * reasonCode.text = "Hypertonie"
 * dosage.text = "1 Kapsel täglich morgens"
-* dosage.route = http://terminology.hl7.org/CodeSystem/route-codes#PO "Oral"
+* dosage.route = $cs-route-codes#PO "Oral"
 * dosage.dose = 5 'mg' "mg"
