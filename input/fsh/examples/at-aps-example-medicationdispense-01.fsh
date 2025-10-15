@@ -1,5 +1,3 @@
-Alias: $route-codes = http://terminology.hl7.org/CodeSystem/route-codes
-
 Instance: AtApsExampleMedicationDispense01
 InstanceOf: AtApsMedicationDispense
 Title: "AtApsMedicationDispense-Beispiel"
@@ -17,4 +15,4 @@ Usage: #example
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.route = $route-codes#PO "Oral"
+* dosageInstruction.route = $cs-route-codes#PO "Oral"
