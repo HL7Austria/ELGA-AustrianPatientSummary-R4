@@ -1,4 +1,3 @@
-
 Profile: AtApsComposition
 Parent: Composition
 Id: at-aps-composition
@@ -7,6 +6,9 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * ^status = #active
 * . ^short = "AT APS Composition"
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionUvIps)
+
+* obeys aps-comp-1
+
 * subject only Reference(AtApsPatient)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
@@ -245,4 +247,9 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 Invariant: ips-comp-1
 Description: "Either section.entry or emptyReason are present"
 Expression: "(entry.reference.exists() or emptyReason.exists())"
+Severity: #error
+
+Invariant: aps-comp-1
+Description: "For automatically generated APS an attester is not allowed"
+Expression: "author.resolve().ofType(Device).count() != author.count() or attester.count() = 0"
 Severity: #error
