@@ -7,7 +7,6 @@ Usage: #example
 * status = #completed
 * description = "Dieser 26-jährige männliche Patient wird nach einem Verkehrsunfall mit dem Krankenwagen in die Notaufnahme gebracht."
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
-* encounter = Reference(Encounter/example)
 * effectivePeriod.start = "2014-12-06T20:00:00+11:00"
 * effectivePeriod.end = "2014-12-06T22:33:00+11:00"
 * date = "2014-12-06T22:33:00+11:00"
@@ -19,4 +18,3 @@ Usage: #example
 * investigation.item[+].display = "zeitlich und örtlich desorientiert"
 * investigation.item[+].display = "unruhig"
 * summary = "Vorläufige Diagnosen: Kopfverletzung und traumatische Hirnverletzung"
-* finding.itemCodeableConcept = http://hl7.org/fhir/sid/icd-9#850.0

@@ -16,15 +16,11 @@ Usage: #example
 * category.text = "Gewichtsmanagementplan"
 * description = "Übergewicht und Gewichtsverlust managen"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
-* encounter = Reference(Encounter/home)
 * period.end = "2017-06-01"
 * created = "2016-01-01"
 * author = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
-* careTeam = Reference(CareTeam/example)
 * addresses = Reference(p1) "obesity"
-* goal = Reference(Goal/example)
 * activity.outcomeCodeableConcept = $cs-sct#161832001 "Progressive weight loss"
-* activity.outcomeReference = Reference(Observation/example) "Gewicht gemessen"
 
 Instance: p1
 InstanceOf: Condition
