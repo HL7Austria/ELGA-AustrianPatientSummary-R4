@@ -4,8 +4,7 @@ Title: "AtApsConsent-Beispiel"
 Description: "Patientenverfügung"
 Usage: #example
 * status = #active
-* category[0].coding[0].system = "http://hl7.org/fhir/ValueSet/consent-category"
-* category[0].coding[0].code = #acd
-* scope.coding[0].system = "http://hl7.org/fhir/ValueSet/consent-scope"
-* scope.coding[0].code = #adr
+* category = $cs-loinc#59284-0 "Einwilligung - Dokument"
+* scope = http://terminology.hl7.org/CodeSystem/consentscope#treatment "Treatment"
 * patient = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* policyRule = http://terminology.hl7.org/CodeSystem/consentpolicycodes#cric "Common Rule Informed Consent"
