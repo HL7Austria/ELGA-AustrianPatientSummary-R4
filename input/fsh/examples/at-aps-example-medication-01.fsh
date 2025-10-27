@@ -7,7 +7,13 @@ Usage: #example
 * code.text = "Ramipril 5mg Kapseln"
 * status = #active
 * manufacturer = Reference(Organization/HL7ATCoreOrganizationExample01) "Beispiel Pharma GmbH"
-* ingredient.itemReference = Reference(Medication/AT-APS-Medication-Ingredient-Ramipril) "Ramipril Wirkstoff"
+* ingredient.itemReference = Reference(Medication/AtApsExampleMedication01) "Ramipril Wirkstoff"
 * ingredient.isActive = true
-* ingredient.strength.numerator = 5 'mg' "mg"
-* ingredient.strength.denominator = 1 'capsule' "Kapsel"
+* ingredient.strength.numerator.value = 500
+* ingredient.strength.numerator.unit = "mg"
+* ingredient.strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient.strength.numerator.code = #mg
+* ingredient.strength.denominator.value = 1
+* ingredient.strength.denominator.unit = "Kapsel"
+* ingredient.strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient.strength.denominator.code = #1

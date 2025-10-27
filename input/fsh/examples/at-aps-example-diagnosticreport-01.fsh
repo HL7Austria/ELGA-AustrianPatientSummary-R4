@@ -11,5 +11,5 @@ Usage: #example
 * performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
 * effectiveDateTime = "2024-09-15T10:30:00+01:00"
 * issued = "2024-09-15T11:00:00+01:00"
-* specimen = Reference(Specimen/AT-APS-Specimen-Example01) "Blutprobe"
-* result = Reference(Observation/AT-APS-Observation-Example01) "Hämoglobin"
+* specimen = Reference(Specimen/AtApsExampleSpecimen01) "Blutprobe"
+* result = Reference(Observation/AtApsExampleObservation01) "Hämoglobin"
