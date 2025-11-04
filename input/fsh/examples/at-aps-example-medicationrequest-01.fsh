@@ -5,7 +5,7 @@ Description: "Medication Request"
 Usage: #example
 * status = #active
 * intent = #order
-* medicationReference = Reference(Medication/APS-Medication-Example01) "Ramipril 5mg Kapseln"
+* medicationReference = Reference(Medication/AtApsExampleMedication01) "Ramipril 5mg Kapseln"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * authoredOn = "2024-10-14T10:00:00+01:00"
 * requester = Reference(Practitioner/HL7ATCorePractitionerExample01) "Dr. Melanie Musterärztin"
@@ -15,7 +15,8 @@ Usage: #example
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
-* dosageInstruction.route = $cs-route-codes#PO "Oral"
+* dosageInstruction.route = $cs-sct#26643006 "Oral use"
 * dosageInstruction.doseAndRate.doseQuantity = 5 'mg' "mg"
-* dispenseRequest.quantity = 30 '{Capsule}' "Kapseln"
+* dispenseRequest.quantity.value = 30
+* dispenseRequest.quantity.unit = "Kapseln"
 * dispenseRequest.expectedSupplyDuration = 30 'd' "Tage"
