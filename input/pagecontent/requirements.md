@@ -15,7 +15,7 @@ Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, s
 |---|---|---|---|
 | **Patient (Subject)** | Patientendaten, inkl. Angabe von Kontaktpersonenen, Hausarzt bzw. primäre Ansprechpartner. | 1..1 | [AtApsPatient](StructureDefinition-at-aps-patient.html) |
 | **Verfasser (Author)** | Automatische Erstellung der Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html) |
-| **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Entfällt bei automatischer Erstellung. | 0..* |  |
+| **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Darf bei automatischer Erstellung durch ein Device nicht angegeben werden. | 0..* |  |
 | **Verwahrer des Dokuments (Custodian)** | Organisation, die die Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
 
 <br>

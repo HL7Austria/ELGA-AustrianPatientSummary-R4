@@ -249,7 +249,10 @@ Description: "Either section.entry or emptyReason are present"
 Expression: "(entry.reference.exists() or emptyReason.exists())"
 Severity: #error
 
+// Either the number of Author-Devices and all Author-Entries is different (i.e. there is at least one non-Device-author)
+// OR
+// (if the number of Author-Devices equals the number of all Author-Entries (i.e. all authors are devices)) the number of attesters is zero
 Invariant: aps-comp-1
 Description: "For automatically generated APS an attester is not allowed"
-Expression: "author.resolve().ofType(Device).count() != author.count() or attester.count() = 0"
+Expression: "(author.resolve().ofType(Device).count() != author.count() or attester.count() = 0)"
 Severity: #error
