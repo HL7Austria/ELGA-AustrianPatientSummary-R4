@@ -12,7 +12,7 @@ Usage: #example
 * type = $cs-loinc#34108-1 "Outpatient Note"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * date = "2005-12-24T09:43:41+11:00"
-* author[0] = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* author[0] = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * authenticator = Reference(Organization/HL7ATCoreOrganizationExample01)
 * custodian = Reference(Organization/HL7ATCoreOrganizationExample01)
 * description = "Körperliche Untersuchung"

@@ -10,7 +10,7 @@ Usage: #example
 * effectivePeriod.start = "2014-12-06T20:00:00+11:00"
 * effectivePeriod.end = "2014-12-06T22:33:00+11:00"
 * date = "2014-12-06T22:33:00+11:00"
-* assessor = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* assessor = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * problem.display = "MVA"
 * investigation.code.text = "Erstuntersuchung"
 * investigation.item[0].display = "tiefe Platzwunde an der Kopfhaut"

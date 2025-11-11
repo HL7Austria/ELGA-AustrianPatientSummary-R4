@@ -10,7 +10,7 @@ Usage: #example
 * code.text = "Pathologiebefund"
 * subject = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
 * effectiveDateTime = "2025-06-20T14:00:00+02:00"
-* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * specimen = Reference(Specimen/AtApsExampleSpecimen01) "Gewebeprobe Tumorbiopsie"
 * hasMember = Reference(Observation/AtApsExampleObservationResultsLaboratoryPathology01) "Subobservation 1"
 * valueString = "Karzinom — maligne epitheliale Neoplasie"

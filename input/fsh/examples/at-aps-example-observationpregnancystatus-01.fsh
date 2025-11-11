@@ -11,4 +11,4 @@ Usage: #example
 * valueCodeableConcept = $vs-elga-pregnancystatus#pregnant "Pregnant"
 * valueCodeableConcept.text = "Schwanger"
 * hasMember = Reference(Observation/AtApsExampleObservationPregnancyEdd01) "Expected Delivery Date"
-* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"

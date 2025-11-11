@@ -10,6 +10,6 @@ Usage: #example
 * effectiveDateTime = "2025-12-15T15:30:00+01:00"
 * valueCodeableConcept = $cs-sct#281050002 "Lebendgeburt"
 * valueCodeableConcept.text = "Lebendgeburt"
-* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>Lebendgeburt, 39. SSW, 3450 g, Sectio</div>"
 * text.status = #generated

@@ -9,4 +9,4 @@ Usage: #example
 * subject = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
 * effectiveDateTime = "2025-05-10"
 * valueDateTime = "2025-12-15"
-* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"

@@ -18,5 +18,5 @@ Usage: #example
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * period.end = "2017-06-01"
 * created = "2016-01-01"
-* author = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* author = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * activity.outcomeCodeableConcept = $cs-sct#416528001 "Intentional weight loss"

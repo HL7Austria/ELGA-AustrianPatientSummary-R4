@@ -10,4 +10,4 @@ Usage: #example
 * code = $cs-sct#165002 "Accident-prone"
 * code.text = "Der Patient zeigt eine erhöhte Sturzgefährdung."
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
-* author = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
+* author = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
