@@ -13,8 +13,8 @@ Usage: #example
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * date = "2005-12-24T09:43:41+11:00"
 * author[0] = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
-* authenticator = Reference(Organization/HL7ATCoreOrganizationExample01)
-* custodian = Reference(Organization/HL7ATCoreOrganizationExample01)
+* authenticator = Reference(Organization/AtApsExampleOrganization01)
+* custodian = Reference(Organization/AtApsExampleOrganization01)
 * description = "Körperliche Untersuchung"
 * securityLabel = $cs-v3-Confidentiality#V "very restricted"
 * content.attachment.contentType = #application/hl7-v3+xml

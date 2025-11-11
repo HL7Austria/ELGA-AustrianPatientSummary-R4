@@ -6,7 +6,7 @@ Usage: #example
 * status = #completed
 * medicationReference = Reference(Medication/AtApsExampleMedication01) "Ramipril 5mg Kapseln"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
-* performer.actor = Reference(Organization/HL7ATCoreOrganizationExample01) "Amadeus Spital"
+* performer.actor = Reference(Organization/AtApsExampleOrganization01) "Amadeus Spital"
 * authorizingPrescription = Reference(MedicationRequest/AtApsExampleMedicationRequest01) "Verordnung Ramipril"
 * whenHandedOver = "2024-10-15T09:30:00+01:00"
 * quantity.value = 30
