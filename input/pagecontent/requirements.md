@@ -1,3 +1,5 @@
+**MOVE TO SCOPE AND CONTENT**
+
 ### Sektionen der Austrian Patient Summary
 
 Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen:
@@ -14,6 +16,8 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 <br>
 <br>
 
+**INTEGRATE INTO COMPOSITION**
+
 **ADMINISTRATIVE DATEN**
 
 | **Sektion** | **Beschreibung** | **Konformität** | **Profile** |
@@ -25,6 +29,8 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 
 <br>
 <br>
+
+**INTEGRATE INTO COMPOSITION**
 
 **MEDIZINISCHE DATEN**
 
@@ -50,6 +56,8 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 <br>
 <br>
 <br>
+
+**MOVE TO USE CASE 1**
 
 ### Anwendungsfallbeschreibung - Patient Journey
 

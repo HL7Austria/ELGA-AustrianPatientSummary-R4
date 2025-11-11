@@ -58,7 +58,11 @@ dependencies:
 #
 pages:
   index.md:
-    title: Start
+    title: Home
+  scope_and_content.md:
+    title: Umfang und Inhalt
+  challenges.md:
+    title: Herausforderungen
   background.md:
     title: Hintergrund
   designprinciples.md:
@@ -67,12 +71,16 @@ pages:
     title: Die "APS"
   # terminologies.md:
   #   title: Terminologien
-  info.md:
-    title: Informationen über dieses Dokument
+  use_case_1.md:
+    title: Anwendungsfall 1
   contributors.md:
     title: Autoren und Mitwirkende
   framework.md:
     title: Technische Rahmenbedingungen
+  info.md:
+    title: Impressum
+  
+  
 
 
 
@@ -116,7 +124,9 @@ menu:
   Home: index.html
   Inhaltsverzeichnis: toc.html
   Einleitung:
+    Umfang und Inhalt: scope_and_content.html
     Hintergrund: background.html
+    Herausforderungen: challenges.html
   Die "APS": requirements.html
   Funktionales:
     Designentscheidungen: designprinciples.html
@@ -127,13 +137,15 @@ menu:
     # Generation and Data Inclusion: Generation-and-Data-Inclusion.html
     # Privacy and Security Considerations: Privacy-and-Security-Considerations.html
     # Known Issues and Future Development: Known-Issues-and-Future-Development.html
+  Anwendungsfälle:
+    Anwendungsfall 1: use_case_1.html
   Artifacts: artifacts.html
   # Terminologien: terminologies.html
   About:
     Mitwirkende: contributors.html
     Dependencies: framework.html
     # Copyright: 
-    Informationen über dieses Dokument: info.html
+    Impressum: info.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
