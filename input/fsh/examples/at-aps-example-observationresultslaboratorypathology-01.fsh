@@ -1,11 +1,10 @@
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Instance: AtApsExampleObservationResultsLaboratoryPathology01
 InstanceOf: AtApsObservationResultsLaboratoryPathology
 Title: "AtApsObservationResultsLaboratoryPathology-Beispiel"
 Description: "Observation Results Laboratory Pathology"
 Usage: #example
 * status = #final
-* category[+] = $observation-category#laboratory "Laboratory"
+* category[+] = $cs-observation-category#laboratory "Laboratory"
 * category[+] = $cs-elga-laborparameterergaenzung#1 "Allgemeiner Laborbefund"
 * code = $cs-elga-laborparameterergaenzung#17880 "Zytologie"
 * code.text = "Pathologiebefund"
