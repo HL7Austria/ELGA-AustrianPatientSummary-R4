@@ -5,7 +5,7 @@ Description: "Care Plan"
 Usage: #example
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Ein einfacher Pflegeplan, der angibt, dass ein Patient aufgrund von Adipositas einmal täglich sein Gewicht messen soll.</p>\n</div>"
-* contained = p1
+* addresses = Reference(Condition/AtApsExampleCondition01)
 * identifier.value = "12345"
 * instantiatesUri = "http://example.org/protocol-for-obesity"
 * basedOn.display = "Behandlung von Typ-2-Diabetes"
@@ -19,13 +19,4 @@ Usage: #example
 * period.end = "2017-06-01"
 * created = "2016-01-01"
 * author = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
-* addresses = Reference(p1) "obesity"
-* activity.outcomeCodeableConcept = $cs-sct#161832001 "Progressive weight loss"
-
-Instance: p1
-InstanceOf: Condition
-Usage: #inline
-* clinicalStatus = $cs-condition-clinical#active
-* verificationStatus = $cs-condition-ver-status#confirmed
-* code.text = "Obesity"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* activity.outcomeCodeableConcept = $cs-sct#416528001 "Intentional weight loss"
