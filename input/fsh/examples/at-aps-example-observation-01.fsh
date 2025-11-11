@@ -9,7 +9,7 @@ Usage: #example
 * code.text = "Hämoglobin"
 * subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
 * effectiveDateTime = "2024-10-10T09:30:00+01:00"
-* performer = Reference(Organization/HL7ATCoreOrganizationExample01) "Labor Praxis Beispiel GmbH"
+* performer = Reference(Organization/HL7ATCoreOrganizationExample01) "Amadeus Spital"
 * valueQuantity = 13.6 'g/dL' "g/dL"
 * referenceRange.low = 12 'g/dL' "g/dL"
 * referenceRange.high = 17.5 'g/dL' "g/dL"

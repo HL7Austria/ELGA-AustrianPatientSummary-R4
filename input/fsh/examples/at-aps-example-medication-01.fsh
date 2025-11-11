@@ -6,7 +6,7 @@ Usage: #example
 * code = http://www.whocc.no/atc#C09AA05 "Ramipril"
 * code.text = "Ramipril 5mg Kapseln"
 * status = #active
-* manufacturer = Reference(Organization/HL7ATCoreOrganizationExample01) "Beispiel Pharma GmbH"
+* manufacturer = Reference(Organization/HL7ATCoreOrganizationExample01) "Amadeus Spital"
 * ingredient.itemReference = Reference(Medication/AtApsExampleMedication01) "Ramipril Wirkstoff"
 * ingredient.isActive = true
 * ingredient.strength.numerator.value = 500
