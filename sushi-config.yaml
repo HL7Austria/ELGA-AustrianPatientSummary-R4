@@ -114,11 +114,12 @@ parameters:
 
 menu:
   Home: index.html
-  Table of Contents: toc.html
+  Inhaltsverzeichnis: toc.html
   Einleitung:
     Hintergrund: background.html
   Die "APS": requirements.html
-  Designprinzipien: designprinciples.html
+  Funktionales:
+    Designentscheidungen: designprinciples.html
     # General Principles: General-Principles.html
     # Design Conventions: Design-Conventions.html
     # Must Support and Obligations: Must-Support-and-Obligations.html
@@ -130,7 +131,7 @@ menu:
   # Terminologien: terminologies.html
   About:
     Mitwirkende: contributors.html
-    Technische Rahmenbedingungen: framework.html
+    Dependencies: framework.html
     # Copyright: 
     Informationen über dieses Dokument: info.html
 
