@@ -112,8 +112,10 @@ parameters:
 
 
 menu:
-  Start: index.html
-  Inhalt: toc.html
+  Home: index.html
+  Table of Contents: toc.html
+  Einleitung:
+    Hintergrund: background.html
   Die "APS": requirements.html
   Designprinzipien: designprinciples.html
     # General Principles: General-Principles.html
@@ -123,13 +125,13 @@ menu:
     # Generation and Data Inclusion: Generation-and-Data-Inclusion.html
     # Privacy and Security Considerations: Privacy-and-Security-Considerations.html
     # Known Issues and Future Development: Known-Issues-and-Future-Development.html
-  Hintergrund: background.html
-  FHIR Artefakte: artifacts.html
+  Artifacts: artifacts.html
   # Terminologien: terminologies.html
-  Weitere Infos:
-    Informationen über dieses Dokument: info.html
-    Autoren und Mitwirkende: contributors.html
+  About:
+    Mitwirkende: contributors.html
     Technische Rahmenbedingungen: framework.html
+    # Copyright: 
+    Informationen über dieses Dokument: info.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
