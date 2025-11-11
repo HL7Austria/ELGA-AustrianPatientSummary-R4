@@ -20,6 +20,8 @@ Alias: $cs-allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/a
 Alias: $cs-v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $cs-allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $cs-list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
+Alias: $cs-v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+
 // termgit.elga.gv.at
 Alias: $cs-asp-liste = https://termgit.elga.gv.at/CodeSystem/asp-liste
 Alias: $cs-elga-laborparameterergaenzung = https://termgit.elga.gv.at/CodeSystem/elga-laborparameterergaenzung
@@ -33,6 +35,7 @@ Alias: $cs-lkat-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-
 Alias: $cs-elga-ergaenzungsliste = https://termgit.elga.gv.at/CodeSystem/elga-ergaenzungsliste
 Alias: $cs-rast-klassen = https://termgit.elga.gv.at/CodeSystem/rast-klassen
 Alias: $cs-elga-medikationmengenart = https://termgit.elga.gv.at/ValueSet/elga-medikationmengenart
+Alias: $cs-hl7-at-organizationtype = https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype
 
 // value sets
 // FHIR

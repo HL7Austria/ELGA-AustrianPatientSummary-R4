@@ -1,0 +1,28 @@
+Instance: AtApsExampleObservationVitalSigns01
+InstanceOf: AtApsObservationVitalSigns
+Title: "AtApsObservationVitalSigns-Beispiel"
+Description: "Observation Vital Signs"
+Usage: #example
+* meta.profile = "https://fhir.hl7.at/r4-ELGA-AustrianPatientSummary-ballot_2025_stu1/StructureDefinition-at-aps-observationvitalsigns"
+* status = #final
+* category = https://termgit.elga.gv.at/CodeSystem/elga-vitalsigns#VITALS "Vitalzeichen"
+* code = $cs-loinc#85354-9 "Vital signs panel"
+* code.text = "Vitalzeichen"
+* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* effectiveDateTime = "2025-10-17T08:15:00+02:00"
+* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Dr. Melanie Musterärztin"
+* component[0].code = $cs-loinc#8867-4 "Heart rate"
+* component[=].code.text = "Herzfrequenz"
+* component[=].valueQuantity = 72 '/min' "beats/min"
+* component[+].code = $cs-loinc#8480-6 "Systolic blood pressure"
+* component[=].code.text = "Systolischer Blutdruck"
+* component[=].valueQuantity = 120 'mm[Hg]' "mmHg"
+* component[+].code = $cs-loinc#8462-4 "Diastolic blood pressure"
+* component[=].code.text = "Diastolischer Blutdruck"
+* component[=].valueQuantity = 80 'mm[Hg]' "mmHg"
+* component[+].code = $cs-loinc#8310-5 "Body temperature"
+* component[=].code.text = "Körpertemperatur"
+* component[=].valueQuantity = 36.8 'Cel' "°C"
+* component[+].code = $cs-loinc#59408-5 "Oxygen saturation in Arterial blood by Pulse oximetry"
+* component[=].code.text = "Sauerstoffsättigung"
+* component[=].valueQuantity = 98 '%' "%"
