@@ -5,7 +5,7 @@ Description: "Befund"
 Usage: #example
 * clinicalStatus = $cs-condition-clinical#active
 * verificationStatus = $cs-condition-ver-status#confirmed
-* category.coding[0] = $vs-elga-problemarten#404684003 "Befund"
+* category.coding[0] = $cs-sct#404684003 "Befund"
 * severity = $vs-elga-problemseverity#6736007 "mittel"
 * code = $cs-sct#39065001 "Burn of ear"
 * code.text = "Verbranntes Ohr"
