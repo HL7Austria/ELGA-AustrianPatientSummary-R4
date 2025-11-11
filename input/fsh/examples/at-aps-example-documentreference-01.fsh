@@ -1,8 +1,3 @@
-Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
-Alias: $eventCodes = http://ihe.net/xds/connectathon/eventCodes
-Alias: $healthcareFacilityTypeCodes = http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes
-Alias: $practiceSettingCodes = http://www.ihe.net/xds/connectathon/practiceSettingCodes
-
 Instance: AtApsExampleDocumentReference01
 InstanceOf: AtApsDocumentReference
 Title: "AtApsDocumentReference-Beispiel"
@@ -21,7 +16,7 @@ Usage: #example
 * authenticator = Reference(Organization/HL7ATCoreOrganizationExample01)
 * custodian = Reference(Organization/HL7ATCoreOrganizationExample01)
 * description = "Körperliche Untersuchung"
-* securityLabel = $v3-Confidentiality#V "very restricted"
+* securityLabel = $cs-v3-Confidentiality#V "very restricted"
 * content.attachment.contentType = #application/hl7-v3+xml
 * content.attachment.language = #de-DE
 * content.attachment.url = "http://example.org/xds/mhd/Binary/07a6483f-732b-461e-86b6-edb665c45510"
