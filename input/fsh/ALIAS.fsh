@@ -35,6 +35,7 @@ Alias: $cs-lkat-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-
 Alias: $cs-elga-ergaenzungsliste = https://termgit.elga.gv.at/CodeSystem/elga-ergaenzungsliste
 Alias: $cs-rast-klassen = https://termgit.elga.gv.at/CodeSystem/rast-klassen
 Alias: $cs-elga-medikationmengenart = https://termgit.elga.gv.at/ValueSet/elga-medikationmengenart
+Alias: $cs-hl7-at-organizationtype = https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype
 
 // value sets
 // FHIR
