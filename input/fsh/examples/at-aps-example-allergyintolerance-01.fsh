@@ -7,6 +7,6 @@ Usage: #example
 * clinicalStatus = $cs-allergyintolerance-clinical#resolved
 * verificationStatus = $cs-allergyintolerance-verification#confirmed
 * code = $cs-sct#256303006 "Ambrosiapollen"
-* patient = Reference(Patient/HL7ATCorePatientExample01) "Maria Mustermann"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
 * onsetDateTime.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * onsetDateTime.extension.valueCode = #unknown

@@ -8,7 +8,7 @@ Usage: #example
 //* vaccineCode.coding[0] = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.coding = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.text = "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
-* patient = Reference(Patient/HL7ATCorePatientExample01) "Maria Mustermann"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
 * performer.actor = Reference(Practitioner/HL7ATCorePractitionerExample01) "Melanie Musterärztin"
 * vaccineCode = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * occurrenceDateTime = "2021-10-01"

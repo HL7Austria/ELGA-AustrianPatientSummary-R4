@@ -8,7 +8,7 @@ Usage: #example
 * status = #available
 * type = $cs-sct#119376003 "Tissue specimen"
 * type.text = "Gewebeprobe"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Maria Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
 * receivedTime = "2025-06-20T10:00:00+02:00"
 * collection.collector = Reference(Practitioner/HL7ATCorePractitionerExample01) "Dr. Melanie Musterärztin"
 * collection.collectedDateTime = "2025-06-19T15:00:00+02:00"
