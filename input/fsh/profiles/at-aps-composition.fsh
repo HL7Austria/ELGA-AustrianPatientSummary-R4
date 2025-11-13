@@ -8,6 +8,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * . ^short = "AT APS Composition"
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionUvIps)
 * subject only Reference(AtApsPatient)
+* attester.party only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
 
