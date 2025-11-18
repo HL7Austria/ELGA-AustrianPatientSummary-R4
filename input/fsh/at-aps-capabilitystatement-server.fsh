@@ -37,7 +37,7 @@ Usage: #definition
 * rest.resource[=].operation.extension.valueCode = #SHOULD
 * rest.resource[=].operation.name = "summary"
 * rest.resource[=].operation.definition = "http://hl7.org/fhir/uv/ips/OperationDefinition/summary"
-* rest.resource[=].operation.documentation = "Operation zum Abrufen einer APS"
+* rest.resource[=].operation.documentation = "Operation zum Abrufen einer APS für eine Patient-Ressource. Diese Operation gibt ein APS Document Bundle als Antwort auf einen GET-Request zurück."
 
 * rest.resource[+].type = #AllergyIntolerance
 * rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
