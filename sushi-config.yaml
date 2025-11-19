@@ -77,6 +77,8 @@ pages:
     title: Autoren und Mitwirkende
   # info.md:
   #   title: Impressum
+  copyright.md:
+    title: Copyright
   dependencies.md:
     title: Dependencies
   imprint.md:
@@ -145,7 +147,7 @@ menu:
   About:
     Mitwirkende: contributors.html
     Dependencies: dependencies.html
-    # Copyright: 
+    Copyright: copyright.html
     Impressum: imprint.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
