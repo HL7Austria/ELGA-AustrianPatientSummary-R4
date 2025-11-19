@@ -1,14 +1,6 @@
-
-
-### Hinweis zur Sprachverwendung
-
-Aus Gründen der Lesbarkeit wird im Text das generische Maskulinum verwendet. Es bezieht sich gleichermaßen auf alle Geschlechter. Der Begriff "Patient" schließt auch Bürgerinnen und Bürger, Kundinnen und Kunden sowie Klientinnen und Klienten ein – unabhängig davon, ob sie aktuell an einem Behandlungs- oder Pflegeprozess teilnehmen.
-
 ### Gesetzliche Grundlagen
 
 Gemäß § 2 Abs. 9 lit. f GTelG 2012 umfassen „ELGA-Gesundheitsdaten“ die zur weiteren Behandlung, Betreuung oder Sicherung der Versorgungskontinuität von ELGA-Teilnehmer/inne/n wesentlich sein könnten auch Patient/inn/endaten gemäß Art. 14 Abs. 2 lit. b sublit. i der Richtlinie 2011/24/EU über die Ausübung der Patientenrechte in der grenzüberschreitenden Gesundheitsversorgung („patient summary“).
-
-
 
 ### Verbindlichkeit
 
@@ -19,3 +11,7 @@ Der Leitfaden in seiner jeweils aktuell gültigen Fassung sowie die aktualisiert
 Die Anwendung dieses Implementierungsleitfadens hat im Einklang mit österreichischem und europäischem Recht, insbesondere mit den relevanten Materiengesetzen (z.B. Ärztegesetz 1998, Apothekenbetriebsordnung 2005, Krankenanstalten- und Kuranstaltengesetz, Gesundheits- und Krankenpflegegesetz, Rezeptpflichtgesetz, Datenschutzgesetz, Gesundheitstelematikgesetz 2012, DSGVO) zu erfolgen. Technische Möglichkeiten können gesetzliche Bestimmungen selbstverständlich nicht verändern, vielmehr sind die technischen Möglichkeiten im Einklang mit den Gesetzen zu nutzen.
 
 Die Einhaltung der gesetzlichen Bestimmungen liegt im Verantwortungsbereich der Ersteller der FHIR-Dokumente.
+
+### Hinweis zur Sprachverwendung
+
+Aus Gründen der Lesbarkeit wird im Text das generische Maskulinum verwendet. Es bezieht sich gleichermaßen auf alle Geschlechter. Der Begriff "Patient" schließt auch Bürgerinnen und Bürger, Kundinnen und Kunden sowie Klientinnen und Klienten ein – unabhängig davon, ob sie aktuell an einem Behandlungs- oder Pflegeprozess teilnehmen.
