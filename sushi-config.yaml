@@ -75,10 +75,10 @@ pages:
     title: Anwendungsfall 1
   contributors.md:
     title: Autoren und Mitwirkende
-  framework.md:
-    title: Technische Rahmenbedingungen
   # info.md:
   #   title: Impressum
+  dependencies.md:
+    title: Dependencies
   imprint.md:
     title: Impressum
   
@@ -144,7 +144,7 @@ menu:
   # Terminologien: terminologies.html
   About:
     Mitwirkende: contributors.html
-    Dependencies: framework.html
+    Dependencies: dependencies.html
     # Copyright: 
     Impressum: imprint.html
 
