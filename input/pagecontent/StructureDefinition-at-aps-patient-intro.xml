@@ -1,0 +1,7 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+		<p>Dieses Profil beinhaltet Abkürzungen (z.B. bPK = bereichsspezifisches Personenkennzeichen) aus dem <a href="https://fhir.hl7.at/HL7-AT-FHIR-Core-R4/2.0.0/StructureDefinition-at-core-patient.html">HL7® AT Core Patient Profile</a>.</p>
+		<p>Die Beschreibung der Abkürzungen in dem Profil wird in diesem Ticket verfolgt: <a href="https://github.com/HL7Austria/HL7-AT-FHIR-Core-R4/issues/147">#147</a> und wird in der nächsten Version des APS IGs übernommen.</p>
+	</blockquote>
+</div>
