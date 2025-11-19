@@ -75,7 +75,9 @@ pages:
     title: Anwendungsfall 1
   contributors.md:
     title: Autoren und Mitwirkende
-  info.md:
+  download.md:
+    title: Download
+  publication_info.md:
     title: Publikationsinformationen
   copyright.md:
     title: Copyright
@@ -146,7 +148,8 @@ menu:
   # Terminologien: terminologies.html
   About:
     Mitwirkende: contributors.html
-    Publikationsinformationen: info.html
+    Download: download.html
+    Publikationsinformationen: publication_info.html
     Dependencies: dependencies.html
     Copyright: copyright.html
     Impressum: imprint.html
