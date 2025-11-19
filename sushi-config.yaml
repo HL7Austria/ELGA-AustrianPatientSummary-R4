@@ -77,9 +77,10 @@ pages:
     title: Autoren und Mitwirkende
   framework.md:
     title: Technische Rahmenbedingungen
-  info.md:
+  # info.md:
+  #   title: Impressum
+  imprint.md:
     title: Impressum
-  
   
 
 
@@ -145,7 +146,7 @@ menu:
     Mitwirkende: contributors.html
     Dependencies: framework.html
     # Copyright: 
-    Impressum: info.html
+    Impressum: imprint.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
