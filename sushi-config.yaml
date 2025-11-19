@@ -83,6 +83,7 @@ pages:
     title: Copyright
   dependencies.md:
     title: Dependencies
+  # Known Issues
   imprint.md:
     title: Impressum
   
@@ -147,11 +148,12 @@ menu:
   Artifacts: artifacts.html
   # Terminologien: terminologies.html
   About:
-    Mitwirkende: contributors.html
+    Autoren und Mitwirkende: contributors.html
     Download: download.html
     Publikationsinformationen: publication_info.html
     Dependencies: dependencies.html
     Copyright: copyright.html
+    # Known Issues
     Impressum: imprint.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
