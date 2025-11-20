@@ -22,7 +22,6 @@ Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrie
 
 | **Sektion** | **Beschreibung** | **Konformität** | **Profile** |
 |---|---|---|---|
-| **Verfasser (Author)** | Autor der Patient Summary. Bei Angabe eines Devices z.B. automatische Erstellung der Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsPractitioner](StructureDefinition-at-aps-practitioner.html), [AtApsPractitionerRole](StructureDefinition-at-aps-practitionerrole.html), [AtApsDevice](StructureDefinition-at-aps-device.html) |
 | **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Darf bei automatischer Erstellung durch ein Device nicht angegeben werden. | 0..* | [AtApsPractitioner](StructureDefinition-at-aps-practitioner.html), [AtApsPractitionerRole](StructureDefinition-at-aps-practitionerrole.html) |
 | **Verwahrer des Dokuments (Custodian)** | Organisation, die die Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
 
