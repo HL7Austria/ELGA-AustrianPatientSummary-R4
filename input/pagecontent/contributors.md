@@ -4,7 +4,7 @@ Dieser Implementierungsleitfaden entstand durch die Harmonisierungsarbeit der "A
 
 | Name[^1]            | Organisation                    |
 |---------------------|---------------------------------|
-| Sophie Bauernfeind  | FH OÖ Forschung &   Entwicklung |
+| Sophie Bauernfeind  | FH OÖ Forschung & Entwicklung   |
 | Emmanuel Helm       | ELGA GmbH                       |
 | Gabriel Kleinoscheg | ELGA GmbH                       |
 | Andrea Klostermann  | ELGA GmbH                       |
