@@ -164,7 +164,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
 * section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionVitalSigns].entry ^slicing.rules = #openAtEnd
-* section[sectionVitalSigns].entry ^slicing.ordered = 
+* section[sectionVitalSigns].entry ^slicing.ordered = true
 * section[sectionVitalSigns].entry ^short = "Vitalparameter (Vital Signs)"
 * section[sectionVitalSigns].entry ^definition = "Die Sektion umfasst Informationen wie Blutdruck, Körpertemperatur, Herzfrequenz, Atemfrequenz, Größe, Gewicht, Body-Mass-Index, Kopfumfang oder Pulsoximetrie. Insbesondere können auffällige Vitalparameter oder körperliche Befunde wie der letzte, maximale und/oder minimale Wert, der Ausgangswert oder relevante Trends angegeben werden."
 * section[sectionVitalSigns].entry only Reference(AtApsObservation or AtApsDocumentReference)
