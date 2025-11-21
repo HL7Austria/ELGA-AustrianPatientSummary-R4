@@ -1,7 +1,6 @@
 Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen:
-<br><br>
+
 {% include APS_Sections.md %}
-<br>
 
 **Begriffsdefintion**<br>
 **Required**: Ein als Required gekennzeichnetes Element ist ein Pflichtfeld und muss vorhanden sein. In FHIR wird diese Verpflichtung durch die Kardinalität festgelegt, typischerweise 1..1 oder 1..\*.<br>
