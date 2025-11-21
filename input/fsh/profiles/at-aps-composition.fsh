@@ -45,7 +45,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 // ------ Required sections ------ //
 
 * section[sectionMedications] ^short = "Medikationsliste (Medication Summary)"
-* section[sectionMedications] ^definition = "Diese Sektion enthält eine Beschreibung der aktuell relevanten Medikamente des Patienten bzw. liefert Information über das Nichtvorhandensein."
+* section[sectionMedications] ^definition = "Diese Sektion enthält eine Beschreibung der aktuell relevanten Medikamente des Patienten bzw. liefert Information über das Nichtvorhandensein. Dabei werden nur rezeptpflichtige Medikamente und wechselwirkungsrelevante OTCs berücksichtigt."
 * section[sectionMedications].code = $cs-loinc#10160-0
 * section[sectionMedications].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedications].entry ^slicing.discriminator[=].path = "resolve()"
