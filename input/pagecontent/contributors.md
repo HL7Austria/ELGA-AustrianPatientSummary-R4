@@ -6,7 +6,7 @@ Dieser Implementierungsleitfaden entstand durch die Harmonisierungsarbeit der "A
 |---------------------|---------------------------------|
 | Sophie Bauernfeind  | FH OÖ Forschung & Entwicklung   |
 | Emmanuel Helm       | ELGA GmbH                       |
-| Gabriel Kleinoscheg | ELGA GmbH                       |
+| Gabriel Leonhartsberger | ELGA GmbH                       |
 | Andrea Klostermann  | ELGA GmbH                       |
 | Oliver Krauss       | FH OÖ, HL7 Austria              |
 | Nikolaus Krondraf   | ELGA GmbH                       |
@@ -27,7 +27,7 @@ Teilnehmer der Arbeitsgruppe Integrierte Versorgung mit Austrian Patient Summary
 | Stefanie Gmeiner | Österreichische Ärztekammer |
 | Sonja Gradwohl | ELGA GmbH |
 | Emmanuel Helm | ELGA GmbH |
-| Gabriel Kleinoscheg | ELGA GmbH |
+| Gabriel Leonhartsberger | ELGA GmbH |
 | Andrea Klostermann | ELGA GmbH |
 | Oliver Krauss | FH OÖ, HL7 Austria |
 | Nikolaus Krondraf | ELGA GmbH |
