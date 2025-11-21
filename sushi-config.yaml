@@ -61,14 +61,12 @@ pages:
     title: Home
   scope_and_content.md:
     title: Umfang und Inhalt
-  challenges.md:
-    title: Herausforderungen
   background.md:
     title: Hintergrund
+  challenges.md:
+    title: Herausforderungen
   designprinciples.md:
     title: Desingprinzipien
-  requirements.md:
-    title: Die "APS"
   # terminologies.md:
   #   title: Terminologien
   use_case_1.md:
@@ -79,10 +77,10 @@ pages:
     title: Download
   publication_info.md:
     title: Publikationsinformationen
-  copyright.md:
-    title: Copyright
   dependencies.md:
     title: Dependencies
+  copyright.md:
+    title: Copyright
   # Known Issues
   imprint.md:
     title: Impressum
@@ -133,7 +131,6 @@ menu:
     Umfang und Inhalt: scope_and_content.html
     Hintergrund: background.html
     Herausforderungen: challenges.html
-  Die "APS": requirements.html
   Funktionales:
     Designentscheidungen: designprinciples.html
     # General Principles: General-Principles.html
@@ -153,7 +150,7 @@ menu:
     Publikationsinformationen: publication_info.html
     Dependencies: dependencies.html
     Copyright: copyright.html
-    # Known Issues
+    Known Issues: https://github.com/HL7Austria/ELGA-AustrianPatientSummary-R4/issues
     Impressum: imprint.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
