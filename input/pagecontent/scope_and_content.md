@@ -1,10 +1,10 @@
-Die Austrian Patient Summary (APS) besteht aus folgenden Sektionen:
+Die Austrian Patient Summary (APS) enthält neben administrativen Inhalten Strukturen, um verschiedene medizinische Inhalte zu dokumentieren.
 
 {% include APS_Sections.md %}
 
-**Begriffsdefintion**<br>
-**Required**: Ein als Required gekennzeichnetes Element ist ein Pflichtfeld und muss vorhanden sein. In FHIR wird diese Verpflichtung durch die Kardinalität festgelegt, typischerweise 1..1 oder 1..\*.<br>
-**Recommended**: Elemente mit diesem Status sind dringend empfohlen, aber nicht verpflichtend. Sie sollen befüllt werden, sofern Informationen verfügbar sind. In FHIR-Profilen wird dies typischerweise durch Must Support oder erläuternde Kommentare kenntlich gemacht. Systeme müssen das Element verarbeiten können, sind jedoch nicht verpflichtet, es stets bereitzustellen.<br>
-**Optional**: Ein als Optional gekennzeichnetes Element kann verwendet werden, ist jedoch nicht verpflichtend. In FHIR wird dies meist durch die Kardinalität 0..1 oder 0..\* abgebildet.<br>
+Die medizinischen Inhalte werden weiters in drei Kategorien gegliedert, die die einzelnen Sektionen der APS enthalten.
+- **Required**: Sektionen in dieser Kategorie müssen jedenfalls in der APS enthalten sein. Enthalten diese Sektionen keine Referenz auf eine Ressource in `Composition.section.entry`, `Composition.section.emptyReason` muss befüllt werden.
+- **Recommended**: Die Angabe von Sektionen dieser Kategorie ist empfohlen. Sollte keine Information für die jeweilige Sektion vorhanden sein, können diese Sektionen entfallen.
+- **Optional**: Sektionen dieser Kategorie können in der APS angegeben werden. Sollte keine Information für die jeweilige Sektion vorhanden sein, können diese Sektionen entfallen.
 
-Im Folgenden werden die Inhalte der einzelnen Sektionen zusammenfassend beschrieben. Sofern im Vergleich zur internationalen Spezifikation österreichspezifische Anpassungen (Profile) vorgenommen wurden, werden diese angeführt und begründet.
+Im Unterschied zur [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) sind in der APS auch die Sektionen "Eingriffe und Therapien (History of Procedures)" und "Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)" in der Kategorie "Required" zu finden, um den Anforderungen von MyHealth@EU gerecht zu werden.
