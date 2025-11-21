@@ -10,6 +10,8 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * obeys aps-comp-1
 
 * subject only Reference(AtApsPatient)
+* subject ^short = "The person the Austrian Patient Summary is about."
+* subject ^definition = "Patientendaten, inkl. Angabe von Kontaktpersonen, Hausarzt bzw. primäre Ansprechpartner."
 * author ^short = "Autor der Austrian Patient Summary"
 * author ^definition = "Autor der Austrian Patient Summary. Ggf. Angabe eines Devices z.B. bei automatischer Erstellung der Patient Summary durch die zentrale Anwendung."
 * author ^short = "Person, die die Richtigkeit der Zusammenstellung bestätigt."
