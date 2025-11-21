@@ -22,7 +22,7 @@ Teilnehmer der Arbeitsgruppe Integrierte Versorgung mit Austrian Patient Summary
 | Armin Berger | Berger MedIT |
 | Stefan Beyer | AIT Austrian Institute of Technology GmbH |
 | Bianca Buchgraber-Schnalzer | Institut eHealth - FH JOANNEUM Gesellschaft mbH |
-| Clara Diesenreiter | ELGA GmbH |
+| Clara Hochrainer | ELGA GmbH |
 | Reinhard Egelkraut | HL7 Austria & CGM Clinical Österreich GmbH |
 | Stefanie Gmeiner | Österreichische Ärztekammer |
 | Sonja Gradwohl | ELGA GmbH |
