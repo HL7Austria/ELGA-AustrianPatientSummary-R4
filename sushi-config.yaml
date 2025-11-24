@@ -69,6 +69,10 @@ pages:
     title: Desingprinzipien
   # terminologies.md:
   #   title: Terminologien
+  use_case_1.md:
+    title: Anwendungsfall 1 - APS aggregieren
+  use_case_2.md:
+    title: Anwendungsfall 2 - APS lesen
   patient_journey.md:
     title: Anwendungsbeispiel
   contributors.md:
@@ -141,6 +145,8 @@ menu:
     # Privacy and Security Considerations: Privacy-and-Security-Considerations.html
     # Known Issues and Future Development: Known-Issues-and-Future-Development.html
   Anwendungsfälle:
+    ANWF1 - APS aggregieren: use_case_1.html
+    ANWF2 - APS lesen: use_case_2.html
     Anwendungsbeispiel: patient_journey.html
   Artifacts: artifacts.html
   # Terminologien: terminologies.html

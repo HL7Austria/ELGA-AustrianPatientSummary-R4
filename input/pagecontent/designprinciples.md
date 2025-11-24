@@ -34,28 +34,13 @@ Folgendes Use Case Diagramm stellt die relevanten Funktionen der Austrian Patien
 <div>{% include aps-uml.svg %}</div>
 <br clear="all"/>
 
-##### APS aggregieren (UC1)
 
-| **Element** | **Beschreibung** |
-|---|---|
-| **Akteur** | Zentrale Anwendung Patient Summary |
-| **Beschreibung** | Die Inhalte der APS werden automatisch aus den angebundenen Registern (e-Medikation, e-Impfpass, etc.) zusammengeführt und basieren somit auf den aktuellsten verfügbaren Gesundheitsdaten des Patienten. Die APS dient darüber hinaus der Generierung fachspezifischer Dokumente (z. B. für bestimmte Krankheitsbilder wie Diabetes) nach definierten Kriterien und stellt diese für den Abruf bereit. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert. <br><br>**Hinweis:** Die genaue Beschreibung des Aggregationsprozesses folgt in einer späteren Version der APS-Spezifikation (siehe dazu auch Kapitel *Datenherkunft*) |
-| **Auslöser** | Beim Abruf der APS wird automatisch ein Prozess gestartet, der die angebundenen Register auf neue oder geänderte Daten überprüft und die Inhalte in die Patient Summary übernimmt. |
-| **Vorbedingungen** | Ein berechtigter Akteur hat lesend auf die APS (UC2) zugegriffen. In den angebundenen Registern liegen Gesundheitsdaten für den betreffenden Patienten vor. |
-| **Ergebnis** | Die *Austrian Patient Summary* wurde mit den aktuellsten Gesundheitsinformationen aus den angebundenen Registern aggregiert. |
 
 <br>
 
 ##### APS lesen (UC2)
 
-| **Element** | **Beschreibung** |
-|---|---|
-| **Akteur** | Gesundheitsdiensteanbieter, Patient:in |
-| **Beschreibung** | Ein GDA ruft die aktuellste Version der APS seines Patienten über sein Primärsystem bzw. ein GDA-Portal ab. Der Patient kann via ELGA-Zugangsportal auf seine aktuelle Patient Summary zugreifen. Die Patient Summary bietet in modular aufgebauten Abschnitten (Sektionen) eine strukturierte Zusammenfassung verfügbarer, medizinisch validierter Gesundheitsinformationen aus Registern, die an die Zentrale Anwendung Patient Summary angebunden sind. |
-| **Verwendete Anwendungsfälle** | GUC1 Patient Summary generieren |
-| **Auslöser** | - Konsultation durch GDA<br> - Informationswunsch durch Patienten<br> - Bedarf für Notfallversorgung, fachärztliche Zweitmeinung, etc. |
-| **Vorbedingungen** | Der jeweilige Akteur ist berechtigt auf die Patient Summary zuzugreifen. |
-| **Ergebnis** | Die aktuelle Version der Patient Summary wird angezeigt und steht zur Behandlungsunterstützung, Behandlungsplanung oder Informationsweitergabe zur Verfügung. |
+
 
 
 ### Designkonventionen
