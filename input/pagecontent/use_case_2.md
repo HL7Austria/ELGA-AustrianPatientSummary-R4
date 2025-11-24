@@ -1,3 +1,4 @@
+
 | **Element** | **Beschreibung** |
 |---|---|
 | **Akteur** | Gesundheitsdiensteanbieter, Patient:in |

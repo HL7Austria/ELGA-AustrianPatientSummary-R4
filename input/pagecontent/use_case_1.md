@@ -1,3 +1,4 @@
+
 | **Element** | **Beschreibung** |
 |---|---|
 | **Akteur** | Zentrale Anwendung Patient Summary |

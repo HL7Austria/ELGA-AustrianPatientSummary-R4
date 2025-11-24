@@ -25,8 +25,8 @@ rectangle "weitere Register"<<Akteur>> as reg_etc
 rectangle "Zentrale Anwendung"<<Akteur>> as zentr_Anwendung
 
 package "Austrian Patient Summary" {
-  usecase "UC1 APS aggregieren" as UC1
-  usecase "UC2 APS lesen" as UC2
+  usecase "[[use_case_1.html ANWF1 - APS aggregieren]]" as UC1
+  usecase "[[use_case_2.html ANWF2 - APS lesen]]" as UC2
 }
 
 :patient: -right- UC2

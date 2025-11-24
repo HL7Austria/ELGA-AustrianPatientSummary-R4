@@ -29,9 +29,6 @@ TODO:
 
 #### Erstellung und Abruf der APS
 
-Folgendes Use Case Diagramm stellt die relevanten Funktionen der Austrian Patient Summary dar.
-
-<div>{% include aps-uml.svg %}</div>
 <br clear="all"/>
 
 
