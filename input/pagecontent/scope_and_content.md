@@ -7,27 +7,31 @@ Die medizinischen Inhalte werden weiters in drei Kategorien gegliedert, die die 
 - **Recommended**: Die Angabe von Sektionen dieser Kategorie ist empfohlen. Sollte keine Information für die jeweilige Sektion vorhanden sein, können diese Sektionen entfallen.
 - **Optional**: Sektionen dieser Kategorie können in der APS angegeben werden. Sollte keine Information für die jeweilige Sektion vorhanden sein, können diese Sektionen entfallen.
 
+Die englischen Bezeichnungen in den Klammern entsprechen jenen, wie sie auch in der [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) verwendet werden.
+
 ### Administrative Inhalte
 
 #### Patient (Subject)
 
-Die Angabe von Patientendaten im Rahmen der APS ist verpflichtend. Zusätzlich können Kontaktpersonen, Hausarzt bzw. primäre Ansprechpartner angegeben werden.
+Die Angabe von Patientendaten im Rahmen der APS ist verpflichtend. Zusätzlich können Kontaktpersonen, Hausarzt bzw. primäre Ansprechpartner angegeben werden. Details zum Patienten können [hier](StructureDefinition-at-aps-patient.html) abgerufen werden.
 
 #### Verfasser (Author)
 
-Patientendaten, inkl. Angabe von Kontaktpersonen, Hausarzt bzw. primäre Ansprechpartner.
+Autor der Austrian Patient Summary (siehe auch [`Composition.author`](StructureDefinition-at-aps-composition.html)). Ggf. Angabe eines Devices z.B. bei automatischer Erstellung der Patient Summary durch die zentrale Anwendung.
 
 #### Rechtlicher Unterzeichner (Attester)
 
-Person, die die Richtigkeit der Zusammenstellung bestätigt. Darf bei automatischer Erstellung durch ein Device nicht angegeben werden.
+Person, die die Richtigkeit der Zusammenstellung bestätigt (siehe auch [`Composition.attester`](StructureDefinition-at-aps-composition.html)). Darf bei automatischer Erstellung durch ein Device nicht angegeben werden.
 
 #### Verwahrer des Dokuments (Custodian)
 
-Organisation, die die Patient Summary verwaltet (z.B. zentrale Anwendung). 
+Organisation, die die Patient Summary verwaltet (z.B. zentrale Anwendung) (siehe auch [`Composition.custodian`](StructureDefinition-at-aps-composition.html)). 
 
 Im Gegensatz zur IPS muss der Verwahrer des Dokuments in der APS angegeben werden, um den Anforderungen von MyHealth@EU gerecht zu werden.
 
 ### Medizinischen Inhalte
+
+Die medizinischen Inhalte werden in der APS in den `section`-Elementen der [AT APS Composition](StructureDefinition-at-aps-composition.html) abgebildet.
 
 Im Unterschied zur [International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/STU2/Structure-of-the-International-Patient-Summary.html) sind in der APS auch die Sektionen "Eingriffe und Therapien (History of Procedures)" und "Implantate, medizinische Geräte und Heilbehelfe (Medical Devices)" in der Kategorie "Required" zu finden, um den Anforderungen von MyHealth@EU gerecht zu werden.
 
