@@ -7,3 +7,4 @@ Description: "Das AT APS-Profil für die Flag-Ressource berücksichtigt zum eine
 * . ^short = "AT APS Flag Alert"
 * ^extension[$imposeProfile].valueCanonical = Canonical(FlagAlertUvIps)
 * subject only Reference(AtApsPatient or Location or Group or AtApsOrganization or AtApsPractitioner or PlanDefinition or AtApsMedication or AtApsProcedure)
+* author only Reference(AtApsDevice or AtApsOrganization or AtApsPatient or AtApsPractitioner or AtApsPractitionerRole)

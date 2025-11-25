@@ -9,3 +9,5 @@ Description: "Das AT APS-Profil für die AllergyIntolerance-Ressource berücksic
 * patient only Reference(AtApsPatient)
 * code from $vs-elga-allergyorintoleranceagent (extensible)
 * reaction.manifestation from $vs-elga-allergyreaction (extensible)
+* recorder only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson)
+* asserter only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole)

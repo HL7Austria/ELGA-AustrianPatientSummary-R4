@@ -8,3 +8,6 @@ Description: "Das AT APS-Profil für die DocumentReference-Ressource berücksich
 * subject only Reference(AtApsPatient or AtApsPractitioner or Group or AtApsDevice)
 * author only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or AtApsDevice or AtApsPatient or RelatedPerson)
 * context.sourcePatientInfo only Reference(AtApsPatient)
+* authenticator only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
+* custodian only Reference(AtApsOrganization)
+* relatesTo.target only Reference(AtApsDocumentReference)

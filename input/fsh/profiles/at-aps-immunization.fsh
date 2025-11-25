@@ -8,6 +8,12 @@ Description: "Das AT APS-Profil für die Immunization-Ressource berücksichtigt 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtApsPatient)
 * extension contains AtApsExtImmunizationBasedOn named basedOn 0..1
+* extension[basedOn].valueReference only Reference(CarePlan or AtApsMedicationRequest or ServiceRequest or ImmunizationRecommendation)
+* manufacturer only Reference(AtApsOrganization)
+* performer.actor only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport)
+* reaction.detail only Reference(AtApsObservation)
+* protocolApplied.authority only Reference(AtApsOrganization)
 
 * vaccineCode from AtApsImmunizationVaccineCodes (extensible)
 * vaccineCode ^binding.extension[0].extension[0].url = "purpose"
