@@ -65,8 +65,8 @@ pages:
     title: Hintergrund
   challenges.md:
     title: Herausforderungen
-  designprinciples.md:
-    title: Desingprinzipien
+  design_choices.md:
+    title: Designentscheidungen
   # terminologies.md:
   #   title: Terminologien
   use_case_overview.md:
@@ -136,7 +136,7 @@ menu:
     Hintergrund: background.html
     Herausforderungen: challenges.html
   Funktionales:
-    Designentscheidungen: designprinciples.html
+    Designentscheidungen: design_choices.html
     # General Principles: General-Principles.html
     # Design Conventions: Design-Conventions.html
     # Must Support and Obligations: Must-Support-and-Obligations.html
