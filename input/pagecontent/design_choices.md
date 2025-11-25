@@ -1,3 +1,5 @@
+Im Grunde orientiert sich die Austrian Patient Summary (APS) an den Inhalten der International Patient Summary (IPS). Die Elemente, wo die APS nicht mit der IPS übereinstimmen werden hier beschrieben.
+
 #### Kontext und Verwendung von Patient Summary
 
 Die Patient Summary ist eine standardisierte Kurzakte, die die wesentlichen medizinischen Informationen eines Patienten zusammenfasst und eine kohärente Momentaufnahme bietet. Sie ist rein informativ und nicht zur direkten Ausführung oder maschinellen Verarbeitung bestimmt.
