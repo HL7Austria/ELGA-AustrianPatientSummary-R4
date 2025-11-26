@@ -24,3 +24,5 @@ Description: "Das AT APS-Profil für die Specimen-Ressource berücksichtigt zum 
 * condition ^slicing.rules = #open
 * condition contains insufficientsample 0..1
 * condition[insufficientsample] = $cs-sct#281268007 "Insufficient sample (finding)"
+* parent only Reference(AtApsSpecimen)
+* collection.collector only Reference(AtApsPractitioner or AtApsPractitionerRole)

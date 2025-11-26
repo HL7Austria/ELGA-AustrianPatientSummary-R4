@@ -6,3 +6,8 @@ Description: "Das AT APS-Profil für die Practitioner-Ressource ist vom entsprec
 * ^status = #active
 * . ^short = "AT APS Practitioner"
 * ^extension[$imposeProfile].valueCanonical = Canonical(PractitionerUvIps)
+* identifier.assigner only Reference(AtApsOrganization)
+* identifier[GDA-OID].assigner only Reference(AtApsOrganization)
+* identifier[VPNR].assigner only Reference(AtApsOrganization)
+* identifier[vbPK].assigner only Reference(AtApsOrganization)
+* qualification.issuer only Reference(AtApsOrganization)
