@@ -17,214 +17,241 @@ Mit dem EHDS zeichnet sich allerdings generell FHIR® ab. Das Projekt Xt-EHR bef
 
 ### Vergleich IPS and MyHealth@EU PS
 
-<table class="tg"><thead>
+<style type="text/css">
+  .ps th {
+    border: 1px solid !important;
+    font-weight: bold;
+    text-align: center;
+  }
+  .ps .required {
+    background-color: #D9AFA4;
+  }
+  .ps .recommended {
+    background-color: #FAEBBD;
+  }
+  .ps .optional {
+    background-color: #BBD3B4;
+  }
+  .ps .border-left {
+    border-left: 1px solid !important;
+  }
+  .ps .border-right {
+    border-right: 1px solid !important;
+  }
+  .ps .border-bottom {
+    border-bottom: 1px solid !important;
+  }
+</style>
+<table class="ps">
   <tr>
-    <th class="tg-0pky">IPS</th>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">MyHealth@EU</th>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">APS</th>
-    <th class="tg-0lax"></th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <th colspan="2">IPS</th>
+    <th colspan="2">MyHealth@EU Requirements Catalogue</th>
+    <th colspan="2">APS</th>
+    <th rowspan="2">Kommentar</th>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <th colspan="6">Administrative Inhalte</th>
   </tr>
   <tr>
-    <td class="tg-0pky">Patient</td>
-    <td class="tg-0pky">required</td>
-    <td class="tg-0pky">Patient</td>
-    <td class="tg-0pky">required</td>
-    <td class="tg-0pky">Patient</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">Author</td>
-    <td class="tg-0pky">required</td>
-    <td class="tg-0pky">Author</td>
-    <td class="tg-0pky">required</td>
-    <td class="tg-0pky">Verfasser</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Author</td>
+    <td class="required">required</td>
+    <td class="border-left">Author</td>
+    <td class="required">required</td>
+    <td class="border-left">Verfasser</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">Attester</td>
-    <td class="tg-0pky">optional</td>
-    <td class="tg-0pky">Attester</td>
-    <td class="tg-0pky">optional</td>
-    <td class="tg-0pky">Attester</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Custodian</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Custodian</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Custodian</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="optional border-bottom">optional</td>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="required border-bottom">required</td>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="required border-bottom">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <th colspan="6">Medizinische Inhalte</th>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Problems</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">List of current problems/diagnosis</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Gesundheitsprobleme und Risiken</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Problems</td>
+    <td class="required">required</td>
+    <td class="border-left">List of current problems/diagnosis</td>
+    <td class="required">required</td>
+    <td class="border-left">Gesundheitsprobleme und Risiken</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Allergies and Intolerances</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Allergies and Intolerances</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Allergien und Intoleranzen</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Allergies and Intolerances</td>
+    <td class="required">required</td>
+    <td class="border-left">Allergies and Intolerances</td>
+    <td class="required">required</td>
+    <td class="border-left">Allergien und Intoleranzen</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Medication Summary</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Medication Summary</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Medikationsliste</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Medication Summary</td>
+    <td class="required">required</td>
+    <td class="border-left">Medication Summary</td>
+    <td class="required">required</td>
+    <td class="border-left">Medikationsliste</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Immunizations</td>
-    <td class="tg-0lax">recommended</td>
-    <td class="tg-0lax">Vaccinations</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Impfungen</td>
-    <td class="tg-0lax">recommended</td>
+    <td class="border-left">Immunizations</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Vaccinations</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Impfungen</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Results</td>
-    <td class="tg-0lax">recommended</td>
-    <td class="tg-0lax">Results</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Diagnostische Resultate</td>
-    <td class="tg-0lax">recommended</td>
+    <td class="border-left">Results</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Results</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Diagnostische Resultate</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">History of Procedures</td>
-    <td class="tg-0lax">recommended</td>
-    <td class="tg-0lax">Procedures</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Eingriffe und Therapien</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">History of Procedures</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Procedures</td>
+    <td class="required">required</td>
+    <td class="border-left">Eingriffe und Therapien</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Medical Devices</td>
-    <td class="tg-0lax">recommended</td>
-    <td class="tg-0lax">Medical Devices</td>
-    <td class="tg-0lax">required</td>
-    <td class="tg-0lax">Implantate, medizinische Geräte und Heilbehelfe</td>
-    <td class="tg-0lax">required</td>
+    <td class="border-left">Medical Devices</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Medical Devices</td>
+    <td class="required">required</td>
+    <td class="border-left">Implantate, medizinische Geräte und Heilbehelfe</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Advance Directives</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Advance Directives</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Willenserklärungen und andere juridische Dokumente</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Advance Directives</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Advance Directives</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Willenserklärungen und andere juridische Dokumente</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Functional Status</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Functional Status</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Beeinträchtigungen</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Functional Status</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Functional Status</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Beeinträchtigungen</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">History of Pregnancy</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Pregnancy History</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Schwangerschaftshistorie</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">History of Pregnancy</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Pregnancy History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Schwangerschaftshistorie</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Plan of Care</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Plan of Care</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Behandlungsplan</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Plan of Care</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Plan of Care</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Behandlungsplan</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Vital Signs</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">Vitalparameter</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Vital Signs</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Vitalparameter</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right">Die Vitalparameter werden in einer eigenen Sektion geführt.<br>In einer zukünftigen Version der APS könnten diese in der Sektion<br>"Diagnostische Resultate" aufgenommen werden.</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Alerts</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Medical alert information (other alerts not included in allergies)</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Warnungen</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Alerts</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Medical alert information (other alerts not included in allergies)</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Warnungen</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">History of Past Problems</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">List of resolved, closed or inactive problems</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Vergangene Gesundheitsprobleme und Risiken</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">History of Past Problems</td>
+    <td class="optional">optional</td>
+    <td class="border-left">List of resolved, closed or inactive problems</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Vergangene Gesundheitsprobleme und Risiken</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax">Patient Story</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">Patientenbericht</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Patient Story</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Patientenbericht</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">Medical History</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Medical History</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left border-right">Aktuell keine Entsprechung in der APS.</td>
   </tr>
   <tr>
-    <td class="tg-0lax">Social History</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Social History</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax">Lebensstil / Soziale Umstände und Verhalten</td>
-    <td class="tg-0lax">optional</td>
+    <td class="border-left">Social History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Social History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Lebensstil / Soziale Umstände und Verhalten</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">Travel History</td>
-    <td class="tg-0lax">optional</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="border-left border-bottom"></td>
+    <td class="border-bottom"></td>
+    <td class="border-left border-bottom">Travel History</td>
+    <td class="optional border-bottom">optional</td>
+    <td class="border-left border-bottom"></td>
+    <td class="border-bottom"></td>
+    <td class="border-left border-right border-bottom">Aktuell keine Entsprechung in der APS.</td>
   </tr>
-</tbody></table>
+</table>
