@@ -1,1 +1,4 @@
-tbd
+
+- multiple Vererbung
+- Aufwärtskompatibilität CarePlan -> Extensions
+- 
