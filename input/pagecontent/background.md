@@ -1,32 +1,257 @@
-### Umfeld
+Die Relevanz der Austrian Patient Summary (APS) lässt sich durch zahlreiche aktuelle Projekte und Initiativen beschreiben, die in dem Paper **["Towards the Austrian Patient Summary: Standards and Cross-Border Integration"](https://ebooks.iospress.nl/ISBN/978-1-64368-592-2)** beschrieben werden.
 
-Die Relevanz der Austrian Patient Summary (APS) lässt sich durch die zahlreichen Projekte und Initiativen in ihrem Umfeld erklären. Die folgende Grafik stellt die wichtigsten Einflussgrößen auf der APS dar, wobei jene, die von der AG Integrierte Versorgung mit Austrian Patient Summary bei der Erstellung dieses Leitfadens berücksichtigt worden sind, farblich hervorgehoben wurden.
+Hervorzuheben sind in diesem Zusammenhang die [FHIR®-Spezifikation der International Patient Summary (IPS)](https://hl7.org/fhir/uv/ips/STU2/) sowie der [MyHealth@EU Requirements Catalogue für die Patient Summary](https://webgate.ec.europa.eu/fpfis/wikis/x/4uHzN) ([EU-Login](https://trusted-digital-identity.europa.eu/index_en) erforderlich), die direkten Einfluss auf die vorliegende Spezifikation der APS hatten. 
 
-<div>{% include aps-environment.svg %}</div>
-<br clear="all"/>
+<blockquote class="stu-note" markdown="1">
+- Die Arbeiten rund um die [European Patient Summary (EPS) von HL7EU](https://build.fhir.org/ig/hl7-eu/eps/) sind noch nicht abgeschlossen und können somit noch nicht berücksichtigt werden.
+- Aktuell gibt es noch keine Information darüber, wie die Spezifikation für das European EHR eXchange Format (EEHRxF) im Rahmen vom Europäischen Gesundheitsdatenraum (European Health Data Space, EHDS) aussehen wird.
 
-Beginnend mit HL7® und dem existierenden Standard zur International Patient Summary (IPS) bildet diese die wichtigste Grundlage für die APS. Zuletzt wurde im Rahmen von HL7EU auch an einer europäischen Version der Patient Summary gearbeitet, der European Patient Summary (EPS). Ziel der EPS ist, nationale (europäische) Initiativen zu harmonisieren und als Grundlage für das European EHR eXchange Format (EEHRxF) zu dienen.
+Sobald entsprechende Informationen vorliegen, wird es zu einer Aktualisierung der APS kommen.
+</blockquote>
 
-Auf Ebene der EU gibt es im Rahmen vom grenzüberschreitenden Datenaustausch (MyHealth@EU) eine Spezifikation auf Basis von HL7® CDA®, die von einigen EU-Ländern produktiv eingesetzt wird. Die Grundlage für diese Spezifikation bilden zunächst die Guideline on Patient Summary vom eHealth Network sowie der davon abgeleitete Anforderungskatalog für MyHealth@EU.
+### Fokus auf IPS
 
-Zusätzlich ist mit 26. März 2025 die Verordnung zum Europäischen Gesundheitsdatenraum (European Health Data Space, EHDS) in Kraft getreten. Ein zentrales Element dieser Verordnung ist die Definition der Prioritären Kategorien personenbezogener elektronischer Gesundheitsdaten für die Primärnutzung. Darunter fällt unter anderem die sogenannte Patientenkurzakte (= Patient Summary). Im Rahmen des mit der Verordnung verknüpften Projekts Extended Electronic Health Record (Xt-EHR) soll neben anderen Aufgaben auch die EU-weite Spezifikation für das EEHRxF erarbeitet werden, wobei hier eng mit HL7EU zusammengearbeitet wird.
+In Österreich hat man sich darauf geeinigt, dass die IPS die Grundlage für die APS bilden soll. Die Gründe dafür sind vielseitig. Zunächst gibt es für die IPS sowohl eine [FHIR®](https://hl7.org/fhir/uv/ips/STU2/)- als auch eine [CDA®](https://art-decor.org/art-decor/decor-project--hl7ips-)-Spezifikation, was eine mögliche Konvertierung zwischen den beiden Formaten entsprechend erleichtert. Dem gegenüber steht die Spezifikation der [Patient Summary im Kontext von MyHealth@EU](https://art-decor.ehdsi.eu/art-decor/decor-templates--epsos-?section=templates&id=1.3.6.1.4.1.12559.11.10.1.3.1.1.3), die auf CDA® basiert und die innerhalb der EU eine größere Bedeutung hat als die IPS.
 
-In Österreich haben vor allem nationale Projekte (z.B. zur Umsetzung des EHDS oder zur Integrierten Versorung) sowie die bestehenden CDA® oder FHIR® Implementierungsleitfäden Einfluss auf die Spezifikation der APS.
+Mit dem EHDS zeichnet sich allerdings generell FHIR® ab. Das Projekt Xt-EHR befasst sich in Zusammenarbeit mit HL7EU unter anderem mit der Spezifikation der EPS, die ihrerseits auf die IPS aufbaut. Gleichzeitig wird in Xt-EHR auch die Konvergenz zur IPS beschrieben, weshalb langfristig davon auszugehen ist, dass die IPS im Grunde auch im europäischen Kontext eine zentrale Rolle spielen wird. Ebenso soll die Patient Summary im Rahmen von MyHealth@EU bis März 2029 auf FHIR® umgestellt werden.
 
-#### Fokus auf IPS
+### Vergleich IPS and MyHealth@EU PS
 
-In Österreich hat man sich darauf geeinigt, dass die IPS die Grundlage für die APS bilden soll. Die Gründe dafür sind vielseitig. Zunächst gibt es für die IPS sowohl eine [FHIR®](https://hl7.org/fhir/uv/ips/STU2/)- als auch eine [CDA®](https://art-decor.org/art-decor/decor-project--hl7ips-)-Spezifikation, was eine mögliche Konvertierung zwischen den beiden Formaten entsprechend erleichtert. Dem gegenüber steht die Spezifikation der [Patient Summary im Kontext von MyHealth@EU](https://art-decor.ehdsi.eu/art-decor/decor-templates--epsos-?section=templates&id=1.3.6.1.4.1.12559.11.10.1.3.1.1.3), die auf CDA® basiert und die innerhalb der EU eine größere Bedeutung hat als die IPS. Wann im Rahmen von MyHealth@EU auf FHIR® umgestellt wird, ist zurzeit noch nicht absehbar. Trotzdem zeichnet sich mit dem EHDS FHIR® ab. Das Projekt Xt-EHR befasst sich in Zusammenarbeit mit HL7EU unter anderem mit der Spezifikation der EPS, die ihrerseits auf die IPS aufbaut. Gleichzeitig wird in Xt-EHR auch die Konvergenz zur IPS beschrieben, weshalb langfristig davon auszugehen ist, dass die IPS im Grunde auch im europäischen Kontext eine zentrale Rolle spielen wird.
-
-### Designentscheidung
-
-#### IPS vor EPS
-
-Die APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für die [International Patient Summary (IPS), Version 2.0.0](https://hl7.org/fhir/uv/ips/STU2/) auf. Nachdem es in FHIR® allerdings nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz der APS gegen beide Spezifikationen validiert werden.
-
-<div class="dragon" markdown="1">
-Beim Lesen der APS-Profile müssen insofern auch immer die IPS-Profile berücksichtigt werden. So ist das `subject` in der [AT APS Composition](StructureDefinition-at-aps-composition.html) mit `0..1` modelliert. In der [Composition (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html) ist das `subject` allerdings mit `1..1` modelliert. Die strengere Regel wird bei der Validierung einer Instanz schlagend.
-</div>
-
-#### FHIR® R4
-
-Aktuell gibt es die IPS nur auf Basis von FHIR® R4. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
+<style type="text/css">
+  .ps th {
+    border: 1px solid !important;
+    font-weight: bold;
+    text-align: center;
+  }
+  .ps .required {
+    background-color: #D9AFA4;
+  }
+  .ps .recommended {
+    background-color: #FAEBBD;
+  }
+  .ps .optional {
+    background-color: #BBD3B4;
+  }
+  .ps .border-left {
+    border-left: 1px solid !important;
+  }
+  .ps .border-right {
+    border-right: 1px solid !important;
+  }
+  .ps .border-bottom {
+    border-bottom: 1px solid !important;
+  }
+</style>
+<table class="ps">
+  <tr>
+    <th colspan="2">IPS</th>
+    <th colspan="2">MyHealth@EU Requirements Catalogue</th>
+    <th colspan="2">APS</th>
+    <th rowspan="2">Kommentar</th>
+  </tr>
+  <tr>
+    <th colspan="6">Administrative Inhalte</th>
+  </tr>
+  <tr>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left">Patient</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Author</td>
+    <td class="required">required</td>
+    <td class="border-left">Author</td>
+    <td class="required">required</td>
+    <td class="border-left">Verfasser</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Attester</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="optional border-bottom">optional</td>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="required border-bottom">required</td>
+    <td class="border-left border-bottom">Custodian</td>
+    <td class="required border-bottom">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <th colspan="6">Medizinische Inhalte</th>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Problems</td>
+    <td class="required">required</td>
+    <td class="border-left">List of current problems/diagnosis</td>
+    <td class="required">required</td>
+    <td class="border-left">Gesundheitsprobleme und Risiken</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Allergies and Intolerances</td>
+    <td class="required">required</td>
+    <td class="border-left">Allergies and Intolerances</td>
+    <td class="required">required</td>
+    <td class="border-left">Allergien und Intoleranzen</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Medication Summary</td>
+    <td class="required">required</td>
+    <td class="border-left">Medication Summary</td>
+    <td class="required">required</td>
+    <td class="border-left">Medikationsliste</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Immunizations</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Vaccinations</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Impfungen</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Results</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Results</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Diagnostische Resultate</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">History of Procedures</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Procedures</td>
+    <td class="required">required</td>
+    <td class="border-left">Eingriffe und Therapien</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Medical Devices</td>
+    <td class="recommended">recommended</td>
+    <td class="border-left">Medical Devices</td>
+    <td class="required">required</td>
+    <td class="border-left">Implantate, medizinische Geräte und Heilbehelfe</td>
+    <td class="required">required</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Advance Directives</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Advance Directives</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Willenserklärungen und andere juridische Dokumente</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Functional Status</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Functional Status</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Beeinträchtigungen</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">History of Pregnancy</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Pregnancy History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Schwangerschaftshistorie</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Plan of Care</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Plan of Care</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Behandlungsplan</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Vital Signs</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Vitalparameter</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right">Die Vitalparameter werden in einer eigenen Sektion geführt.<br>In einer zukünftigen Version der APS könnten diese in der Sektion<br>"Diagnostische Resultate" aufgenommen werden.</td>
+  </tr>
+  <tr>
+    <td class="border-left">Alerts</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Medical alert information (other alerts not included in allergies)</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Warnungen</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">History of Past Problems</td>
+    <td class="optional">optional</td>
+    <td class="border-left">List of resolved, closed or inactive problems</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Vergangene Gesundheitsprobleme und Risiken</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left">Patient Story</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Patientenbericht</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left">Medical History</td>
+    <td class="optional">optional</td>
+    <td class="border-left"></td>
+    <td></td>
+    <td class="border-left border-right">Aktuell keine Entsprechung in der APS.</td>
+  </tr>
+  <tr>
+    <td class="border-left">Social History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Social History</td>
+    <td class="optional">optional</td>
+    <td class="border-left">Lebensstil / Soziale Umstände und Verhalten</td>
+    <td class="optional">optional</td>
+    <td class="border-left border-right"></td>
+  </tr>
+  <tr>
+    <td class="border-left border-bottom"></td>
+    <td class="border-bottom"></td>
+    <td class="border-left border-bottom">Travel History</td>
+    <td class="optional border-bottom">optional</td>
+    <td class="border-left border-bottom"></td>
+    <td class="border-bottom"></td>
+    <td class="border-left border-right border-bottom">Aktuell keine Entsprechung in der APS.</td>
+  </tr>
+</table>

@@ -1,6 +1,6 @@
 ValueSet: AtApsImmunizationVaccineCodes
 Id: at-aps-immunization-vaccine-codes
-Title: "AT APS Immunitzation Vaccine Codes"
+Title: "AT APS Immunization Vaccine Codes"
 Description: "Dieses Value-Set erweitert die in Österreich existierenden Impfstoffe um die Möglichkeit, angeben zu können, dass der verimpfte Impfstoff unbekannt ist."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^status = #active
