@@ -44,9 +44,15 @@ Pflichtfelder gemäß FHIR-Definition (cardinality 1..1 oder 1..*) müssen immer
 
 TODO @Gabriel: Derzeit ist die Must Support Kennzechnung in den Profilen der APS visuell nicht sichtbar.
 
-#### Datenherkunft
+### Datenherkunft
 
-Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quellen bzw. über welche Mechanismen die Informationen in die APS übernommen werden. Insbesondere ist offen, ob bestimmte Angaben über e-Befunde bereitgestellt und diese als Quelldokumente herangezogen werden können. Grundsätzlich soll die Herkunft der Daten jeweils in Meta.source abgelegt werden; die konkrete Formatvorgabe für dieses Feld befindet sich noch in Ausarbeitung. Um zukünftige Anwendungsfälle abdecken zu können, besteht zudem die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
+Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta.source` dokumentiert werden.
+
+<blockquote class="stu-note" markdown="1">
+- Die konkrete Formatvorgabe für `meta.source` befindet sich noch in Ausarbeitung. 
+- Zurzeit ist noch nicht geklärt, aus welchen Quellen (z.B. e-Befunde, e-Impfpass, e-Medikation, etc.) bzw. über welche Mechanismen die Informationen in die APS übernommen werden.
+- Um zukünftige Anwendungsfälle abdecken zu können, besteht die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
+</blockquote>
 
 #### Leere Sektionen und fehlende Daten
 
@@ -54,8 +60,11 @@ Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Inf
 Auch mittels Ressourcen können fehlende Informationen dokumentiert werden, z.B. mittels SNOMED Codes, dass keine bekannte Allergie vorliegt.
 Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
 
-### 
+### TODO andere Themen
 
+- Aufwärtskompatibilität CarePlan -> Extensions
+
+### ggf. noch einbauen
 
 #### Kontext und Verwendung von Patient Summary
 
