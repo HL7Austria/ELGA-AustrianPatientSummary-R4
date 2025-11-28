@@ -1,4 +1,56 @@
-Im Grunde orientiert sich die Austrian Patient Summary (APS) an den Inhalten der International Patient Summary (IPS). Die Elemente, wo die APS nicht mit der IPS übereinstimmen werden hier beschrieben.
+Die Austrian Patient Summary (APS) baut auf der International Patient Summary (IPS) auf. In diesem Sinne sind grundsätzlich auch die folgenden Abschnitte der IPS zu beachten:
+
+- [General Principles](https://hl7.org/fhir/uv/ips/STU2/General-Principles.html)
+- [Design Conventions](https://hl7.org/fhir/uv/ips/STU2/Design-Conventions.html)
+- [Must Support and Obligations](https://hl7.org/fhir/uv/ips/STU2/Must-Support-and-Obligations.html)
+- [Empty Sections and Missing Data](https://hl7.org/fhir/uv/ips/STU2/Empty-Sections-and-Missing-Data.html)
+- [Generation and Data Inclusion](https://hl7.org/fhir/uv/ips/STU2/Generation-and-Data-Inclusion.html)
+- [Privacy and Security Considerations](https://hl7.org/fhir/uv/ips/STU2/Privacy-and-Security-Considerations.html)
+- [Known Issues and Future Development](https://hl7.org/fhir/uv/ips/STU2/Known-Issues-and-Future-Development.html)
+
+Für die APS besonders wichtige Aspekte werden hier hervorgehoben, insbesondere dann, wenn von der IPS abgewichen wird.
+
+### Aufbau der APS
+
+Die APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für die [International Patient Summary (IPS), Version 2.0.0](https://hl7.org/fhir/uv/ips/STU2/) auf. 
+
+Nachdem es in FHIR® nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz der APS gegen beide Spezifikationen validiert werden.
+
+<div class="dragon" markdown="1">
+Beim Lesen der APS-Profile müssen insofern auch immer die IPS-Profile berücksichtigt werden. So ist das `subject` in der [AT APS Composition](StructureDefinition-at-aps-composition.html) mit `0..1` modelliert. In der [Composition (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html) ist das `subject` allerdings mit `1..1` modelliert. Die strengere Regel wird bei der Validierung einer Instanz schlagend.
+</div>
+
+Zusätzlich wurden bei der Erstellung der APS die Vorgaben aus dem Requirements Catalogue im Rahmen von [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en) berücksichtigt, insbesondere im Hinblick auf die Erweiterung der verpflichtend zu befüllenden Sektionen. Weitere Erläuterungen finden sich im Kapitel [Hintergrund](background.html).
+
+[![overview](austrian-ips-context.drawio.png){: style="width: 60%"}](austrian-ips-context.drawio.png)
+
+### Profilierung
+
+Wie bei der IPS wurde bei der APS folgender Profilierungsansatz gewählt: Anstatt die Ressourcen streng zu beschränken, wurden hauptsächlich die Pflichtelemente des Minimaldatensatzes festgelegt, während anderen offen bleiben.
+Dieser Ansatz erleichtert die Wiederverwendung der Profile und erlaubt den schrittweisen Zugriff auf zusätzliche relevante Informationen, um zukünftige Anforderungen und spezifische klinische Anwendungsfälle abzubilden.
+* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben ?
+
+#### Must Support und Obligations
+
+Die APS folgt den Grundsätzen des IPS-Standards in Bezug auf „Must Support“ und Verpflichtungen:
+Ein Element, das als Must Support gekennzeichnet ist, muss von Implementierungen unterstützt werden – d.h. Systeme müssen in der Lage sein, das Element zu erfassen, zu speichern, zu übermitteln und anzuzeigen, sofern entsprechende Informationen verfügbar sind.
+Wenn Daten für ein Must Support-Element nicht vorliegen, darf das Element weggelassen oder mit einem geeigneten Data Absent Reason-Code versehen werden. 
+Pflichtfelder gemäß FHIR-Definition (cardinality 1..1 oder 1..*) müssen immer befüllt werden.
+
+TODO @Gabriel: Derzeit ist die Must Support Kennzechnung in den Profilen der APS visuell nicht sichtbar.
+
+#### Datenherkunft
+
+Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quellen bzw. über welche Mechanismen die Informationen in die APS übernommen werden. Insbesondere ist offen, ob bestimmte Angaben über e-Befunde bereitgestellt und diese als Quelldokumente herangezogen werden können. Grundsätzlich soll die Herkunft der Daten jeweils in Meta.source abgelegt werden; die konkrete Formatvorgabe für dieses Feld befindet sich noch in Ausarbeitung. Um zukünftige Anwendungsfälle abdecken zu können, besteht zudem die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
+
+#### Leere Sektionen und fehlende Daten
+
+Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Informationen vorliegen oder verfügbar sind, muss „Composition.section.emptyReason“ befüllt werden, sodass der Grund dafür ersichtlich ist (z.B. "nicht verfügbar" oder "nicht abgefragt"). Nicht verpflichtende Sektionen dürfen bei der Erstellung der Patient Summary weggelassen werden.
+Auch mittels Ressourcen können fehlende Informationen dokumentiert werden, z.B. mittels SNOMED Codes, dass keine bekannte Allergie vorliegt.
+Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
+
+### 
+
 
 #### Kontext und Verwendung von Patient Summary
 
@@ -46,17 +98,7 @@ TODO:
 
 ##### Beziehung zu HL7AT Core, IPS und MyHealth@EU
 
-Die APS baut auf dem [HL7® Austria FHIR® Core Implementation Guide (HL7AT Core IG), Version 2.0.0](https://fhir.hl7.at/HL7-AT-FHIR-Core-R5/2.0.0/) und dem HL7® Leitfaden für die [International Patient Summary (IPS), Version 2.0.0](https://hl7.org/fhir/uv/ips/STU2/) auf. 
 
-Nachdem es in FHIR® nicht möglich ist, mehr als eine Basisdefinition für eine StructureDefinition-Ressource anzugeben, wird nach Möglichkeit immer das entsprechende Profil aus dem HL7AT Core IG als Basisdefinition angegeben und das entsprechende Profil aus der IPS mit Hilfe der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) eingebunden. Damit kann eine Instanz der APS gegen beide Spezifikationen validiert werden.
-
-<div class="dragon" markdown="1">
-Beim Lesen der APS-Profile müssen insofern auch immer die IPS-Profile berücksichtigt werden. So ist das `subject` in der [AT APS Composition](StructureDefinition-at-aps-composition.html) mit `0..1` modelliert. In der [Composition (IPS)](https://hl7.org/fhir/uv/ips/STU2/StructureDefinition-Composition-uv-ips.html) ist das `subject` allerdings mit `1..1` modelliert. Die strengere Regel wird bei der Validierung einer Instanz schlagend.
-</div>
-
-Zusätzlich wurden bei der Erstellung der APS die Vorgaben aus dem Requirements Catalogue im Rahmen von [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en) berücksichtigt, insbesondere im Hinblick auf die Erweiterung der verpflichtend zu befüllenden Sektionen. Weitere Erläuterungen finden sich im Kapitel [Hintergrund](background.html).
-
-[![overview](austrian-ips-context.drawio.png){: style="width: 60%"}](austrian-ips-context.drawio.png)
 
 ##### FHIR® R4
 
@@ -64,9 +106,7 @@ Aktuell liegt die IPS nur auf Basis von FHIR® R4 vor. Ob und wann die IPS auch 
 
 #### Profilierungsansatz
 
-Wie bei der IPS wurde bei der APS folgender Profilierungsansatz gewählt: Anstatt die Ressourcen streng zu beschränken, wurden hauptsächlich die Pflichtelemente des Minimaldatensatzes festgelegt, während anderen offen bleiben.
-Dieser Ansatz erleichtert die Wiederverwendung der Profile und erlaubt den schrittweisen Zugriff auf zusätzliche relevante Informationen, um zukünftige Anforderungen und spezifische klinische Anwendungsfälle abzubilden.
-* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben ?
+
 
 #### Open Slicing
 
@@ -97,27 +137,14 @@ TODO ?
 #### Medicinal Product Identification
 TODO ?
 
-#### Datenherkunft
 
-Zum aktuellen Zeitpunkt ist noch nicht abschließend geklärt, aus welchen Quellen bzw. über welche Mechanismen die Informationen in die APS übernommen werden. Insbesondere ist offen, ob bestimmte Angaben über e-Befunde bereitgestellt und diese als Quelldokumente herangezogen werden können. Grundsätzlich soll die Herkunft der Daten jeweils in Meta.source abgelegt werden; die konkrete Formatvorgabe für dieses Feld befindet sich noch in Ausarbeitung. Um zukünftige Anwendungsfälle abdecken zu können, besteht zudem die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 
 #### Use of Persistent Identifiers in IPS
 TODO ?
 
-#### Must Support und Obligations
 
-Die APS folgt den Grundsätzen des IPS-Standards in Bezug auf „Must Support“ und Verpflichtungen:
-Ein Element, das als Must Support gekennzeichnet ist, muss von Implementierungen unterstützt werden – d.h. Systeme müssen in der Lage sein, das Element zu erfassen, zu speichern, zu übermitteln und anzuzeigen, sofern entsprechende Informationen verfügbar sind.
-Wenn Daten für ein Must Support-Element nicht vorliegen, darf das Element weggelassen oder mit einem geeigneten Data Absent Reason-Code versehen werden. 
-Pflichtfelder gemäß FHIR-Definition (cardinality 1..1 oder 1..*) müssen immer befüllt werden.
 
-TODO @Gabriel: Derzeit ist die Must Support Kennzechnung in den Profilen der APS visuell nicht sichtbar.
 
-#### Leere Sektionen und fehlende Daten
-
-Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Informationen vorliegen oder verfügbar sind, muss „Composition.section.emptyReason“ befüllt werden, sodass der Grund dafür ersichtlich ist (z.B. "nicht verfügbar" oder "nicht abgefragt"). Nicht verpflichtende Sektionen dürfen bei der Erstellung der Patient Summary weggelassen werden.
-Auch mittels Ressourcen können fehlende Informationen dokumentiert werden, z.B. mittels SNOMED Codes, dass keine bekannte Allergie vorliegt.
-Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
 
 #### Optionale Datenelemente mit Must Support/Obligations (cardinality of 0..1 or 0..*)
 
