@@ -11,5 +11,5 @@ Usage: #example
 * code.text = "Verbranntes Ohr"
 * bodySite = $cs-sct#1910005 "Entire ear"
 * bodySite.text = "Entire ear"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * onsetDateTime = "2025-05-24"

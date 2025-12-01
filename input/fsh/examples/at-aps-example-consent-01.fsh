@@ -6,5 +6,5 @@ Usage: #example
 * status = #active
 * category = $cs-loinc#59284-0 "Einwilligung - Dokument"
 * scope = http://terminology.hl7.org/CodeSystem/consentscope#treatment "Treatment"
-* patient = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * policyRule = http://terminology.hl7.org/CodeSystem/consentpolicycodes#cric "Common Rule Informed Consent"

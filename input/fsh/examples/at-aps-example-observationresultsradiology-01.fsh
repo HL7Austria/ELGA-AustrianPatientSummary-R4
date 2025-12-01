@@ -7,10 +7,10 @@ Usage: #example
 * code = $cs-loinc#24627-2 "CT Chest"
 * code.text = "CT Thorax"
 * category[+] = $cs-observation-category#imaging "Imaging"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * partOf = Reference(ImagingStudy/AtApsExampleImagingStudy01)
 * effectiveDateTime = "2025-08-15T09:30:00+02:00"
-* performer = Reference(Practitioner/HL7ATCorePractitionerExample01) "Dr. Melanie Musterärztin"
+* performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * valueString = "Keine pathologischen Befunde im Thoraxbereich. Lunge belüftet, keine Infiltrate."
 * interpretation = $cs-v3-ObservationInterpretation#N "Normal"
 * interpretation.text = "Normalbefund"

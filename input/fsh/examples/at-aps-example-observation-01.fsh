@@ -7,7 +7,7 @@ Usage: #example
 * category = $cs-observation-category#laboratory "Laboratory"
 * code = $cs-loinc#718-7 "Hemoglobin"
 * code.text = "Hämoglobin"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * effectiveDateTime = "2024-10-10T09:30:00+01:00"
 * performer = Reference(Organization/AtApsExampleOrganization01) "Amadeus Spital"
 * valueQuantity = 13.6 'g/dL' "g/dL"

@@ -6,7 +6,7 @@ Usage: #example
 * identifier.value = "12345"
 * status = #completed
 * description = "Dieser 26-jährige männliche Patient wird nach einem Verkehrsunfall mit dem Krankenwagen in die Notaufnahme gebracht."
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * effectivePeriod.start = "2014-12-06T20:00:00+11:00"
 * effectivePeriod.end = "2014-12-06T22:33:00+11:00"
 * date = "2014-12-06T22:33:00+11:00"

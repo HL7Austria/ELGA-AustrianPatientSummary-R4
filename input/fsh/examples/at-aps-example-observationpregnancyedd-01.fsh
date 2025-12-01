@@ -6,7 +6,7 @@ Usage: #example
 * status = #final
 * code = $cs-loinc#11778-8 "Delivery date Estimated"
 * code.text = "Voraussichtlicher Entbindungstermin"
-* subject = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * effectiveDateTime = "2025-05-10"
 * valueDateTime = "2025-12-15"
 * performer = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"

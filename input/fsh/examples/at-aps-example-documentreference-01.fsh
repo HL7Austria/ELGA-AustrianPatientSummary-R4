@@ -10,7 +10,7 @@ Usage: #example
 * status = #current
 * docStatus = #preliminary
 * type = $cs-loinc#34108-1 "Outpatient Note"
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * date = "2005-12-24T09:43:41+11:00"
 * author[0] = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * authenticator = Reference(Organization/AtApsExampleOrganization01)

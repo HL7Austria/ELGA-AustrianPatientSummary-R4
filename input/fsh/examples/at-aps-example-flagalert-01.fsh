@@ -9,5 +9,5 @@ Usage: #example
 * category.text = "Sicherheit"
 * code = $cs-sct#165002 "Accident-prone"
 * code.text = "Der Patient zeigt eine erhöhte Sturzgefährdung."
-* subject = Reference(Patient/HL7ATCorePatientExample01) "Max Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * author = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"

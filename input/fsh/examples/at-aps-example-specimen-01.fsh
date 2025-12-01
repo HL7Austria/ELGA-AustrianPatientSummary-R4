@@ -8,9 +8,9 @@ Usage: #example
 * status = #available
 * type = $cs-sct#119376003 "Tissue specimen"
 * type.text = "Gewebeprobe"
-* subject = Reference(Patient/at-aps-example-patient-01) "Maria Mustermann"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * receivedTime = "2025-06-20T10:00:00+02:00"
-* collection.collector = Reference(Practitioner/HL7ATCorePractitionerExample01) "Dr. Melanie Musterärztin"
+* collection.collector = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * collection.collectedDateTime = "2025-06-19T15:00:00+02:00"
 * collection.bodySite = $cs-sct#76752008 "Breast structure (body structure)"
 * collection.bodySite.text = "Brustgewebe"
