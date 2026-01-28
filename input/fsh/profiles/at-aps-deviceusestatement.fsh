@@ -8,3 +8,6 @@ Description: "Das AT APS-Profil für die DeviceUseStatement-Ressource berücksic
 * ^extension[$imposeProfile].valueCanonical = Canonical(DeviceUseStatementUvIps)
 * subject only Reference(AtApsPatient)
 * device only Reference(AtApsDevice)
+* derivedFrom only Reference(ServiceRequest or AtApsProcedure or Claim or AtApsObservation or QuestionnaireResponse or AtApsDocumentReference)
+* source only Reference(AtApsPatient or AtApsPractitioner or AtApsPractitionerRole or RelatedPerson)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport or AtApsDocumentReference or Media)

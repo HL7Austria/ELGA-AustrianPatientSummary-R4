@@ -8,3 +8,7 @@ Description: "Das AT APS-Profil für die MedicationStatement-Ressource berücksi
 * ^extension[$imposeProfile].valueCanonical = Canonical(MedicationStatementIPS)
 * medication[x] only CodeableConcept or Reference(AtApsMedication)
 * subject only Reference(AtApsPatient)
+* basedOn only Reference(AtApsMedicationRequest or AtApsCarePlan or ServiceRequest)
+* partOf only Reference(AtApsMedicationAdministration or AtApsMedicationDispense or AtApsMedicationStatement or AtApsProcedure or AtApsObservation)
+* informationSource only Reference(AtApsPatient or AtApsPractitioner or AtApsPractitionerRole or RelatedPerson or AtApsOrganization)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport)

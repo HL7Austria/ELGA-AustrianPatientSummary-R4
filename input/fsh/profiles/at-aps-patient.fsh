@@ -10,3 +10,4 @@ Description: "Das AT APS-Profil für die Patient-Ressource ist vom entsprechende
 * name.given 1..*
 * birthDate 1..1
 * identifier[localPatientId] 1..1
+* link.other only Reference(AtApsPatient or RelatedPerson)

@@ -9,11 +9,15 @@ Description: "Das AT APS-Profil für die DiagnosticReport-Ressource berücksicht
 * subject only Reference(AtApsPatient or Group)
 * performer only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam)
 * specimen only Reference(AtApsSpecimen)
+* basedOn only Reference(AtApsCarePlan or ImmunizationRecommendation or AtApsMedicationRequest or NutritionOrder or ServiceRequest)
+* resultsInterpreter only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam)
+* imagingStudy only Reference(AtApsImagingStudy)
 
 * result ^slicing.discriminator.type = #profile
 * result ^slicing.discriminator.path = "resolve()"
 * result ^slicing.rules = #open
 * result ^slicing.ordered = false
 * result contains observationResults 0..*
+* result only Reference(AtApsObservation)
 * result[observationResults] 0..*
 * result[observationResults] only Reference(AtApsObservationResultsLaboratoryPathology or AtApsObservationResultsRadiology)

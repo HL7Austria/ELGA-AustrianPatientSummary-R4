@@ -16,6 +16,12 @@ Description: "Das AT APS-Profil für die Immunization-Ressource berücksichtigt 
   *  valueReference 1..1
   *  valueReference only Reference(AtApsCarePlan or AtApsMedicationRequest or ServiceRequest or ImmunizationRecommendation)
 
+* manufacturer only Reference(AtApsOrganization)
+* performer.actor only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport)
+* reaction.detail only Reference(AtApsObservation)
+* protocolApplied.authority only Reference(AtApsOrganization)
+
 * vaccineCode from AtApsImmunizationVaccineCodes (extensible)
 * vaccineCode ^binding.extension[0].extension[0].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
