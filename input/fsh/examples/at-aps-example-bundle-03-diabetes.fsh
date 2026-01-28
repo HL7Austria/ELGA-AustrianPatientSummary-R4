@@ -298,12 +298,12 @@ Usage: #inline
 // Careplan Schulungen
 
 Instance: AtApsExample03Diabetes-schulung-1
-InstanceOf: CarePlan
+InstanceOf: AtApsCarePlan
 Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Schulung zur Verbesserung der Mobilität </p></div>"
 * identifier.value = "12345"
-//* instantiatesUri = "http://example.org/protocol-for-heart-association-event"
+* extension[shallComplyWith].valueUri = "http://example.org/protocol-for-heart-association-event"
 * basedOn.display = "Schulungen für Diabetespatienten"
 * replaces.display = "Plan"
 * partOf.display = "Plan"
@@ -318,18 +318,6 @@ Usage: #inline
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * addresses = Reference(urn:uuid:61db6213-22ab-405a-825a-0ae6905fad1e) "AtApsExample03Diabetes-problem-3"
 * activity.outcomeCodeableConcept = $cs-sct#408443003 "Allgemeines Verfahren"
-// * activity.outcomeReference = Reference(Observation/example) "Patient ist über das Ereignis informiert" // ??
-* activity.detail.code.coding[0] = $cs-sct#409063005 "Beratung"
-* activity.detail.code.coding[+] = $cs-sct#1293061000168108 "Dienst für Gesundheitsförderung"
-* activity.detail.status = #completed
-* activity.detail.statusReason.text = "Der Hausarzt informierte den Patienten über eine Veranstaltung des Herzverbandes zur Förderung der Herzgesundheit."
-* activity.detail.doNotPerform = false
-* activity.detail.scheduledTiming.repeat.frequency = 1
-* activity.detail.scheduledTiming.repeat.period = 1
-* activity.detail.scheduledTiming.repeat.periodUnit = #d
-* activity.detail.location.display = "Informationsveranstaltung des Herzverbandes"
-* activity.detail.performer = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
-
 
 // Medication Summary
 

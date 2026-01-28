@@ -7,7 +7,7 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Ein einfacher Pflegeplan, der angibt, dass ein Patient aufgrund von Adipositas einmal täglich sein Gewicht messen soll.</p>\n</div>"
 * addresses = Reference(Condition/AtApsExampleCondition01)
 * identifier.value = "12345"
-* instantiatesUri = "http://example.org/protocol-for-obesity"
+* extension[shallComplyWith].valueUri = "http://example.org/protocol-for-obesity"
 * basedOn.display = "Behandlung von Typ-2-Diabetes"
 * replaces.display = "Plan der Klinik"
 * partOf.display = "Allgemeiner Wellnessplan"
