@@ -18,7 +18,7 @@ Description: "Das AT APS-Profil für die Condition-Ressource berücksichtigt zum
 * category ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * severity from $vs-elga-problemseverity (extensible)
-* code from AtApsProblems (extensible)
+* code from ProblemsUvIps (extensible)
 * bodySite ^binding.strength = #extensible
 * recorder only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson)
 * asserter only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson)

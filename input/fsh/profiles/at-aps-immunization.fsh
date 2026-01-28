@@ -7,8 +7,15 @@ Description: "Das AT APS-Profil für die Immunization-Ressource berücksichtigt 
 * . ^short = "AT APS Immunization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImmunizationUvIps)
 * patient only Reference(AtApsPatient)
-* extension contains AtApsExtImmunizationBasedOn named basedOn 0..1
-* extension[basedOn].valueReference only Reference(CarePlan or AtApsMedicationRequest or ServiceRequest or ImmunizationRecommendation)
+
+* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.basedOn named ImmunizationBasedOnR5 0..*
+
+* extension[ImmunizationBasedOnR5]
+  * ^short = "Authority that the immunization event is based on"
+  * ^definition = "This extension implements the R5 basedOn element. A plan, order or recommendation fulfilled in whole or in part by this immunization."
+  *  valueReference 1..1
+  *  valueReference only Reference(AtApsCarePlan or AtApsMedicationRequest or ServiceRequest or ImmunizationRecommendation)
+
 * manufacturer only Reference(AtApsOrganization)
 * performer.actor only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
 * reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport)
