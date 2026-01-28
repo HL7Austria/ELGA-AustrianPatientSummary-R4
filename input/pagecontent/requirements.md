@@ -14,8 +14,8 @@ Im Folgenden werden die Inhalte der Sektionen zusammenfassend beschrieben und, s
 | **Sektion** | **Beschreibung** | **Konformität** | **Profile** |
 |---|---|---|---|
 | **Patient (Subject)** | Patientendaten, inkl. Angabe von Kontaktpersonenen, Hausarzt bzw. primäre Ansprechpartner. | 1..1 | [AtApsPatient](StructureDefinition-at-aps-patient.html) |
-| **Verfasser (Author)** | Automatische Erstellung der Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsDevice](StructureDefinition-at-aps-device.html) |
-| **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Entfällt bei automatischer Erstellung. | 0..* |  |
+| **Verfasser (Author)** | Autor der Patient Summary. Bei Angabe eines Devices z.B. automatische Erstellung der Patient Summary durch die Zentrale Anwendung. | 1..* | [AtApsPractitioner](StructureDefinition-at-aps-practitioner.html), [AtApsPractitionerRole](StructureDefinition-at-aps-practitionerrole.html), [AtApsDevice](StructureDefinition-at-aps-device.html) |
+| **Rechtlicher Unterzeichner (Attester)** | Person, die die Richtigkeit der Zusammenstellung bestätigt. Darf bei automatischer Erstellung durch ein Device nicht angegeben werden. | 0..* | [AtApsPractitioner](StructureDefinition-at-aps-practitioner.html), [AtApsPractitionerRole](StructureDefinition-at-aps-practitionerrole.html) |
 | **Verwahrer des Dokuments (Custodian)** | Organisation, die die Patient Summary verwaltet (Zentrale Anwendung). | 1..1 | [AtApsOrganization](StructureDefinition-at-aps-organization.html) |
 
 <br>
@@ -61,7 +61,13 @@ Folgendes Use Case Diagramm stellt die im Kontext Implementierungsleitfaden rele
 
 **Beschreibung**
 
-Die Inhalte der APS werden automatisch aus den angebundenen Registern zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+Die Inhalte der APS werden automatisch aus den angebundenen Registern (e-Medikation, e-Impfpass, etc.) zusammengeführt und basieren somit auf den aktuellsten vorhandenen Gesundheitsdaten des Patienten. Die APS dient im Weiteren dazu, nach festgelegten Kriterien fachspezifische Dokumente (wie z.B. ein Leitdokument für Diabetes) zu generieren und für den Abruf zur Verfügung zu stellen. Auf der APS basierende Dokumentenklassen werden in eigenen Implementierungsleitfäden spezifiziert.
+
+<blockquote>
+    <p>
+        <b>Note:</b> Wie die Aggregation genauer erfolgt, kann zum aktuellen Zeitpunkt noch nicht beschrieben werden und wird in einer späteren Version der APS ergänzt.
+    </p>
+</blockquote>
 
 **Auslöser**
 

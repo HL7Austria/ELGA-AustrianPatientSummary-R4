@@ -157,7 +157,6 @@ Usage: #inline
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. Hannes Hausarzt"
 * title = "International Patient Summary - Preventive Medical Checkup"
 * custodian = Reference(urn:uuid:f6266e6a-f63d-4673-b2de-3dff11e619d6) "Muster-Organisation"
-* extension[countryOfAffiliation].valueString = "AT"
 // Medication Summary
 * section[sectionMedications].title = "Medikationsliste"
 * section[sectionMedications].code = $cs-loinc#10160-0 "Medikationsanamnese"

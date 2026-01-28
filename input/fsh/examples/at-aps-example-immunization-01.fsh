@@ -3,13 +3,15 @@ InstanceOf: AtApsImmunization
 Title: "Immunization-Beispiel 1"
 Description: "Impfung Diphtherie, Pertussis, Poliomyelitis und Tetanus"
 Usage: #example
+* contained = ExampleServiceRequest01
 * status = #completed
 * id = "at-aps-example-immunization-01"
+* extension[ImmunizationBasedOnR5].valueReference = Reference(ExampleServiceRequest01)
 //* vaccineCode.coding[0] = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.coding = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.text = "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
 * patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
-* performer.actor = Reference(Practitioner/at-aps-example-practitioner-01) "Dr. Hanna Hausärztin"
+* performer.actor = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * vaccineCode = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * occurrenceDateTime = "2021-10-01"
 //* primarySource = true
@@ -20,3 +22,13 @@ Usage: #example
 * protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#27836007 "Pertussis"
 * protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#398102009 "Poliomyelitis"
 * protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#76902006 "Tetanus"
+
+Instance: ExampleServiceRequest01
+InstanceOf: ServiceRequest
+Usage: #inline
+* status = #active
+* intent = #order
+* code = $cs-sct#390865008
+* subject = Reference(Patient/at-aps-example-patient-01) "Max Mustermann"
+* occurrenceDateTime = "2021-10-01"
+* note.text = "Patient hat Angst vor Spritzen."

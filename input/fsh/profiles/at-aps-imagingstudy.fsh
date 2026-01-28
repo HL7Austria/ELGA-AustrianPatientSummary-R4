@@ -7,3 +7,10 @@ Description: "Das AT APS-Profil für die ImagingStudy-Ressource berücksichtigt 
 * . ^short = "AT APS ImagingStudy"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ImagingStudyUvIps)
 * subject only Reference(AtApsPatient)
+* basedOn only Reference(AtApsCarePlan or ServiceRequest or Appointment or AppointmentResponse or Task)
+* referrer only Reference(AtApsPractitioner or AtApsPractitionerRole)
+* interpreter only Reference(AtApsPractitioner or AtApsPractitionerRole)
+* procedureReference only Reference(AtApsProcedure)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or Media or AtApsDiagnosticReport or AtApsDocumentReference)
+* series.specimen only Reference(AtApsSpecimen)
+* series.performer.actor only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization or CareTeam or AtApsPatient or AtApsDevice or RelatedPerson)

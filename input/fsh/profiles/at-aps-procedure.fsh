@@ -11,3 +11,12 @@ Description: "Das AT APS-Profil für die Procedure-Ressource berücksichtigt zum
 * performer.onBehalfOf only Reference(AtApsOrganization)
 * code from $vs-procedures-uv-ips (extensible)
 * bodySite ^binding.strength = #extensible
+* basedOn only Reference(AtApsCarePlan or ServiceRequest)
+* partOf only Reference(AtApsProcedure or AtApsObservation or AtApsMedicationAdministration)
+* recorder only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole)
+* asserter only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsProcedure or AtApsDiagnosticReport or AtApsDocumentReference)
+* report only Reference(AtApsDiagnosticReport or AtApsDocumentReference or AtApsComposition)
+* complicationDetail only Reference(AtApsCondition)
+* focalDevice.manipulated only Reference(AtApsDevice)
+* usedReference only Reference(AtApsDevice or AtApsMedication or Substance)
