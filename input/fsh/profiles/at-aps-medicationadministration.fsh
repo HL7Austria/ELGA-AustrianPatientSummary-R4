@@ -6,3 +6,9 @@ Description: "Das AT APS-Profil f√ºr die MedicationAdministration-Ressource ber√
 * ^status = #active
 * . ^short = "At APS MedicationAdministration"
 * subject only Reference(AtApsPatient or Group)
+* partOf only Reference(AtApsMedicationAdministration or AtApsProcedure)
+* medication[x] only Reference(AtApsMedication)
+* performer.actor only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson or AtApsDevice)
+* reasonReference only Reference(AtApsCondition or AtApsObservation or AtApsDiagnosticReport)
+* request only Reference(AtApsMedicationRequest)
+* device only Reference(AtApsDevice)

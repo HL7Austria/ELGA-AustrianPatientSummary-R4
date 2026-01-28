@@ -6,3 +6,8 @@ Description: "Das AT APS-Profil für die Organization-Ressource ist vom entsprec
 * ^status = #active
 * . ^short = "AT APS Organization"
 * ^extension[$imposeProfile].valueCanonical = Canonical(OrganizationUvIps)
+* identifier[GDA-OID].assigner only Reference(AtApsOrganization)
+* identifier[VPNR].assigner only Reference(AtApsOrganization)
+* identifier[VKZ].assigner only Reference(AtApsOrganization)
+* identifier[KANR].assigner only Reference(AtApsOrganization)
+* partOf only Reference(AtApsOrganization)

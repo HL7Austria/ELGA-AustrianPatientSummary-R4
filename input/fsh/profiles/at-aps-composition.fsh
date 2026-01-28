@@ -10,6 +10,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * obeys aps-comp-1
 
 * subject only Reference(AtApsPatient)
+* attester.party only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
 * relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
 * custodian 1..1
 
