@@ -345,7 +345,7 @@ Usage: #inline
 * dosage.timing.repeat.when = $cs-event-timing#NIGHT "Night"
 * dosage.timing.repeat.dayOfWeek = #fri
 * dosage.route = $cs-sct#26643006 "Oraler Verabreichungsweg"
-* dosage.doseAndRate.doseQuantity = 2 $cs-elga-medikationmengenart#{TAB} "Tablet"
+* dosage.doseAndRate.doseQuantity = 2 $cs-ucum#{TAB} "Tablet"
 
 // Allergies and Intolerances
 
