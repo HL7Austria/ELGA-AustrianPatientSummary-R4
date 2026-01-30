@@ -6,7 +6,7 @@ import decimal
 import math
 from urllib.parse import urlparse
 
-from . import date as dateutil
+import date as dateutil
 
 time_units = ["year", "years", "month", "months", "week", "weeks", "day", "days", "hour", "hours", "minute", "minutes", "second", "seconds", "millisecond", "milliseconds"]
 
