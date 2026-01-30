@@ -1,5 +1,4 @@
 import datetime
-import dateutil
 import inspect
 import io
 import re
@@ -7,7 +6,7 @@ import decimal
 import math
 from urllib.parse import urlparse
 
-import dateutil.parser
+import date as dateutil
 
 time_units = ["year", "years", "month", "months", "week", "weeks", "day", "days", "hour", "hours", "minute", "minutes", "second", "seconds", "millisecond", "milliseconds"]
 
@@ -100,7 +99,8 @@ class FHIRPathUtils(object):
             self.SystemQuantity: "Quantity"
         }
 
-    def get(self, val, attr, strip=False):
+    def get(self, val, *attrs, **options):
+        attr = attrs[0]
         try:
             result = getattr(val, attr) or []
         except AttributeError:
@@ -119,14 +119,20 @@ class FHIRPathUtils(object):
                         prefix = getattr(val, key)
                         if prefix and attr.lower() == (prefix + key[:-10]).lower():
                             result = getattr(val, key[:-10]) or []
-        if result != [] and strip:
+        if result != [] and len(attrs) == 1 and options.get("strip", False):
             result = str(result).strip()
-        return result if isinstance(result, list) else [result]
+            if result == "":
+                result = []
+        result = result if isinstance(result, list) else [result]
+        if len(attrs) == 1:
+            return result
+        else:
+            return [v2 for v in result for v2 in self.get(v, *attrs[1:], **options)]
 
     def string_value(self, val):
         if isinstance(val, str):
             return val
-        elif isinstance(val, self.model.string) or isinstance(val, self.model.uri):
+        elif isinstance(val, self.model.string) or isinstance(val, self.model.uri) or isinstance(val, self.model.code) or isinstance(val, self.model.canonical) or isinstance(val, self.model.id):
             return val.value
         elif isinstance(val, self.model.div):
             tmp = io.StringIO()
@@ -194,7 +200,12 @@ class FHIRPathUtils(object):
         else:
             raise BaseException("Unexpected type: %s (expected %s)" % (val, expected_types))
 
-    def bool_and(self, val_a, val_b):
+    def bool_and(self, *vals):
+        if len(vals) > 2:
+            result = self.bool_and(*vals[1:])
+            return self.bool_and(vals[0], result)
+        else:
+            val_a, val_b = vals
         val_a = self.boolean_value(val_a)
         val_b = self.boolean_value(val_b)
         if val_a == [] or val_b == []:
@@ -205,7 +216,12 @@ class FHIRPathUtils(object):
         else:
             return [val_a and val_b]
 
-    def bool_or(self, val_a, val_b):
+    def bool_or(self, *vals):
+        if len(vals) > 2:
+            result = self.bool_or(*vals[1:])
+            return self.bool_or(vals[0], result)
+        else:
+            val_a, val_b = vals
         val_a = self.boolean_value(val_a)
         val_b = self.boolean_value(val_b)
         if val_a == [] or val_b == []:
@@ -294,17 +310,20 @@ class FHIRPathUtils(object):
                 results.append(key)
         return results
 
-    def add(self, val_a, val_b):
+    def add(self, *vals):
+        if len(vals) > 2:
+            result = self.add(*vals[1:])
+            return self.add(vals[0], result)
+        else:
+            val_a, val_b = vals
         val_a = self.single_value(val_a)
         val_b = self.single_value(val_b)
         if val_a == [] or val_b == []:
             return []
         else:
             if isinstance(val_a, (str, self.model.string)) or isinstance(val_b, (str, self.model.string)):
-                if isinstance(val_a, self.model.string):
-                    val_a = val_a.value
-                elif isinstance(val_b, self.model.string):
-                    val_b = val_b.value
+                val_a = self.string_value(val_a)
+                val_b = self.string_value(val_b)
             return [val_a + val_b] # TODO check types and add support for quantity 
 
     def subtract(self, val_a, val_b):
@@ -488,7 +507,7 @@ class FHIRPathUtils(object):
         if val == [] or regex == []:
             return []
         else:
-            return [re.fullmatch(val, regex)]
+            return [re.fullmatch(regex, val) is not None]
 
     def contains(self, val, other):
         val = self.string_value(val)
@@ -497,6 +516,24 @@ class FHIRPathUtils(object):
             return []
         else:
             return [other in val]
+
+    def replace(self, val, pattern, substitution):
+        val = self.string_value(val)
+        pattern = self.string_value(self.single_value(pattern, str, self.model.string))
+        substitution = self.string_value(self.single_value(substitution, str, self.model.string))
+        if val == [] or pattern == [] or substitution == []:
+            return []
+        else:
+            return [val.replace(pattern, substitution)]
+
+    def replaceMatches(self, val, regex, substitution):
+        val = self.string_value(val)
+        regex = self.string_value(self.single_value(regex, str, self.model.string))
+        substitution = self.string_value(self.single_value(substitution, str, self.model.string))
+        if val == [] or regex == [] or substitution == []:
+            return []
+        else:
+            return [re.sub(regex, substitution, val)]
 
     def startswith(self, val, other):
         val = self.string_value(val)
@@ -527,13 +564,20 @@ class FHIRPathUtils(object):
             return [-1]
 
     def concat(self, val, other):
-        val = self.string_value(self.single_value(val, str, self.model.string))
-        other = self.string_value(self.single_value(other, str, self.model.string))
+        val = self.string_value(self.single_value(val))
+        other = self.string_value(self.single_value(other))
         if val == []:
             val = ""
         if other == []:
             other = ""
         return [val + other]
+    
+    def split(self, val, separator):
+        val = self.string_value(self.single_value(val))
+        separator = self.string_value(self.single_value(separator))
+        if val == [] or separator == []:
+            return []
+        return val.split(separator)
 
     def skip(self, val, count):
         count = self.single_value(count, int, self.model.integer)
@@ -720,7 +764,7 @@ class FHIRPathUtils(object):
                 key = val
         elif isinstance(val, self.model.dateTime) or isinstance(val, datetime.datetime):
             val = val.value if isinstance(val, self.model.dateTime) else val
-            key = dateutil.parser.parse(val) if isinstance(val, str) else val
+            key = dateutil.parse(val) if isinstance(val, str) else val
             if isinstance(val, str):
                 prec = -1 * len(val.split(":"))
                 if key.tzinfo:
@@ -735,7 +779,7 @@ class FHIRPathUtils(object):
             if isinstance(key, str):
                 prec = len(key.split("-"))
                 if prec == 3:
-                    key = dateutil.parser.parse(key).date()
+                    key = dateutil.parse(key).date()
             else:
                 prec = 3
             type_ = "date"
@@ -982,6 +1026,8 @@ class FHIRPathUtils(object):
                 result = val.value
             else:
                 result = str(val)
+        elif isinstance(val, dateutil.PartialDate):
+            result = val.isoformat()
         else:
             result = False
         return [result]
@@ -1087,7 +1133,7 @@ class FHIRPathUtils(object):
             return []
         elif isinstance(val, self.model.dateTime) or isinstance(val, datetime.datetime):
             if isinstance(val, self.model.dateTime):
-                result = self.model.date(value=dateutil.parser.parse(val.value).date().isoformat())
+                result = self.model.date(value=dateutil.parse(val.value).date().isoformat())
             else:
                 result = self.model.date(value=val.date().isoformat())
             return [result]
@@ -1122,7 +1168,7 @@ class FHIRPathUtils(object):
         elif isinstance(val, self.model.string) or isinstance(val, str):
             try:
                 if "T" in val or not "-" in val: # support for CDA dates
-                    return [self.model.dateTime(value=dateutil.parser.parse(val).isoformat())]
+                    return [self.model.dateTime(value=dateutil.parse(val).isoformat())]
                 else:
                     return [self.model.dateTime(value=datetime.datetime.strptime(val,"-".join("%Y-%m-%d".split("-")[:len(val.split("-"))])).isoformat())]
             except:
@@ -1265,17 +1311,17 @@ class FHIRPathUtils(object):
         else:
             profile = self.string_value(profile[0])
             if profile.startswith("http://hl7.org/fhir/StructureDefinition/"):
-                return type(val[0]).__name__ == profile.rstrip("/").split("/")[-1]
+                return [type(val[0]).__name__ == profile.rstrip("/").split("/")[-1]]
             else:
                 meta = self.get(val[0], "meta") # TODO add test
                 if not meta:
-                    return False
+                    return [False]
                 profiles = self.get(meta, "profile")
                 for p in profiles:
                     p = self.string_value(p)
                     if p == profile:
-                        return True
-                return False
+                        return [True]
+                return [False]
 
     def extension(self, val, extension):
         if val == [] or extension == []:

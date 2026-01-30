@@ -1,9 +1,10 @@
 
 import argparse
-import time
+import time as sys_time
 import json
-from datetime import datetime
-import dateutil.parser
+from datetime import datetime, time as datetime_time
+import date as dateutil
+from html import escape as html_escape
 import r4
 import vidi as malac_vidi
 import utils
@@ -25,7 +26,7 @@ def init_argparse() -> argparse.ArgumentParser:
     return parser
 
 def transform(source_path, target_path):
-    start = time.time()
+    start = sys_time.time()
     print('+++++++ Transformation from '+source_path+' to '+target_path+' started +++++++')
 
     if source_path.endswith('.xml'):
@@ -42,289 +43,527 @@ def transform(source_path, target_path):
             f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
             vidi.export(f, 0, namespacedef_='xmlns="http://hl7.org/fhir" xmlns:v3="urn:hl7-org:v3"')
         elif target_path.endswith('.json'):
-            json.dump(vidi.exportJson(), f)
+            json.dump(vidi.exportJson(), f, indent=4)
         else:
             raise BaseException('Unknown target file ending')
 
-    print('altogether in '+str(round(time.time()-start,3))+' seconds.')
+    print('altogether in '+str(round(sys_time.time()-start,3))+' seconds.')
     print('+++++++ Transformation from '+source_path+' to '+target_path+' ended  +++++++')
 
 def groot(bundi, vidi):
     for entry in bundi.entry or []:
-        med = entry.resource
-        if med:
-            med = unpack_container(med)
-            if isinstance(med, r4.MedicationStatement):
+        author = unpack_container(entry.resource)
+        if author is not None:
+            if type(author) is r4.Practitioner:
+                if vidi.author is None:
+                    vidi.author = malac_vidi.authorType()
+                vauthor = vidi.author
+                authorToVidi(author, vauthor)
+        patient = unpack_container(entry.resource)
+        if patient is not None:
+            if type(patient) is r4.Patient:
+                if vidi.subject is None:
+                    vidi.subject = malac_vidi.subjectType()
+                vsubject = vidi.subject
+                patientToVidi(patient, vsubject)
+        med = unpack_container(entry.resource)
+        if med is not None:
+            if type(med) is r4.MedicationStatement:
                 med_effper = med.effectivePeriod
-                if med_effper:
-                    if fhirpath.single((fhirpath_utils.bool_or(fhirpath_utils.bool_not([bool([v2 for v1 in [med_effper] for v2 in fhirpath_utils.get(v1,'end')])]), fhirpath_utils.compare([v5 for v4 in [med_effper] for v5 in fhirpath_utils.get(v4,'end')], '>=', [one_timestamp.date()])))):
-                        vcmd = malac_vidi.v_current_medication_dataType()
-                        if vidi.v_current_medication_data is not None:
-                            vcmd = vidi.v_current_medication_data
-                        else:
-                            vidi.v_current_medication_data = vcmd
+                if med_effper is not None:
+                    if fhirpath.single(fhirpath_utils.bool_or([(med_effper.end is None)], fhirpath_utils.compare(fhirpath_utils.get(med_effper,'end'), '>=', [one_timestamp.date()]))):
+                        if vidi.v_current_medication_data is None:
+                            vidi.v_current_medication_data = malac_vidi.v_current_medication_dataType()
+                        vcmd = vidi.v_current_medication_data
                         data = malac_vidi.dataType()
                         vcmd.data.append(data)
                         medication_data(med, data)
-        med = entry.resource
-        if med:
-            med = unpack_container(med)
-            if isinstance(med, r4.MedicationStatement):
+        med = unpack_container(entry.resource)
+        if med is not None:
+            if type(med) is r4.MedicationStatement:
                 med_effper = med.effectivePeriod
-                if med_effper:
-                    if fhirpath.single((fhirpath_utils.bool_or(fhirpath_utils.bool_not([bool([v2 for v1 in [med_effper] for v2 in fhirpath_utils.get(v1,'end')])]), fhirpath_utils.compare([v5 for v4 in [med_effper] for v5 in fhirpath_utils.get(v4,'end')], '>=', [one_timestamp.date()])))):
-                        icmd = malac_vidi.i_current_medication_dataType()
-                        if vidi.i_current_medication_data is not None:
-                            icmd = vidi.i_current_medication_data
-                        else:
-                            vidi.i_current_medication_data = icmd
+                if med_effper is not None:
+                    if fhirpath.single(fhirpath_utils.bool_or([(med_effper.end is None)], fhirpath_utils.compare(fhirpath_utils.get(med_effper,'end'), '>=', [one_timestamp.date()]))):
+                        if vidi.i_current_medication_data is None:
+                            vidi.i_current_medication_data = malac_vidi.i_current_medication_dataType()
+                        icmd = vidi.i_current_medication_data
                         data = malac_vidi.dataType1()
                         icmd.data.append(data)
                         i_medication_data(med, data)
-        med = entry.resource
-        if med:
-            med = unpack_container(med)
-            if isinstance(med, r4.MedicationStatement):
+        med = unpack_container(entry.resource)
+        if med is not None:
+            if type(med) is r4.MedicationStatement:
                 med_effper = med.effectivePeriod
-                if med_effper:
-                    if fhirpath.single((fhirpath_utils.compare([v2 for v1 in [med_effper] for v2 in fhirpath_utils.get(v1,'end')], '<', [one_timestamp.date()]))):
-                        vpmd = malac_vidi.v_past_medication_dataType()
-                        if vidi.v_past_medication_data is not None:
-                            vpmd = vidi.v_past_medication_data
-                        else:
-                            vidi.v_past_medication_data = vpmd
+                if med_effper is not None:
+                    if fhirpath.single(fhirpath_utils.compare(fhirpath_utils.get(med_effper,'end'), '<', [one_timestamp.date()])):
+                        if vidi.v_past_medication_data is None:
+                            vidi.v_past_medication_data = malac_vidi.v_past_medication_dataType()
+                        vpmd = vidi.v_past_medication_data
                         data = malac_vidi.dataType2()
                         vpmd.data.append(data)
                         medication_data(med, data)
-        med = entry.resource
-        if med:
-            med = unpack_container(med)
-            if isinstance(med, r4.MedicationStatement):
+        med = unpack_container(entry.resource)
+        if med is not None:
+            if type(med) is r4.MedicationStatement:
                 med_effper = med.effectivePeriod
-                if med_effper:
-                    if fhirpath.single((fhirpath_utils.compare([v2 for v1 in [med_effper] for v2 in fhirpath_utils.get(v1,'end')], '<', [one_timestamp.date()]))):
-                        ipmd = malac_vidi.i_past_medication_dataType()
-                        if vidi.i_past_medication_data is not None:
-                            ipmd = vidi.i_past_medication_data
-                        else:
-                            vidi.i_past_medication_data = ipmd
+                if med_effper is not None:
+                    if fhirpath.single(fhirpath_utils.compare(fhirpath_utils.get(med_effper,'end'), '<', [one_timestamp.date()])):
+                        if vidi.i_past_medication_data is None:
+                            vidi.i_past_medication_data = malac_vidi.i_past_medication_dataType()
+                        ipmd = vidi.i_past_medication_data
                         data = malac_vidi.dataType3()
                         ipmd.data.append(data)
                         i_medication_data(med, data)
-        allin = entry.resource
-        if allin:
-            allin = unpack_container(allin)
-            if isinstance(allin, r4.AllergyIntolerance):
-                vad = malac_vidi.v_allergies_dataType()
-                if vidi.v_allergies_data is not None:
-                    vad = vidi.v_allergies_data
-                else:
-                    vidi.v_allergies_data = vad
+        allin = unpack_container(entry.resource)
+        if allin is not None:
+            if type(allin) is r4.AllergyIntolerance:
+                if vidi.v_allergies_data is None:
+                    vidi.v_allergies_data = malac_vidi.v_allergies_dataType()
+                vad = vidi.v_allergies_data
                 data = malac_vidi.dataType4()
                 vad.data.append(data)
                 problems_data(allin, data)
-        allin = entry.resource
-        if allin:
-            allin = unpack_container(allin)
-            if isinstance(allin, r4.AllergyIntolerance):
-                iad = malac_vidi.i_allergies_dataType()
-                if vidi.i_allergies_data is not None:
-                    iad = vidi.i_allergies_data
-                else:
-                    vidi.i_allergies_data = iad
+        allin = unpack_container(entry.resource)
+        if allin is not None:
+            if type(allin) is r4.AllergyIntolerance:
+                if vidi.i_allergies_data is None:
+                    vidi.i_allergies_data = malac_vidi.i_allergies_dataType()
+                iad = vidi.i_allergies_data
                 data = malac_vidi.dataType5()
                 iad.data.append(data)
                 i_problems_data(allin, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_and(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])]), fhirpath_utils.bool_not([v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])])), fhirpath_utils.equals([v22 for v21 in [v20 for v19 in [v18 for v17 in [condi] for v18 in fhirpath_utils.get(v17,'clinicalStatus')] for v20 in fhirpath_utils.get(v19,'coding')] for v22 in fhirpath_utils.get(v21,'code')], '==', ['active'])))):
-                    vcpd = malac_vidi.v_current_problems_dataType()
-                    if vidi.v_current_problems_data is not None:
-                        vcpd = vidi.v_current_problems_data
-                    else:
-                        vidi.v_current_problems_data = vcpd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])]), fhirpath_utils.bool_not([v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])]), fhirpath_utils.equals(fhirpath_utils.get(condi,'clinicalStatus','coding','code'), '==', ['active']))):
+                    if vidi.v_current_problems_data is None:
+                        vidi.v_current_problems_data = malac_vidi.v_current_problems_dataType()
+                    vcpd = vidi.v_current_problems_data
                     data = malac_vidi.dataType6()
                     vcpd.data.append(data)
                     problems_data(condi, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_and(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])]), fhirpath_utils.bool_not([v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])])), fhirpath_utils.equals([v22 for v21 in [v20 for v19 in [v18 for v17 in [condi] for v18 in fhirpath_utils.get(v17,'clinicalStatus')] for v20 in fhirpath_utils.get(v19,'coding')] for v22 in fhirpath_utils.get(v21,'code')], '==', ['active'])))):
-                    icpd = malac_vidi.i_current_problems_dataType()
-                    if vidi.i_current_problems_data is not None:
-                        icpd = vidi.i_current_problems_data
-                    else:
-                        vidi.i_current_problems_data = icpd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])]), fhirpath_utils.bool_not([v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])]), fhirpath_utils.equals(fhirpath_utils.get(condi,'clinicalStatus','coding','code'), '==', ['active']))):
+                    if vidi.i_current_problems_data is None:
+                        vidi.i_current_problems_data = malac_vidi.i_current_problems_dataType()
+                    icpd = vidi.i_current_problems_data
                     data = malac_vidi.dataType7()
                     icpd.data.append(data)
                     i_problems_data(condi, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_and(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])]), fhirpath_utils.bool_not([v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])])), fhirpath_utils.equals([v22 for v21 in [v20 for v19 in [v18 for v17 in [condi] for v18 in fhirpath_utils.get(v17,'clinicalStatus')] for v20 in fhirpath_utils.get(v19,'coding')] for v22 in fhirpath_utils.get(v21,'code')], '!=', ['active'])))):
-                    vppd = malac_vidi.v_past_problems_dataType()
-                    if vidi.v_past_problems_data is not None:
-                        vppd = vidi.v_past_problems_data
-                    else:
-                        vidi.v_past_problems_data = vppd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])]), fhirpath_utils.bool_not([v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])]), fhirpath_utils.equals(fhirpath_utils.get(condi,'clinicalStatus','coding','code'), '!=', ['active']))):
+                    if vidi.v_past_problems_data is None:
+                        vidi.v_past_problems_data = malac_vidi.v_past_problems_dataType()
+                    vppd = vidi.v_past_problems_data
                     data = malac_vidi.dataType8()
                     vppd.data.append(data)
                     problems_data(condi, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_and(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])]), fhirpath_utils.bool_not([v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])])), fhirpath_utils.equals([v22 for v21 in [v20 for v19 in [v18 for v17 in [condi] for v18 in fhirpath_utils.get(v17,'clinicalStatus')] for v20 in fhirpath_utils.get(v19,'coding')] for v22 in fhirpath_utils.get(v21,'code')], '!=', ['active'])))):
-                    ippd = malac_vidi.i_past_problems_dataType()
-                    if vidi.i_past_problems_data is not None:
-                        ippd = vidi.i_past_problems_data
-                    else:
-                        vidi.i_past_problems_data = ippd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_and(fhirpath_utils.bool_not([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])]), fhirpath_utils.bool_not([v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])]), fhirpath_utils.equals(fhirpath_utils.get(condi,'clinicalStatus','coding','code'), '!=', ['active']))):
+                    if vidi.i_past_problems_data is None:
+                        vidi.i_past_problems_data = malac_vidi.i_past_problems_dataType()
+                    ippd = vidi.i_past_problems_data
                     data = malac_vidi.dataType10()
                     ippd.data.append(data)
                     i_problems_data(condi, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_or([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])], [v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])]))):
-                    vfpd = malac_vidi.v_family_problems_dataType()
-                    if vidi.v_family_problems_data is not None:
-                        vfpd = vidi.v_family_problems_data
-                    else:
-                        vidi.v_family_problems_data = vfpd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_or([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])], [v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])])):
+                    if vidi.v_family_problems_data is None:
+                        vidi.v_family_problems_data = malac_vidi.v_family_problems_dataType()
+                    vfpd = vidi.v_family_problems_data
                     data = malac_vidi.dataType11()
                     vfpd.data.append(data)
                     problems_data(condi, data)
-        condi = entry.resource
-        if condi:
-            condi = unpack_container(condi)
-            if isinstance(condi, r4.Condition):
-                if fhirpath.single((fhirpath_utils.bool_or([v8 for v7 in [v6 for v5 in [v4 for v3 in [v2 for v1 in [condi] for v2 in fhirpath_utils.get(v1,'code')] for v4 in fhirpath_utils.get(v3,'coding')] for v6 in fhirpath_utils.get(v5,'display')] for v8 in fhirpath_utils.startswith(v7, ['FH:'])], [v16 for v15 in [v14 for v13 in [v12 for v11 in [v10 for v9 in [condi] for v10 in fhirpath_utils.get(v9,'code')] for v12 in fhirpath_utils.get(v11,'coding')] for v14 in fhirpath_utils.get(v13,'display')] for v16 in fhirpath_utils.startswith(v15, ['Family history'])]))):
-                    ifpd = malac_vidi.i_family_problems_dataType()
-                    if vidi.i_family_problems_data is not None:
-                        ifpd = vidi.i_family_problems_data
-                    else:
-                        vidi.i_family_problems_data = ifpd
+        condi = unpack_container(entry.resource)
+        if condi is not None:
+            if type(condi) is r4.Condition:
+                if fhirpath.single(fhirpath_utils.bool_or([v2 for v1 in fhirpath_utils.get(condi,'code','coding','display') for v2 in fhirpath_utils.startswith(v1, ['FH:'])], [v4 for v3 in fhirpath_utils.get(condi,'code','coding','display') for v4 in fhirpath_utils.startswith(v3, ['Family history'])])):
+                    if vidi.i_family_problems_data is None:
+                        vidi.i_family_problems_data = malac_vidi.i_family_problems_dataType()
+                    ifpd = vidi.i_family_problems_data
                     data = malac_vidi.dataType13()
                     ifpd.data.append(data)
                     i_problems_data(condi, data)
-        proc = entry.resource
-        if proc:
-            proc = unpack_container(proc)
-            if isinstance(proc, r4.Procedure):
-                vpd = malac_vidi.v_procedures_dataType()
-                if vidi.v_procedures_data is not None:
-                    vpd = vidi.v_procedures_data
-                else:
-                    vidi.v_procedures_data = vpd
+        proc = unpack_container(entry.resource)
+        if proc is not None:
+            if type(proc) is r4.Procedure:
+                if vidi.v_procedures_data is None:
+                    vidi.v_procedures_data = malac_vidi.v_procedures_dataType()
+                vpd = vidi.v_procedures_data
                 data = malac_vidi.dataType14()
                 vpd.data.append(data)
                 procedures_data(proc, data)
-        proc = entry.resource
-        if proc:
-            proc = unpack_container(proc)
-            if isinstance(proc, r4.Procedure):
-                ipd = malac_vidi.i_procedures_dataType()
-                if vidi.i_procedures_data is not None:
-                    ipd = vidi.i_procedures_data
-                else:
-                    vidi.i_procedures_data = ipd
+        proc = unpack_container(entry.resource)
+        if proc is not None:
+            if type(proc) is r4.Procedure:
+                if vidi.i_procedures_data is None:
+                    vidi.i_procedures_data = malac_vidi.i_procedures_dataType()
+                ipd = vidi.i_procedures_data
                 data = malac_vidi.dataType16()
                 ipd.data.append(data)
                 i_procedures_data(proc, data)
+        immunization = unpack_container(entry.resource)
+        if immunization is not None:
+            if type(immunization) is r4.Immunization:
+                if vidi.i_immunizations_data is None:
+                    vidi.i_immunizations_data = malac_vidi.i_immunizations_dataType()
+                iid = vidi.i_immunizations_data
+                data = malac_vidi.dataType17()
+                iid.data.append(data)
+                i_immunizations_data(immunization, data)
+        careplan = unpack_container(entry.resource)
+        if careplan is not None:
+            if type(careplan) is r4.CarePlan:
+                if vidi.i_careplan_data is None:
+                    vidi.i_careplan_data = malac_vidi.i_careplan_dataType()
+                icd = vidi.i_careplan_data
+                data = malac_vidi.dataType22()
+                icd.data.append(data)
+                i_careplan_data(careplan, data)
+        task = unpack_container(entry.resource)
+        if task is not None:
+            if type(task) is r4.Task:
+                if vidi.i_tasks_data is None:
+                    vidi.i_tasks_data = malac_vidi.i_tasks_dataType()
+                itd = vidi.i_tasks_data
+                data = malac_vidi.dataType23()
+                itd.data.append(data)
+                i_tasks_data(task, data)
+        goal = unpack_container(entry.resource)
+        if goal is not None:
+            if type(goal) is r4.Goal:
+                if vidi.i_goals_data is None:
+                    vidi.i_goals_data = malac_vidi.i_goals_dataType()
+                igd = vidi.i_goals_data
+                data = malac_vidi.dataType24()
+                igd.data.append(data)
+                i_goals_data(goal, data)
+
+def patientToVidi(patient, vsubject):
+    for identifier in patient.identifier or []:
+        if getattr(identifier.system, 'value', None) == 'urn:oid:1.2.40.0.10.1.4.3.1':
+            vsubject.svnr = fhirpath.single(fhirpath_utils.get(identifier,'value','value'))
+    for name in patient.name or []:
+        for given in name.given or []:
+            for v1 in fhirpath_utils.get(given,'value'):
+                vsubject.given.append(v1)
+        family = name.family
+        if family is not None:
+            vsubject.family = fhirpath.single(fhirpath_utils.get(family,'value'))
+    gender = patient.gender
+    if gender is not None:
+        vsubject.gender = str(fhirpath.single(fhirpath_utils.get(gender,'value')))
+    birthDate = patient.birthDate
+    if birthDate is not None:
+        vsubject.birthDate = fhirpath.single(fhirpath_utils.toString([birthDate]))
+    for address in patient.address or []:
+        vaddress = malac_vidi.addressType()
+        vsubject.address.append(vaddress)
+        for line in address.line or []:
+            for v1 in fhirpath_utils.get(line,'value'):
+                vaddress.line.append(v1)
+        city = address.city
+        if city is not None:
+            vaddress.city = fhirpath.single(fhirpath_utils.get(city,'value'))
+        postalCode = address.postalCode
+        if postalCode is not None:
+            vaddress.postalCode = fhirpath.single(fhirpath_utils.get(postalCode,'value'))
+
+def authorToVidi(author, vauthor):
+    for name in author.name or []:
+        for fhir_prefix in name.prefix or []:
+            for v1 in fhirpath_utils.get(fhir_prefix,'value'):
+                vauthor.prefix.append(v1)
+        for given in name.given or []:
+            for v1 in fhirpath_utils.get(given,'value'):
+                vauthor.given.append(v1)
+        family = name.family
+        if family is not None:
+            vauthor.family = fhirpath.single(fhirpath_utils.get(family,'value'))
 
 def medication_data(med, data):
     med_code = med.medicationCodeableConcept
-    if med_code:
+    if med_code is not None:
         for med_code_coding in med_code.coding or []:
             med_code_coding_display = med_code_coding.display
-            if med_code_coding_display:
+            if med_code_coding_display is not None:
                 data.name = med_code_coding_display.value
+    med_ref = med.medicationReference
+    if med_ref is not None:
+        med_ref_display = med_ref.display
+        if med_ref_display is not None:
+            data.name = med_ref_display.value
     for med_dose in med.dosage or []:
         med_dose_text = med_dose.text
-        if med_dose_text:
+        if med_dose_text is not None:
             data.dosis = med_dose_text.value
 
 def i_medication_data(med, data):
     medication_data(med, data)
     med_effper = med.effectivePeriod
-    if med_effper:
+    if med_effper is not None:
         med_effper_start = med_effper.start
-        if med_effper_start:
-            data.beginn = fhirpath.single(fhirpath_utils.toString([dateutil.parser.parse(str(med_effper_start.value))]))
+        if med_effper_start is not None:
+            data.beginn = fhirpath.single(fhirpath_utils.toString([dateutil.parse(str(med_effper_start.value))]))
     med_status = med.status
-    if med_status:
+    if med_status is not None:
         data.status = med_status.value
     med_code = med.medicationCodeableConcept
-    if med_code:
+    if med_code is not None:
         for med_code_coding in med_code.coding or []:
             med_code_coding_code = med_code_coding.code
-            if med_code_coding_code:
+            if med_code_coding_code is not None:
                 data.code = med_code_coding_code.value
             med_code_coding_system = med_code_coding.system
-            if med_code_coding_system:
+            if med_code_coding_system is not None:
                 data.codesystem = med_code_coding_system.value
 
 def problems_data(condi, data):
     condi_code = condi.code
-    if condi_code:
+    if condi_code is not None:
         for condi_code_coding in condi_code.coding or []:
             condi_code_coding_display = condi_code_coding.display
-            if condi_code_coding_display:
+            if condi_code_coding_display is not None:
                 data.diagnose = condi_code_coding_display.value
+                data.allergies = condi_code_coding_display
 
 def i_problems_data(condi, data):
     problems_data(condi, data)
     condi_code = condi.code
-    if condi_code:
+    if condi_code is not None:
         for condi_code_coding in condi_code.coding or []:
             condi_code_coding_code = condi_code_coding.code
-            if condi_code_coding_code:
+            if condi_code_coding_code is not None:
                 data.code = condi_code_coding_code.value
             condi_code_coding_cs = condi_code_coding.system
-            if condi_code_coding_cs:
+            if condi_code_coding_cs is not None:
                 data.codesystem = condi_code_coding_cs.value
     condi_clinstat = condi.clinicalStatus
-    if condi_clinstat:
+    if condi_clinstat is not None:
         for condi_clinstat_codi in condi_clinstat.coding or []:
             condi_clinstat_codi_disp = condi_clinstat_codi.display
-            if condi_clinstat_codi_disp:
+            if condi_clinstat_codi_disp is not None:
                 data.status = condi_clinstat_codi_disp.value
     condi_veristat = condi.verificationStatus
-    if condi_veristat:
+    if condi_veristat is not None:
         for condi_veristat_codi in condi_veristat.coding or []:
             condi_veristat_codi_disp = condi_veristat_codi.display
-            if condi_veristat_codi_disp:
+            if condi_veristat_codi_disp is not None:
                 data.status = condi_veristat_codi_disp.value
 
 def procedures_data(proc, data):
     problems_data(proc, data)
     proc_performedDateTime = proc.performedDateTime
-    if proc_performedDateTime:
-        data.zeitpunkt = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parser.parse(str(proc_performedDateTime.value))]) for v2 in fhirpath_utils.substring(v1,[0],[4])])
+    if proc_performedDateTime is not None:
+        data.zeitpunkt = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parse(str(proc_performedDateTime.value))]) for v2 in fhirpath_utils.substring(v1,[0],[4])])
 
 def i_procedures_data(proc, data):
     procedures_data(proc, data)
     proc_code = proc.code
-    if proc_code:
+    if proc_code is not None:
         for proc_code_coding in proc_code.coding or []:
             proc_code_coding_code = proc_code_coding.code
-            if proc_code_coding_code:
+            if proc_code_coding_code is not None:
                 data.code = proc_code_coding_code.value
             proc_code_coding_cs = proc_code_coding.system
-            if proc_code_coding_cs:
+            if proc_code_coding_cs is not None:
                 data.codesystem = proc_code_coding_cs.value
             proc_code_coding_display = proc_code_coding.display
-            if proc_code_coding_display:
+            if proc_code_coding_display is not None:
                 data.operation = proc_code_coding_display.value
     proc_status = proc.status
-    if proc_status:
+    if proc_status is not None:
         data.status = proc_status.value
+
+def i_immunizations_data(immunization, data):
+    immunization_occurrenceDateTime = immunization.occurrenceDateTime
+    if immunization_occurrenceDateTime is not None:
+        data.zeitpunkt = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parse(str(immunization_occurrenceDateTime.value))]) for v2 in fhirpath_utils.substring(v1,[0],[4])])
+    immunization_code = immunization.vaccineCode
+    if immunization_code is not None:
+        for immunization_code_coding in immunization_code.coding or []:
+            immunization_code_coding_display = immunization_code_coding.display
+            if immunization_code_coding_display is not None:
+                data.name = immunization_code_coding_display.value
+    for immunization_protocolApplied in immunization.protocolApplied or []:
+        for immunization_protocolApplied_targetDisease in immunization_protocolApplied.targetDisease or []:
+            for immunization_protocolApplied_targetDisease_coding in immunization_protocolApplied_targetDisease.coding or []:
+                immunization_protocolApplied_targetDisease_coding_display = immunization_protocolApplied_targetDisease_coding.display
+                if immunization_protocolApplied_targetDisease_coding_display is not None:
+                    data_immunizationtarget = malac_vidi.immunizationtargetType()
+                    data.immunizationtarget.append(data_immunizationtarget)
+                    data_immunizationtarget.immunizationtarget = immunization_protocolApplied_targetDisease_coding_display.value
+
+def i_careplan_data(careplan, data):
+    cp_status = careplan.status
+    if cp_status is not None:
+        data.status = cp_status.value
+    cp_intent = careplan.intent
+    if cp_intent is not None:
+        data.zweck = cp_intent.value
+    for cp_cat in careplan.category or []:
+        cp_cat_text = cp_cat.text
+        if cp_cat_text is not None:
+            data.kategorie = cp_cat_text.value
+    cp_title = careplan.title
+    if cp_title is not None:
+        data.titel = cp_title.value
+    cp_desc = careplan.description
+    if cp_desc is not None:
+        data.beschreibung = cp_desc.value
+    cp_created = careplan.created
+    if cp_created is not None:
+        data.erstellt_am = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parse(str(cp_created.value))]) for v2 in fhirpath_utils.substring(v1,[0],[23])])
+    cp_author = careplan.author
+    if cp_author is not None:
+        cp_author_disp = cp_author.display
+        if cp_author_disp is not None:
+            data.verantwortlich = cp_author_disp.value
+    for cp_addr in careplan.addresses or []:
+        cp_addr_disp = cp_addr.display
+        if cp_addr_disp is not None:
+            data.abklaerung = cp_addr_disp.value
+    for cp_goal in careplan.goal or []:
+        cp_goal_disp = cp_goal.display
+        if cp_goal_disp is not None:
+            data_ziel = malac_vidi.zielType()
+            data.ziel.append(data_ziel)
+            data_ziel.ziel = cp_goal_disp.value
+    for cp_act in careplan.activity or []:
+        for cp_act_outref in cp_act.outcomeReference or []:
+            cp_act_outref_disp = cp_act_outref.display
+            if cp_act_outref_disp is not None:
+                data_task_aktivitaet = malac_vidi.task_aktivitaetType()
+                data.task_aktivitaet.append(data_task_aktivitaet)
+                data_task_aktivitaet.task_aktivitaet = cp_act_outref_disp.value
+
+def i_tasks_data(task, data):
+    task_id = task.id
+    if task_id is not None:
+        data.id = task_id.value
+    task_status = task.status
+    if task_status is not None:
+        data.status = task_status.value
+    task_intent = task.intent
+    if task_intent is not None:
+        data.intent = task_intent.value
+    task_priority = task.priority
+    if task_priority is not None:
+        data.priority = task_priority.value
+    task_desc = task.description
+    if task_desc is not None:
+        data.beschreibung = task_desc.value
+    task_code = task.code
+    if task_code is not None:
+        for task_coding in task_code.coding or []:
+            task_code_disp = task_coding.display
+            if task_code_disp is not None:
+                data.code = task_code_disp.value
+    task_focus = task.focus
+    if task_focus is not None:
+        task_focus_disp = task_focus.display
+        if task_focus_disp is not None:
+            data.focus = task_focus_disp.value
+    task_authored = task.authoredOn
+    if task_authored is not None:
+        data.authoredOn = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parse(str(task_authored.value))]) for v2 in fhirpath_utils.substring(v1,[0],[23])])
+    task_modified = task.lastModified
+    if task_modified is not None:
+        data.lastModified = fhirpath.single([v2 for v1 in fhirpath_utils.toString([dateutil.parse(str(task_modified.value))]) for v2 in fhirpath_utils.substring(v1,[0],[23])])
+    task_requester = task.requester
+    if task_requester is not None:
+        task_req_disp = task_requester.display
+        if task_req_disp is not None:
+            data.requester = task_req_disp.value
+    for task_perfType in task.performerType or []:
+        for task_perf_coding in task_perfType.coding or []:
+            task_perf_disp = task_perf_coding.display
+            if task_perf_disp is not None:
+                data.performerType = task_perf_disp.value
+    task_owner = task.owner
+    if task_owner is not None:
+        task_owner_disp = task_owner.display
+        if task_owner_disp is not None:
+            data.owner = task_owner_disp.value
+
+def i_goals_data(goal, data):
+    goal_id = goal.id
+    if goal_id is not None:
+        data.id = goal_id.value
+    goal_status = goal.lifecycleStatus
+    if goal_status is not None:
+        data.lifecycleStatus = goal_status.value
+    for goal_cat in goal.category or []:
+        for cat_coding in goal_cat.coding or []:
+            cat_disp = cat_coding.display
+            if cat_disp is not None:
+                data.category.append(cat_disp.value)
+    goal_priority = goal.priority
+    if goal_priority is not None:
+        for prio_coding in goal_priority.coding or []:
+            prio_disp = prio_coding.display
+            if prio_disp is not None:
+                data.priority = prio_disp.value
+    goal_desc = goal.description
+    if goal_desc is not None:
+        goal_desc_txt = goal_desc.text
+        if goal_desc_txt is not None:
+            data.description = goal_desc_txt.value
+    goal_subject = goal.subject
+    if goal_subject is not None:
+        subj_disp = goal_subject.display
+        if subj_disp is not None:
+            data.subject = subj_disp.value
+    goal_start = goal.startDate
+    if goal_start is not None:
+        data.startDate = fhirpath.single(fhirpath_utils.toString([goal_start]))
+    for goal_target in goal.target or []:
+        target_measure = goal_target.measure
+        if target_measure is not None:
+            for tm_coding in target_measure.coding or []:
+                tm_disp = tm_coding.display
+                if tm_disp is not None:
+                    data_target = malac_vidi.targetType()
+                    data.target.append(data_target)
+                    data_target.measure = tm_disp.value
+    dq = goal_target.detailQuantity
+    if dq is not None:
+        dq_value = dq.value
+        if dq_value is not None:
+            data_target.detail_value = fhirpath.single(fhirpath_utils.toString([dq_value]))
+        dq_comp = dq.comparator
+        if dq_comp is not None:
+            data_target.detail_comparator = dq_comp.value
+        dq_unit = dq.unit
+        if dq_unit is not None:
+            data_target.detail_unit = dq_unit.value
+        dq_system = dq.system
+        if dq_system is not None:
+            data_target.detail_system = dq_system.value
+        dq_code = dq.code
+        if dq_code is not None:
+            data_target.detail_code = dq_code.value
+    expr_by = goal.expressedBy
+    if expr_by is not None:
+        expr_disp = expr_by.display
+        if expr_disp is not None:
+            data.expressedBy = expr_disp.value
+    for addr in goal.addresses or []:
+        addr_disp = addr.display
+        if addr_disp is not None:
+            data.addresses.append(addr_disp.value)
+    for note in goal.note or []:
+        note_text = note.text
+        if note_text is not None:
+            data.note.append(note_text.value)
 
 # output
 # 1..1 result (boolean)
@@ -335,48 +574,48 @@ def i_procedures_data(proc, data):
 #       0..1 system
 #       0..1 version
 #       0..1 code
-#       0..1 display
+#       0..1 display 
 #       0..1 userSelected will always be false, because this is a translation
 #   0..1 source (conceptMap url)
 # TODO implement reverse
 def translate(url=None, conceptMapVersion=None, code=None, system=None, version=None, source=None, coding=None, codeableConcept=None, target=None, targetsystem=None, reverse=None, silent=False)              -> dict [bool, str, list[dict[str, dict[str, str, str, str, bool], str]]]:
-    start = time.time()
-
+    start = sys_time.time()
+    
     # start validation and recall of translate in simple from
     if codeableConcept:
-        if isinstance(codeableConcept, str):
+        if isinstance(codeableConcept, str): 
             codeableConcept = r4.parseString(codeableConcept, silent)
-        elif isinstance(coding, r4.CodeableConcept):
+        elif isinstance(codeableConcept, r4.CodeableConcept):
             pass
         else:
             raise BaseException("The codeableConcept parameter has to be a string or a CodeableConcept Object (called method as library)!")
         # the first fit will be returned, else the last unfitted value will be returned
         # TODO check translate params
-        for one_coding in codeableConcept.get_coding:
-            if (ret := translate(url=url, source=source, coding=one_coding,
-                                 target=target, targetsystem=targetsystem,
-                                 reverse=reverse, silent=True))[0]:
+        for one_coding in codeableConcept.get_coding():
+            if (ret := translate(url=url, source=source, coding=one_coding, 
+                                 target=target, targetsystem=targetsystem, 
+                                 reverse=reverse, silent=True))['result']:
                 return ret
         else: return ret
     elif coding:
-        if isinstance(coding, str):
+        if isinstance(coding, str): 
             coding = r4.parseString(coding, silent)
         elif isinstance(coding, r4.Coding):
             pass
         else:
             raise BaseException("The coding parameter has to be a string or a Coding Object (called method as library)!")
         # TODO check translate params
-        return translate(url=url,  source=source, coding=one_coding,
-                         target=target, targetsystem=targetsystem,
+        return translate(url=url,  source=source, code=coding.code.value, system=(coding.system.value if coding.system else None), 
+                         target=target, targetsystem=targetsystem, 
                          reverse=reverse, silent=True)
     elif code:
-        if not isinstance(code,str):
+        if not isinstance(code,str): 
             raise BaseException("The code parameter has to be a string!")
     elif target:
-        if not isinstance(code,str):
+        if not isinstance(code,str): 
             raise BaseException("The target parameter has to be a string!")
     elif targetsystem:
-        if not isinstance(code,str):
+        if not isinstance(code,str): 
             raise BaseException("The targetsystem parameter has to be a string!")
     else:
         raise BaseException("At least codeableConcept, coding, code, target or targetSystem has to be given!")
@@ -402,8 +641,8 @@ def translate(url=None, conceptMapVersion=None, code=None, system=None, version=
                                                     if code_lvl == "|" or code_lvl == "~" or code_lvl == "#":
                                                         unmapped += conceptMap_as_7dimension_dict[url_lvl][source_lvl][target_lvl][system_lvl][targetsystem_lvl][code_lvl]
                                                     if code_lvl == "%" or not code or code_lvl == code:
-                                                        match += conceptMap_as_7dimension_dict[url_lvl][source_lvl][target_lvl][system_lvl][targetsystem_lvl][code_lvl]
-
+                                                        match += conceptMap_as_7dimension_dict[url_lvl][source_lvl][target_lvl][system_lvl][targetsystem_lvl][code_lvl]                
+                                                    
     if not match:
         for one_unmapped in unmapped:
             tmp_system = ""
@@ -417,12 +656,12 @@ def translate(url=None, conceptMapVersion=None, code=None, system=None, version=
                 tmp_code = one_unmapped["concept"]["code"][1:] + code
             # replace all "~" values with fixed code (provided from https://hl7.org/fhir/R4B/conceptmap-definitions.html#ConceptMap.group.unmapped.mode)
             elif one_unmapped["concept"]["code"].startswith("~"):
-                if tmp := one_unmapped["concept"]["system"]: tmp_system = tmp
+                if tmp := one_unmapped["concept"]["system"]: tmp_system = tmp 
                 tmp_code = one_unmapped["concept"]["code"][1:]
                 tmp_display = one_unmapped["concept"]["display"]
             elif one_unmapped["concept"]["code"].startswith("#"):
                 # TODO detect recursion like conceptMapA -> conceptMapB -> ConceptMapA -> ...
-                return translate(one_unmapped["concept"]["code"][1:], None, code, system, version, source,
+                return translate(one_unmapped["concept"]["code"][1:], None, code, system, version, source, 
                                  coding, codeableConcept, target, targetsystem, reverse, silent)
             # prepare the match.concept results
             concept = {}
@@ -435,8 +674,8 @@ def translate(url=None, conceptMapVersion=None, code=None, system=None, version=
             if concept == {}:
                 # TODO do a warning, that it seems like the conceptmap is broken, because there is a empty group
                 continue
-
-            match.append({"relationship": one_unmapped["relationship"],
+            
+            match.append({"relationship": one_unmapped["relationship"], 
                           "concept": concept,
                           "source": one_unmapped["source"]})
 
@@ -445,18 +684,20 @@ def translate(url=None, conceptMapVersion=None, code=None, system=None, version=
     message = ""
     for one_match in match:
         if one_match["relationship"] not in ['not-related-to']:
-            result = True
+            result = True 
             # for printing only, if no url was initially given use the conceptmap
             if not url:
                 url = one_match["source"]
 
     if not silent:
-        print('Translation in '+str(round(time.time()-start,3))+' seconds for code "'+(code or "NONE")+'" with ConceptMap "'+url+'"')
+        print('Translation in '+str(round(sys_time.time()-start,3))+' seconds for code "'+(code or "NONE")+'" with ConceptMap "'+url+'"')
     return {"result": result, "message": message, "match": match}
 
 conceptMap_as_7dimension_dict = {}
 
 def unpack_container(resource_container):
+    if resource_container is None:
+        return None
     if resource_container.Account is not None:
         return resource_container.Account
     if resource_container.ActivityDefinition is not None:
@@ -748,8 +989,8 @@ def translate_unmapped(url, code):
     if url == 'AllergyCategoryMap': return [{'code': None}]
     raise BaseException('Code %s could not be mapped to any code in concept map %s and no exception defined' % (code, url))
 
-def translate_single(url, code, out_type):
-    trans_out = translate(url=url, code=code, silent=True)
+def translate_single(url, code=None, coding=None, codeableConcept=None, out_type='code'):
+    trans_out = translate(url=url, code=code, coding=coding, codeableConcept=codeableConcept, silent=True)
     matches = [match['concept'] for match in trans_out['match'] if match['relationship']=='equivalent' or match['relationship']=='equal']
     # if there are mutliple 'equivalent' or 'equal' matches and CodeableConcept is not the output param, than throw an error
     if len(matches) > 1:
@@ -757,21 +998,21 @@ def translate_single(url, code, out_type):
     elif len(matches) == 0:
         matches = translate_unmapped(url=url, code=code)
     if out_type == "Coding":
-        return malac_vidi.Coding(system=(malac_vidi.uri(value=matches[0]['system']) if "system" in matches[0] else None),
-                              version=(malac_vidi.string(value=matches[0]['version']) if "version" in matches[0] else None),
-                              code=(malac_vidi.string(value=matches[0]['code']) if "code" in matches[0] else None),
-                              display=(malac_vidi.string(value=matches[0]['display']) if "display" in  matches[0] else None),
+        return malac_vidi.Coding(system=(malac_vidi.uri(value=matches[0]['system']) if "system" in matches[0] else None), 
+                              version=(malac_vidi.string(value=matches[0]['version']) if "version" in matches[0] else None), 
+                              code=(malac_vidi.string(value=matches[0]['code']) if "code" in matches[0] else None), 
+                              display=(malac_vidi.string(value=matches[0]['display']) if "display" in  matches[0] else None), 
                               userSelected=(malac_vidi.string(value=matches[0]['userSelected']) if "userSelected" in matches[0] else None))
     else:
         return matches[0][out_type]
 
-def translate_multi(url, code):
-    trans_out = translate(url=url, code=code, silent=True)
+def translate_multi(url, code=None, coding=None, codeableConcept=None):
+    trans_out = translate(url=url, code=code, coding=coding, codeableConcept=codeableConcept, silent=True)
     matches = [match['concept'] for match in trans_out['match'] if match['relationship']=='equivalent' or match['relationship']=='equal']
-    return malac_vidi.CodeableConcept(coding=[malac_vidi.Coding(system=(malac_vidi.uri(value=matches[0]['system']) if "system" in matches[0] else None),
-                                                          version=(malac_vidi.string(value=matches[0]['version']) if "version" in matches[0] else None),
-                                                          code=(malac_vidi.string(value=matches[0]['code']) if "code" in matches[0] else None),
-                                                          display=(malac_vidi.string(value=matches[0]['display']) if "display" in  matches[0] else None),
+    return malac_vidi.CodeableConcept(coding=[malac_vidi.Coding(system=(malac_vidi.uri(value=matches[0]['system']) if "system" in matches[0] else None), 
+                                                          version=(malac_vidi.string(value=matches[0]['version']) if "version" in matches[0] else None), 
+                                                          code=(malac_vidi.string(value=matches[0]['code']) if "code" in matches[0] else None), 
+                                                          display=(malac_vidi.string(value=matches[0]['display']) if "display" in  matches[0] else None), 
                                                           userSelected=(malac_vidi.string(value=matches[0]['userSelected']) if "userSelected" in matches[0] else None)
                                                           ) for match in matches])
 
