@@ -87,4 +87,35 @@ export function loadFrom(data){
 
     // advanceddirectives missing
 
+    const subject = data.subject;
+  const author  = data.author;
+
+  if (!subject || !author) return;
+
+  // Subject fields
+  const svnr   = subject.svnr ?? "";
+  const given  = subject.given?.join(" ") ?? "";
+  const family = subject.family ?? "";
+  const gender = subject.gender ?? "";
+  const birth  = subject.birthDate ?? "";
+
+  const addressObj = subject.address?.[0] ?? {};
+  const addrLine   = addressObj.line?.[0] ?? "";
+  const city       = addressObj.city ?? "";
+  const postal     = addressObj.postalCode ?? "";
+
+  // Insert into DOM (assumes these ids exist in index.html)
+  document.querySelectorAll(".subject-svnr").forEach(el => el.textContent = svnr);
+  document.querySelectorAll(".subject-name").forEach(el => el.textContent = `${given} ${family}`);
+  document.querySelectorAll(".subject-gender").forEach(el => el.textContent = gender);
+  document.querySelectorAll(".subject-birthdate").forEach(el => el.textContent = birth);
+  document.querySelectorAll(".subject-address").forEach(el => el.textContent = `${addrLine}, ${city}, ${postal}`);
+
+  // Author fields
+  const authGiven  = author.given?.join(" ") ?? "";
+  const authFamily = author.family ?? "";
+  const authPrefix = author.prefix?.join(" ") ?? "";
+
+  document.querySelectorAll(".author-name").forEach(el => el.textContent = `${authPrefix} ${authGiven} ${authFamily}`);
+
 }
