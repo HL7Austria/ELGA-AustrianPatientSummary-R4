@@ -62,5 +62,6 @@ Alias: $vs-elga-specimentype = https://termgit.elga.gv.at/ValueSet/elga-specimen
 Alias: $vs-eimpf-impfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-impfstoffe
 Alias: $vs-eimpf-historischeimpfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-historischeimpfstoffe
 Alias: $vs-elga-nachweisergebnis = https://termgit.elga.gv.at/ValueSet/elga-nachweisergebnis
+Alias: $vs-eimpf-specialcasevaccination = https://termgit.elga.gv.at/ValueSet/eimpf-specialcasevaccination
 Alias: $vs-elga-medikationmengenart = https://termgit.elga.gv.at/ValueSet/elga-medikationmengenart
 Alias: $vs-hl7-at-organizationtype = https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype

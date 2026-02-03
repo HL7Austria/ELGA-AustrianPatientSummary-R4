@@ -188,11 +188,13 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionPlanOfCare].entry ^slicing.rules = #open
 * section[sectionPlanOfCare].entry ^slicing.ordered = false
-* section[sectionPlanOfCare].entry only Reference(AtApsCarePlan or AtApsDocumentReference)
+* section[sectionPlanOfCare].entry only Reference(AtApsCarePlan or AtApsImmunizationRecommendation or AtApsDocumentReference)
 * section[sectionPlanOfCare].entry contains
     carePlan 0..* and
+    immunizationRecommendation 0..* and
     document 0..*
 * section[sectionPlanOfCare].entry[carePlan] only Reference(AtApsCarePlan)
+* section[sectionPlanOfCare].entry[immunizationRecommendation] only Reference(AtApsImmunizationRecommendation)
 * section[sectionPlanOfCare].entry[document] only Reference(AtApsDocumentReference)
 
 * section[sectionSocialHistory].code = $cs-loinc#29762-2
