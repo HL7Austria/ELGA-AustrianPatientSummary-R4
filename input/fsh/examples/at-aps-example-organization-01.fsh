@@ -12,7 +12,7 @@ Usage: #example
 * identifier[+].system = "urn:oid:1.2.40.0.10.1.4.3.2"
 * identifier[=].value = "123456789"
 * identifier[=].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
-* type = $cs-hl7-at-organizationtype#300 "Allgemeine Krankenanstalt"
+* type = $cs-elga-gtelvogdarollen#300 "Allgemeine Krankenanstalt"
 * name = "Amadeus Spital"
 * address.use = #work
 * address.type = #both
