@@ -87,12 +87,13 @@ Usage: #inline
 * maritalStatus = $cs-v3-MaritalStatus#M "Verheiratet"
 
 Instance: AtApsExampleBundle01-author
-InstanceOf: Device
+InstanceOf: AtApsDevice
 Usage: #inline
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"
 * deviceName.name = "APS Generator"
 * deviceName.type = #user-friendly-name
+* version.value = "1.0.0"
 
 Instance: AtApsExampleBundle01-custodian
 InstanceOf: AtApsOrganization

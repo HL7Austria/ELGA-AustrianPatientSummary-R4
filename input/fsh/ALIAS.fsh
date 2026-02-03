@@ -6,6 +6,7 @@ Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinit
 // general
 Alias: $cs-loinc = http://loinc.org
 Alias: $cs-sct = http://snomed.info/sct
+Alias: $cs-ucum = http://unitsofmeasure.org
 // FHIR
 Alias: $cs-event-timing = http://hl7.org/fhir/event-timing
 Alias: $cs-specimen-status = http://hl7.org/fhir/specimen-status
@@ -34,8 +35,7 @@ Alias: $cs-icf = https://termgit.elga.gv.at/CodeSystem/icf
 Alias: $cs-lkat-bmsgpk-2025 = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-2025
 Alias: $cs-elga-ergaenzungsliste = https://termgit.elga.gv.at/CodeSystem/elga-ergaenzungsliste
 Alias: $cs-rast-klassen = https://termgit.elga.gv.at/CodeSystem/rast-klassen
-Alias: $cs-elga-medikationmengenart = https://termgit.elga.gv.at/ValueSet/elga-medikationmengenart
-Alias: $cs-hl7-at-organizationtype = https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype
+Alias: $cs-elga-gtelvogdarollen = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen
 
 // value sets
 // FHIR
@@ -63,3 +63,5 @@ Alias: $vs-eimpf-impfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-impfstof
 Alias: $vs-eimpf-historischeimpfstoffe = https://termgit.elga.gv.at/ValueSet/eimpf-historischeimpfstoffe
 Alias: $vs-elga-nachweisergebnis = https://termgit.elga.gv.at/ValueSet/elga-nachweisergebnis
 Alias: $vs-eimpf-specialcasevaccination = https://termgit.elga.gv.at/ValueSet/eimpf-specialcasevaccination
+Alias: $vs-elga-medikationmengenart = https://termgit.elga.gv.at/ValueSet/elga-medikationmengenart
+Alias: $vs-hl7-at-organizationtype = https://termgit.elga.gv.at/ValueSet/hl7-at-organizationtype

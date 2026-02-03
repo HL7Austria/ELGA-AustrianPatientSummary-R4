@@ -324,20 +324,19 @@ Instance: AtApsExampleBundle-Journey-2-Immunization-1
 InstanceOf: AtApsImmunization
 Usage: #inline
 * status = #completed
-* vaccineCode.coding[0] = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
+* vaccineCode = $cs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.text = "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 //* performer.actor = Reference(Patient/at-aps-example-practitioner-01) "Dr. Hanna Hausärztin"
-* vaccineCode = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * occurrenceDateTime = "2025-01-08T14:31:30+00:00"
 //* primarySource = true
-* route = $vs-eimpf-medikationartanwendung#IM "Intramuskulär"
+* route = $cs-medikationartanwendung#100000073600 "intramuskuläre Anwendung"
 //* protocolApplied[0].series = "Standardimpfserie"
 * protocolApplied[0].doseNumberPositiveInt = 1
-* protocolApplied[0].targetDisease[0] = $vs-eimpf-immunizationtarget#397430003 "Diphtheria"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#27836007 "Pertussis"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#398102009 "Poliomyelitis"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#76902006 "Tetanus"
+* protocolApplied[0].targetDisease[0] = $cs-sct#397430003 "Diphtheria"
+* protocolApplied[0].targetDisease[+] = $cs-sct#27836007 "Pertussis"
+* protocolApplied[0].targetDisease[+] = $cs-sct#398102009 "Poliomyelitis"
+* protocolApplied[0].targetDisease[+] = $cs-sct#76902006 "Tetanus"
 
 // History of Procedures
 
@@ -508,7 +507,7 @@ Usage: #inline
 
 
 Instance: AtApsExampleBundle-Journey-2-author-device
-InstanceOf: Device
+InstanceOf: AtApsDevice
 Usage: #inline
 * patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * type = $cs-sct#49062001 "Gerät"
@@ -516,6 +515,7 @@ Usage: #inline
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"
 * deviceName.name = "APS Generator"
 * deviceName.type = #user-friendly-name
+* version.value = "1.0.0"
 
 Instance: AtApsExampleBundle-Journey-2-custodian
 InstanceOf: AtApsOrganization

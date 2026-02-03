@@ -10,9 +10,13 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 * obeys aps-comp-1
 
 * subject only Reference(AtApsPatient)
+* author only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsDevice or AtApsPatient or RelatedPerson or AtApsOrganization)
 * attester.party only Reference(AtApsPatient or RelatedPerson or AtApsPractitioner or AtApsPractitionerRole or AtApsOrganization)
-* relatesTo.target[x] only Identifier or Reference(Composition or AtApsComposition)
-* custodian 1..1
+* custodian 1..1 
+* custodian only Reference(AtApsOrganization)
+* relatesTo.target[x] only Identifier or Reference(AtApsComposition)
+
+* section.author only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsDevice or AtApsPatient or RelatedPerson or AtApsOrganization)
 
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
