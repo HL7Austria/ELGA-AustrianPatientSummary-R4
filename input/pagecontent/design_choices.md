@@ -93,7 +93,6 @@ Erklärung?
 Reihenfolge der Sektionen?
 TODO:
 * Bevorzugte Terminologie SNOMED CD, LOINC, UCUM, ergänzt mit nationalen Value Sets und Mappings ?  Hinweis auf Snomed Lizenzen, Terminologieserver
-* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben
 
 #### Erstellung und Abruf der APS
 
@@ -142,43 +141,6 @@ Gemäß IPS-Standard bestehen derzeit keine Einschränkungen hinsichtlich der Ge
 
 Der narrative Text ist auch für den rechtlichen Unterzeichner des Dokuments (Attester) von Bedeutung, da er den präsentierten und prüfbaren Dokumentinhalt darstellt. Da in Österreich die APS automatisch generiert wird, entfällt der Attester.
 
-#### Linking Narrative to Discrete FHIR Resources
-TODO ?
-
-#### Medication Lists in the IPS
-TODO ?
-
-#### Medicinal Product Identification
-TODO ?
-
-
-
-#### Use of Persistent Identifiers in IPS
-TODO ?
-
-
-
-
-
-#### Optionale Datenelemente mit Must Support/Obligations (cardinality of 0..1 or 0..*)
-
-Verfügt ein Ersteller einer Patient Summary über keine Daten, weil sie entweder nicht vorhanden sind, nicht weitergegeben werden dürfen oder für den Anwendungsbereich nicht relevant sind, kann das entsprechende Datenelement weggelassen werden.
-
-#### Verpflichtende Datenelemente mit Must Support/Obligations (cardinality of 1..1 or 1..*)
-
-Nicht codierte Datenelemente und codierte Datenelemente:
-Beispiele siehe https://hl7.org/fhir/uv/ips/Empty-Sections-and-Missing-Data.html#required-data-elements-with-must-supportobligations-cardinality-of-11-or-1
-
-### Privacy and Security Considerations
-https://hl7.org/fhir/uv/ips/Privacy-and-Security-Considerations.html
-
-
 #### Bekannte Probleme
 
-TODO: Würde hier alle offenen Punkte reinnehmen, auch wenn sie vielleicht schon mal wo anders erwähnt wurden
-- Angaben zur Herkunft von Informationen: Meta.source vs Provenance
-- Inkonsistente Darstellung der APS Profile durch imposeProfile (TODO @Gabriel)
 - Deutsche Übersetzungen der APS Profile
-
-
-#### Zukünftige Entwicklungen
