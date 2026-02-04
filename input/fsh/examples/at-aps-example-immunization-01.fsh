@@ -7,21 +7,19 @@ Usage: #example
 * status = #completed
 * id = "at-aps-example-immunization-01"
 * extension[ImmunizationBasedOnR5].valueReference = Reference(ExampleServiceRequest01)
-//* vaccineCode.coding[0] = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
-* vaccineCode.coding = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
+* vaccineCode = $cs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
 * vaccineCode.text = "Diphtherie-Pertussis-Poliomyelitis-Tetanus"
-* patient = Reference(Patient/at-aps-example-patient-01) "Max Mustermann"
-* performer.actor = Reference(Practitioner/at-aps-example-practitioner-01) "Dr. Hanna Hausärztin"
-* vaccineCode = $vs-eimpf-impfstoffe#2457324 "BOOSTRIX POLIO FSPR 0,5ML"
+* patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
+* performer.actor = Reference(Practitioner/at-aps-example-practitioner-01) "Hanna Hausärztin"
 * occurrenceDateTime = "2021-10-01"
 //* primarySource = true
-* route = $vs-eimpf-medikationartanwendung#IM "Intramuskulär"
+* route = $cs-medikationartanwendung#100000073600 "intramuskuläre Anwendung"
 //* protocolApplied[0].series = "Standardimpfserie"
 * protocolApplied[0].doseNumberPositiveInt = 1
-* protocolApplied[0].targetDisease[0] = $vs-eimpf-immunizationtarget#397430003 "Diphtheria"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#27836007 "Pertussis"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#398102009 "Poliomyelitis"
-* protocolApplied[0].targetDisease[+] = $vs-eimpf-immunizationtarget#76902006 "Tetanus"
+* protocolApplied[0].targetDisease[0] = $cs-sct#397430003 "Diphtheria"
+* protocolApplied[0].targetDisease[+] = $cs-sct#27836007 "Pertussis"
+* protocolApplied[0].targetDisease[+] = $cs-sct#398102009 "Poliomyelitis"
+* protocolApplied[0].targetDisease[+] = $cs-sct#76902006 "Tetanus"
 
 Instance: ExampleServiceRequest01
 InstanceOf: ServiceRequest

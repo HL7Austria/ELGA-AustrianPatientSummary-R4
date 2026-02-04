@@ -10,3 +10,5 @@ Description: "Das AT APS-Profil für die Device-Ressource berücksichtigt zum ei
 * deviceName 1..*
 * version 1..*
 * type from $vs-elga-medicaldevices (extensible)
+* owner only Reference(AtApsOrganization)
+* parent only Reference(AtApsDevice)

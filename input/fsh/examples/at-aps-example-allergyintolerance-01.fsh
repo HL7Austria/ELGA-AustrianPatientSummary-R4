@@ -4,8 +4,6 @@ Title: "AtApsAllergyIntolerance-Beispiel"
 Description: "Überwundene Allergie"
 Usage: #example
 * id = "at-aps-example-allergyintolerance-01"
-* extension.url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement"
-* extension.valueDateTime = "2020"
 * clinicalStatus = $cs-allergyintolerance-clinical#resolved
 * verificationStatus = $cs-allergyintolerance-verification#confirmed
 * code = $cs-sct#256303006 "Ambrosiapollen"

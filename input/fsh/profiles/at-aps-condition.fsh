@@ -20,3 +20,6 @@ Description: "Das AT APS-Profil für die Condition-Ressource berücksichtigt zum
 * severity from $vs-elga-problemseverity (extensible)
 * code from ProblemsUvIps (extensible)
 * bodySite ^binding.strength = #extensible
+* recorder only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson)
+* asserter only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsPatient or RelatedPerson)
+* stage.assessment only Reference(AtApsClinicalImpression or AtApsDiagnosticReport or AtApsObservation)

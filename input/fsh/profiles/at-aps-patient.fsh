@@ -15,3 +15,8 @@ Deshalb ist die Angabe des Geburtsdatums erforderlich."""
 * name.given 1..*
 * birthDate 1..1
 * identifier[localPatientId] 1..1
+* identifier.assigner only Reference(AtApsOrganization)
+* contact.organization only Reference(AtApsOrganization)
+* generalPractitioner only Reference(AtApsOrganization or AtApsPractitioner or AtApsPractitionerRole)
+* managingOrganization only Reference(AtApsOrganization)
+* link.other only Reference(AtApsPatient or RelatedPerson)

@@ -7,3 +7,4 @@ Description: "Das AT APS-Profil für die Medication-Ressource berücksichtigt zu
 * . ^short = "AT APS Medication"
 * ^extension[$imposeProfile].valueCanonical = Canonical(MedicationIPS)
 * ingredient.item[x] only CodeableConceptIPS or Reference(http://hl7.org/fhir/StructureDefinition/Substance or AtApsMedication)
+* manufacturer only Reference(AtApsOrganization)
