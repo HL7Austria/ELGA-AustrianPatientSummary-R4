@@ -33,7 +33,8 @@ Durch den Einsatz der `imposeProfile`-Extension werden bei der Validierung autom
 
 Wie bei der IPS wurde bei der APS folgender Profilierungsansatz gewählt: Anstatt die Ressourcen streng zu beschränken, wurden hauptsächlich die Pflichtelemente des Minimaldatensatzes festgelegt, während anderen offen bleiben.
 Dieser Ansatz erleichtert die Wiederverwendung der Profile und erlaubt den schrittweisen Zugriff auf zusätzliche relevante Informationen, um zukünftige Anforderungen und spezifische klinische Anwendungsfälle abzubilden.
-* Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben ?
+
+Wo möglich wurden die Profile der APS auf jene Aufgebaut, die der HL7® Austria FHIR® Core zur Verfügung stellt. In der Folge wurden alle Profile der APS dahingehend angepasst, dass für alle Referenzen nach Möglichkeit die Profile der APS selbst verwendet werden.
 
 ### Must Support und Obligations
 
