@@ -41,6 +41,11 @@ Durch die Einbindung der IPS-Profile mit der [`imposeProfile`-Extension](http://
 
 Einen ähnlichen Zugang verfolgt die in Aufbau befindliche [European Patient Summary (EPS) von HL7EU](https://build.fhir.org/ig/hl7-eu/eps/). Diese Entwicklungen werden beobachtet und zu gegebener Zeit berücksichtigt.
 
+### Leere Sektionen und fehlende Daten
+
+Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Informationen vorliegen oder verfügbar sind, muss „Composition.section.emptyReason“ befüllt werden, sodass der Grund dafür ersichtlich ist (z.B. "nicht verfügbar" oder "nicht abgefragt"). Nicht verpflichtende Sektionen dürfen bei der Erstellung der Patient Summary weggelassen werden.
+Auch mittels Ressourcen können fehlende Informationen dokumentiert werden, z.B. mittels SNOMED Codes, dass keine bekannte Allergie vorliegt.
+Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
 
 ### Datenherkunft
 
@@ -52,11 +57,7 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 - Um zukünftige Anwendungsfälle abdecken zu können, besteht die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 </blockquote>
 
-#### Leere Sektionen und fehlende Daten
 
-Wenn eine verpflichtende Sektion der APS leer bleibt, weile keine relevanten Informationen vorliegen oder verfügbar sind, muss „Composition.section.emptyReason“ befüllt werden, sodass der Grund dafür ersichtlich ist (z.B. "nicht verfügbar" oder "nicht abgefragt"). Nicht verpflichtende Sektionen dürfen bei der Erstellung der Patient Summary weggelassen werden.
-Auch mittels Ressourcen können fehlende Informationen dokumentiert werden, z.B. mittels SNOMED Codes, dass keine bekannte Allergie vorliegt.
-Das Ziel ist, die Vollständigkeit und Nachvollziehbarkeit der Patient Summary sicherzustellen – auch bei fehlenden Informationen.
 
 ### TODO andere Themen
 
