@@ -35,14 +35,12 @@ Wie bei der IPS wurde bei der APS folgender Profilierungsansatz gewählt: Anstat
 Dieser Ansatz erleichtert die Wiederverwendung der Profile und erlaubt den schrittweisen Zugriff auf zusätzliche relevante Informationen, um zukünftige Anforderungen und spezifische klinische Anwendungsfälle abzubilden.
 * Einschränkungen von IPS, AtApsPatient usw wenn noch nicht an anderer Stelle beschrieben ?
 
-#### Must Support und Obligations
+### Must Support und Obligations
 
-Die APS folgt den Grundsätzen des IPS-Standards in Bezug auf „Must Support“ und Verpflichtungen:
-Ein Element, das als Must Support gekennzeichnet ist, muss von Implementierungen unterstützt werden – d.h. Systeme müssen in der Lage sein, das Element zu erfassen, zu speichern, zu übermitteln und anzuzeigen, sofern entsprechende Informationen verfügbar sind.
-Wenn Daten für ein Must Support-Element nicht vorliegen, darf das Element weggelassen oder mit einem geeigneten Data Absent Reason-Code versehen werden. 
-Pflichtfelder gemäß FHIR-Definition (cardinality 1..1 oder 1..*) müssen immer befüllt werden.
+Durch die Einbindung der IPS-Profile mit der [`imposeProfile`-Extension](http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile) wurden die "Must Support"-Markierungen und Obligations nicht in die APS übernommen.
 
-TODO @Gabriel: Derzeit ist die Must Support Kennzechnung in den Profilen der APS visuell nicht sichtbar.
+Einen ähnlichen Zugang verfolgt die in Aufbau befindliche [European Patient Summary (EPS) von HL7EU](https://build.fhir.org/ig/hl7-eu/eps/). Diese Entwicklungen werden beobachtet und zu gegebener Zeit berücksichtigt.
+
 
 ### Datenherkunft
 
