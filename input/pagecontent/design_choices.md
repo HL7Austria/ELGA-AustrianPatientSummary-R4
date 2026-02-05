@@ -66,11 +66,6 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 
 ### ggf. noch einbauen
 
-#### Kontext und Verwendung von Patient Summary
-
-Die Patient Summary ist eine standardisierte Kurzakte, die die wesentlichen medizinischen Informationen eines Patienten zusammenfasst und eine kohärente Momentaufnahme bietet. Sie ist rein informativ und nicht zur direkten Ausführung oder maschinellen Verarbeitung bestimmt.
-Die APS gewährleistet die nationale Implementierbarkeit unter Beibehaltung der semantischen und strukturellen Kompatibilität mit den IPS-Spezifikationen.
-
 #### Patientensicherheit
 
 Ein korrektes Verständnis der Datenelemente der Patient Summary ist entscheidend, damit Behandler fundierte Entscheidungen treffen können und Fehler vermieden werden. Daher sind sicherheitskritische Datenelemente für Ersteller und Nutzer der Patient Summary verpflichtend zu berücksichtigen. 
