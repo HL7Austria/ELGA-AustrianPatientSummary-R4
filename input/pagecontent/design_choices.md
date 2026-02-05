@@ -66,20 +66,6 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 
 ### ggf. noch einbauen
 
-#### Patientensicherheit
-
-Ein korrektes Verständnis der Datenelemente der Patient Summary ist entscheidend, damit Behandler fundierte Entscheidungen treffen können und Fehler vermieden werden. Daher sind sicherheitskritische Datenelemente für Ersteller und Nutzer der Patient Summary verpflichtend zu berücksichtigen. 
-
-Elemente, die mit ["Is-modifier" ("?!")](https://hl7.org/fhir/R4/conformance-rules.html#isModifier) oder „SHALL:handle” gekennzeichnet sind, dürfen weder bei der Erstellung noch bei der Weiterverarbeitung oder Anzeige der APS ignoriert werden und sind für menschliche Überprüfung sichtbar (SHOULD:display) zu machen.
-
-Beispiele für sicherheitsrelevante Fälle:
-* Eine dokumentierte Allergie (*AllergyIntolerance*), deren Schweregrad (*severity*) als schwer (*severe*) eingestuft ist.
-* Eine Diagnose (*Condition*), deren Verifikationsstatus (*verificationStatus*) widerlegt ist (*refuted*), also ausgeschlossen wurde.
-* Eine Medikation (*MedicationStatement*), deren Status *stopped* lautet.
-* Ein Laborergebnis (*Observation*), dessen Status vorläufig (*preliminary*) ist, also noch nicht validiert wurde.
-
-Die korrekte Übersetzung und Darstellung von Inhalten hat ebenfalls Auswirkungen auf die Patientensicherheit.
-
 #### Structuring Terminology Choices
 
 Die APS wird in diesem Leitfaden als HL7-FHIR-Dokument vom Typ "Bundle" spezifiziert.
