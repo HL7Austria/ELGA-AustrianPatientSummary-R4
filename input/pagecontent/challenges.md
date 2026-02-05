@@ -17,3 +17,7 @@ Aktuell liegt die IPS nur auf Basis von FHIR® R4 vor. Ob und wann die IPS auch 
 #### Aufwärtskompatibilität
 
 Um auf Entwicklungen in FHIR® R5 bzw. R6 vorbereitet zu sein, wurden im [AT APS CarePlan](StructureDefinition-at-aps-careplan.html) die Elemente `instantiatesCanonical` und `instantiatesUri` durch die beiden Extensions [`shallComplyWith`](http://hl7.org/fhir/StructureDefinition/workflow-shallComplyWith) und [`adheresTo`](http://hl7.org/fhir/StructureDefinition/workflow-adheresTo) ersetzt.
+
+### Deutsche Übersetzung
+
+Wo es einfach möglich ist (narrative Texte, Erklärungen in Profilen), wird die deutsche Sprache verwendet. Dort, wo auf die FHIR-Spezifikation aufgebaut wird (z.B. Elemente in Profilen) oder wo die Texte vom IG Publisher vorgegeben werden, sind die Texte in Englisch.
