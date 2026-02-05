@@ -14,7 +14,6 @@ Die strengere Regel wird also bei der Validierung einer Instanz schlagend (siehe
 
 Aktuell liegt die IPS nur auf Basis von FHIR® R4 vor. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
 
-### TODO andere Themen
+#### Aufwärtskompatibilität
 
-- Aufwärtskompatibilität CarePlan -> Extensions
-- Deutsche Übersetzung der APS-Profile
+Um auf Entwicklungen in FHIR® R5 bzw. R6 vorbereitet zu sein, wurden im [AT APS CarePlan](StructureDefinition-at-aps-careplan.html) die Elemente `instantiatesCanonical` und `instantiatesUri` durch die beiden Extensions [`shallComplyWith`](http://hl7.org/fhir/StructureDefinition/workflow-shallComplyWith) und [`adheresTo`](http://hl7.org/fhir/StructureDefinition/workflow-adheresTo) ersetzt.
