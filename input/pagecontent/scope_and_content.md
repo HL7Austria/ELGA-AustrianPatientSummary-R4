@@ -73,11 +73,11 @@ Die Sektion ermöglicht Warnmeldungen, wenn bestimmte Umstände eintreten (z.B. 
 
 #### Beeinträchtigungen (Functional Status)
 
-Diese Sektion enthält eine Beschreibung der Mobilität bzw. Fähigkeit der Patientin oder des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden.
+Diese Sektion enthält eine Beschreibung der Mobilität bzw. Fähigkeit des Patienten, Handlungen des täglichen Lebens auszuführen, einschließlich möglicher Bedürfnisse. Hier könnte auch die Pflegestufe dokumentiert werden.
 
 #### Vergangene Gesundheitsprobleme und Risiken (History of Past Problems)
 
-Die Sektion enthält eine Beschreibung der historischen klinischen Probleme oder Erkrankungen, die für die Patientin oder den Patienten in der Vergangenheit diagnostiziert wurden.
+Die Sektion enthält eine Beschreibung der historischen klinischen Probleme oder Erkrankungen, die für den Patienten in der Vergangenheit diagnostiziert wurden.
 
 #### Schwangerschaftshistorie (History of Pregnancy)
 
@@ -93,7 +93,7 @@ Die Sektion enthält den Behandlungsplan inkl. Vorschlägen, Zielen und Anordnun
 
 #### Lebensstil / Soziale Umstände und Verhalten (Social History)
 
-Diese Sektion erfasst den aktuellen Lebensstil einer Person. Angaben zum Rauchverhalten sowie zum Alkoholkonsum werden in den hierfür vorgesehenen spezifischen Ressourcen abgebildet. Weitere relevante Aspekte, wie z.B. körperliche Aktivität, Ernährungsgewohnheiten oder sonstige Verhaltensweisen, werden mithilfe der AtApsObservation-Ressource dokumentiert.
+Diese Sektion erfasst den aktuellen Lebensstil des Patienten. Angaben zum Rauchverhalten sowie zum Alkoholkonsum werden in den hierfür vorgesehenen spezifischen Ressourcen abgebildet. Weitere relevante Aspekte, wie z.B. körperliche Aktivität, Ernährungsgewohnheiten oder sonstige Verhaltensweisen, werden mithilfe der AtApsObservation-Ressource dokumentiert.
 
 #### Vitalparameter (Vital Signs)
 
