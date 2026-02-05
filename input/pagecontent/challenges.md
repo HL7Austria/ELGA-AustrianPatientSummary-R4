@@ -10,6 +10,10 @@ So ist das `subject` in der [AT APS Composition](StructureDefinition-at-aps-comp
 
 Die strengere Regel wird also bei der Validierung einer Instanz schlagend (siehe auch [Validierung von APS-Instanzen](design_choices.html#validierung-von-aps-instanzen)).
 
+### FHIR® R4
+
+Aktuell liegt die IPS nur auf Basis von FHIR® R4 vor. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
+
 ### TODO andere Themen
 
 - Aufwärtskompatibilität CarePlan -> Extensions

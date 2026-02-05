@@ -94,13 +94,6 @@ TODO:
 
 
 
-##### FHIR® R4
-
-Aktuell liegt die IPS nur auf Basis von FHIR® R4 vor. Ob und wann die IPS auch in R5 bzw. R6 zur Verfügung steht, ist noch nicht klar. Deshalb wird die APS zurzeit auch nur in FHIR® R4 spezifiziert.
-
-#### Profilierungsansatz
-
-
 
 #### Open Slicing
 
