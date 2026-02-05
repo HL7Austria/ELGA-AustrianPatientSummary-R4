@@ -89,7 +89,7 @@ Die Sektion ermöglicht die Dokumentation eines Schwangerschaftsstatus inkl. gep
 
 #### Willenserklärungen und andere juridische Dokumente (AdvanceDirectives)
 
-Die Sektion kann aktuelle Verfügungen von Patienten beinhalten.
+Die Sektion kann aktuelle Willenserklärungen und andere juridische Dokumente von Patienten beinhalten.
 
 #### Warnungen (Alerts)
 
