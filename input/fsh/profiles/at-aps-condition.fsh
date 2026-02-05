@@ -10,7 +10,7 @@ Description: "Das AT APS-Profil für die Condition-Ressource berücksichtigt zum
 
 * category from $vs-problem-type-uv-ips (extensible)
 * category ^binding.extension[0].extension[0].url = "purpose"
-* category ^binding.extension[=].extension[=].valueCode = #candidate
+* category ^binding.extension[=].extension[=].valueCode = #extensible
 * category ^binding.extension[=].extension[+].url = "valueSet"
 * category ^binding.extension[=].extension[=].valueCanonical = $vs-elga-problemarten
 * category ^binding.extension[=].extension[+].url = "key"
