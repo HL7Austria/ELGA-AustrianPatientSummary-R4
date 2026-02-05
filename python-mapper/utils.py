@@ -6,6 +6,7 @@ import io
 import json
 from html import escape as html_escape
 from html.parser import HTMLParser
+import keyword
 
 class dateString(str): # wrapper for strings that should be in iso datetime format
     pass
@@ -55,10 +56,12 @@ def _handle_content(elem):
             if getattr(content.value, "ID", None):
                 attrs += ' id="%s"' % content.value.ID 
             if content.name == "table":
-                html += "<table%s><thead>" % attrs
-                for tr in content.value.thead.tr:
-                    html += _handle_tr(tr)
-                html += "</thead>"
+                html += "<table%s>" % attrs
+                if content.value.thead:
+                    html += "<thead>"
+                    for tr in content.value.thead.tr:
+                        html += _handle_tr(tr)
+                    html += "</thead>"
                 if content.value.tfoot:
                     html += "<tfoot>"
                     for tr in content.value.tfoot.tr:
@@ -185,7 +188,7 @@ def exportJsonResultResourceContainer(self, json_dict, parent_dict, key, is_list
 def exportJsonResultNarrative(self, json_dict, parent_dict, key, is_list):
     divf = io.StringIO()
     if self.div:
-        self.div.export(divf, 0)
+        self.div.export(divf, 0, namespacedef_='xmlns="http://www.w3.org/1999/xhtml"')
         json_dict["div"] = divf.getvalue()
     return json_dict
 
@@ -227,7 +230,10 @@ def exportJsonResultElement(self, json_dict, parent_dict, key, is_list, sub_defs
             else:
                 return value
         elif self.__class__.__name__ == "time":
-            return value.isoformat("seconds")
+            if isinstance(value, datetime.time):
+                return value.isoformat("seconds")
+            else:
+                return value
         else:
             return value
     else:
@@ -250,6 +256,8 @@ def parse_json_primitive(module, val, type_str):
         return val
 
 def parse_json(module, dct, class_name=None):
+    keyword_list = keyword.kwlist
+    escaped_elements = ["type", "float", "build", "range", "set"] + keyword_list # see generateDS NameTable
     if "resourceType" in dct:
         clazz = getattr(module, dct["resourceType"])
     else:
@@ -264,40 +272,55 @@ def parse_json(module, dct, class_name=None):
         elif elem == "class":
             elem = "class_"
         if elem != "resourceType":
+            elem_esc = elem[1:] if elem.startswith("_") else elem
+            elem_esc = elem + "_" if elem_esc in escaped_elements else elem_esc
             if isinstance(val, list):
+                type_str = typing.get_args(ann[elem_esc])[0].__forward_arg__
                 if elem.startswith("_"):
+                    if elem_esc not in kwargs:
+                        kwargs[elem_esc] = []
+                    while len(kwargs[elem_esc]) < len(val):
+                        kwargs[elem_esc].append(parse_json_primitive(module, None, type_str))
                     for idx, el in enumerate(val):
                         exts = []
                         for ext in el["extension"]:
                             exts.append(parse_json(module, ext, class_name="Extension"))
-                        kwargs[elem[1:]][idx].extension = exts
+                        kwargs[elem_esc][idx].extension = exts
                 else:
-                    type_str = typing.get_args(ann[elem])[0].__forward_arg__
                     lst = []
                     for el in val:
-                        if isinstance(el, dict):
+                        if type_str == "ResourceContainer":
+                            kkwargs = { el["resourceType"]: parse_json(module, el, class_name=type_str) }
+                            container = module.ResourceContainer(**kkwargs)
+                            for val in kkwargs.values():
+                                if hasattr(val, "parent_object_"):
+                                    val.parent_object_ = container
+                            lst.append(container)
+                        elif isinstance(el, dict):
                             lst.append(parse_json(module, el, class_name=type_str))
                         else:
                             lst.append(parse_json_primitive(module, el, type_str))
-                    kwargs[elem] = lst
+                    kwargs[elem_esc] = lst
             elif isinstance(val, dict):
                 if elem.startswith("_"):
                     exts = []
                     for ext in val["extension"]:
                         exts.append(parse_json(module, ext, class_name="Extension"))
-                    kwargs[elem[1:]].extension = exts
+                    if elem_esc not in kwargs:
+                        kwargs[elem_esc] = parse_json_primitive(module, None, ann[elem_esc])
+                    kwargs[elem_esc].extension = exts
                 else:
-                    if ann[elem] == "ResourceContainer":
-                        kkwargs = { val["resourceType"]: parse_json(module, val, class_name=ann[elem]) }
+                    if ann[elem_esc] == "ResourceContainer":
+                        kkwargs = { val["resourceType"]: parse_json(module, val, class_name=ann[elem_esc]) }
                         container = module.ResourceContainer(**kkwargs)
                         for val in kkwargs.values():
                             if hasattr(val, "parent_object_"):
                                 val.parent_object_ = container
-                        kwargs[elem] = container
+                        kwargs[elem_esc] = container
                     else:
-                        kwargs[elem] = parse_json(module, val, class_name=ann[elem])
+                        kwargs[elem_esc] = parse_json(module, val, class_name=ann[elem_esc])
             else:
-                kwargs[elem] = parse_json_primitive(module, val, ann[elem])
+                kwargs[elem_esc] = parse_json_primitive(module, val, ann[elem_esc])
     fhir_res = clazz(**kwargs)
     fhir_res.gds_elementtree_node_ = dct
     dct["@node"] = fhir_res
@@ -370,7 +393,7 @@ def get_type(var_type, element, type_str=None):
                 var_type = dateString
             elif type_str in ["real", "decimal_primitive"]:
                 var_type = decimal.Decimal
-            elif type_str in ["EntityNamePartQualifier", "set_EntityNamePartQualifier", "ActMood", "ContextControl", "ActClass", "RoleClassAssociative"]:
+            elif type_str in ["EntityNamePartQualifier", "set_EntityNamePartQualifier", "ActMood", "ContextControl", "ActClass", "RoleClassAssociative", "RoleClass"]:
                 # TODO genDs check why this class is not generated
                 var_type = getattr(module, "CS")
             elif type_str.startswith("set_"):
