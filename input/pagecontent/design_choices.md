@@ -58,8 +58,6 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 - Um zukünftige Anwendungsfälle abdecken zu können, besteht die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 </blockquote>
 
-
-
 ### TODO andere Themen
 
 - Aufwärtskompatibilität CarePlan -> Extensions
@@ -74,24 +72,6 @@ Erklärung?
 Reihenfolge der Sektionen?
 TODO:
 * Bevorzugte Terminologie SNOMED CD, LOINC, UCUM, ergänzt mit nationalen Value Sets und Mappings ?  Hinweis auf Snomed Lizenzen, Terminologieserver
-
-#### Erstellung und Abruf der APS
-
-<br clear="all"/>
-
-
-
-<br>
-
-##### APS lesen (UC2)
-
-
-
-
-### Designkonventionen
-
-##### Beziehung zu HL7AT Core, IPS und MyHealth@EU
-
 
 
 
