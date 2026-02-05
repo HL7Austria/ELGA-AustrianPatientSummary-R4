@@ -58,20 +58,17 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 - Um zukünftige Anwendungsfälle abdecken zu können, besteht die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 </blockquote>
 
+### Terminologien
+
+Die primären Terminologien der IPS (SNOMED CT, LOINC, UCUM, etc.) werden in der APS dort, wo es notwendig ist, um nationale Terminologien ergänzt.
+
+Die nationalen Terminologien sind über den [österreichischen e-Health Terminologieserver](https://termgit.elga.gv.at/) abrufbar.
+
 ### TODO andere Themen
 
 - Aufwärtskompatibilität CarePlan -> Extensions
 
 ### ggf. noch einbauen
-
-#### Structuring Terminology Choices
-
-Die APS wird in diesem Leitfaden als HL7-FHIR-Dokument vom Typ "Bundle" spezifiziert.
-Die APS Composition legt fest, dass nur jene Profile verwendet werden dürfen, die vorgesehene Sektionen und Entries enthalten. Eine Ausnahme bilden die Sektionen *Diagnostische Resultate*, *Vitalparameter* und *Lebensstil* mit der slicing.rule „openAtEnd“. 
-Erklärung?
-Reihenfolge der Sektionen?
-TODO:
-* Bevorzugte Terminologie SNOMED CD, LOINC, UCUM, ergänzt mit nationalen Value Sets und Mappings ?  Hinweis auf Snomed Lizenzen, Terminologieserver
 
 #### Bekannte Probleme
 
