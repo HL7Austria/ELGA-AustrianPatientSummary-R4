@@ -54,7 +54,7 @@ Die Herkunft der Daten in den erstellten FHIR® Ressourcen soll jeweils in `meta
 
 <blockquote class="stu-note" markdown="1">
 - Die konkrete Formatvorgabe für `meta.source` befindet sich noch in Ausarbeitung. 
-- Zurzeit ist noch nicht geklärt, aus welchen Quellen (z.B. e-Befunde, e-Impfpass, e-Medikation, etc.) bzw. über welche Mechanismen die Informationen in die APS übernommen werden.
+- Zurzeit ist noch nicht geklärt, aus welchen Quellen (z.B. e-Befunde, e-Impfpass, e-Medikation, etc.) bzw. über welche Mechanismen die Informationen in die APS übernommen werden und in welchen Sektionen dieses Informationen abgebildet werden.
 - Um zukünftige Anwendungsfälle abdecken zu können, besteht die Möglichkeit, zu einem späteren Zeitpunkt zusätzlich Provenance zu verwenden.
 </blockquote>
 
