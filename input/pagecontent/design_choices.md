@@ -64,12 +64,3 @@ Die primären Terminologien der IPS (SNOMED CT, LOINC, UCUM, etc.) werden in der
 
 Die nationalen Terminologien sind über den [österreichischen e-Health Terminologieserver](https://termgit.elga.gv.at/) abrufbar.
 
-### TODO andere Themen
-
-- Aufwärtskompatibilität CarePlan -> Extensions
-
-### ggf. noch einbauen
-
-#### Bekannte Probleme
-
-- Deutsche Übersetzungen der APS Profile
