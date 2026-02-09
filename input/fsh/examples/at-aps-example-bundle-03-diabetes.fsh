@@ -75,7 +75,7 @@ Usage: #inline
 // * language = #de-AT
 * status = #final
 * type = $cs-loinc#60591-5 "Patient summary"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * title = "Diabetes Leitdokument"
@@ -193,7 +193,7 @@ Usage: #inline
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 //* category[diabetes] = VsIvDiagnosekategorie#73211009 "Diabetes mellitus"
 * code = $cs-sct#105401000119101 "Diabetes mellitus aufgrund einer Verletzung der Bauchspeicheldrüse"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * recordedDate = "2024-02-08T14:01:30+00:00"
 
 // // Diabetes Nebendiagnosen
@@ -204,7 +204,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#280137006 "Diabetischer Fuß"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * recordedDate = "2021-02-08T14:01:30+00:00"
 
 Instance: AtApsExample03Diabetes-problem-1
@@ -214,7 +214,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#700379002 "CKD - Chronische Niereninsuffizienz Grad 3B"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-problem-2
 InstanceOf: AtApsCondition
@@ -223,7 +223,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#711150003 "Langfristige Einnahme von Antikoagulantien"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-problem-5
 InstanceOf: AtApsCondition
@@ -232,7 +232,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#38341003 "Arterielle Hypertonie"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 
 // Problem List - Family history
@@ -244,7 +244,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#160303001 "Diabetes mellitus in der Familienanamnese"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-problem-14
 InstanceOf: AtApsCondition
@@ -253,7 +253,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#312824007 "Familienanamnese: Kolonkarzinom"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-problem-15
 InstanceOf: AtApsCondition
@@ -262,7 +262,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#134439009 "Familienanamnese: vorzeitige koronare Herzkrankheit"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-problem-16
 InstanceOf: AtApsCondition
@@ -271,7 +271,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#160314003 "Hypercholesterinämie in der Familienanamnese"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 // risk of periodontal disease
 Instance: AtApsExample03Diabetes-problem-17
@@ -281,7 +281,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#provisional "Provisional"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#2556008 "Parodontalerkrankung"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * stage.assessment = Reference(urn:uuid:f235c566-01aa-457d-ab49-9e422df69863) "AtApsExample03Diabetes-problem-17-assessment-1"
 
 Instance: AtApsExample03Diabetes-problem-17-assessment-1
@@ -290,7 +290,7 @@ Usage: #inline
 * status = #final
 * category = $cs-observation-category#exam "Exam"
 * code = $cs-sct#1237049003 "Bewertung der Risikofaktoren für Parodontalerkrankungen"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueCodeableConcept = $cs-sct#723509005 "Hohes Risiko"
@@ -312,7 +312,7 @@ Usage: #inline
 * category.text = "Plan zur Patientenschulung"
 * title = "Spezialschulung für Diabetespatienten mit Retinophatie"
 * description = "Information über eine Veranstaltung des Diabetes"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * period.end = "2024-04-12"
 * created = "2024-03-29"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
@@ -326,7 +326,7 @@ InstanceOf: AtApsMedicationStatement
 Usage: #inline
 * status = #active
 * medicationCodeableConcept = $cs-asp-liste#2443061 "EBETREXAT TBL 10MG"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * effectivePeriod.start = "2024-02-08T10:31:58+02:00"
 // "S:0-0-0-2 / FR"
 * dosage.sequence = 1
@@ -342,7 +342,7 @@ InstanceOf: AtApsAllergyIntolerance // DiabAllergyIntolerance
 Usage: #inline
 * clinicalStatus = $cs-allergyintolerance-clinical#active "Active"
 * code = $cs-sct#89055006 "Benzylpenicillin-Natrium"
-* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* patient = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 //* text.div = "Das ist eine optionale Beschreibung der Allergie des Arztes." // ??
 * asserter = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 
@@ -355,7 +355,7 @@ InstanceOf: AtApsProcedure
 Usage: #inline
 * status = #completed
 * code = $cs-sct#770606008 "Totalersatz des linken Hüftgelenks"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * performedDateTime = "2010"
 
 // Diagnostic Results
@@ -367,7 +367,7 @@ Usage: #inline
 * category[0] = $cs-observation-category#laboratory "Laboratory"
 * category[+] = $cs-elga-laborparameterergaenzung#300 "Hämatologie"
 * code = $cs-loinc#882-1 "AB0 und Rh-Blutgruppensysteme [Typ] in Blut"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * effectiveDateTime = "2024-02-08T07:34:06+01:00"
 * performer = Reference(urn:uuid:82f802a7-56a9-49b4-a675-95da08f0d7a6) "Amadeus Spital - Labor"
 * valueCodeableConcept = $cs-sct#278149003 "Blutgruppe A Rh(D) positiv"
@@ -399,7 +399,7 @@ Usage: #inline
 Instance: AtApsExample03Diabetes-diagnostic-specimen-1
 InstanceOf: AtApsSpecimen
 Usage: #inline
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * status = $cs-specimen-status#unavailable "Unavailable"
 * type = $cs-sct#119297000 "Blutprobe"
 
@@ -412,7 +412,7 @@ Usage: #inline
 * language = #de-AT
 * category[VSCat] = $cs-observation-category#vital-signs "Vital Signs"
 * code = $cs-loinc#8302-2 "Körpergröße"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueQuantity = 173 'cm' "cm"
@@ -427,7 +427,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#161419000 "Zustand nach Masern"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 Instance: AtApsExample03Diabetes-illness-history-2
 InstanceOf: AtApsCondition
@@ -436,7 +436,7 @@ Usage: #inline
 * verificationStatus = $cs-condition-ver-status#confirmed "Confirmed"
 * category.coding[0] = $cs-condition-category#problem-list-item "Problem List Item"
 * code = $cs-sct#161423008 "Zustand nach Windpocken"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 
 // Social History
 
@@ -445,7 +445,7 @@ InstanceOf: AtApsObservationTobaccoUse
 Usage: #inline
 * status = #final
 * code = $cs-loinc#72166-2 "Raucherstatus"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2019-07-15"
 * valueCodeableConcept = $cs-sct#8517006 "Ehemalig rauchende Person"
@@ -455,7 +455,7 @@ InstanceOf: Observation
 Usage: #inline
 * status = #final
 * code = $cs-sct#61686008 "Körperliche Aktivität"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Susi Testpatientin"
+* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * performer = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Dr. IV-Ärztin"
 * effectiveDateTime = "2024-02-08T08:30:00+01:00"
 * valueRatio.numerator = 2.5 'h' "h"
