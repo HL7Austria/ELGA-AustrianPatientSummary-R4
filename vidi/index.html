@@ -68,10 +68,9 @@
                     <img class="img-description" data-view="simple" src="assets/img/introduction_simple.jpg" alt="Beschreibung">
                 </div>
                 <div class="div-description">
-                    <h1><span class="h1-light">Sehr geehrter </span>Herr Mustermann<span class="h1-light">,</span></h1>
-                    <p>
-                        in dieser Ansicht finden Sie all Ihre medizinischen Daten übersichtlich und vereinfacht dargestellt.
-                        <p>Bei Fragen wenden Sie sich bitte an <span class="span-bold">Ihre Hausärztin, Frau Musterfrau</span>, die Erstellerin Ihres IPS. </p>
+                    <h1><span class="h1-light">Sehr geehrte(r) </span><span class="subject-name"></span><span class="h1-light">,</span></h1>
+                        <p>In dieser Ansicht finden Sie all Ihre medizinischen Daten übersichtlich und vereinfacht dargestellt.</p>
+                        <p>Bei Fragen wenden Sie sich bitte an <span class="span-bold author-name"></span>.</p>
                     </p>
                 </p>
                 </div>
@@ -85,31 +84,31 @@
                 <div class="expansion-panel-content">
                     <p>Hier werden allgemeine Informationen über Ihre Person festgehalten:</p>
                     <table class="table-horizontal">
-                        <tr>
-                          <th>Name:</th>
-                          <td>Max Mustermann</td>
-                          <th>Adresse:</th>
-                          <td>Am Schulweg 5, Hainfeld, 3100, AUT</td>
-                        </tr>
-                        <tr>
-                          <th>Geschlecht:</th>
-                          <td>männlich</td>
-                          <th>Identifikationsnummer:</th>
-                          <td>0000121150</td>
-                        </tr>
-                        <tr>
-                          <th>Geburtsdatum:</th>
-                          <td>11.12.1950</td>
-                          <th></th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Verfasserin des Dokuments:</th>
-                          <td>Hausarzt:ärztin Marlene Musterfrau</td>
-                          <th></th>
-                          <td></td>
-                        </tr>
-                      </table>
+                            <tr>
+                            <th>Name:</th>
+                            <td class="subject-name"></td>
+                            <th>Adresse:</th>
+                            <td class="subject-address"></td>
+                            </tr>
+                            <tr>
+                            <th>Geschlecht:</th>
+                            <td class="subject-gender"></td>
+                            <th>Identifikationsnummer:</th>
+                            <td class="subject-svnr"></td>
+                            </tr>
+                            <tr>
+                            <th>Geburtsdatum:</th>
+                            <td class="subject-birthdate"></td>
+                            <th></th>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <th>Verfasser des Dokuments:</th>
+                            <td class="author-name"></td>
+                            <th></th>
+                            <td></td>
+                            </tr>
+                            </table>
                     <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
                 </div>
             </div>
@@ -250,9 +249,9 @@
                 <div class="div-description">
                     <h1><span class="h1-light">Sehr geehrte:r</span> Experte:in<span class="h1-light">,</span></h1>
                     <p>
-                        hier finden Sie alle relevanten medizinischen Informationen zu Herrn <span class="span-bold">Max Mustermann</span>.
-                    </p>
-                    <p>Dieser IPS wurde von <span class="span-bold">Hausärztin Frau Musterfrau erstellt</span> und mit den angegebenen Informationen befüllt.</p>
+                        hier finden Sie alle relevanten medizinischen Informationen über <span class="span-bold subject-name"></span>. 
+                    </p> 
+                    <p>Dieser IPS wurde von <span class="span-bold author-name"></span> erstellt und mit den angegebenen Informationen befüllt.</p>
                     <div id="div-switch-expansion-panel">
                         <label class="switch">
                             <input
@@ -282,30 +281,30 @@
                     <div class="expansion-panel-content">
                         <table class="table-horizontal">
                             <tr>
-                              <th>Name:</th>
-                              <td>Max Mustermann</td>
-                              <th>Adresse:</th>
-                              <td>Am Schulweg 5, Hainfeld, 3100, AUT</td>
+                            <th>Name:</th>
+                            <td class="subject-name"></td>
+                            <th>Adresse:</th>
+                            <td class="subject-address"></td>
                             </tr>
                             <tr>
-                              <th>Geschlecht:</th>
-                              <td>männlich</td>
-                              <th>Identifikationsnummer:</th>
-                              <td>0000121150</td>
+                            <th>Geschlecht:</th>
+                            <td class="subject-gender"></td>
+                            <th>Identifikationsnummer:</th>
+                            <td class="subject-svnr"></td>
                             </tr>
                             <tr>
-                              <th>Geburtsdatum:</th>
-                              <td>11.12.1950</td>
-                              <th></th>
-                              <td></td>
+                            <th>Geburtsdatum:</th>
+                            <td class="subject-birthdate"></td>
+                            <th></th>
+                            <td></td>
                             </tr>
                             <tr>
-                              <th>Verfasserin des Dokuments:</th>
-                              <td>Hausarzt:ärztin Marlene Musterfrau</td>
-                              <th></th>
-                              <td></td>
+                            <th>Verfasser des Dokuments:</th>
+                            <td class="author-name"></td>
+                            <th></th>
+                            <td></td>
                             </tr>
-                          </table>
+                            </table>
                         <button type="button" aria-label="Einklappen" class="btn-collapse btn-collapse-large">Einklappen</button>
                     </div>
                 </div>
