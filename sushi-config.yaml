@@ -117,7 +117,7 @@ parameters:
   allow-extensible-warnings: true
   display-warnings: true
   path-expansion-params: '../resources/Parameters-AtApsExpansionParametersSCT.json' # for using SNOMED CT Austrian Extension
-  pin-canonicals: pin-all # relevant for CarePlan.shallComplyWith, CarePlan.adheresTo and Patient.address
+  pin-canonicals: pin-multiples # relevant for CarePlan.shallComplyWith, CarePlan.adheresTo and Patient.address
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
