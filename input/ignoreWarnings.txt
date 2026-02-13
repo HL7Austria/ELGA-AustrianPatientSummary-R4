@@ -24,3 +24,11 @@ Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
 UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 UCUM Codes that contain human readable annotations like {ratio} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 UCUM Codes that contain human readable annotations like {pieces} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+
+# Ignore warnings regarding not resolvable URLs or OIDs
+URL-Wert 'http://system-to-be-defined.com' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.10.1.4.3.1' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.10.1.4.3.2' löst nicht auf
+URL-Wert 'urn:oid:1.2.3.4.5' löst nicht auf
+URL-Wert 'https://elga.gv.at/specimen-id' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.34.4.10' löst nicht auf
