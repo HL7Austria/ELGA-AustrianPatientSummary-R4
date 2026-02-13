@@ -15,3 +15,8 @@ Display_Name_for__should_be_one_of__instead_of
 
 # This is a tooling error which is already being dealt with: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/expansion.20parameters.20error
 URL-Wert 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' löst nicht auf
+
+# Ignore warnings regarding draft value sets which are part of the FHIR specification
+Reference to draft CodeSystem http://hl7.org/fhir/diagnostic-report-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
+
