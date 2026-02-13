@@ -27,7 +27,8 @@ Usage: #example
 
 Instance: AtApsExampleDevice03
 InstanceOf: Device
-Usage: #inline
+Description: "Medizinprodukt"
+Usage: #example
 * id = "at-aps-example-device-03"
 * patient = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * type = $cs-sct#49062001 "Gerät"
@@ -38,7 +39,8 @@ Usage: #inline
 
 Instance: AtApsExampleDevice04
 InstanceOf: Device
-Usage: #inline
+Description: "APS Generator"
+Usage: #example
 * type = $cs-sct#49062001 "Gerät"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"

@@ -1,10 +1,11 @@
 Instance: AtApsComposition01
 InstanceOf: AtApsComposition
+Description: "Composition"
 Usage: #example
 // * language = #de-AT
 * status = #preliminary
 * type = $cs-loinc#60591-5 "Patient summary"
-* subject = Reference(Patient/AtApsExamplePatient01) "Maria Musterfrau"
+* subject = Reference(Patient/at-aps-example-patient-01) "Maria Musterfrau"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(Device/AtApsExampleDevice04) "APS Generator"
 * title = "Austrian Patient Summary"
