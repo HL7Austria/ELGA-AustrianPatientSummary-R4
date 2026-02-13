@@ -33,3 +33,8 @@ URL-Wert 'urn:oid:1.2.40.0.10.1.4.3.2' löst nicht auf
 URL-Wert 'urn:oid:1.2.3.4.5' löst nicht auf
 URL-Wert 'https://elga.gv.at/specimen-id' löst nicht auf
 URL-Wert 'urn:oid:1.2.40.0.34.4.10' löst nicht auf
+
+# Ignore warnings regarding not found resources - these are part of examples and it is not a problem that they are not resolvable
+Can't find 'http://example.org/protocol-for-heart-association-event' in the bundle (Bundle.entry[12].resource.extension[0].value[x])
+Can't find 'https://example.org/fhir/Binary/AtApsExampleBundle-Journey%
+
