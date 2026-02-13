@@ -38,3 +38,6 @@ URL-Wert 'urn:oid:1.2.40.0.34.4.10' löst nicht auf
 Can't find 'http://example.org/protocol-for-heart-association-event' in the bundle (Bundle.entry[12].resource.extension[0].value[x])
 Can't find 'https://example.org/fhir/Binary/AtApsExampleBundle-Journey%
 
+# These messages are generated in the snapshot from the base resources. There is no reference to these extensions in the IPS resource profiles.
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
