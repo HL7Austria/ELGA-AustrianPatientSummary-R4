@@ -45,6 +45,8 @@ Alias: $vs-results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhi
 Alias: $vs-problem-type-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips
 Alias: $vs-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
 // termgit.elga.gv.at
+Alias: $vs-at-aps-immunization-vaccine-codes = https://termgit.elga.gv.at/ValueSet/at-aps-immunization-vaccine-codes
+Alias: $vs-at-aps-observationinterpretation = https://termgit.elga.gv.at/ValueSet/at-aps-observationinterpretation
 Alias: $vs-elga-allergyorintoleranceagent = https://termgit.elga.gv.at/ValueSet/elga-allergyorintoleranceagent
 Alias: $vs-elga-allergyreaction = https://termgit.elga.gv.at/ValueSet/elga-allergyreaction
 Alias: $vs-elga-problemarten = https://termgit.elga.gv.at/ValueSet/elga-problemarten
