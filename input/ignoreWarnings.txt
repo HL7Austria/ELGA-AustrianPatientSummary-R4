@@ -21,6 +21,10 @@ Reference to draft CodeSystem http://hl7.org/fhir/diagnostic-report-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
 The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
 
+# Ignore warnings regarding canonicals which cannot be resolved but are parte of FHIR specification
+Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx' kann nicht aufgelöst werden
+Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' kann nicht aufgelöst werden
+
 # Ignore warnings regarding UCUM annotations
 UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 UCUM Codes that contain human readable annotations like {ratio} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
