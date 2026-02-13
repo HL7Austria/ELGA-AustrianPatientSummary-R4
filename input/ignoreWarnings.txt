@@ -54,3 +54,6 @@ Keiner der angegebenen Codes ist im Valueset 'IdentifierType' (http://hl7.org/fh
 
 # Ignore warning about Condition.category - code from additional binding is being used
 Keiner der angegebenen Codes ist im Valueset 'Problem Type - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#404684003)
+
+# Ignore warning about code which is not part of extensible value set - none of the codes in extensible value set represents the meaning of this SNOMED code
+Keiner der angegebenen Codes ist im Valueset 'hl7VS-specimenCondition' (http://terminology.hl7.org/ValueSet/v2-0493|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#281268007)
