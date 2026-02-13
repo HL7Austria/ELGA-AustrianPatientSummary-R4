@@ -22,7 +22,7 @@ Description: "Das AT APS-Profil für die Immunization-Ressource berücksichtigt 
 * reaction.detail only Reference(AtApsObservation)
 * protocolApplied.authority only Reference(AtApsOrganization)
 
-* vaccineCode from AtApsImmunizationVaccineCodes (extensible)
+* vaccineCode from $vs-at-aps-immunization-vaccine-codes (extensible)
 * vaccineCode ^binding.extension[0].extension[0].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
