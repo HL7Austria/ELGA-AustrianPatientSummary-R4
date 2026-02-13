@@ -19,7 +19,7 @@ Description: "Das AT APS-Profil für die Specimen-Ressource berücksichtigt zum 
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * collection.bodySite ^binding.strength = #extensible   // Europe Laboratory Report has an additional bodySite - this might be not relevant vor the IPS/APS: https://hl7.eu/fhir/laboratory/StructureDefinition-Specimen-eu-lab.html
 
-* condition ^slicing.discriminator.type = #pattern
+* condition ^slicing.discriminator.type = #value
 * condition ^slicing.discriminator.path = "$this"
 * condition ^slicing.rules = #open
 * condition contains insufficientsample 0..1
