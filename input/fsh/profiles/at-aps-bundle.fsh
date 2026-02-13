@@ -31,14 +31,7 @@ Description: "Das AT APS-Profil für die Bundle-Ressource berücksichtigt zum ei
     PractitionerRole 0..* and
     Procedure 0..* and
     Organization 0..* and
-    ObservationPregnancyEdd 0..* and
-    ObservationPregnancyOutcome 0..* and
-    ObservationPregnancyStatus 0..* and
-    ObservationAlcoholUse 0..* and
-    ObservationTobaccoUse 0..* and
-    ObservationResultsLaboratoryPathology 0..* and
-    ObservationResultsRadiology 0..* and
-    ObservationVitalSigns 0..* and
+    Observation 0..* and
     Specimen 0..* and
     Flag 0..* and
     ClinicalImpression 0..* and
@@ -94,29 +87,8 @@ Description: "Das AT APS-Profil für die Bundle-Ressource berücksichtigt zum ei
 * entry[Organization].resource 1..
 * entry[Organization].resource only AtApsOrganization
 
-* entry[ObservationPregnancyEdd].resource 1..
-* entry[ObservationPregnancyEdd].resource only AtApsObservationPregnancyEdd
-
-* entry[ObservationPregnancyOutcome].resource 1..
-* entry[ObservationPregnancyOutcome].resource only AtApsObservationPregnancyOutcome
-
-* entry[ObservationPregnancyStatus].resource 1..
-* entry[ObservationPregnancyStatus].resource only AtApsObservationPregnancyStatus
-
-* entry[ObservationAlcoholUse].resource 1..
-* entry[ObservationAlcoholUse].resource only AtApsObservationAlcoholUse
-
-* entry[ObservationTobaccoUse].resource 1..
-* entry[ObservationTobaccoUse].resource only AtApsObservationTobaccoUse
-
-* entry[ObservationResultsLaboratoryPathology].resource 1..
-* entry[ObservationResultsLaboratoryPathology].resource only AtApsObservationResultsLaboratoryPathology
-
-* entry[ObservationResultsRadiology].resource 1..
-* entry[ObservationResultsRadiology].resource only AtApsObservationResultsRadiology
-
-* entry[ObservationVitalSigns].resource 1..
-* entry[ObservationVitalSigns].resource only AtApsObservationVitalSigns
+* entry[Observation].resource 1..
+* entry[Observation].resource only AtApsObservation
 
 * entry[Specimen].resource 1..
 * entry[Specimen].resource only AtApsSpecimen
