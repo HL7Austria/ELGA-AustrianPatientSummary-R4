@@ -57,3 +57,7 @@ Keiner der angegebenen Codes ist im Valueset 'Problem Type - IPS' (http://hl7.or
 
 # Ignore warning about code which is not part of extensible value set - none of the codes in extensible value set represents the meaning of this SNOMED code
 Keiner der angegebenen Codes ist im Valueset 'hl7VS-specimenCondition' (http://terminology.hl7.org/ValueSet/v2-0493|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#281268007)
+
+# Ignore warning about generated text by IG publisher
+Der String-Wert enthält Text, der wie eingebettete HTML-Tags aussieht. Wenn dieser Inhalt ohne entsprechende Nachbearbeitung in HTML gerendert wird, kann er ein Sicherheitsrisiko darstellen
+
