@@ -35,3 +35,12 @@ Usage: #inline
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"
 * deviceName.name = "APS Generator"
 * deviceName.type = #user-friendly-name
+
+Instance: AtApsExampleDevice04
+InstanceOf: Device
+Usage: #inline
+* type = $cs-sct#49062001 "Gerät"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dieses Gerät erzeugt ein APS FHIR-Dokument.</p></div>"
+* deviceName.name = "APS Generator"
+* deviceName.type = #user-friendly-name
