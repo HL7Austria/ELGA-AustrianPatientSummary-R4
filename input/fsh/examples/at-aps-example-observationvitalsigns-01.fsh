@@ -3,7 +3,6 @@ InstanceOf: AtApsObservationVitalSigns
 Title: "AtApsObservationVitalSigns-Beispiel"
 Description: "Observation Vital Signs"
 Usage: #example
-* meta.profile = "https://fhir.hl7.at/r4-ELGA-AustrianPatientSummary-ballot_2025_stu1/StructureDefinition-at-aps-observationvitalsigns"
 * status = #final
 * category = https://termgit.elga.gv.at/CodeSystem/elga-vitalsigns#VITALS "Vitalzeichen"
 * code = $cs-loinc#85354-9 "Vital signs panel"
