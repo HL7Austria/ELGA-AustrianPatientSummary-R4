@@ -4,7 +4,7 @@ Title: "AtApsObservationResultsLaboratoryPathology-Beispiel"
 Description: "Observation Results Laboratory Pathology"
 Usage: #example
 * status = #final
-* category[+] = $cs-observation-category#laboratory "Laboratory"
+* category[0] = $cs-observation-category#laboratory "Laboratory"
 * category[+] = $cs-elga-laborparameterergaenzung#1 "Allgemeiner Laborbefund"
 * code = $cs-elga-laborparameterergaenzung#17880 "Zytologie"
 * code.text = "Pathologiebefund"

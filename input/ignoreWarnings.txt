@@ -61,3 +61,8 @@ Keiner der angegebenen Codes ist im Valueset 'hl7VS-specimenCondition' (http://t
 # Ignore warning about generated text by IG publisher
 Der String-Wert enthält Text, der wie eingebettete HTML-Tags aussieht. Wenn dieser Inhalt ohne entsprechende Nachbearbeitung in HTML gerendert wird, kann er ein Sicherheitsrisiko darstellen
 
+# The IPS Procedure profile directs implementers to use performedDateTime. Some examples use performedPeriod to highlight some procedures may not be for a specific date even though this generates profile slice messages.
+INFORMATION: Procedure/at-aps-example-procedure-01: Procedure.performed.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.0 überein.
+
+# The IPS ObservationResultsLaboratoryPathologyUvIps profile requires one Observation.category but more are allowed even though this generates profile slice messages.
+INFORMATION: Observation/AtApsExampleObservationResultsLaboratoryPathology01: Observation.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
