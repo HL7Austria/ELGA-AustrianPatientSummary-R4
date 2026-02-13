@@ -51,3 +51,6 @@ The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated 
 # Ignore warnings regarding identifier types which are based on HL7 AT Core Patient
 Keiner der angegebenen Codes ist im Valueset 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://terminology.hl7.org/CodeSystem/v2-0203#SS)
 Keiner der angegebenen Codes ist im Valueset 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://terminology.hl7.org/CodeSystem/v2-0203#PI)
+
+# Ignore warning about Condition.category - code from additional binding is being used
+Keiner der angegebenen Codes ist im Valueset 'Problem Type - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#404684003)
