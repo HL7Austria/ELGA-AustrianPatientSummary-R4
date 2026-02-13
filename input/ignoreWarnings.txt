@@ -20,3 +20,7 @@ URL-Wert 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' l√
 Reference to draft CodeSystem http://hl7.org/fhir/diagnostic-report-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
 
+# Ignore warnings regarding UCUM annotations
+UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+UCUM Codes that contain human readable annotations like {ratio} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+UCUM Codes that contain human readable annotations like {pieces} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
