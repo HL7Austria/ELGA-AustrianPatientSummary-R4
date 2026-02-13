@@ -16,9 +16,10 @@ Display_Name_for__should_be_one_of__instead_of
 # This is a tooling error which is already being dealt with: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/expansion.20parameters.20error
 URL-Wert 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' löst nicht auf
 
-# Ignore warnings regarding draft value sets which are part of the FHIR specification
+# Ignore warnings regarding draft or experimental value sets which are part of the FHIR specification
 Reference to draft CodeSystem http://hl7.org/fhir/diagnostic-report-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
 
 # Ignore warnings regarding UCUM annotations
 UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
