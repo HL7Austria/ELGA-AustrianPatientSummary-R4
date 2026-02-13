@@ -52,7 +52,7 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
 // * category[laborstruktur] from $vs-elga-laborstruktur
 // * category[laborstruktur] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 
-* interpretation from AtApsObservationInterpretation (extensible)
+* interpretation from $vs-at-aps-observationinterpretation (extensible)
 
 * component
   * code only CodeableConcept-uv-ips
@@ -81,4 +81,4 @@ Description: "Das AT APS-Profil für die Observation-Ressource berücksichtigt z
   * valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ComponentProofValue"
   * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
-  * interpretation from AtApsObservationInterpretation (extensible)
+  * interpretation from $vs-at-aps-observationinterpretation (extensible)

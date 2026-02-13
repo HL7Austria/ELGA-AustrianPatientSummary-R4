@@ -1,7 +1,0 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="note-to-balloters">
-		<p>Dieses Value-Set wurde für das Austrian Patient Summary (APS) entworfen und wird auf den <a href="https://termgit.elga.gv.at/">österreichische e-Health Terminologieserver</a> verschoben, abhängig vom Ergebnis des Ballots.</p>
-		<p>Eine Expansion dieses Value-Sets ist zurzeit nicht möglich, weil die referenzierten Codesysteme (https://termgit.elga.gv.at/CodeSystem/icd-10-bmsgpk-2025, https://termgit.elga.gv.at/CodeSystem/icpc2, https://termgit.elga.gv.at/CodeSystem/icf, https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-2025) vom IG Publisher nicht aufgelöst werden können.</p>
-	</blockquote>
-</div>
