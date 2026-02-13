@@ -3,8 +3,11 @@ Id: at-aps-immunization-vaccine-codes
 Title: "AT APS Immunization Vaccine Codes"
 Description: "Dieses Value-Set erweitert die in Österreich existierenden Impfstoffe um die Möglichkeit, angeben zu können, dass der verimpfte Impfstoff unbekannt ist."
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+* ^url = "https://termgit.elga.gv.at/ValueSet/at-aps-immunization-vaccine-codes"
+* ^version = "1.0.0+20260213"
 * ^status = #active
 * ^experimental = false
+* ^date = "2026-02-13"
 * ^publisher = "ELGA GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "https://elga.gv.at"
