@@ -26,6 +26,8 @@ The definition for the element 'ImagingStudy.series.performer.function' binds to
 Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx' kann nicht aufgelöst werden
 Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' kann nicht aufgelöst werden
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 vom Validator nicht gefunden
+Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html' kann nicht aufgelöst werden
+ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html vom Validator nicht gefunden
 
 # Ignore warnings regarding UCUM annotations
 UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
@@ -125,6 +127,9 @@ INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[2
 INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[54]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
 
 # Presumably this is not able to be fixed in the example Bundle in the IG.  This is discussed in Zulip topic: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/.E2.9C.94.20Duplicate.20anchor.20IDs.3F.3F.3F/with/469989028
-WARNING: C:\DND_GIT_Repos\02_HL7Austria\hl7at_gh_ELGA-AustrianPatientSummary-R4\output\Bundle-AtApsExampleBundle-Journey-1.html: The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-1-patient,Patient_AtApsExampleBundle-Journey-1-patient,hcAtApsExampleBundle-Journey-1-patient
-WARNING: C:\DND_GIT_Repos\02_HL7Austria\hl7at_gh_ELGA-AustrianPatientSummary-R4\output\Bundle-AtApsExampleBundle-Journey-2.html: The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-2-patient,Patient_AtApsExampleBundle-Journey-2-patient,hcAtApsExampleBundle-Journey-2-patient
-WARNING: C:\DND_GIT_Repos\02_HL7Austria\hl7at_gh_ELGA-AustrianPatientSummary-R4\output\Bundle-AtApsExampleBundle-Journey-3.html: The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-3-patient,Patient_AtApsExampleBundle-Journey-3-patient,hcAtApsExampleBundle-Journey-3-patient
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-1-patient,Patient_AtApsExampleBundle-Journey-1-patient,hcAtApsExampleBundle-Journey-1-patient
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-2-patient,Patient_AtApsExampleBundle-Journey-2-patient,hcAtApsExampleBundle-Journey-2-patient
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-3-patient,Patient_AtApsExampleBundle-Journey-3-patient,hcAtApsExampleBundle-Journey-3-patient
+
+# Known inactive concept regarding immunizations
+The concept '836499004' has a status of inactive and its use should be reviewed
