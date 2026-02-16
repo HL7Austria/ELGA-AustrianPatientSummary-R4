@@ -21,15 +21,16 @@ jobs:
     - name: Checkout the implementation guide
       uses: actions/checkout@v2
       with:
-        repository: HL7Austria/HL7-AT-FHIR-Core-R4
+        repository: HL7Austria/ELGA-AustrianPatientSummary-R4
         path: .
+        ref: 84-create-publication-of-020
 
     - name: Checkout github io project
       uses: actions/checkout@v2
       with:
         repository: HL7Austria/hl7austria.github.io
         path: ./web
-        ref: pages
+        ref: publish-aps
         token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Checkout FHIR IG Web Templates
@@ -86,6 +87,20 @@ jobs:
         path: .
         file: publisher.jar
 
+    # special to APS because of VIDi
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    # special to APS because of VIDi
+    - name: Install dependencies
+      run: python -m pip install --upgrade pip lxml python-dateutil
+
+    # special to APS because of PlanUML (see https://chat.fhir.org/#narrow/channel/196008-ig-publishing-requirements/topic/Plantuml.20for.20ehrs.20igs)
+    - name: Setup Graphviz
+      uses: ts-graphviz/setup-graphviz@v2
+
     - name: Run IG Publisher
       run: |
         mkdir input-cache
@@ -97,6 +112,25 @@ jobs:
       run: |
         unset DISPLAY
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -go-publish -source ${{github.workspace}} -web ${{github.workspace}}/web -registry ${{github.workspace}}/fhir-ig-registry/fhir-ig-list.json -history ${{github.workspace}}/fhir-ig-history-templates -templates ${{github.workspace}}/fhir-web-templates -temp ${{github.workspace}}/buildtmp
+
+    # special to APS because of VIDi
+    - name: Transform Bundles
+      run: python python-mapper/transform.py
+
+    # special to APS because of VIDi
+    - name: Move vidi files
+      run: |
+        cp ./vidi/Bundle*.html ./web/elga/aps/r4/1.0.0/
+        cp ./vidi/favicon.ico ./web/elga/aps/r4/1.0.0/
+        cp -r ./vidi/scripts ./web/elga/aps/r4/1.0.0/
+        cp -r ./vidi/styles ./web/elga/aps/r4/1.0.0/
+        cp -r ./vidi/assets/* ./web/elga/aps/r4/1.0.0/assets/
+
+        cp ./vidi/Bundle*.html ./web/elga/aps/r4/
+        cp ./vidi/favicon.ico ./web/elga/aps/r4/
+        cp -r ./vidi/scripts ./web/elga/aps/r4/
+        cp -r ./vidi/styles ./web/elga/aps/r4/
+        cp -r ./vidi/assets/* ./web/elga/aps/r4/assets/
 
     - name: Move index file
       run: |
