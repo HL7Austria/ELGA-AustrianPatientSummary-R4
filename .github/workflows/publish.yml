@@ -23,16 +23,13 @@ jobs:
       with:
         repository: HL7Austria/ELGA-AustrianPatientSummary-R4
         path: .
-        # TODO remove
-        ref: fix-pipeline
 
     - name: Checkout github io project
       uses: actions/checkout@v2
       with:
         repository: HL7Austria/hl7austria.github.io
         path: ./web
-        # TODO set to pages
-        ref: publish-aps
+        ref: pages
         token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Checkout FHIR IG Web Templates
@@ -148,8 +145,7 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: Publish IG
-        # TODO set to 'pages'
-        branch: publish-aps
+        branch: pages
         repository: ./web
 
     - name: Deploy updated FHIR IG List.json
