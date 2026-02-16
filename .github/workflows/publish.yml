@@ -137,7 +137,7 @@ jobs:
 
     - name: Move index file
       run: |
-        mv ./input/landing_page/_index.yml ./web/${{ github.event.repository.name }}
+        mv ./input/landing_page/_index.yml ./web/elga/aps/r4
 
     - name: Remove ig build zip directory
       run: |
