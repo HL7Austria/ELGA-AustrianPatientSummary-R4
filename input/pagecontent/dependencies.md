@@ -9,3 +9,7 @@
 ### Globale Profile
 
 {% include globals-table.xhtml %}
+
+### Expansion Parameters
+
+{% include expansion-params.xhtml %}

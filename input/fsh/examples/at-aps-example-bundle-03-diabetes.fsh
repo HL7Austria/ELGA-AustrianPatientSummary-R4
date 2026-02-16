@@ -285,7 +285,7 @@ Usage: #inline
 * stage.assessment = Reference(urn:uuid:f235c566-01aa-457d-ab49-9e422df69863) "AtApsExample03Diabetes-problem-17-assessment-1"
 
 Instance: AtApsExample03Diabetes-problem-17-assessment-1
-InstanceOf: Observation
+InstanceOf: AtApsObservation
 Usage: #inline
 * status = #final
 * category = $cs-observation-category#exam "Exam"

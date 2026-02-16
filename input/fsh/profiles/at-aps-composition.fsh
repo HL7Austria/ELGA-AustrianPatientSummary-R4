@@ -27,7 +27,7 @@ Description: "Das AT APS-Profil für die Composition-Ressource berücksichtigt z
 
 * section.author only Reference(AtApsPractitioner or AtApsPractitionerRole or AtApsDevice or AtApsPatient or RelatedPerson or AtApsOrganization)
 
-* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 * section ^slicing.ordered = false

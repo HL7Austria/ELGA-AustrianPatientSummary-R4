@@ -294,7 +294,7 @@ Usage: #inline
 
 // DocumentReference: Quelldokument
 Instance: AtApsExampleBundle-Journey-3-Entlassungsbrief-2024-12
-InstanceOf: DocumentReference
+InstanceOf: AtApsDocumentReference
 Usage: #inline
 * status = #current
 * type = $cs-loinc#11490-0 "Entlassungsbrief"

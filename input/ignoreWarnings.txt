@@ -7,7 +7,129 @@
 # A lot of German display names can't be found. For now, this is not a problem.
 NO_VALID_DISPLAY_FOUND_LANG_NONE
 NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR
+NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK
 Display_Name_for__should_be_one_of__instead_of
+Wrong Display Name 'Durchleuchtungsgeführte Angioplastie einer Arterie mit Kontrastmittel' for http://snomed.info/sct#233258006. There are no valid display names found for language(s) 'de-AT'. Default display is 'Angioplasty of artery'; Wrong Display Name 'Einsetzen eines Stents in Koronararterie' for http://snomed.info/sct#36969009. There are no valid display names found for language(s) 'de-AT'. Default display is 'Placement of stent in coronary artery (procedure)'
 
 # Errors related to terminologies which cannot be resolved because termgit.elga.gv.at cannot yet provide packages or be used as proper tx
 %https://termgit.elga.gv.at/%
+
+# This is a tooling error which is already being dealt with: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/expansion.20parameters.20error
+URL-Wert 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' löst nicht auf
+
+# Ignore warnings regarding draft or experimental value sets which are part of the FHIR specification
+Reference to draft CodeSystem http://hl7.org/fhir/diagnostic-report-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/imagingstudy-status|4.0.1
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
+
+# Ignore warnings regarding canonicals which cannot be resolved but are parte of FHIR specification
+Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx' kann nicht aufgelöst werden
+Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' kann nicht aufgelöst werden
+ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 vom Validator nicht gefunden
+Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html' kann nicht aufgelöst werden
+ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html vom Validator nicht gefunden
+
+# Ignore warnings regarding UCUM annotations
+UCUM Codes that contain human readable annotations like {TAB} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+UCUM Codes that contain human readable annotations like {ratio} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+UCUM Codes that contain human readable annotations like {pieces} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+
+# Ignore warnings regarding not resolvable URLs or OIDs
+URL-Wert 'http://system-to-be-defined.com' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.10.1.4.3.1' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.10.1.4.3.2' löst nicht auf
+URL-Wert 'urn:oid:1.2.3.4.5' löst nicht auf
+URL-Wert 'https://elga.gv.at/specimen-id' löst nicht auf
+URL-Wert 'urn:oid:1.2.40.0.34.4.10' löst nicht auf
+
+# Ignore warnings regarding not found resources - these are part of examples and it is not a problem that they are not resolvable
+Can't find 'http://example.org/protocol-for-heart-association-event' in the bundle (Bundle.entry[12].resource.extension[0].value[x])
+Can't find 'https://example.org/fhir/Binary/AtApsExampleBundle-Journey%
+
+# These messages are generated in the snapshot from the base resources. There is no reference to these extensions in the IPS resource profiles.
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+
+# Ignore warnings regarding identifier types which are based on HL7 AT Core Patient
+Keiner der angegebenen Codes ist im Valueset 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://terminology.hl7.org/CodeSystem/v2-0203#SS)
+Keiner der angegebenen Codes ist im Valueset 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://terminology.hl7.org/CodeSystem/v2-0203#PI)
+
+# Ignore warning about Condition.category - code from additional binding is being used
+Keiner der angegebenen Codes ist im Valueset 'Problem Type - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#404684003)
+
+# Ignore warning about code which is not part of extensible value set - none of the codes in extensible value set represents the meaning of this SNOMED code
+Keiner der angegebenen Codes ist im Valueset 'hl7VS-specimenCondition' (http://terminology.hl7.org/ValueSet/v2-0493|2.0.0), und ein Code sollte aus diesem Valueset stammen, es sei denn, er enthält keinen geeigneten Code) (Codes = http://snomed.info/sct#281268007)
+
+# Ignore warning about generated text by IG publisher
+Der String-Wert enthält Text, der wie eingebettete HTML-Tags aussieht. Wenn dieser Inhalt ohne entsprechende Nachbearbeitung in HTML gerendert wird, kann er ein Sicherheitsrisiko darstellen
+
+# The IPS profiles direct implementers to use certain data types. Some examples use other data types to highlight that there are also other use cases. Anyway, they trigger a slicing information.
+INFORMATION: Bundle/AtApsExample03Diabetes: Bundle.entry[13].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-1: Bundle.entry[4].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-1: Bundle.entry[12].resource.timing.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[5].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[15].resource.timing.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[5].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[15].resource.timing.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[11].resource.onset.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[22].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[23].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[24].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[25].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[26].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[27].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[28].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[29].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[30].resource.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Procedure/at-aps-example-procedure-01: Procedure.performed.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.0 überein.
+INFORMATION: MedicationStatement/AtApsExampleMedicationStatement01: MedicationStatement.effective.ofType(Period): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 überein.
+INFORMATION: Observation/AtApsExampleObservationPregnancyOutcome01: Observation.value.ofType(CodeableConcept): Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips|2.0.0 überein.
+
+# The IPS requires one Observation.category within Observation-results-laboratory-pathology-uv-ips. Additional categories are allowed but they trigger a slicing information.
+INFORMATION: Bundle/AtApsExample03Diabetes: Bundle.entry[16].resource.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[19].resource.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[19].resource.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[20].resource.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[21].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-3*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[22].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-4*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[23].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-5*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[24].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-6*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[25].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-7*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[26].resource/*Observation/AtApsExampleBundle-Journey-3-diagnostic-result-15*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[36].resource.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[36].resource.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[37].resource.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[38].resource/*Observation/AtApsExampleBundle02-diagnostic-result-3*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[39].resource/*Observation/AtApsExampleBundle02-diagnostic-result-4*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[40].resource/*Observation/AtApsExampleBundle02-diagnostic-result-5*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[41].resource/*Observation/AtApsExampleBundle02-diagnostic-result-6*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[42].resource/*Observation/AtApsExampleBundle02-diagnostic-result-7*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[43].resource/*Observation/AtApsExampleBundle02-diagnostic-result-15*/.category[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+INFORMATION: Observation/AtApsExampleObservationResultsLaboratoryPathology01: Observation.category[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.0 überein.
+
+# The IPS proposes the use of certain profiles within the Bundle. Other profiles or resources are allowed. Anyway, they trigger a slicing information.
+INFORMATION: Bundle/AtApsExample03Diabetes: Bundle.entry[11]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+
+# The APS and IPS proposes the use of certain profiles for social history. However, others are allowed too resulting in a slicing information.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[0].resource.section[9].entry[2]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://fhir.hl7.at/elga/aps/r4/StructureDefinition/at-aps-composition|0.2.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[0].resource.section[9].entry[2]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[0].resource.section[9].entry[2]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://fhir.hl7.at/elga/aps/r4/StructureDefinition/at-aps-composition|0.2.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[0].resource.section[9].entry[2]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[0].resource.section[8].entry[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://fhir.hl7.at/elga/aps/r4/StructureDefinition/at-aps-composition|0.2.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[0].resource.section[8].entry[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 überein.
+
+# The IPS profile for Bundle does not contain a slice for a simple observation following no specific profile. However, as the slicing is open further observations are allowed triggering a slicing information.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[9]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-2: Bundle.entry[26]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[9]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle-Journey-3: Bundle.entry[36]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[21]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+INFORMATION: Bundle/AtApsExampleBundle02PreventiveMedicalCheckup: Bundle.entry[54]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 überein.
+
+# Presumably this is not able to be fixed in the example Bundle in the IG.  This is discussed in Zulip topic: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/.E2.9C.94.20Duplicate.20anchor.20IDs.3F.3F.3F/with/469989028
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-1-patient,Patient_AtApsExampleBundle-Journey-1-patient,hcAtApsExampleBundle-Journey-1-patient
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-2-patient,Patient_AtApsExampleBundle-Journey-2-patient,hcAtApsExampleBundle-Journey-2-patient
+The html source has duplicate anchor Ids: AtApsExampleBundle-Journey-3-patient,Patient_AtApsExampleBundle-Journey-3-patient,hcAtApsExampleBundle-Journey-3-patient
+
+# Known inactive concept regarding immunizations
+The concept '836499004' has a status of inactive and its use should be reviewed
