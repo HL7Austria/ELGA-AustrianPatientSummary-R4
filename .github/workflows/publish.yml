@@ -117,7 +117,7 @@ jobs:
 
     # special to APS because of VIDi
     - name: Transform Bundles
-      run: python python-mapper/transform.py
+      run: python python-mapper/transform.py -output ./web/elga/aps/r4/1.0.0/ -output ./web/elga/aps/r4/
 
     # special to APS because of VIDi
     - name: Move vidi files

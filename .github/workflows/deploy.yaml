@@ -81,7 +81,7 @@ jobs:
         java -jar -Dfile.encoding=UTF-8 -Xmx10g -Xms10g ./input-cache/publisher.jar -ig ig.ini
 
     - name: Transform Bundles
-      run: python python-mapper/transform.py
+      run: python python-mapper/transform.py -output ../output
 
     - name: Move vidi files
       run: |

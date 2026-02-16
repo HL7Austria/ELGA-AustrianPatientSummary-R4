@@ -2,13 +2,18 @@ import IpsToVidi
 import os
 import glob
 import shutil
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-output", action='append', help='Output directory of IG publisher', required=True
+)
+args = parser.parse_args()
 
 # directory of this script: ./python-mapper/
 directory = os.path.dirname(os.path.abspath(__file__))
 # directory of sushi-generated resources: ./../fsh-generated/resources/
 bundle_dir = os.path.join(directory, '..', 'fsh-generated', 'resources')
-# directory of IG publisher output: ./../output/
-output_dir = os.path.join(directory, '..', 'output')
 # directory of VIDi files: ./../vidi/
 vidi_dir = os.path.join(directory, '..', 'vidi')
 # directory containing the transformed json (FHIR Bundle -> VIDi tables)
@@ -23,7 +28,6 @@ for fhir_bundle_with_path in list(glob.glob(bundle_dir + os.sep + 'Bundle-*.json
     fhir_bundle_basename = os.path.basename(fhir_bundle_with_path)
     # HTML file which has been created by IG publisher, e.g. Bundle-aps-1.html
     ig_bundle_basename = fhir_bundle_basename.replace('.json', '.html')
-    ig_bundle_with_path = os.path.join(output_dir, ig_bundle_basename)
 
     # HTML file displaying VIDi content
     vidi_html_basename = fhir_bundle_basename.replace('.json', '.vidi.html')
@@ -49,11 +53,13 @@ for fhir_bundle_with_path in list(glob.glob(bundle_dir + os.sep + 'Bundle-*.json
         file.write(filecontent)
 
     # activate tab-link in corresponding HTML-output file
-    with open(ig_bundle_with_path,'r',encoding='utf-8') as file:
-        filecontent = file.read()
+    for output_dir in args.output: 
+        ig_bundle_with_path = os.path.join(os.path.join(directory, output_dir), ig_bundle_basename)
+        with open(ig_bundle_with_path,'r',encoding='utf-8') as file:
+            filecontent = file.read()
 
-    filecontent = filecontent.replace('<!-- <a href="' + vidi_html_basename + '">VIDi</a> -->', '<a href="' + vidi_html_basename + '">VIDi</a>')
+        filecontent = filecontent.replace('<!-- <a href="' + vidi_html_basename + '">VIDi</a> -->', '<a href="' + vidi_html_basename + '">VIDi</a>')
 
-    with open(ig_bundle_with_path, 'w', encoding='utf-8') as file:
-        file.write(filecontent)
+        with open(ig_bundle_with_path, 'w', encoding='utf-8') as file:
+            file.write(filecontent)
 
