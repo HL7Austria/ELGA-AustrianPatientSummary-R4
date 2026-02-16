@@ -1,0 +1,14 @@
+{
+    "package-id" : "hl7.at.fhir.elga.aps.r4",
+    "version" : "1.0.0",
+    "path" : "https://fhir.hl7.at/elga/aps/r4/1.0.0",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "STU1",
+    "desc" : "The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).",
+    "first" : true,
+    "title" : "Austrian Patient Summary (R4)",
+    "ci-build" : "https://build.fhir.org/ig/HL7Austria/ELGA-AustrianPatientSummary-R4/",
+    "introduction" : "The FHIR® implementation guide Austrian Patient Summary is derived from the HL7® Austria FHIR® Core implementation guide and ensures conformity with the International Patient Summary (IPS).",
+    "category" : "Patient Summary"
+}
