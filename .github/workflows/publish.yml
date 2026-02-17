@@ -23,14 +23,13 @@ jobs:
       with:
         repository: HL7Austria/ELGA-AustrianPatientSummary-R4
         path: .
-        ref: 84-create-publication-of-020
 
     - name: Checkout github io project
       uses: actions/checkout@v2
       with:
         repository: HL7Austria/hl7austria.github.io
         path: ./web
-        ref: publish-aps
+        ref: pages
         token: ${{ secrets.ROBO_OLIVER }}
 
     - name: Checkout FHIR IG Web Templates
@@ -63,8 +62,9 @@ jobs:
       with:
         _input-file: input/landing_page/_index.yml
         _format-key: '%%key%%'
-        branch: ${{ github.event.repository.name }}
+        branch: elga/aps/r4
         date: ${{ steps.extract_date.outputs.date }}
+        repo: ${{ github.event.repository.name }}
         _output-file: input/landing_page/_index.yml
 
     - name: Install NPM
@@ -115,7 +115,7 @@ jobs:
 
     # special to APS because of VIDi
     - name: Transform Bundles
-      run: python python-mapper/transform.py
+      run: python python-mapper/transform.py -output ../web/elga/aps/r4/1.0.0/ -output ../web/elga/aps/r4/
 
     # special to APS because of VIDi
     - name: Move vidi files
@@ -134,7 +134,7 @@ jobs:
 
     - name: Move index file
       run: |
-        mv ./input/landing_page/_index.yml ./web/${{ github.event.repository.name }}
+        mv ./input/landing_page/_index.yml ./web/elga/aps/r4
 
     - name: Remove ig build zip directory
       run: |
